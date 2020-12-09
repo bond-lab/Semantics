@@ -1,0 +1,1024 @@
+\PassOptionsToPackage{xetex}{xcolor}
+\PassOptionsToPackage{xetex}{graphicx}
+\documentclass[a4paper,landscape,headrule,footrule,xetex]{foils}
+
+\input{headx.tex}
+\usepackage{tikzsymbols}
+\newcommand{\PF}[1]{\Smiley[#1][green]}
+\newcommand{\NF}[1]{\Annoey[#1][red]}
+
+
+\begin{document}
+\header{Lecture 6}{Pragmatics and Discourse}{}
+\maketitle
+
+%\include{schedule}
+
+
+\myslide{Overview}
+
+\begin{itemize}
+\item Review
+\item Context
+\item Conversation and Cooperation
+\item Conversational Maxims
+\item Politeness
+\item Indirect Speech
+\item Summary
+
+\end{itemize}
+
+\section{Revision}
+
+\myslide{Idioms and Metaphors}
+\begin{itemize}
+\item Many phrases have meanings that cannot be predicted from the meanings of the individual words
+  \begin{itemize}
+  \item \eng{take into one's confidence}
+  \item \eng{take in}
+  \item \eng{Sherlock Holmes}
+  \item \eng{practical joke(r)}
+  \item \eng{in love}
+  \end{itemize}
+\item Metaphors extend the use of words beyond their primary meaning
+  to describe referents that bear similarities to the word's primary
+  referent.
+\begin{exe}
+  \ex \eng{"Oh, sir, do you not think that you could help me, too, and  and at least \ul{throw a little light} through \ul{the dense darkness which surrounds me}"}
+\end{exe}
+UNDERSTANDING is LIGHT
+\end{itemize}
+
+
+\section{Reference and Context}
+\MyLogo{}
+
+\myslide{We interpret words in \txx{context}}
+
+\begin{itemize}\addtolength{\itemsep}{-1.5ex}
+%\item It isn't only deictic expressions that require context
+\item For example, in a restaurant
+  \begin{exe}
+    \ex \eng{Have you got the new \ul{C.J. Cherryh}?} \textnormal{``book by $\sim$''}
+  \end{exe}
+\item In a snooker (pool)  game
+  \begin{exe}
+    \ex \eng{I have two \ul{reds} left} ``red balls''
+  \end{exe}
+\item \txx{metonymy}: substituting the name of an attribute or feature for the name of the thing itself
+  \begin{exe}
+    \ex \eng{\ul{The ham} sandwich is at table three} ``person who ordered $\sim$''
+    \ex \eng{I spent all morning with \ul{the suits}} ``person who
+    habitually wears $\sim$''\footnote{ A person who wears matching
+      jacket and trousers, especially a boss or a supervisor (pejorative)}
+  \end{exe}
+  \item \txx{synecdoche}: substituting the name of a part for the name of a thing \\
+    (a kind of metonymy)
+  \begin{exe}
+    \ex \eng{We need some more willing \ul{hands}} ``person with $\sim$''
+  \end{exe}
+\item[?] Give examples of metonymy and synechdoche\task
+
+\end{itemize}
+
+
+\myslide{All knowledge is context}
+\begin{itemize}
+\item Knowledge to interpret utterances can come from multiple sources
+  \begin{enumerate}\addtolength{\itemsep}{1ex}
+  \item \txx{Deixis}: The physical context of the utterance
+    \begin{itemize}
+    \item \eng{My stepdaughter has been \ul{here}. I have traced her.} ``221B Baker Street'' \sh{SPEC}
+    \end{itemize}
+
+  \item \txx{Discourse}: What has already been said
+    \begin{itemize}
+    \item \eng{The dog chased$_i$ the cat$_j$.  Eventually it$_i$ caught it$_j$.}
+    \item \eng{My stepdaughter$_i$ has been here. I have traced her$_i$.} \sh{SPEC}
+    \end{itemize}
+  \item \txx{World knowledge}: Background and common knowledge
+   \begin{itemize}
+    \item \eng{I would like to go to the moon.} ``the Earth's moon''
+    \end{itemize}
+
+  \end{enumerate}
+\end{itemize}
+
+\myslide{Context can complete fragments}
+\begin{itemize}
+\item In a dialogue, we often only add new knowledge
+  \begin{exe}
+    \ex 
+    \begin{xlist}
+      \ex \eng{Who moved these chairs?}
+      \ex \eng{Sandy (did) [move these chairs]}
+  \end{xlist}
+    \ex 
+    \begin{xlist}
+      \ex \eng{Where are you going?}
+      \ex \eng{[I am going] (to) Tokyo}
+  \end{xlist}
+  \ex
+  \begin{xlist}
+   \ex \eng{'What is it, then? [Is it] A fire?'}
+   \ex \eng{'No [it is not], [It is] a client.  \ldots} \hfill \sh{SPEC}
+ \end{xlist}
+\end{exe}
+\item Normally English requires a complete sentence, 
+\item[\ldots] but here a \txx{fragment} is OK
+\end{itemize}
+
+
+If you are interested in this, NTU's LMS is a center for \txx{conversational analysis}.
+
+% \myslide{Discourse Topic}
+% \MyLogo{\url{http://lessonstream.org/2011/04/30/washing-clothes/}}
+% \begin{itemize}
+% \item It is much easier to understand an utterance if you know what
+%   it is about \citep{Bransford:Johnson:1972}
+
+% \item Giving the same text different titles changes your interpretation
+
+% \item Giving a discourse topic aids in understanding and retention
+
+% \end{itemize}
+
+% \myslide{Background Knowledge}
+
+% What knowledge do we need to interpret the following?
+
+% \begin{exe}
+%   \ex 
+%   \begin{xlist}
+%     \ex \eng{I'm hungry}
+%     \ex \eng{I'll lend you some money}
+%   \end{xlist}
+%   \ex 
+%   \begin{xlist}
+%     \ex \eng{Shall we get some icecream?}
+%     \ex \eng{I'm on a diet}
+%   \end{xlist}
+%   \ex 
+%   \begin{xlist}
+%     \ex \eng{Shall we lunch next week?}
+%     \ex \eng{It's Ramadan}
+%   \end{xlist}
+%  \ex 
+%   \begin{xlist}
+%     \ex \eng{Kim chased the dog with a stick}
+%     \ex \eng{Kim chased the dog with a bone}
+%     \ex \eng{Kim chased the dog with a broom}
+%     \ex \eng{Kim chased the dog with a white tail}
+%     \ex \eng{Kim chased the dog with a wound}
+
+%   \end{xlist}
+
+% \end{exe}
+
+% %\myslide{Mutual Knowledge}
+
+% \myslide{Formalizing Knowledge for Computers}
+
+% \begin{itemize}
+% \item There is a lot of work on making knowledge available to
+%   computers so that they can interpret text
+%   \begin{itemize}
+%   \item Formal ontologies (knowledge-based)
+%     \begin{itemize}
+%     \item Scripts
+%     \item Wordnets
+%     \item CYC
+%     \end{itemize}
+%   \item Example-based (compare to existing examples)
+%     \\ collect many fragments of existing knowledge
+%   \end{itemize}
+% \end{itemize}
+
+
+% \myslide{What can computers do?}
+% \MyLogo{}
+% \begin{itemize}
+% \item[Q] \eng{Do birds migrate through Turkey?}
+% \item[A] Yes.  \eng{The crane ($\subset$ bird) flies across Ankara ($\subset_{in}$ Turkey)}.
+%   \begin{quote}
+%     \large   fly$_1$ ($e_1$, crane$_5$($x_1$)),  across($e_2$,$e_1$,$x_2$), Ankara($x_2$).
+%   \end{quote}
+%   \begin{itemize}
+%   \item  \eng{through} and \eng{across} are both \textit{path} roles.
+%   \item \eng{fly} and \eng{migrate} are both \textit{motion} verbs.
+%   \item Ankara is in Turkey
+%   \end{itemize}
+% \item Why do this?
+%   \begin{itemize}
+%   \item Local environmental knowledge is often not translated into many languages
+%   \item Facts may only be recorded in a few documents
+% \end{itemize}
+% \end{itemize}
+
+
+
+% \section{Inference}
+
+% \myslide{Anaphoric Reference}
+% \MyLogo{In bridging, the referent is different, but linked in some way.}
+% \begin{itemize}
+% \item A pronoun (or definite nominal) can refer back to something
+%   earlier in the discourse
+%   \begin{exe}
+%     \ex 
+%     \begin{xlist}
+%     \ex \eng{I tripped over a dog. \ul{The dog} bit me.}
+%     \ex \eng{I tripped over a dog. \ul{The beast} bit me.}
+%     \ex \eng{I tripped over a dog. \ul{It} bit me.}
+%     \ex \eng{I tripped over a dog. \ul{The tail} tangled me.} \hfill \txx{bridging}
+%     \ex \eng{I tripped over a dog. $\phi$ bit me.} 
+%   \end{xlist}
+%   \ex 
+%  \begin{xlist}
+%    \ex \eng{I left early.  I had a train to catch.}
+%    \trans \textnormal{Inference: I left early \textbf{because} I had a train to catch.}
+%  \end{xlist}
+% \end{exe}
+% \item People use inference to 
+%   \begin{itemize}
+%   \item Interpret pronouns and nominals
+%   \item More generally, to link information together
+%   \end{itemize}
+% \end{itemize}
+ 
+\section{Conversational Implicature}
+
+
+\myslide{Cooperation in Conversation}
+\MyLogo{\citet{Grice:1975}}
+\begin{itemize}
+\item \txx{Cooperative Principle}: people cooperate in conversation
+  \begin{quote}
+    ``Make your conversational contribution such as is required, at the stage at which it occurs, by the accepted purpose or direction of the talk exchange in which you are engaged.''
+  \end{quote}
+\item \txx{Implicature}
+  \begin{quote}
+    The aspect of meaning that a speaker conveys, implies, or suggests
+    without directly expressing.
+  \end{quote}
+  \begin{exe}
+    \ex \eng{Did you do the reading?}
+    \ex \eng{I meant to.}
+    \trans \textnormal{Implicates: No}
+  \end{exe}
+
+\end{itemize}
+
+\myslide{Gricean Maxims}
+\MyLogo{\citet{Grice:1975}}
+\begin{description}
+\item [\txx{Maxim of Quantity}] ~
+  \begin{itemize}
+  \item Make your contribution as informative as is required (for the current purposes of the exchange).
+  \item Do not make your contribution more informative than is required.
+  \end{itemize}
+\item [\txx{Maxim of Quality}] ~
+  \begin{itemize}
+  \item Do not say what you believe to be false.
+  \item Do not say that for which you lack proper evidence.
+  \end{itemize}
+\newpage
+\item [\txx{Maxim of Relation}] ~
+  \begin{itemize}
+  \item Be relevant.
+  \end{itemize}
+\item [\txx{Maxim of Manner}] ~
+  \begin{itemize}
+  \item Be perspicuous [= be easily understood]
+  \item Avoid obscurity of expression.
+  \item Avoid ambiguity
+  \item Be brief (avoid unnecessary prolixity)
+  \item Be orderly
+  \end{itemize}
+\end{description}
+
+\myslide{An Example of implicature}
+
+Speech that seems to violate the maxims will evoke \txx{implicatures}
+(inferences about the reason why the speaker violated the maxim(s)).
+This is because the hearer assumes the speaker is acting in accordance
+with the Cooperative Principle, and is rational.
+\begin{exe}
+  \ex A: \eng{Can you tell me the time?}
+  \trans Lit: Do you have the ability to tell me the time?
+  \ex B: \eng{Well, the milkman has come.}
+  \trans Lit.: The milkman came at some time prior to the time of speaking.
+\end{exe}
+\newpage
+What is meant:
+\begin{itemize}
+\item [A] Do you have the ability to tell me the time of the present moment, as standardly indicated on a watch, and if so, please do so tell me what time it is.
+\item [B] No, I don't know the exact time of the present moment, but I can provide some information from which you may be able to deduce the approximate time, namely the milkman, who delivers milk at 6:30am,  came at some time prior to the time of speaking.
+\end{itemize}
+
+\begin{itemize}
+\item [A] flouted Manner --- why not request that you are told the time?
+\item [B] flouted Relation --- what does this have to do with the time?
+\end{itemize}
+
+\myslide{Various Conversational Implicatures}
+\begin{itemize}
+\item Sometimes no special knowledge is required in the context to
+  calculate the additional conveyed meaning 
+  (\txx{Generalized Conversational Implicatures})
+  \begin{exe}
+    \ex \eng{Did you bring the flowers and the card?}
+    \ex \eng{I brought the card.}
+    \trans \textnormal{Implicature: but not the flowers.}
+  \end{exe}
+\item 
+Most of our conversations take place in very specific contexts in
+which locally recognized inferences are assumed. 
+(\txx{Particularized Conversational Implicatures})
+
+\begin{exe}
+  \ex \eng{Hey Terry, are you coming to the party tonight?}
+  \ex \eng{My parents are visiting.} ``So I am busy/So I have a babysitter''
+\end{exe}
+\item All implicatures are \txx{defeasible}: they can be canceled
+without a contradiction.
+
+\begin{exe}
+  \ex \eng{But I can still come.}
+\end{exe}
+\end{itemize}
+
+
+
+\myslide{Scalar Implicatures}
+\MyLogo{Extended into the Horn Scale: classic example is numbers}
+\newcommand{\horn}[1]{\ensuremath{\langle}\,#1\,\ensuremath{\rangle}}
+\newcommand{\set}[1]{\{#1\}}
+
+Certain information is communicated by choosing a word which
+expresses one value from a scale of values. 
+
+\begin{exe}
+  \ex	$\langle$ \eng{all, most, many, some, few} $\rangle$
+  \ex	$\langle$ \eng{always, often, sometimes} $\rangle$
+\end{exe}
+
+We should choose the word from the scale which is the most informative
+and truthful in the circumstances (Quantity and Quality):
+
+\begin{exe}
+  \ex \eng{I'm doing a major in Linguistics and I've completed some of the required subjects}
+  \ex \eng{They are often late.}
+  \ex	\eng{I got some of these antiques in London – hang on, actually I think I got most of them 	there.} \hfill (defeasible)
+\end{exe}
+
+\myslide{Horn Scales}
+%\MyLogo{\url{http://www.personal.uni-jena.de/~mu65qev/wikolin/index.php?title=Horn_scale&redirect=no}}
+ To form a
+Horn scale \horn{$S,W$}, two words ($S$ and $W$) must satisfy the following
+conditions:
+\begin{enumerate}\addtolength{\itemsep}{-2ex}
+\item[(i)] $A(S)$ must entail $A(W)$ for some arbitrary sentence frame $A$;
+\item[(ii)] $S$ and $W$ must be equally lexicalized;
+\item[(iii)] $S$ and $W$ must be about the same semantic relations, or
+  from the same semantic field. 
+\end{enumerate}
+  \begin{itemize}
+\item Words on the scale implicate the negation of words on their left
+  \begin{itemize}
+  \item \horn{\eng{always, often, sometimes}}.
+  \item \horn{\eng{\ldots, 5, 4, 3, 2, 1}}.
+  \item \horn{\eng{hot, warm, lukewarm, cold}}.
+  \item \horn{\eng{the},  \set{\eng{a},\eng{some}}}.
+  \end{itemize}
+\end{itemize}
+
+
+
+\myslide{Conventional Implicatures}
+\MyLogo{}
+
+Conventional implicatures are non-truth conditional inferences that
+are not derived from superordinate pragmatic principles like the
+[Gricean] maxims, but are simply attached by convention to particular
+lexical items.
+
+They are non-cancellable:
+\begin{exe}
+  \ex
+  \begin{xlist}
+    \ex \eng{She was poor, but honest.}
+    \ex \eng{*She was poor but honest, and was in fact rich.}
+  \end{xlist}
+\end{exe}
+
+\myslide{Flouting the maxims}
+\begin{itemize}
+\item Quantity:	(In answer to \eng{Tell me all about him!}:) 
+  \eng{He has a nice personality.}
+\item Quality:	(In response to something stupid someone did:) 
+  \eng{That was brilliant!}
+\item Relation:	(In response to \eng{Can I go out and play?}:) 
+\eng{Did you finish your homework?}
+\item Quality:
+  \begin{exe}
+    \ex \eng{My car breaks down every five minutes} \hfill hyperbole
+    \ex \eng{I've got millions of bottles of wine in my cellar} \hfill hyperbole    \ex \eng{Queen Victoria was made of iron} \hfill metaphor
+    \ex \eng{I love it when you sing out of tune} \hfill irony or sarcasm
+  \end{exe}
+  
+\end{itemize}
+%% FIXME add some manner flouting
+
+\myslide{What happens when we flout?}
+\begin{itemize}
+\item If someone doesn't understand this, (e.g. someone from another
+  culture), then what was originally intended to be a metaphor may
+  result in a \txx{lie}.
+\item We may flout: 
+  \begin{itemize}
+\item Quantity: 
+  \begin{itemize}
+  \item say  more than we need to indicate a sense of occasion, or respect
+  \item  say less than we need, in order to be blunt, or rude
+  \end{itemize}
+\item Quality: 
+  \begin{itemize}
+  \item white lies
+  \end{itemize}
+\item Relation  
+  \begin{itemize}
+  \item to signal embarrassment
+  \item to change the subject
+  \end{itemize}
+\item Manner
+  \begin{itemize}
+  \item for the   sake of humour
+  \item to obscure information (parents talking in front of children)
+  \item to show in-group status,  \ldots
+  \end{itemize}
+\end{itemize}
+\end{itemize}
+
+
+\myslide{Hedges}
+
+When we \txx{flout}  a maxim, we can use \txx{hedges}:
+
+\begin{exe}
+\ex Quantity:
+    \begin{xlist}
+    \ex \eng{\ul{As you probably know},} \ldots
+    \ex \eng{\ul{To cut a long story short},} \ldots
+  \end{xlist}
+\ex Quality:
+  \begin{xlist}
+    \ex \eng{In the kitchen, \ul{I believe}.}\hfill \sh{DANC}
+    \ex \eng{\ul{As far as I'm aware}, Kim is still on medication.}
+  \end{xlist}
+\ex Relation:
+    \begin{xlist}
+    \ex \eng{\ul{I don't know if this is will affect the bottom line}, but some of the numbers are  missing.}
+  \end{xlist}
+  % b. This may seem beside the point, but we can't ignore the impact of lower interest
+  %  rates on these investments.
+  %       c. Not that I'm changing the topic, but is this related to the budget?
+
+\ex Manner:
+ \begin{xlist}
+    \ex \eng{\ul{I'm not sure if this makes sense}, but the car had no lights.}
+  \end{xlist}
+\end{exe}
+
+\myslide{Your turn, I guess}
+
+Hedges are used when you know you will flout a maxim.  Which
+  maxim is flouted in the following hedges (and why)?\task
+
+\begin{exe}
+% Manner:
+\ex \eng{This may be a bit confused, but I remember being in a car.}
+
+%Quality:
+\ex \eng{I may be mistaken, but I thought I saw a wedding ring on her finger.}
+
+%\ex \eng{ I'm not sure if this is right, but I heard it was a secret ceremony in Hawaii.
+%\ex \eng{ He couldn't live without her, I guess.
+
+% Quantity:
+%\ex \eng{  So, to cut a long story short, we grabbed our stuff and ran.
+\ex \eng{I won't bore you with all the details, but it was an exciting trip.}
+
+% Relation:
+\ex \eng{I don't know if this is important, but some of the files are missing.}
+
+%Quality:
+\ex \eng{As far as I know, they're married.}
+
+% Relation:
+\ex \eng{This may sound like a dumb question, but whose handwriting is this?}
+%\ex \eng{  Not to change the subject, but is this related to the budget?
+
+% Manner:
+%\ex \eng{I'm not sure if this makes sense, but the car had no lights.
+\ex \eng{I don't know if this is clear at all, but I think the other car was reversing.}
+% Quantity:
+\ex \eng{As you probably know, I am afraid of dogs.}
+\end{exe}
+
+\section{Politeness}
+
+\myslide{Why be Indirect?}
+
+\begin{itemize}
+\item Mainly for politeness
+
+  \begin{exe}
+    \ex {[Motorist to gas station attendant]}
+    \begin{xlist}
+      \ex \eng{You don't happen to have any change for the phone do you?}
+    \end{xlist}
+    \ex {[Doctor to Nurse]}
+    \begin{xlist}
+      \ex \eng{I'll need a 19 gauge needle, IV tubing and some unobtanium}
+    \end{xlist}
+  \ex {[Teacher to student?]}
+    \begin{xlist}
+      \ex \eng{Would you be so kind as to give me a hand with this?}
+    \end{xlist}
+  \end{exe}
+\item[$\Rightarrow$] Low Status \into High Status is generally more indirect than High \into Low 
+\end{itemize}
+
+\myslide{Politeness and Face-Threatening Acts}
+\MyLogo{\citet{Brown:Levinson:1987}}
+\begin{itemize}
+\item[\PF{2}] \txx{Positive Face} desire to seem worthy and deserving of approval
+  \\ \emp{self-worth}: I want you to like me!
+\bigskip\bigskip\bigskip
+\item[\NF{2}] \txx{Negative Face} desire to be autonomous, unimpeded by others
+  \\ \emp{freedom}: I want you not to bother me!
+\bigskip\bigskip\bigskip
+\item It is argued that we all have these two faces --- they are universal
+\item But they are always under threat!
+
+\end{itemize}
+
+\myslide{Face Threatening Acts}
+
+\begin{itemize}
+\item[\PF{1}] Threaten Positive Face
+  \begin{itemize}
+  \item Hearer
+    \begin{itemize}
+    \item explicit expressions of disapproval 
+    \item expressions of indifference, interruption, boasting
+    \item identification of status (\eng{boy} not \eng{doctor})
+    \end{itemize}
+  \item Speaker
+    \begin{itemize}
+    \item apologies, accepting a compliment, confession, losing control
+    \end{itemize}
+  \end{itemize}
+\item[\NF{1}] Threaten Negative Face
+  \begin{itemize}
+  \item Hearer
+    \begin{itemize}
+    \item orders, requests, suggestions, advice
+    \item compliments, expressions of envy or admiration
+    \item offers or promises (adds obligation)
+    \end{itemize}
+  \item Speaker
+    \begin{itemize}
+    \item thanks, excuses, acceptance of offers or apologies
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\myslide{Face Saving Strategies} \MyLogo{Choice depends on social
+  distance, power asymmetry, nature of the act}
+  \begin{itemize}\addtolength{\itemsep}{-1ex}
+\item Bald (on-record)
+\item Positive Politeness: 
+  \begin{itemize}
+  \item be attentive, appeal to in-group, joke 
+  \item reciprocate: \eng{I'll help you if you help me}
+  \item compliment: \eng{You're looking good today, \ldots}
+  \end{itemize}
+\item Negative Politeness: 
+  \begin{itemize}
+  \item hedge to minimize threat: \eng{I may be wrong but, \ldots}
+  \item allow for negative face: \eng{Could you please, \ldots}
+  \item ask indirectly: \eng{Have you got the time, \ldots}
+  \end{itemize}
+\item Indirect (off-record)
+  \begin{itemize}
+  \item \eng{It's hot in here} ``please turn on the aircon''
+  \end{itemize}
+\item[?] Which face is threatened, and how does Holmes save it?
+  \eng{There may be some little danger, so kindly put your army revolver in your pocket.'} \hfill \sh{REDH}\task
+\end{itemize}
+
+
+
+\myslide{An example of polite, indirect speech (gone wrong)}
+\MyLogo{The Big Bang Theory: \href{https://www.youtube.com/watch?v=fhv1dOae9MUAn}{The Apology Insufficiency (S4E7)}}
+
+\begin{exe}
+  \ex {[Knock on the door]}
+  \ex Leonard: \eng{Wanna get that?}
+  \ex Sheldon: \eng{Not particularly.}
+  \ex Leonard: \eng{Could you get that?}
+  \ex Sheldon: \eng{I suppose I could if I were asked.}
+  \trans {[Knock on the door]}
+  \ex Leonard: \eng{Would you please get that?}
+  \ex Sheldon: \eng{ Well of course! \\  Why do you have to make things so complicated?}
+\end{exe}
+
+
+
+\section{Austin's Speech Act Theory}
+
+\myslide{Speech as Action}
+\MyLogo{\citet{Austin:1962}}
+\begin{itemize}
+\item Language is often used to \emp{do} things: \txx{speech acts}
+  \\ language has both
+  \begin{itemize}
+  \item \txx{interactivity}
+  \item \txx{context dependence}
+  \end{itemize}
+\item E.g. If you greet someone or ask them a question, and they don't
+  respond it is very awkward
+\end{itemize}
+
+\myslide{Sentence Types}
+\MyLogo{A bit like tense and time}
+\begin{itemize}
+\item There are four syntactic types that correlate closely to pragmatic uses
+
+  \begin{tabular}{lcll}
+  \txx{declarative}  &$\leftrightarrow$& \txx{assertion} & \eng{This is my friend}\\
+  \txx{interrogative} &$\leftrightarrow$& \txx{question}  & \eng{Are you my friend?}\\
+  \txx{imperative} &$\leftrightarrow$& \txx{order}  & \eng{Be my friend!}\\
+  \txx{optative} &$\leftrightarrow$& \txx{wish} & \eng{Oh that you were my friend!}
+  \end{tabular}
+\item But it turns out there is a lot of flexibility:
+  \begin{exe}
+    \ex \begin{xlist} 
+      \ex \eng{Would you like a beer?}\hfill question
+      \ex \eng{Is the pope Catholic?} \hfill assertion
+      \ex \eng{You are sure that she has not sent it yet?} (\sh{SCAN})
+       \hfill question
+
+    \end{xlist}
+  \end{exe}
+\end{itemize}
+
+\myslide{Language as Truth}
+\begin{itemize}
+\item One tradition of semantics is based on these assumptions
+  \begin{itemize}
+  \item the basic sentence type is declarative
+  \item language is mainly used to describe the world
+  \item meaning can be given in terms of truth values
+  \end{itemize}
+\item It doesn't deal well with these
+  \begin{exe}
+    \ex \eng{Excuse me!}
+    \ex \eng{Hello.}
+    \ex \eng{How much can a Koala bear?}
+    \ex \eng{Six pints of lager and some nachos, thanks!}
+    \ex \eng{How 'bout them niners?}
+  \end{exe}
+\end{itemize}
+
+\myslide{Perfomative Utterances}
+
+\begin{exe}
+  \ex \eng{I \ul{promise} I won't drive home}
+  \ex \eng{I \ul{bet} you 5 bucks they get caught }
+  \ex \eng{I \ul{declare} this lecture over} 
+  \ex \eng{I \ul{warn} you that legal action will ensue}
+  \ex \eng{I \ul{name} this ship \ul{the Nautilus}}
+\end{exe}
+
+\begin{itemize}
+\item Uttering these (in an appropriate context) \emp{is} acting
+\\  \emp{Utterances themselves can be actions}
+\item In English, we can signal this explicitly with \lex{hereby}
+\end{itemize}
+
+\myslide{Felicity Conditions}
+\MyLogo{\citep{Austin:1962}}
+\begin{itemize}
+\item Performatives (vs Constantives) 
+\\ Given the correct \txx{felicity conditions}
+  \begin{description}
+  \item[A1] There must exist an accepted conventional procedure that
+    includes saying certain words by certain persons in certain
+    circumstances,
+  \item[A2] The circumstances must be appropriate for the invocation
+  \item[B1] All participants must do it both correctly
+  \item[B2] \ldots  and completely
+  \item[C1] The intention must be to do this the act
+  \item[C2] The participants must conduct themselves so subsequently.
+  \end{description}
+\item If the conditions don't hold, the speech act is \txx{infelicitous}
+  \begin{itemize}
+  \item Failing \textbf{A} or \textbf{B} is a \txx{misfire}
+  \item Failing \textbf{C} is an \txx{abuse}
+  \end{itemize}
+  \end{itemize}
+
+\myslide{Examples of Infelicities}
+\begin{itemize} \addtolength{\itemsep}{-1ex}
+\item \textbf{A1} \eng{I hereby marry you} (said by someone not authorized to do so)
+\item \textbf{A2} \eng{I baptize this baby Harold} (baby's name should
+  be Herman)
+\item \textbf{A2} \eng{I pronounce John Smith dead} (uttered by a doctor who has confused John Smith
+with John Smit, or if John Smith is still alive)
+\item \textbf{B1}
+\eng{Yes} (exchanging vows in a Christian marriage ceremony)
+\item \textbf{B1}
+\eng{OK} (in response to \eng{Do you swear to tell the truth, the whole truth and nothing but
+the truth?} – wrong formula)
+\item \textbf{B2}
+\eng{I bet you \$50 the opposition loses the next election} (infelicitous without a response: \eng{OK – you're on}; Austin calls the required response uptake)
+\item \textbf{C1}
+\eng{Guilty as charged} (if accused known to be innocent by a jury member)
+\item \textbf{C2}
+\eng{I promise to come tomorrow} (if there is no intention to keep to the promise)
+\end{itemize}
+
+
+\myslide{Explicit and Implicit Performatives}
+\begin{itemize}
+\item \txx{Explicit Performatives}
+  \begin{itemize}
+  \item Tend to be first person
+  \item The main verb  is a performative: 
+    \lex{promise, warn, sentence, bet, pronounce, \ldots}
+  \item You can use \lex{hereby}
+  \end{itemize}
+\item \txx{Implicit Performatives}
+  \begin{exe}
+    \ex \eng{You are hereby charged with treason} [by me]
+    \ex \eng{Students are requested to be quiet in the halls} [by NTU]
+    \ex \eng{10 bucks says they'll be late} [I bet you] 
+    \ex \eng{Come up and see me some time!} [I invite you]
+  \end{exe}
+  Can be made explicit by adding an active perfomative verb
+\end{itemize}
+
+% \myslide{Elements of Speech Acts}
+% \begin{description}
+% \item \txx{Locutionary act} the act of saying something
+% \item \txx{\underline{Illocutionary act}} the force of the statement 
+% \item \txx{Perlocutionary act} the effects of the statement
+% \end{description}
+% Illocutionary force indicating devices(IFID)
+% \begin{itemize}
+% \item   word order
+% \item    stress
+% \item    intonation contour
+% \item    punctuation
+% \item    the mood of the verb
+% \item     performative verbs: \eng{I (Vp) you that \ldots} 
+% \end{itemize}
+
+\myslide{Searle's speech act classification}
+ \MyLogo{\cite{Searle:1969}}
+  \begin{description}
+  \item \txx{Declarative} changes the world (like performatives)
+  \item \txx{Representative} describes the (speaker's view of the) world 
+  \item \txx{Expressives}  express how the speaker feels
+  \item \txx{Directives} get someone else to do something
+  \item \txx{Comissives} commit oneself to a future action
+  \end{description}
+
+% \myslide{Felicity Conditions for Promising}
+% \MyLogo{Searle (1969)}
+ 
+% \begin{itemize}
+% \item \textbf{Preparatory 1}: $H$ would prefer $S$'s doing $A$ to his
+%   not doing $A$, and $S$ believes $H$ would prefer his doing $A$ to
+%   his not doing $A$.
+% \item \textbf{Preparatory 2:} It is not obvious to both $S$ and $H$
+%   that $S$ will do $A$ in the normal course of events.
+% \item \textbf{Propositional:} In expressing that $p$, $S$ predicates a
+%   future act $A$ of $S$
+% \item \textbf{Sincerity:}  $S$ intends to do $A$ 
+% \item \textbf{Essential:} The utterance $e$ counts as an undertaking to do $A$
+% \end{itemize}
+
+%   \begin{tabular}{llll}
+%     $S$ & Speaker & $A$ & Future Action \\
+%     $H$ & Hearer  & $p$ & proposition expressed \\
+%         &          & $e$ & linguistic expression  
+%   \end{tabular}
+\section{Indirect Speech Acts}
+
+
+\myslide{Indirect speech acts}
+\MyLogo{}
+\begin{itemize}\addtolength{\itemsep}{-1ex}
+\item 
+ \begin{tabular}[t]{lcll}
+   Sentence Type & & Speech Act & Example \\ \hline
+  \txx{declarative}  &$\leftrightarrow$& \txx{assertion}  (statement) & 
+  \eng{I sing.}\\
+  \txx{interrogative} &$\leftrightarrow$& \txx{question}  &
+  \eng{Do you sing?}   \\
+  \txx{imperative} &$\leftrightarrow$& \txx{order} (request, command) &
+  \eng{sing!} \\
+  \txx{exclamative}&$\leftrightarrow$&  \txx{exclamation} & \eng{What a voice!}  \\
+  \txx{optative} &$\leftrightarrow$& \txx{wish} & \eng{If only I could sing}
+  \end{tabular}
+  % \begin{description}
+  % \item[statement] declarative:  \eng{I sing.}
+  % \item[command] imperative: \eng{sing!}  
+  % \item[question] interrogative: \eng{Do you sing?}  
+  % \item[exclamation] exclamative: \eng{What a voice!}  
+  % \end{description}
+% \item Properties of Indirect Speech Acts:
+%   \begin{itemize}
+%   \item Multiplicity of meanings
+%   \item Logical priority of meaning
+%   \item Rationality
+%   \item Conventionality
+%   \item Politeness
+%   \item Purposefulness
+%   \end{itemize}
+\end{itemize}  
+
+\myslide{Literal and non-literal uses}
+
+\begin{exe}
+  \ex
+  \begin{xlist}
+    \ex \eng{Could you get that? }
+    \ex \eng{Please pass the salt.}
+  \end{xlist}
+  \ex 
+  \begin{xlist}
+    \ex \eng{I wish you wouldn't do that.}
+    \ex \eng{Please don't do that.}
+  \end{xlist}
+  \ex
+  \begin{xlist}
+    \ex \eng{You left the door open.}
+    \ex \eng{Please close the door.}
+  \end{xlist}
+\end{exe}
+\begin{itemize}
+\item People have access to both the literal and non-literal meanings
+\item Non literal meanings can be slower to understand
+\item Some non-literal uses are very conventionalized 
+  \\ \eng{Can/Could you X?} \into \eng{Please X}
+\item Questioning the felicity conditions produces an indirect version
+\end{itemize}
+
+
+\myslide{Felicity Conditions for Requesting}
+\MyLogo{Searle (1969), simplified}
+These things must hold for an utterance to be a \txx{request}:
+\begin{itemize}
+\item \textbf{Preparatory 1}: $H$ (hearer) is able to perform  $A$ (future action)
+\item \textbf{Preparatory 2}: It is not obvious that the $H$ would perform $A$  without being asked
+\item \textbf{Propositional:} $S$ (speaker) predicates a future act $A$ of $H$
+\item \textbf{Sincerity:}  $S$ wants $H$ to do $A$ 
+\item \textbf{Essential:} The utterance $e$ counts as an attempt by $S$ to get $H$ to do $A$
+\end{itemize}
+
+
+\begin{itemize}
+\item[?]  Form different indirect requests with the following strategies:\task
+  \begin{enumerate}
+  \item By querying the preparatory content of the direct request
+  \item By stating the  propositional content of the direct request
+  \item By querying the propositional content of the direct request
+  \item By stating the sincerity condition of the direct request.
+  \end{enumerate}
+
+\end{itemize}
+
+
+
+
+\myslide{Indirect Requests}
+
+%\begin{small}
+  \begin{itemize}
+\item \textbf{Preparatory 1}: $H$ is able to perform  $A$
+\item \textbf{Preparatory 2}: It is not obvious that the $H$ would perform $A$  without being asked
+\item \textbf{Propositional:} $S$ predicates a future act $A$ of $H$
+\item \textbf{Sincerity:}  $S$ wants $H$ to do $A$ 
+\item \textbf{Essential:} The utterance $e$ counts as an attempt by $S$ to get $H$ to do $A$
+\end{itemize}
+%\end{small}
+  \begin{itemize}
+\item \textbf{Preparatory 1}: \eng{Can you tell me the time?}
+\item \textbf{Preparatory 2}: \eng{Would you let me know the time?}
+\item \textbf{Propositional:} \eng{Aren't you going to start your annotation?}
+\item \textbf{Sincerity:}  \eng{I wish you would answer me}
+%\item \textbf{Essential:} The utterance $e$ counts as an attempt by $S$ to get $H$ to do $A$
+\end{itemize}
+
+
+\section{Summary of Semantics and Pragmatics}
+
+\myslide{The big picture}
+\begin{itemize}
+\item We can do many things with words
+  \begin{itemize}
+  \item Convey information
+  \item Express attitudes
+  \item Ask someone to do something
+  \item Commit to doing something
+  \item Change the state of the world (performatives)
+  \end{itemize}
+\item We do this by building layers of inference (pragmatics) on top
+  of our understanding of words and how they go together (semantics)
+  \begin{itemize}
+  \item Words have meanings, that can be described through semantic relations
+  \item Words describe referents and situations, and can also show the
+    speaker's attitudes
+  \item Relations between participants in a situation are linked by semantic roles
+  \item Sometimes word meaning is non-compositional, it comes from constructions
+  \item The scope of reference can be changed by quantifiers and modification
+  \end{itemize}
+\item A skilled writer can use words to tell a story, \ldots
+\end{itemize}
+
+\myslide{What you have learned and are still learning}
+
+\begin{itemize}
+\item A gentle introduction to some of the basic semantic concepts
+\item Some practical experience in analysis
+  \begin{itemize}
+  \item Word meaning (projects 1 and 2)
+  \item Sentiment and connotation (project 3)
+  \item How to define concepts (project 3)
+  \item Identifying non-compositional expressions (project 3)
+  \end{itemize}
+\item Holmes in popular culture,  Copyright and authorship
+\item Still to come
+  \begin{itemize}
+  \item Detective fiction 
+  \item Reading Sherlock Holmes
+  \item Watching Sherlock Holmes
+  \item Holmes in translation
+  \end{itemize}
+\end{itemize}
+
+\myslide{Speaking of copyright}
+
+\begin{itemize}
+\item I would like to ask permission to use the results of your
+  analysis in projects 1--3.
+\item This will help in further research into semantics, pragmatics
+  and teaching.
+\item Technically, that you release the data into \href{https://creativecommons.org/publicdomain/zero/1.0/}{the public domain}.
+  \begin{itemize}
+  \item You dedicate the work to the public domain by waiving all of
+    your rights to the work worldwide under copyright law, including
+    all related and neighboring rights, to the extent allowed by law.
+  \item Anyone can copy, modify, distribute and use the data in
+    performances, even for commercial purposes, all without asking
+    permission.
+  \end{itemize}
+\item Your name will not be listed anywhere
+\item If you do not wish your data to be released, you can email me at
+  any time until one week after the grades for the last project has
+  been released and say you do not wish your data to be used.  This
+  has no effect on your grade.
+\end{itemize}
+
+%%% FIXME
+%%%
+%%%  what did we learn
+%%%
+%%%  Further reading
+
+
+%\section{Sentence Types}
+
+
+%\myslide{Acknowledgments and References}
+
+\small
+\bibliographystyle{aclnat}
+\bibliography{abb,mtg,nlp,ling}
+
+
+
+\end{document}
+
+%%% Local Variables: 
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-PDF-mode: t
+%%% TeX-engine: xetex
+%%% End: 
+

@@ -1,0 +1,1505 @@
+\PassOptionsToPackage{xetex}{xcolor}
+\PassOptionsToPackage{xetex}{graphicx}
+\documentclass[a4paper,landscape,headrule,footrule,xetex]{foils}
+
+\input{headx.tex}
+\newcommand{\tra}[1]{\textcolor{olive}{\textsf{#1}}}
+\usepackage{multicol}
+\usepackage{booktabs,subscript}
+\newcommand{\DF}[1]{\parbox{.6\textwidth}{#1}}
+\begin{document}
+\renewcommand{\avmvalfont}{\it}
+\header{Lecture 5}{Idioms and Metaphors}{}
+\maketitle
+
+%\include{schedule}
+
+
+\myslide{Overview}
+
+\begin{itemize}
+\item Revision of Quantification, Truth and Sentiment
+\item Word Meaning Revisited
+\item Beyond Words: Constructions
+\item Idioms
+\item Metaphors
+\end{itemize}
+
+
+\section{Revision: \\ Sentence Relations and Truth}
+
+\myslide{Logic}
+
+\begin{itemize}
+\item Classical logic is an attempt to find valid principles of argument and inference.
+\\[2ex]
+\begin{tabular}{llr}
+  $a$ & If something is human then it is mortal & \txx{premise}\\
+  $b$ & Socrates is human & \txx{premise}\\ \hline
+  $c$ & Socrates is mortal & \txx{conclusion}
+\end{tabular}
+\item Can we go from $a$ and $b$ to $c$? \hfill {\large Yes}
+\item Truth is \txx{empirical}: The premises need to correspond with
+  the facts of the world
+  \begin{itemize}
+  \item Sentences have \txx{truth values} (true, false or unknown)
+  \item The state of the world that makes a sentence true or false are its \txx{truth conditions}
+  \end{itemize}
+\end{itemize}
+
+
+\myslide{Methods of Argument}
+
+\begin{itemize}
+\item \txx{Modus Ponens}
+\\[2ex]
+  \begin{tabular}{ll}
+    $a$ & If something is human then it is mortal \\
+    $b$ & Socrates is human \\ \hline
+    $c$ & Socrates is mortal
+  \end{tabular}
+\\ $p \rightarrow q, p \vdash q$
+\item \txx{Modus tollens}
+\\[2ex]
+  \begin{tabular}{ll}
+    $a$ & If something is human then it is mortal \\
+    $b$ & Zeus is not mortal \\ \hline
+    $c$ & Zeus is not human
+  \end{tabular}
+\\ $p \rightarrow q, \neg q \vdash \neg p$
+
+\newpage
+\item \txx{Hypothetical syllogism}
+\\[2ex]
+ \begin{tabular}{ll}
+    $a$ & If something is human then it is mortal \\
+    $b$ & If something is mortal then it dies \\ \hline
+    $c$ & If something is human then it dies
+  \end{tabular}
+\\ $p \rightarrow q, q \rightarrow r \vdash p \rightarrow r$
+\item \txx{Disjunctive syllogism}
+\\ (modus tollendo ponens: affirm by denying)
+\\[2ex]
+ \begin{tabular}{ll}
+    $p$ & Either a human is mortal or a human is immortal \\
+    $q$ & A human is not immortal \\ \hline
+    $r$ & A human is mortal
+  \end{tabular}
+\\ $p \oplus q, \neg p \vdash q$
+\end{itemize}
+
+\myslide{Truth Tables}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    $p$ & $q$ & $p \rightarrow q$ & $p \wedge q$ & $p \vee q$ 
+    & $p \oplus q$ & $p \equiv q$ & $\neg p$\\
+    \hline
+    &   & if & and & or &  XOR & iff & not  \\
+    \hline
+    T & T & T & T & T & F & T & F \\ 
+    T & F & F & F & T & T & F & F \\  
+    F & T & T & F & T & T & F & T\\ 
+    F & F & T & F & F & F & T & T\\ \hline
+%    \hline
+  \end{tabular}
+  \begin{itemize}
+  \item Words themselves often carry more implications
+    \\ \eng{I did A and B} often implies \eng{I did A first}
+  \item There are many ways of saying the operations
+  \end{itemize}
+\end{center}
+
+
+
+\myslide{Quantification and Negation}
+\begin{itemize} \addtolength{\itemsep}{-1em} 
+\item We can restrict the scope of statements with quantifiers
+\item We can change the polarity of statements using negation
+\item These interact with each other in interesting ways
+\item These interact with language in interesting ways
+\item We use quantifiers for explicit representation of scope ambiguity
+  \begin{exe}
+    \ex \eng{Everyone doesn't love semantics}
+    \begin{xlist}
+          \ex \eng{It is not the case that all people love semantics}:  
+          \\ $\neg\forall$x (L(x,s))
+          \ex \eng{All people have the property of not loving semantics}: 
+          \\ $\forall$x($\neg$L(x,s))
+    \end{xlist}
+  \end{exe}
+\item Negative Polarity Items
+ \begin{exe}
+   \ex \eng{Few people have eaten dessert \ul{yet}} vs 
+   \eng{I \ul{still} have not eaten desert} 
+\ex \eng{Rarely does Kim \ul{ever} eat dessert} vs
+\eng{Kim \ul{often} eats dessert}
+ \end{exe}
+ 
+\end{itemize}
+
+\myslide{Connotation}
+
+\begin{itemize}
+\item Many words carry more meaning than just identifying their referent.
+\begin{exe}
+  \ex
+  \begin{xlist}
+    \ex \eng{Kim is slender}
+    \ex \eng{Kim is thin}
+    \ex \eng{Kim is haggard}
+  \end{xlist}
+\end{exe}
+\item Sentiment can be built up.
+  \begin{exe}
+    \ex \eng{good}
+    \ex \eng{very good}
+    \ex \eng{less than very good}
+    \ex \eng{I have never found it to be less than very good}
+  \end{exe}
+\end{itemize}
+
+
+
+\section{Word Meaning Revisited}
+
+\myslide{Defining Meaning}
+
+\begin{itemize}
+\item When we use a word, we don't have to know everything about the
+  referent
+  \begin{itemize}
+  \item A \eng{dog-cart} is a kind of \con{cart}
+  \item[\ent] you can ride it
+  \item[\ent] it has wheels
+  \end{itemize}
+\item We infer that it has many of the same properties as its
+  \txx{hypernym}, even though it may not have all
+ \begin{itemize}
+  \item A \eng{hover-car} is a kind of \con{car}
+  \item[\ent] you can ride it
+  \item[$\not\Rightarrow$] it has wheels
+  \end{itemize}
+\item Many of the properties may be irrelevant to the story at hand,
+  and irrelevant to the syntax of the language
+\end{itemize}
+
+\myslide{How do we learn?}
+
+\begin{quote}
+  \textit{You shall know a word by the company it keeps} \hfill
+\citep[p11]{Firth:1957}
+\end{quote}
+
+\begin{itemize}
+\item You see a new word \emp{in context}
+\\ \eng{buttoning up his \ul{pea-jacket}, }
+\item And you deduce information from the context
+
+\begin{itemize}
+\item[?] it is a kind of jacket \hfill(\eng{yellow jacket}?)
+\item[?] with buttons
+\item [?] it is thick material (they are going to a stake out)
+\item[?] it has something to do with peas \\ $\times$ not true (from the West
+  Frisian word \eng{pijjakker}, in which \eng{pij} referred to the
+  type of cloth used, a coarse kind of \ul{twilled} blue cloth)
+\end{itemize}
+\item We are getting better at doing this with computers
+\begin{itemize}
+\item but people don't just use words
+\item they have eyes and noses and other senses, \\ and they have brains
+  that link things
+\end{itemize}
+
+\end{itemize}
+
+\myslide{How else do we learn?}
+
+\begin{itemize}
+\item From word internal cues
+  \begin{itemize}
+  \item \eng[far vision]{Television} 
+  \item \eng[internet phone]{iphone} 
+    (also \eng{individual, instruct, inform, inspire} from the \lex{iMac})
+  \item 鯖 \jpn[mackerel]{saba} = 魚 fish; 青 blue
+  \end{itemize}
+\item From the sound
+  \begin{itemize}
+  \item \eng{bouba/kiki}  $\star$ or $\clubsuit$
+  \item \eng{banged, beaten, battered, bruised, blistered, bashed}
+  \item mouth shape for \eng{teeny weeny} vs \eng{large}
+  \end{itemize}
+\item From  images:
+  \begin{tabular}[t]{c}
+\includegraphics[width=5em]{pics/magnifying-glass} \\    
+ \eng{Magnifying Glass} 
+  \end{tabular}
+\end{itemize}
+
+
+\myslide{Words are related in many other ways}
+
+
+\begin{itemize}
+\item Domains: \eng{ball, racket, net, love, ace}
+\item Origin: \eng{chew, eat, drink} vs \eng{masticate, consume, imbibe}
+\item[?] come up with some words with different origins\task 
+  \\ English or another language!
+\item Dialect: \eng{ripper, bonza, sickie, no worries}
+\item Part-of-speech: \eng{die, live} vs \eng{death, life}
+\item When you learned them!
+\item and many more
+\end{itemize}
+
+All of these relations affect how you use and understand language.
+  
+\section{Constructions and Idioms}
+
+\myslide{Beyond words and phrases}
+
+\begin{itemize}
+\item Some uses of language seem to come from beyond just the words
+  \begin{itemize}
+  \item \eng{They laughed the poor guy out of the room.}
+  \item \eng{Mary urged Bill into the house.}
+  \end{itemize}
+\item \textbf{Caused Motion Construction}
+  \\ CAUSE-MOVE $<$agent, theme, goal/path$>$ \into S V NP PP
+  \begin{itemize}
+  \item compatible verbs can fuse with the construction
+  \end{itemize}
+\item \textbf{The Xer the Yer}
+  \begin{itemize}
+  \item \eng{the more you think about it, the less you understand}
+  \end{itemize}
+\item At one end, phrases can be modeled as very general constructions
+\item At the other end, idioms can be modeled as very specific constructions
+\end{itemize}
+
+\myslide{Idioms}
+
+\begin{itemize}
+\item Some expressions clearly involve more than one orthographic word
+  \begin{itemize}
+  \item compound noun
+    \begin{itemize}
+    \item \eng{grass snake}; \eng{grass and tree snakes}
+    \end{itemize}
+  \item verb-particle
+    \begin{itemize}
+    \item \eng{I looked it up} vs \eng{I looked up the very long word}
+    \end{itemize}
+  \item  idiom
+    \begin{itemize}
+    \item \eng{going great guns, give the Devil his due}
+    \item \eng{jog someone's memory}
+    \item \eng{blow one's top}
+    \end{itemize}
+\item And more
+\\ \eng{San Francisco, ad hoc, by and large, Where Eagles
+Dare, kick the bucket, part of speech, in step, the
+Oakland Raiders, trip the light fantastic, telephone
+box,  take a walk , do a number on
+(someone), take (unfair) advantage (of), pull strings,
+kindle excitement, fresh air, \ldots}
+  \end{itemize}
+\item Knowing the individual words is not enough to know the meaning (or usage)
+  
+\end{itemize}
+
+\myslide{Multiword Expressions (MWE)}
+
+There are many different kinds of irregularity.
+
+\begin{tabular}{lccccc}
+  MWE & \multicolumn{5}{c}{Weirdness} \\
+                  & Lexical  & Syntactic & Semantic & Pragmatic &
+                                                                  Statistical  \\
+\hline
+\eng{ad hominem}       &  $+$ & ?   &  ?   &   ?   & $+$ \\
+\eng{at first}          &      & $+$ &     &      & ? \\
+\eng{first aid}         &      &      & $+$   &      & ? \\
+\eng{salt and pepper}   &      &      &      &      & $+$\\
+\eng{good morning}      &      &      &      &  $+$ &$+$ \\
+\eng{cat's cradle}     & $+$  &      &  $+$ &      & ?\\
+\end{tabular}
+
+\begin{itemize}
+\item Most of the time, we don't even notice
+\item Unless it is your second language
+\item In Project Three you will try to find examples of interesting
+  multi-word expressions
+\\ from a new story
+\end{itemize}
+
+\myslide{How common are MWEs?}
+
+\begin{itemize}
+\item They are very common in the lexicon
+  \begin{itemize}
+  \item In wordnet,  41\% of the entries are multiword (mainly compound nouns)
+  \end{itemize}
+\item But less common in the actual text (\sh{SPEC} 4.5\%: 296/6,641)
+\\ 24 are new (not in Wordnet 3.0); 55 are named entities
+% sqlite3 /var/www/ntumc/db/eng.db "select substr(tag,1,1), clemma, tag, count(clemma) from concept where sid >=11000 and sid <=11700 and tag != 'x' and clemma glob '* *' group by substr(tag,1,1)"
+% -- Loading resources from /home/bond/.sqliterc
+
+% substr(tag,1,1)	clemma	tag	count(clemma)
+% 0	and so	00117620-r	206
+% 1	good fortune	11463746-n	11
+
+% 7	no one	77000137-n	3
+% 8	pull off	80000623-v	16
+% 9	last night	90000518-n	5
+
+% d	four o'clock	dat	1
+% l	baker street	loc	18
+% o	in order	oth	3
+% p	Hilton Cubitt	per	32
+% w	as well as	w	1
+
+  \begin{itemize}
+  \item \eng{take into one's confidence}
+  \item \eng{take in}
+  \item \eng{Sherlock Holmes}
+  \item \eng{practical joke(r)}
+  \item \eng{in love}
+  \item \eng{get the better of}
+  \item \eng{Panama hat}
+  \item \eng{as good as one's word} 
+  \end{itemize}
+\item It still seems as though we are missing many MWEs
+\end{itemize}
+
+\myslide{Why are they important?}
+
+\begin{itemize}
+\item If you think you know the individual words, then you might be  confused
+
+\item  Which is a problem if you are a translator:
+\\ \eng[whoever he met]{whoever crossed his path} \sh{SPEC}
+\begin{exe}
+  \ex \glll 私道 を 渡ろう と する 人 \\
+  shidou wo watarou to suru hito \\
+  private-road \textsc{acc} cross.let's \textsc{quot} do person \\
+\trans ''whoever tried to cross his private road''
+\end{exe}
+\item Knowledge of MWEs is one of the things that separates a good speaker from a poor one
+\item From a linguist's point of view, they also reveal something about
+  how language is organized in our brains
+\end{itemize}
+
+
+
+%\section{Idioms}
+
+%\begin{frame}{Idioms are hard to handle}
+\myslide{Idioms are hard to handle}
+%\MyLogo{They don't translate well}
+%\MyLogo{\eng{atama-ni kuru} better with 1st person subject}
+\begin{exe}
+  \ex \eng{Kim blew her top}
+  \trans ``Kim got angry''
+  \trans No \emp{blowing}, no \emp{top}, no \emp{her}
+  \ex  \glll \jpn{キムは} \jpn{頭に} \jpn{来た}  \\
+  kimu-wa atama-ni  kita \\
+  Kim-\textsc{top} head-\textsc{dat} came \\
+  \trans ``Kim got angry (lit: Kim came to her head)''
+  \trans no \emp{head}, no \emp{coming}
+\end{exe}
+
+\begin{itemize}
+\item They are hard to identify
+\item They require work to represent
+\end{itemize}
+%\end{frame}
+
+%\begin{frame}{The state of the art (translation)}
+\myslide{The state of the art (translation)}
+\MyLogo{Not very impressive}
+
+\begin{exe}
+  \ex \eng{Kim blew her top}
+  \trans \glll \tra{キムは、} \tra{彼女の} \tra{上を} \tra{吹きました} \\
+  {Kimu wa,} {kanojo no} {ue o} fukimashita \\
+  Kim-\textsc{top} her-'s top-\textsc{acc} blew \\  
+  \trans  \tra{Kim exhaled on the upper part of her} (Google Translate
+  2015)
+ \trans \glll \tra{キムは、} \tra{彼女の} \tra{トップを} \tra{吹いた} \\
+  {Kimu wa,} {kanojo no} {toppu o} fuita \\
+  Kim-\textsc{top} her-'s top-\textsc{acc} blew \\  
+  \trans  \tra{Kim exhaled on the shirt of her} (Bing Translate 2015)
+ \trans \glll \tra{キムは、} \tra{トップを} \tra{吹いた} \\
+  {Kimu wa,} {toppu o} fuita \\
+  Kim-\textsc{top}  top-\textsc{acc} blew \\  
+  \trans  \tra{Kim exhaled on the shirt} (Google Translate 2019)
+  \ex \eng{キムは 頭に 来た}
+  \trans \tra{Kim came to the head} (Google+Bing Translate 2015)
+%  \trans \tra{Kim came to the head} (Bing Translate)
+\end{exe}
+%\end{frame}
+
+%\begin{frame}{The state of the art (wordnet)}
+\myslide{The state of the art (wordnet)}
+\MyLogo{Some but not all}
+\vspace*{-1.5ex}
+\begin{itemize}
+\item Hyponym of \eng{rage} with many lemmas
+\begin{multicols}{2}
+  \begin{itemize}
+  \item \eng{flip one's lid}
+  \item \eng{blow one's stack}
+  \item \eng{flip one's wig}
+  \item \eng{lose one's temper}
+  \item \eng{blow up}
+  \item \eng{throw a fit}
+  \item \eng{hit the roof}
+  \item \eng{hit the ceiling}
+  \item \eng{have kittens}
+  \item \eng{have a fit}
+  \item \eng{combust}
+  \item \eng{fly off the handle}
+  \item \eng{blow a fuse}
+  \item \eng{go ballistic}
+  \end{itemize}
+\end{multicols}
+\item But by no means exhaustive
+\begin{multicols}{2}
+  \begin{itemize}
+  \item \eng{lose one's cool}
+  \item \eng{lose one's rag}  
+  \item \eng{lose one's grip}
+  \item \eng{blow one's top}
+  \item \eng{fly off one's handle}
+  \item \eng{spit the dummy}
+  \end{itemize}
+\end{multicols}
+\end{itemize}
+
+%\end{frame}
+
+
+% %\begin{frame}{Why Look at them in HPSG?}
+% \myslide{Why Look at them in HPSG?}
+
+%   \begin{itemize}
+%   \item Head-driven Phrase Structure Grammar is a theory of grammar
+%     with several desirable properties
+%     \begin{itemize}
+%     \item \txx{Mono-stratal}: Orthography, Syntax, Semantics,
+%       Pragmatics are are all handled in a single structure (the
+%       {\smaller \txx{SIGN}})
+%     \item \txx{Constraint-based}: parses are built up compositionally,
+%       with new information constraining the range of interpretations
+%     \item \txx{Lexicalist}: Word structure and phrase structure are
+%       governed by partly independent principles. Words and phrases are
+%       two kinds (subtypes) of sign.  Lexical information is organized
+%       in terms of multiple inheritance hierarchies and lexical rules
+%       that allow complex properties of words to be derived from the
+%       logic of the lexicon.
+%     \item \txx{Constructionist}: Constructions (phrase-rules) are also
+%       modeled as feature structures. This allows constructions to be
+%       analyzed via multiple inheritance hierarchies: modeling the fact
+%       that constructions cluster into groups with a `family
+%       resemblance' that corresponds to a constraint on a common
+%       supertype. 
+
+%     \end{itemize}
+%   \end{itemize}
+% %\end{frame}
+ 
+
+
+%\begin{frame}{Possessed Idioms (i)}
+\myslide{Possessed Idioms (i)}
+\begin{small}
+\noindent\begin{tabular}{llr}
+  % \toprule
+  \textbf{Structure} & \textbf{Example} & \textbf{Frequency}\\
+  \midrule
+  X\textsubscript{NP} V\textsubscript{1} X's N\textsubscript{1} & 
+  \eng{lose one's mind} & 137\\
+    
+  X\textsubscript{NP} V\textsubscript{1} [P\textsubscript{1} X's N\textsubscript{1}] & 
+  \eng{fly off one's handle} & 40\\
+
+  X\textsubscript{NP} V\textsubscript{1} X's N\textsubscript{1} [P\textsubscript{1} Y\textsubscript{NP}] & 
+  \eng{cast one's lot with someone/thing} & 39\\
+    
+  X\textsubscript{NP} V\textsubscript{1} X's N\textsubscript{1} [P\textsubscript{1} D\textsubscript{1} N\textsubscript{2}] & 
+  \eng{have one's head in the clouds} & 27\\
+    
+    X\textsubscript{NP} V\textsubscript{1} X's N\textsubscript{1} P\textsubscript{1} & 
+    \eng{cry one's eyes out} & 22\\
+    
+    X\textsubscript{NP} V\textsubscript{1} X's own N\textsubscript{1} & 
+    \eng{blow one's own horn} & 18\\
+    
+    X\textsubscript{NP} V\textsubscript{1}+P\textsubscript{1} X's N\textsubscript{1} & 
+    \eng{pull up one's socks} & 17\\
+    
+    X\textsubscript{NP} be [P\textsubscript{1} X's N\textsubscript{1}]  & 
+    \eng{[be] off one's rocker} & 13\\
+      
+    X\textsubscript{NP} V\textsubscript{1} X's N\textsubscript{1} [P\textsubscript{1} X's N\textsubscript{2}] & 
+    \eng{scratch one's ear with one's elbow} & 13\\
+    
+    X\textsubscript{NP} V\textsubscript{1} D\textsubscript{1} N\textsubscript{1} [P\textsubscript{1} X's N\textsubscript{2}] & 
+    \eng{a dose of one's medicine} & 10\\
+    
+    X\textsubscript{NP} V\textsubscript{1} X's N\textsubscript{1} A\textsubscript{1} & 
+    \eng{get one's hands dirty} & 10\\
+    
+    X\textsubscript{NP} V\textsubscript{1} Y\textsubscript{NP} [P\textsubscript{1} X's N\textsubscript{1}] & 
+    \eng{wind someone around one's finger} & 10\\
+  \end{tabular}
+\end{small}
+
+\begin{itemize}
+\item Extracted from lexicons
+\item Collected by me, my interns and students (Sara, Sheefa, Jia Qian)
+\end{itemize}
+
+%\end{frame}
+
+%\begin{frame}{Possessed idioms (ii)}
+\myslide{Possessed idioms (ii)}
+\begin{small}
+\noindent\begin{tabular}{llr}
+    
+    X\textsubscript{NP} V\textsubscript{1} X's A\textsubscript{1}(est) & 
+    \eng{do one's best} & 8\\
+    
+    X\textsubscript{NP} V\textsubscript{1} [P\textsubscript{1} X's N\textsubscript{1} [P\textsubscript{2} Y\textsubscript{NP}]] & 
+    \eng{pour out one's heart to someone} & 7\\
+    
+    X\textsubscript{NP} aux+neg V\textsubscript{1} X's N\textsubscript{1} & 
+    \eng{not mince one's words} & 5\\
+
+
+X\textsubscript{NP} V\textsubscript{1} Y\textsubscript{NP} D\textsubscript{1} N\textsubscript{1} [P\textsubscript{1} X's N\textsubscript{2}] & 
+\eng{give someone a piece of one's mind} & 4\\
+    
+    X\textsubscript{NP} V\textsubscript{1} R\textsubscript{1} A\textsubscript{1} [P\textsubscript{1} X's N\textsubscript{1}] & 
+    \eng{too big for one's boots} & 3\\
+    
+    X\textsubscript{NP} V\textsubscript{1} [P\textsubscript{1} D\textsubscript{1} N\textsubscript{1} P\textsubscript{2} X's N\textsubscript{2}] & 
+    \eng{by the skin of one's teeth} & 2\\
+    
+    X\textsubscript{NP} V\textsubscript{1} N\textsubscript{1} [P\textsubscript{1} X's N\textsubscript{2}] & 
+    \eng{have egg on one's face} & 2\\
+     
+    X\textsubscript{NP} V\textsubscript{1} X's N\textsubscript{1} [P\textsubscript{1} X] & 
+    \eng{have one's wits about one} & 2\\
+    
+    X\textsubscript{NP} V\textsubscript{1} X's N\textsubscript{1} and V\textsubscript{2} N\textsubscript{2} & 
+    \eng{have one's cake and eat it} & 2\\
+    
+    Remainder & 
+    \eng{let grass grow under one's feet} & 30\\
+\midrule
+    \textbf{Total} &  & \textbf{421}\\ 
+     \end{tabular}
+  
+\end{small}
+
+\begin{itemize}
+\item Surely we have not yet found them all
+  \begin{itemize}
+  \item \eng{blow one's load}, \eng{get one's rocks off}, \ldots
+  \end{itemize}
+\item Some of these have other properties (e.g.,  NPI):
+  \begin{exe}
+    \ex \eng{Kim doesn't let the grass grow under his feet}
+    \ex $?$\eng{Kim lets the grass grow under his feet}
+  \end{exe}
+\end{itemize}
+%\end{frame}
+
+%\begin{frame}{The idiom lexicon ``eat one's words'', \ldots}
+\myslide{The idiom lexicon ``eat one's words'', \ldots}
+
+\begin{exe}
+\ex
+\begin{small}
+\begin{avm}
+\[\avmspan{\it Idiom entry}\\
+    Index form & \lex{eat one's words}\\
+    Template & X\textsubscript{NP} V\textsubscript{1} X's N\textsubscript{1}\\
+    Example & \eng{Kim eats her words}\\
+    Example & \eng{Kim is going to have to eat her words}\\
+    Definition & to retract one's statement, especially with humility\\
+    V\textsubscript{1} & S: (v) eat (take in solid food)\\
+    N\textsubscript{1} & S: (n) words (the words that are spoken)\\
+    $^{*}$V\textsubscript{1} & S: (v) swallow, take back, unsay, withdraw \\
+ &  
+ (take back what one has said)\\[12pt]
+    $^{*}$N\textsubscript{1} & \DF{S: (n) statement (a message that is stated or declared; a communication (oral or written) setting forth particulars or facts etc)}\\ 
+   @type & decomposable \ldots \]
+  \end{avm}
+\end{small}
+\end{exe}
+%\end{frame}
+
+% \begin{frame}{The idiom lexicon \ldots, ``eat one's words''}
+
+% \begin{exe}
+% \begin{small}
+
+% \begin{avm}
+ % \[\avmspan{\it Idiom entry \ldots}\\
+%     Index form & eat one's words\\
+
+% @type & decomposable\\
+%     Paraphrase & X unsays X's statement\\
+%     @template & X V N\\[12pt]
+%     @V & \DF{S: (v) swallow, take back, unsay, withdraw 
+%  (take back what one has said)}\\[12pt]
+%     @N & \DF{S: (n) statement (a message that is stated or declared; a communication (oral or written) setting forth particulars or facts etc)}
+%     \]
+%     \end{avm}
+% \end{small}
+% \end{exe}
+% %\end{frame}
+
+%\begin{frame}{The idiom lexicon \ldots, ``twiddle one's thumbs''}
+\myslide{The idiom lexicon \ldots, ``twiddle one's thumbs''}
+\begin{exe}
+\ex
+\begin{avm}
+\[\avmspan{\it Idiom entry}\\
+    Index form & \lex{twiddle one's thumbs}\\	
+    Template & X\textsubscript{NP} V\textsubscript{1} X's N\textsubscript{1}\\
+    Example & \eng{Kim twiddles her thumbs}\\
+    Definition & to do nothing\\
+    V\textsubscript{1} & \DF{S: (v) twiddle, fiddle with (manipulate, as in a nervous or unconscious manner)}\\
+    N\textsubscript{1} & S: (n) thumb, pollex (the thick short innermost \\
+                        & digit of the forelimb)\\
+    @type & Nondecomposable\\
+    Paraphrase & \eng{X is idle}\\
+    @template & X BE A\\
+    @A & S: (adj) idle (not in action or at work))
+    \]
+    \end{avm}
+  \end{exe}
+  
+
+%\end{frame}
+
+
+%\begin{frame}{Corpus Examples}
+\myslide{Corpus Examples}
+\begin{itemize}
+\item Examples of modification and distance in the BNC
+\begin{exe}
+  \ex  \eng{\ul{cannot believe my own \underline{bloody} eyes}}
+  \ex  \eng{\ul{make one’s \underline{unsteady} way}}
+\ex  \eng{\ul{have one’s \underline{humorous} moment}}.
+\ex \eng{\ul{The butcher had lined his pockets \ull{too thickly}} in the past at their expense, and Faith's will had been a warning, a pointer to their future.}
+\ex \eng{\ul{Now do thy \ull{speedy} utmost}, Meg,}
+    \ex \eng{Maybe the parties foolishly signed \ul{a pact which then found its way} into the hands of the DTI.}
+    \ex \eng{\ul{Fitzgerald, who lost his rag with John McEnroe} at Wimbledon, had already offered his view of the pair}
+\ex \eng{Nor is it the case that the \ul{Federal Republic is using the issue of democratic accountability to drag its feet} on EMU.}
+\ex \eng{\ul{Mr Waddington, a former immigration minister and rightwinger, seems to have gritted his teeth} at yesterday's meeting and stood by the compromise hammered out at Mrs Thatcher's insistence in a cabinet committee.}
+  \end{exe}
+\end{itemize}
+
+%\end{frame}
+
+\myslide{Semantics of
+ possessed idioms}
+\begin{itemize}
+\item Tweak the meaning a little.
+  \begin{itemize}
+  \item If the structure can be kept (\txx{decomposable}) then map the
+    predicates to appropriate wordnet senses.
+    \begin{exe}
+      \ex \eng{Kim changes his tune} ``Kim changed his \emp{opinion}''
+    \end{exe}
+  \item If it is more opaque (\txx{non-decomposable}) then rewrite to
+    a more suitable semantics.
+    \begin{exe}
+      \ex \eng{Kim blew her mind} ``Kim \emp{became} \emp{angry}''
+    \end{exe}
+    
+  \end{itemize}
+% \item Jia Qian mapped predicates to wordnet and wrote paraphrases for
+%   all of the idioms!
+% \item But they have not all been put in the grammar (yet).
+%   \\ Looking for students to work on this
+ \item Representing meaning is hard!
+\end{itemize}
+
+\section{In your  Projects}
+
+\begin{itemize}
+\item Be aware of multiword expressions when you analyze the text
+\item There should be, on average, one in every two sentences
+\item We expect around 20\% to be missing from Wordnet!  
+\item If they are not already in the wordnet, add them in the comment
+\end{itemize}
+
+
+
+
+\myslide{Truly Unique Things}
+
+\begin{itemize} \addtolength{\itemsep}{-1ex}
+\item the music of Beethoven
+\item the intuition of a woman
+\item the obstinacy of an ass
+\item the crowing of a cock
+\item the song of a tit
+\item the waywardness of the wind
+\end{itemize}
+\begin{flushright}
+  Alas Smith and Jones (1986)
+\end{flushright}
+Mistakenly attributed to Oscar Wilde (1854 – 1900), who actually said:
+\begin{quote}
+``Intuition: the strange instinct that tells a woman she is right, whether she is or not.''  
+\end{quote}
+
+
+
+% qlite3 /var/www/ntumc/db/eng.db "select count(*) from concept where sid >=11000 and sid <=11700 and tag != 'x'"
+% (/ 296.0 6461)0.04581334158798948
+% sqlite3 /var/www/ntumc/db/eng.db "select count(*) from concept where sid >=11000 and sid <=11700 and tag != 'x' and clemma glob '* *'"
+\section{Metaphors}
+\myslide{Metaphors and Mechanisms of Interpretation}
+
+A metaphor is an extension of the use of a word beyond its
+primary meaning to describe referents that bear similarities to
+the word's primary referent.
+\begin{itemize}
+\item \lex{eye} ``body part used for vision''
+  \begin{exe}
+  \ex \eng{dull end of a needle (with a hole for the thread)} 
+  \raisebox{-2.5ex}{\includegraphics[width=3em]{pics/needle}}    
+  \ex \eng{the bud on a potato}
+\raisebox{-2ex}{\includegraphics[width=3em]{pics/potato}}     
+  \ex \eng{the centre of a storm} \raisebox{-4ex}{\includegraphics[width=10em]{pics/eye-of-storm}}
+  \end{exe}
+\item The similarities between these referents and the primary referent of
+the word \lex{eye} are their roundish shape and their more or less central
+location on a larger shape.
+\end{itemize}
+
+\myslide{Grammaticalization}
+\begin{itemize}
+\item Once a metaphor becomes accepted, speakers tend to view the
+metaphorical meaning as separated from its primary meaning
+
+\begin{exe}
+  \ex \eng{booking a flight}
+  \ex \eng{tabling a motion}
+  \ex \eng{seeing the point}
+  \ex \eng{stealing the headlines}
+  \ex \eng{buying time}
+\end{exe}
+\item These are \txx{dead metaphors}: we don't need to specially process them
+\end{itemize}
+
+\myslide{Metaphors as non-prototypical use}
+
+\begin{itemize}
+\item In a way, metaphors are non-prototypical uses of a word.
+\begin{itemize}
+\item Humans understand words by referring to a prototypical usage,
+and they match a new example against the characteristics of the
+prototype.
+\item  Use of words with broken typicality conditions happens all the
+time.
+\end{itemize}
+\item
+  \begin{exe}
+    \ex \eng{The price of brussel sprouts went up.}
+    \ex \eng{Marigold is coming out of a coma.}
+    \ex \eng{Felix is under age.}
+    \ex \eng{I killed his argument.}
+    \ex \eng{Their love affair is blossoming.}
+    \ex \eng{She has a fertile imagination.}
+  \end{exe}
+\item However, depending on how you count frozen metaphors, 
+we may use metaphors more than literal uses!
+\end{itemize}
+
+\myslide{Metaphors as central to understanding}
+% \begin{exe}
+%   \ex \eng{Her heart drummed against her rib-cage \ex \eng{The music flowed over
+%   her \ex \eng{The evening staggered/plodded on
+% \end{exe}
+
+\begin{quote}
+  \Large Our conceptual system is fundamentally
+metaphorical in nature
+\end{quote}
+\begin{flushright}
+  George Lakoff
+\end{flushright}
+
+\begin{itemize}
+\item Cognitive semantics:
+\\ There is no separation between cognition and
+linguistic knowledge
+\item Features of Metaphor
+\begin{itemize}
+\item \txx{Conventional}: some metaphors are very well established 
+\\ (but remain metaphorical)
+\item \txx{Systematic}: understood as part of larger domains
+\item \txx{Asymmetrical}: normally understand the \emp{abstract} 
+  in terms of the \emp{concrete}
+\end{itemize}
+
+\end{itemize}
+
+
+\myslide{Metaphors we live by}
+
+\begin{itemize}
+\item Metaphor is pervasive in everyday life, not just in
+language but in thought and action.
+\item Our ordinary conceptual system, in terms of which we
+both think and act, is fundamentally metaphorical in
+nature.
+\item If we are right in suggesting that our conceptual system
+is largely metaphorical, then the way we think, what we
+experience, and what we do every day is very much a
+matter of metaphor.
+\end{itemize}
+
+\begin{quote}
+  George Lakoff and Mark Johnson \citeyear{Lakoff:Johnson:1980} \textit{Metaphors we live by} 
+  University of Chicago Press.
+\end{quote}
+
+
+
+\myslide{Prototypical metaphors}
+
+Some metaphors are not as good as others because not all broken typicality
+conditions result in prototypical metaphors. What is a prototypical
+metaphor?
+
+\begin{itemize}
+\item Similarity and dissimilarity have both been stressed.
+\item Items must not be too similar:
+  \begin{exe}
+    \ex \eng{$^\#$Wine is whisky}
+    \ex \eng{$^\#$Cars are trucks}
+    \ex \eng{$^\#$Jam is honey}
+  \end{exe}
+\newpage
+\item They should not be too dissimilar:
+  \begin{exe}
+    \ex \eng{His feet were stars}
+    \ex \eng{Her cheeks were typewriters}
+    \ex \eng{Her knees were penguins}
+  \end{exe}
+\item In a prototypical metaphor then, items compared are
+likely to come from different lexical fields but they are
+also similar in that they do share some minor
+characteristic. Dissimilarity signals the listener to do
+some active semantic matching.
+\begin{exe}
+  \ex \eng{Life is a subway train}
+  \ex \eng{Men are thistles}
+  \ex \eng{He posted the toast down to his stomach}
+\end{exe}
+\end{itemize}
+
+\myslide{Target and Source Domains}
+
+% \begin{exe}
+%   \ex \eng{The cake was absolutely wicked.
+% \iz The chocolate crème was just plain sinful. I feel guilty eating it.
+% \end{exe}
+\begin{quote}
+ Metaphors enable us to understand one
+  domain of experience in terms of another.
+\hfill \citet{Lakoff:Turner:1989}
+\end{quote}
+
+\begin{itemize}
+\item We map from a \txx{source domain} to a \txx{target domain}
+\\[1.5ex] often written: \txx{TARGET} is \txx{SOURCE}
+\end{itemize}
+
+
+
+
+\myslide{DESIRE is HUNGER}
+
+\begin{exe}
+  \ex \eng{He was drooling over her.}  
+  \ex \eng{He is sex-starved.}
+  \ex \eng{She thirsts for recognition.} 
+  \ex \eng{Her sexual appetite is enormous.}
+  \ex \eng{He hungers for her touch.}
+\end{exe}
+\begin{itemize}
+\item Target domain: SEX (DESIRE, LUST)
+\item Source domain: FOOD (HUNGER, EATING)
+\end{itemize}
+
+
+\myslide{ARGUMENT is WAR}
+
+\begin{exe}
+\ex \eng{Your claims are indefensible.}
+\ex \eng{He attacked every weak point in my argument.}
+\ex \eng{His criticisms were right on target.}
+\ex \eng{I demolished his argument.}
+\ex \eng{I've never won an argument with him.}
+\ex \eng{You disagree? Okay shoot!}
+\ex \eng{If you use that strategy, he'll wipe you out.}
+\ex \eng{He shot down all my arguments.}
+\ex \eng{He was defeated by the argument.}
+\end{exe}
+\newpage
+\begin{itemize}
+\item We don't just talk about argument in terms of war. We can actually win or
+lose arguments.
+\item  Many of the things we do in arguing are partially structured by the concept of war.
+Though there is no physical battle, there is a verbal battle.
+\begin{itemize}
+  \item  We see the person we are arguing with as an opponent.
+  \item  We attack their positions and defend our own.
+  \item  We gain and lose ground.
+  \item  We plan and use strategies.
+ \end{itemize}
+
+\item The metaphor is not only in the words we use --- it is in our very concept of argument.  We talk about arguments that way because we conceive of them that way --- and we
+act according to the way we conceive of things
+\item But we could think of an argument as a search for truth, \ldots
+\end{itemize}
+
+\myslide{Argument: When losing is winning}
+\MyLogo{\url{http://www.humansinvent.com/\#!/13260/argument-when-losing-is-winning/}}
+
+\begin{itemize}
+\item Leo Kent (2013) argues that the argument as war metaphor is counterproductive
+  \begin{itemize}
+  \item Suppose you and I have an argument. You believe a proposition, P, and I don't. I've objected, I've questioned, I've raised all sorts of counter-considerations, and in every case you've responded to my satisfaction. At the end of the day, I say, ‘You know what? I guess you're right.'
+  \item So I have a new belief. And it's not just any belief, but it's a well-articulated, examined and battle-tested belief.
+  \item So who won that argument? Well, the war metaphor seems to force us into saying you won, even though I'm the only one who made any cognitive gain.
+  \item The war metaphor forces us into thinking that you're the winner and I lost, even though I gained and there's something wrong with that picture.
+  \end{itemize}
+  
+\end{itemize}
+
+
+
+\myslide{Spatial Metaphors}
+\MyLogo{\textit{Backs to the Future} \url{http://ucsdnews.ucsd.edu/archive/newsrel/soc/backsfuture06.asp}}
+\begin{itemize}
+\item \txx{Spatial metaphors} have to do with
+spatial orientation: \lex{up-down, in-out, front-back, on-off, deep-shallow, 
+central-peripheral}.
+
+\item Spatial metaphors give a concept a spatial orientation eg.
+HAPPY is UP: \eng{I'm feeling up today}
+\item Though polar oppositions \eng{up-down, in-out} are physical in nature, the spatial
+metaphors based on them can vary from culture to culture. (e.g. in most 
+cultures FUTURE is FRONT but in at least one FUTURE is BACK)
+\begin{itemize}
+\item Aymara, who live in the Andes highlands of Bolivia, Peru and
+  Chile, have future behind them
+\end{itemize}
+\end{itemize}
+
+\myslide{HAPPY is UP}
+\begin{exe}
+\ex \eng{I'm feeling up.}
+\ex \eng{That boosted my spirits.}
+\ex \eng{My spirits rose.}
+\ex \eng{You're in high spirits.}
+\ex \eng{Thinking about logic gives me a lift.}
+\ex \eng{I'm feeling down.}
+\ex \eng{I'm depressed.}
+\ex \eng{He is really low these days.}
+\ex \eng{I fell into a depression.}
+\ex \eng{My spirits sank.}
+\end{exe}
+
+
+
+\myslide{HEALTHY is UP}
+\begin{exe}
+\ex \eng{He's at the peak of health.}
+\ex \eng{Lazarus rose from the dead.}
+\ex \eng{He's in top shape.}
+\ex \eng{He fell ill.}
+\ex \eng{He is sinking fast.}
+\ex \eng{He came down with the flu.}
+\ex \eng{His health is declining.}
+\ex \eng{He dropped dead.}
+\end{exe}
+
+\myslide{CONTROL is UP}
+\begin{exe}
+\ex \eng{I have control over her.}
+\ex \eng{I am on top of the situation.}
+\ex \eng{He's at the height of this power.}
+\ex \eng{He's in high command.}
+\ex \eng{He's in the upper echelon.}
+\ex \eng{His power rose.}
+\ex \eng{He ranks above me in strength.}
+\ex \eng{He is under my control.}
+\ex \eng{He fell from power.}
+\ex \eng{His power is on the decline.}
+\end{exe}
+
+\myslide{AWAKE is UP}
+\begin{exe}
+\ex \eng{Get up.}
+\ex \eng{Wake up.}
+\ex \eng{I'm up already.}
+\ex \eng{He rises early in the morning.}
+\ex \eng{He fell asleep.}
+\ex \eng{He dropped off to sleep.}
+\ex \eng{He's under hypnosis.}
+\ex \eng{He sank into a coma.}
+\end{exe}
+
+\myslide{VIRTUE is UP}
+\begin{exe}
+\ex \eng{He is high-minded.}
+\ex \eng{She is upright.}
+\ex \eng{She is a upstanding citizen.}
+\ex \eng{He is underhanded.}
+\ex \eng{I wouldn't stoop to that.}
+\ex \eng{That is beneath me.}
+\ex \eng{That was a low trick.}
+\end{exe}
+
+\myslide{MORE is UP}
+\begin{exe}
+\ex \eng{The number of books printed keeps going up.}
+\ex \eng{The number of errors he made is incredibly low.}
+\ex \eng{What is the upper bound?}
+\end{exe}
+
+\begin{itemize}
+\item Our experience of physical objects and substances provides a
+  further basis for understanding.
+\item UP is positive
+  \begin{itemize}
+  \item if we pile things up, more reach higher
+  \item healthy people stand upright
+  \item when we are awake, we stand up
+  \end{itemize}
+\item Understanding our experiences
+  in terms of objects and  substances allows us to pick out parts
+  of our experience and treat them as discrete entities.
+\end{itemize}
+
+\myslide{MENTAL HEALTH is a (FRAGILE) OBJECT}
+\begin{exe}
+\ex \eng{Her mental health is very fragile.}
+\ex \eng{We have to handle him with care since his wife's death.}
+\ex \eng{He broke under cross-examination.}
+\ex \eng{She is easily crushed.}
+\ex \eng{The experience shattered him.}
+\ex \eng{I'm going to pieces.}
+\ex \eng{His mind snapped.}
+\ex \eng{He cracked up.}
+\end{exe}
+
+\myslide{MIND is a MACHINE}
+\begin{exe}
+\ex \eng{We're still trying to grind out the solution to this equation.}
+\ex \eng{My mind just isn't operating today.}
+\ex \eng{Boy, the wheels are turning now!}
+\ex \eng{I'm a little rusty today.}
+\ex \eng{We've been working on this problem all day and now we're running out of  steam.}
+\ex \eng{He broke down.}
+\end{exe}
+
+% \myslide{LOVE is FORCE}
+% \begin{exe} 
+% \ex \eng{I could feel the electricity between us,
+% \ex \eng{There were sparks.
+% \ex \eng{I was magnetically drawn to her.
+% \ex \eng{They gravitate to each other.
+% \ex \eng{The atmosphere around them is always charged etc.
+% \end{exe}
+
+% \myslide{LOVE is HEALTH}
+% \begin{exe}
+% \ex \eng{They have a strong healthy relationship.
+% \ex \eng{Their love can't be revived.
+% \ex \eng{Their love is on the mend etc.
+% \end{exe}
+
+% \myslide{LOVE is MADNESS}
+% \begin{exe}
+% \ex \eng{I'm crazy about him.
+% \ex \eng{He drives me out of my mind.
+% \ex \eng{He raves on about her.
+% \ex \eng{I'm madly in love with her.
+% \ex \eng{She is wild about Anne etc.
+% \end{exe}
+ 
+% \myslide{LOVE is MAGIC}
+% \begin{exe} 
+% \ex \eng{She cast her spell over me.
+% \ex \eng{The magic is gone.
+% \ex \eng{I was spellbound.
+% \ex \eng{He had me in a trance.
+% \ex \eng{I was entranced by him.
+% \ex \eng{I'm charmed by here.
+% \ex \eng{He is bewitching
+% \end{exe}
+
+% \myslide{LOVE is WAR}
+% \begin{exe} 
+% \ex \eng{James is known for his many conquests.
+% \ex \eng{She fought for him, but but his mistress won out.
+% \ex \eng{She fled from Jeff's advances.
+% \ex \eng{He pursued her relentlessly.
+% \ex \eng{She won his hand in marriage.
+% \ex \eng{He is besieged by suitors.
+% \ex \eng{He has to fend them off. 
+% \end{exe}
+
+
+\myslide{LIFE is a JOURNEY}
+\begin{itemize}
+\item The person leading a life is a traveler
+\item Their purposes are destinations
+\item The means for achieving purposes are routes
+\item Difficulties in life are impediments to travel
+\item Counsellors are guides
+\item Progress is the distance traveled
+\item Things you gauge your progress by are landmarks
+\item Material resources and talents are provisions.
+\end{itemize}
+
+\myslide{ANGER}
+
+\begin{itemize}\addtolength{\itemsep}{-1ex}
+\item Emotions are often considered to be feelings alone, and
+as such they are viewed as being devoid of conceptual
+content.
+\item In fact emotions have a fairly complex conceptual
+structure which can be studied through metaphors.
+\item Lakoff and Johnson's cultural model of anger
+\\ Physiological effects of anger:
+  \begin{itemize}
+  \item Increased body heat
+  \item Increased internal pressure
+  \item Agitation
+  \item Interference with accurate perception
+  \item As anger increases, the physiological effect increases
+  \item There is a limit beyond which the physiological effects of anger impair normal functioning.
+\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+\item Body heat:
+  \begin{exe}
+    \ex \eng{Don't get hot under the collar.}
+    \ex \eng{Billy's a hothead.}
+    \ex \eng{They were having a heated argument.}
+    \ex \eng{She got all hot and bothered.}
+  \end{exe}
+  \item Internal pressure:
+  \begin{exe}
+    \ex \eng{When I found out, I almost burst a blood vessel.}
+    \ex \eng{He almost had a hemorrhage.}
+    \ex \eng{I exploded at them.}
+  \end{exe}
+\newpage
+\item Redness in the face and neck area:
+  \begin{exe}
+    \ex \eng{She was scarlet with rage.}
+    \ex \eng{He got red with anger.}
+    \ex \eng{He was flushed with anger.}
+  \end{exe}
+\item Agitation
+\begin{exe}
+  \ex \eng{She was shaking with anger.}
+  \ex \eng{I was hopping mad.}
+  \ex \eng{He was quivering with rage.}
+  \ex \eng{He's all worked up.}
+ \ex \eng{She's all wrought up.}
+\end{exe}
+\newpage
+\item Interference with accurate perception
+\begin{exe}
+  \ex \eng{She was blind with rage.}
+  \ex \eng{I was beginning to see red.}
+  \ex \eng{I was so mad I couldn't see straight.}
+\end{exe}
+\end{itemize}
+
+\myslide{ANGER is HEAT}
+
+\begin{itemize}
+\item ANGER is HEAT forms the basis of the most
+  general metaphor for anger
+\item There are two versions to this metaphor,
+  one where the heat is applied to fluid and
+  the other where the heat is applied to
+  solids.
+\item The fluid version is more elaborated
+\end{itemize}
+
+\begin{itemize}
+\item The body is a container for the emotions
+\begin{exe}
+  \ex \eng{He was filled with anger.}
+  \ex \eng{She couldn't contain her joy.}
+  \ex \eng{She was brimming with rage.}
+  \ex \eng{Try to get the anger out of your system.}
+\end{exe}
+\item
+The ANGER is HEAT metaphor when applied to fluids combines with the
+metaphor the body is a container for the emotions to yield the central
+metaphor of the system:
+\item ANGER is HEAT OF A FLUID in a container.
+\begin{exe}
+  \ex \eng{You make my blood boil.}
+  \ex \eng{Simmer down!}
+  \ex \eng{I had reached the boiling point.}
+  \ex \eng{Let him stew.}
+  \ex \eng{She was seething with rage.}
+\end{exe}
+
+\item Similarly \lex{pissed off} is used only to refer to anger --- ``hot liquid under
+pressure''
+\item Cool and calm corresponds to the lack of anger.
+\begin{exe}
+  \ex \eng{Keep cool.}
+  \ex \eng{Stay calm.}
+\end{exe}
+
+\item When The Intensity Of Anger Increases The Fluid Rises
+\begin{exe}
+  \ex \eng{His pent-up anger welled up inside him.}
+  \ex \eng{She could feel her gorge rising.}
+  \ex \eng{We got a rise out of him.}
+  \ex \eng{My anger kept building up inside me.}
+  \ex \eng{Pretty soon I was in a towering rage.}
+\end{exe}
+\newpage
+\item We also know that intense heat produces steam and creates pressure on the
+container. This yields the metaphorical entailments:
+\item Intense Anger Produces Pressure On The Container
+  \begin{exe}
+    \ex \eng{He was bursting with anger.}
+    \ex \eng{I could barely contain my rage.}
+    \ex \eng{I could barely keep it in any more.}
+    \ex \eng{He suppressed his anger.}
+    \ex \eng{He turned his anger inward.}
+    \ex \eng{He managed to keep his anger bottled up inside him.}
+    \ex \eng{He was blue in the face.}
+\end{exe}
+\newpage
+\item  When the pressure on the container becomes too high, the container explodes.
+\item When Anger Becomes Too Intense The Person Explodes
+  \begin{exe}
+    \ex \eng{When I told him, he just exploded.}
+  \ex \eng{She blew up at me.}
+  \ex \eng{We don't like your outbursts.}
+  \ex \eng{She blew a fuse.}
+  \ex \eng{He blew a gasket.}
+  \ex \eng{He erupted.}
+\end{exe}
+\newpage
+\item When A Person Explodes, Parts Of Them Go Up In The Air.
+  \begin{exe}
+  \ex \eng{I blew my stack.}
+  \ex \eng{I blew my top.}
+  \ex \eng{She flipped her lid.}
+  \ex \eng{He hit the ceiling.}
+  \ex \eng{I went through the roof.}
+\end{exe}
+
+\newpage
+
+\item The central metaphor of Anger as heated fluid in a container indicate
+that the anger scale is not open-ended, it has a limit. Just as hot
+fluid in a closed container can only take so much heat before it
+explodes, so we conceptualise the anger scale as having a limit
+point. We can only bear so much anger before we explode.
+\item The conceptual metaphors are motivated by our own physiology.
+\item There may be cross-cultural differences
+\item And there are many possible metaphors
+
+\begin{itemize}
+\item ANGER is FIRE
+\item ANGER is INSANITY
+\item ANGER is an OPPONENT
+\item ANGER is a DANGEROUS ANIMAL
+\end{itemize}
+
+\end{itemize}
+
+
+\myslide{Anger in Lamaholot}
+
+ANGER IS HOT SPICES
+\begin{exe}
+  \ex \gll one=k helo n-o'oN sili lia' \\
+heart=1SG.POSS like 3SG.exist chilli ginger \\
+\trans ``I am furious (lit. there exist chilli and ginger in my heart).''
+\end{exe}
+
+Adonara-Lamaholot is a small language spoken on Eastern part of Flores
+Island, Solor Island, and Lembata Island of Eastern Indonesia.   From
+the PhD thesis of Elvis Albertus bin Toni (NTU 2018).  
+
+\myslide{Influence of Metaphors}
+\begin{itemize}
+% \item Polysemy FIXME
+\item Verbs of perception
+\\  \begin{tabular}{lcl}
+    seeing & \into & understanding \\
+    hearing & \into & obeying \\
+    tasting & \into & choosing \\
+    feeling & \into & emoting \\
+    smelling & \into & disliking \\
+  \end{tabular}
+\item[?] Can you give an example in English or another language?\task
+\item Literal meanings extend into metaphorical meanings
+\item These become conventionalized
+\item And then we have polysemy
+\end{itemize}
+
+\myslide{Metonymy as Metaphor}  %% FIXME add examples
+
+\begin{itemize}\addtolength{\itemsep}{-0.5em}
+\item PART for WHOLE (synecdoche)
+  \begin{exe}
+    \ex \eng{Can you lend a hand?}
+  \end{exe}
+\item WHOLE for PART (synecdoche)
+  \begin{exe}
+    \ex \eng{NTU won the soccer.}
+  \end{exe}
+\item CONTAINER for CONTENT
+  \begin{exe}
+    \ex \eng{The lunch menu had five dishes.}
+  \end{exe}
+\item MATERIAL for OBJECT
+  \begin{exe}
+    \ex \eng{I won gold.}
+   \end{exe}
+\item PRODUCER for PRODUCT
+  \begin{exe}
+    \ex \eng{I'll get an IBM}
+  \end{exe}
+\item PLACE for INSTITUTION (toponym)
+  \begin{exe}
+    \ex \eng{Downing Street has made no comment}
+  \end{exe}
+ \item INSTITUTION for PEOPLE RESPONSIBLE
+   \begin{exe}
+     \ex \eng{Fairprice raised its prices.}
+   \end{exe}
+\item PLACE for EVENT
+  \begin{exe}
+    \ex \eng{Hiroshima changed our view of war.}
+  \end{exe}
+ \item CONTROLLER for CONTROLLED
+   \begin{exe}
+     \ex \eng{ A truck rear ended me.}
+   \end{exe}
+ \item OBJECT for USER
+   \begin{exe}
+     \ex \eng{They are a hired gun.}
+   \end{exe}
+% \item CAUSE for EFFECT
+%   \begin{exe}
+%     \ex \eng{His native tongue is Hausa.}
+%   \end{exe}
+\end{itemize}
+
+\myslide{Everything's a metaphor}
+\MyLogo{\citep{Feldman:2006}}
+\begin{itemize}
+\item Embodied Construction Grammar
+  \begin{itemize}
+  \item  \txx{embodied} ECG structures parameterize active simulations based on motor and perceptual schemas
+  \item \txx{construction-based} the basic linguistic unit is a construction, or form-meaning pairing
+  \item \txx{constraint-based} constraints of all kinds (phonological, syntactic, semantic, etc.) are expressed using a unification-based grammar;
+  \item \txx{formal(ized)} both formally defined and computationally implemented. 
+  \end{itemize}
+\item We understand \lex{grasp} because we can physically control our
+  bodies to grasp things.
+\item We grasp \lex{understand} because it is like \lex{grasp} but with ideas not things.
+\end{itemize}
+
+\myslide{Metaphor and Politics}
+
+\begin{itemize}
+\item \citet{Lakoff:1995} states that different political groups base their
+  understanding of the world on different metaphors
+  \begin{itemize}
+  \item \txx{nurturant parent} (liberal) family is one that revolves
+    around every family member caring for and being cared for by every
+    other family member, with open communication between all parties,
+    and with each family member pursuing their own vision of
+    happiness.
+  \item \txx{strict father} (conservative) family revolves around the idea that parents teach their children how to be self-reliant and self-disciplined through "tough love". 
+  \end{itemize}
+\end{itemize}
+
+\myslide{Nurturant Parent}
+
+\begin{itemize}
+\item     Morality: The basis of morality is in understanding, respecting, and helping other people, and in seeking the happiness of one's self and of others. The primary vices are selfishness and anti-social behavior.
+\item   Child development: Children develop morality primarily through interacting with and observing good people, especially good parents. Punishment is necessary in some cases, but also has the potential to backfire, causing children to adopt more violent or more anti-social ways. Though children should, in general, obey their parents, they will develop best if allowed to question their parents' decisions. Moral development is a life-long process, and almost no one is so perfect as not to need improvement.
+\item     Justice: The world is not without justice, but it is far from the ideal of justice. Many people, for example, do not seem properly rewarded for their hard work and dedication. We must work hard to improve everyone's condition.
+\end{itemize}
+
+\myslide{Strict Father}
+
+\begin{itemize}
+\item     Morality: Evil is all around us, constantly tempting us. Thus, the basis of morality is strong moral character, which requires self-reliance and self-discipline. The primary vices are those that dissolve self-discipline, such as laziness, gluttony, and indulgent sexuality.
+\item     Child development: Children develop self-discipline, self-reliance, and other virtues primarily through rewards and punishment, a system of "tough love". Since parents know the difference between right and wrong and children still do not, obedience to the parents is very important. Moral development basically lasts only as long as childhood; it's important to get it right the first time, because there is no "second chance".
+\item 
+    Justice: The world may be a difficult place to live, but it is basically just; people usually get what they deserve. The difficulties in one's life serve as a test to sort the deserving from the undeserving.
+
+\end{itemize}
+
+\myslide{Metaphors in Sherlock Holmes}
+\begin{exe}
+  
+\ex \eng{"Oh, sir, do you not think that you could help me, too, and  and at least \ul{throw a little light} through \ul{the dense darkness which surrounds me}"}
+ \ex \eng{"You may advise me how to \ul{walk amid the dangers which encompass me.}"}
+\ex \eng{" 'Tell me, Helen,' said she, 'have you ever heard anyone whistle \ul{in the dead of the night}?"}
+\ex \eng{"my sister was quite alone \ul{when she met her end}"}
+\ex \eng{"My companion sat in the front of the trap, his arms folded, his hat pulled down over his eyes, and his chin sunk upon his breast, \ul{buried in the deepest thought}"}
+ \ex \eng{"As we passed out he exchanged a few words with the landlord, explaining that we were going on a late visit to an acquaintance, and that it was possible that \ul{we might spend the night there}."}
+\ex \eng{"The presence of the gypsies, and the use of the word `band', which was used by the poor girl, no doubt to explain the appearance which she had caught a hurried glimpse of by the light of her match, were sufficient to \ul{put me upon an entirely wrong scent}."}
+\end{exe}
+
+
+\myslide{Summary}
+
+\begin{itemize}
+\item We can combine words in non-compositional ways
+\item But still there are shared conventions
+\item Some things we have to learn (\txx{idioms}), some things we work out
+  on the fly (\txx{metaphors})
+\item The distinction is somewhat fuzzy
+
+\end{itemize}
+
+\small
+\bibliographystyle{aclnat}
+\bibliography{abb,mtg,nlp,ling}
+
+
+\end{document}
+
+%%% Local Variables: 
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-PDF-mode: t
+%%% TeX-engine: xetex
+%%% End: 
+
