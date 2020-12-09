@@ -1,0 +1,1560 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>HG8011 Project 4</title>
+
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <!-- FANCYBOX -->
+    <!-- Needs JQuery -->
+    <!-- Add FancyBox main JS and CSS files -->
+    <script type="text/javascript" 
+     src="fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" 
+     href="fancybox/source/jquery.fancybox.css?v=2.1.5" 
+     media="screen" />
+    <!-- Make FancyBox Ready on page load (adds Classes) -->
+    <script type="text/javascript" 
+     src="fancybox-ready.js"></script>
+
+    <!-- KICKSTART -->
+    <script src="HTML-KickStart-master/js/kickstart.js"></script> 
+    <link rel="stylesheet" href="HTML-KickStart-master/css/kickstart.css" media="all" />
+
+    <style>
+      hr{
+        padding: 0px;
+        margin: 10px;    
+      }
+    </style>
+
+    <style type='text/css'>
+      h1 {
+      text-align: center
+      }
+      h6 {
+      text-decoration: underline;
+      }
+      #proj1_sents {display: none}
+      #toggle_sents {font-weight: bold; font-size: 1.2em}
+    </style>
+    
+    <script>
+    
+    $(document).ready(function(){
+    
+    	$("#toggle_sents").click(function(){
+    		//alert($(this).attr("toggle_act"));
+    		if($(this).attr("toggle_act") == "show"){
+    			$(this).attr("toggle_act", "hide")
+    			$("#proj1_sents").show(500);
+    			$(this).text("▼ Hide Project 1 Sentences");
+    		} else {
+    			$(this).attr("toggle_act", "show")
+    			$("#proj1_sents").hide(350);
+    			$(this).text("► Show Project 1 Sentences");
+    		}
+    		return false;
+    	});
+    
+    });
+    
+    </script>
+    
+  </head>
+  <body>
+    <h3>HG8011: Project 4 (Individual: 15%)</h3>
+
+<p>The fourth and final project for <a href="index.html">HG8011: Detecting Meaning with Sherlock Holmes</a>
+
+<p>This project is divided into two parts: Idioms/MWEs and simplification.
+
+<h5>Identify and annotate idioms (and/or) metaphors (10%)</h5>
+<ul>
+  <li>The main goal for this task is to help you think about
+  compositionality and how words build up meaning.
+  <li>The secondary goal is to expose you to one more Sherlock Holmes
+  short story --- we hope your new knowledge will make them even more
+  enjoyable.
+  <li>Find your <a href='#stories'>story</a>
+  <li>Read the story.
+  <li>Find 5 examples of multiword expressions where the meaning is
+    non-compositional (i.e. you can't get it directly from the
+    meanings of the individual words)
+    <br>e.g. <i>knock up</i> "awaken someone"
+    <br><i>buried in the deepest thought</i> "thinking very deeply"
+    <br> NOT <i>guard dog</i> "a dog the guards something"
+  <li>Enter the following information into the online form (there is a
+  link for it <a href='#stories'>below</a>, you will have to click it
+  once for each MWE, that is five times):
+    <ul>
+      <li>name
+      <li>id (starts with s)
+      <li>matriculation number
+      <li>story
+      <li>sentence
+      <li>idiom
+      <li>definition/paraphrase
+      <li>comment
+    </ul>
+  <li>e.g.
+     <ul>
+       <li>Herlock Sholmes
+      <li>s000
+      <li>U0123456789
+      <li>DANC
+      <li>"My companion sat in the front of the trap, his arms folded, his hat pulled down over his eyes, and his chin sunk upon his breast, buried in the deepest thought"
+      <li>buried in the deepest thought
+      <li>thinking very deeply
+      <li>he is so surrounded by his thoughts that it is as though he
+      is buried in them --- slightly mixed metaphor: the thoughts are
+      deep, but he is under them.
+    </ul>
+ <li>e.g.
+     <ul>
+       <li>Herlock Sholmes
+      <li>s000
+      <li>U0123456789
+      <li>SPEC
+      <li>'Very sorry to knock you up, Watson,' said he, 'but it's the common lot this morning.
+      <li>knock up
+      <li>awaken
+      <li>not used much in modern English
+    </ul>
+ <li>You will be assessed on
+    <ul>
+      <li>Completion: did you find five non-compositional multiword expressions
+      <li>Understanding: does your definition/paraphrase adequately express the meaning
+      <li>Insight: did you say anything insightful in the comments.
+    </ul>
+ <li> Estimated time 1-2 hours.
+ <li> Comment words if you have anything interesting to say.
+ <li> Due date: 2016-04-15 23:59 (Fri)
+</ul>
+
+<h5>Simplification (5%)</h5>  
+
+<ul>
+  <li> Rewrite the <a href='#sentences'>sentences assigned to you in
+  projects 1,2 and 3</a> using a restricted vocabulary (defined here
+  to be the most 1,000 common words of English and their inflectional
+  forms).
+  <li> The goal of this task is to test how well you can represent the
+  meaning with a limited vocabulary.  So you should not simplify by
+  removing redundant words, just by using a smaller set of words.  
+  <li> It is ok to leave capitalized words (<i>April, Sherlock
+  Holmes</i>, ...)  
+  <li> It is ok to use either current modern English, or Doyle's
+  Victorian English (long sentences, some inversion).  You can split
+  one sentence into many shorter sentences if it makes things flow
+  better.
+  <li> If a sentence (or part of a sentence) is already written only
+  using the restricted vocabulary, you can leave it as is.
+  <li> Everything else must pass the 
+    <a href='http://xkcd.com/simplewriter/'>simple writer</a>
+    <br>  E.g.
+    <ul>
+      <li> <i>It is a capital mistake to theorize before you have all the evidence. It biases the judgment.</i>
+      <li>→<i>It is a very bad problem to guess the answer before you have all the facts. It makes your guess not be right.</i>
+      <li>or → <i>It is very bad to guess the answer before you have all the facts. You will guess wrong. </i>
+    </ul>
+<br><a href='http://blog.xkcd.com/2015/09/22/a-thing-explainer-word-checker/'>Simple Writer Explained</a>
+  <li> Try not to use multiword expressions like <i>knock up</i>.
+  <li> Input the text (all the sentences in one go) using the <a href='http://goo.gl/forms/2p2PIqDdkY'>online form</a>.
+  <li> If you decide you want to change things, just input it again, and I will only assess the most recent version.
+  <li>You will be assessed on
+    <ul>
+      <li>Completion: does your paraphrase cover all the sentences
+      <li>Fidelity: does it mean the same thing
+      <li>Readability: how well does it flow (probably not too well,
+      it is hard to only use simplified text)
+    </ul>
+ <li> Estimated time 1-2 hours.
+ <li> Due date: 2016-04-15 23:59 (Fri)
+</ul>
+
+<h3><a name="sentences">Project 4: Your Sentences (same as 1-3)</a></h3>
+
+<ul>
+  <li>Look for your name. You will see your username (s#) and the sentences to work on beside it. <code>NAME (s#): First Sentence-Last Sentence</code></li>
+  <li>You have to log on: Click <em>Sentences here</em> > Login > <b>Return this page again</b> > Click <em>Sentences here</em> <b>again</b></li>
+
+</ul>
+
+<!-- <p><a href="#" id="toggle_sents" toggle_act="show">► Show Project 1 Sentences</a> <b>(Ignore these for Project 2!)</b></p>  -->
+
+<hr />
+ <!-- id="proj1_sents" -->
+<ul>
+<li>ABIGAIL LAY YAN JUN (s1): 55657-55667 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55657'>Sentences here</a>
+<li>AMANDA CHIA WAN YING (s2): 55668-55674 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55668'>Sentences here</a>
+<li>AMANDA CHLOE LAU (s3): 55675-55681 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55675'>Sentences here</a>
+<li>ANG LI TING (s4): 55682-55688 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55682'>Sentences here</a>
+<li>ANG SHI XUAN (s5): 55689-55699 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55689'>Sentences here</a>
+<li>ANG WEI YANG (s6): 55700-55712 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55700'>Sentences here</a>
+<li>AUO XIN YUAN, CHELSEA (s7): 55713-55724 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55713'>Sentences here</a>
+<li>AW JINYUE JUSTUS (s8): 55725-55736 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55725'>Sentences here</a>
+<li>BAXTER CHAN ZU HE (s9): 55737-55750 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55737'>Sentences here</a>
+<li>BENJAMIN HENSON YEO RUI XIANG (s10): 55751-55759 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55751'>Sentences here</a>
+<li>BENJAMIN KITSON BOK JIA WEI (s11): 55760-55769 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55760'>Sentences here</a>
+<li>BETHANIE PAMELA XAVIER (s12): 55770-55777 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55770'>Sentences here</a>
+<li>BHAVIKA SONYA D/O BHARAT KAPOOR (s13): 55778-55783 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55778'>Sentences here</a>
+<li>CHAN MUN CHEW KENNETH (s14): 55784-55790 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55784'>Sentences here</a>
+<li>CHARISSE ONG MIN QI (s15): 55791-55800 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55791'>Sentences here</a>
+<li>CHEN MEIHUI (s16): 55801-55811 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55801'>Sentences here</a>
+<li>CHERYL TAN LI-SHIAN (s17): 55812-55825 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55812'>Sentences here</a>
+<li>CHIA KAIYIN (s18): 55826-55842 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55826'>Sentences here</a>
+<li>CHIN WEI LU (s19): 55843-55853 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55843'>Sentences here</a>
+<li>CHOO SHUN YUAN KUANG (s20): 55854-55860 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55854'>Sentences here</a>
+<li>CHOW KIN MING (s21): 55861-55870 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55861'>Sentences here</a>
+<li>CHRIS-ANABEL KHAW JING YI (s22): 55871-55883 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55871'>Sentences here</a>
+<li>CHRISTIE YEO QING WEN (s23): 55884-55901 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55884'>Sentences here</a>
+<li>CHRISTY ANGKA (s24): 55902-55911 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55902'>Sentences here</a>
+<li>CHUA CHIN ING, IVY (s25): 55912-55927 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55912'>Sentences here</a>
+<li>CHUA MEI HUI VALERIE (s26): 55928-55948 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55928'>Sentences here</a>
+<li>DARSHINEE RAMAN (s27): 55949-55959 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55949'>Sentences here</a>
+<li>DE ALMEIDA DEVINDA IROSHAN (s28): 55960-55971 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55960'>Sentences here</a>
+<li>DESKER REESA CORRIE (s29): 55972-55978 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55972'>Sentences here</a>
+<li>DHANEESHA RATANKUMAR CHUGANI (s30): 55979-55995 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55979'>Sentences here</a>
+<li>ELISSA CHAN YI LING (s31): 55996-56004 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=55996'>Sentences here</a>
+<li>EMILYN BOH LI HUAN (s32): 56005-56008 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=56005'>Sentences here</a>
+<li>EMMA LI-CHEN EVERITT (s33): 56009-56025 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=56009'>Sentences here</a>
+<li>EUGENE MOK CHIA CHUN (s34): 56026-56032 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=56026'>Sentences here</a>
+<li>FAN FAN (s35): 56033-56041 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=56033'>Sentences here</a>
+<li>FARM HUI JIA (s36): 56042-56050 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=56042'>Sentences here</a>
+<li>FAYYADHAH BTE ZAINALABIDEN (s37): 56051-56060 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=56051'>Sentences here</a>
+<li>FOO JIA LIN (s38): 56061-56072 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=56061'>Sentences here</a>
+<li>GENEVIE GAN JIA YEE (s39): 56073-56082 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=56073'>Sentences here</a>
+<li>GILLIAN TAN LISI (s40): 56083-56092 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=56083'>Sentences here</a>
+<li>GLADYS LEE JIA YAN (s41): 56093-56103 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=56093'>Sentences here</a>
+<li>GOH JIA LING (s42): 56104-56113 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=56104'>Sentences here</a>
+<li>GOH KENG SIANG (s43): 56114-56125 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=56114'>Sentences here</a>
+<li>GOH LI XUAN SHERRIE (s44): 56126-56134 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=56126'>Sentences here</a>
+<li>GOH MEI HUI (s45): 56135-56151 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=56135'>Sentences here</a>
+<li>GOH MIN YI VANESSA (s46): 56152-56161 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=56152'>Sentences here</a>
+<li>GOH XU YAO, JONATHAN (s47): 56162-56167 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=56162'>Sentences here</a>
+<li>GOH YING LI CHERYL JOY (s48): 56168-56181 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=56168'>Sentences here</a>
+<li>GOH ZHEN XIANG (s49): 56182-56195 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=56182'>Sentences here</a>
+<li>GU XINGZHI (s50): 56196-56209 [engA] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=56196'>Sentences here</a>
+<li>GUO WEI (s51): 55657-55667 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55657'>Sentences here</a>
+<li>HAW MAN YUN TIFFANY (s52): 55668-55674 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55668'>Sentences here</a>
+<li>HAZEL LIU JIANJIA (s53): 55675-55681 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55675'>Sentences here</a>
+<li>HEAH YONG RUAY (s54): 55682-55688 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55682'>Sentences here</a>
+<li>HERDIYENTI HOWARD (s55): 55689-55699 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55689'>Sentences here</a>
+<li>HO PING GHEE (s56): 55700-55712 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55700'>Sentences here</a>
+<li>HO WANTING BERNICE (s57): 55713-55724 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55713'>Sentences here</a>
+<li>HO YI EN (s58): 55725-55736 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55725'>Sentences here</a>
+<li>HOH LI YUEN EMILY (s59): 55737-55750 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55737'>Sentences here</a>
+<li>ISAAC CHING XIANG GUO (s60): 55751-55759 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55751'>Sentences here</a>
+<li>ISABELLE TENG HUI FANG (s61): 55760-55769 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55760'>Sentences here</a>
+<li>IVAN NG KERT FON (s62): 55770-55777 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55770'>Sentences here</a>
+<li>JACKIE ONG (s63): 55778-55783 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55778'>Sentences here</a>
+<li>JASMINE BTE SADIMIN (s64): 55784-55790 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55784'>Sentences here</a>
+<li>JASON HENG TEIK OOI (s65): 55791-55800 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55791'>Sentences here</a>
+<li>JASPER CHUA DONG QIU (s66): 55801-55811 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55801'>Sentences here</a>
+<li>JEREMY CHUA KUN DA (s67): 55812-55825 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55812'>Sentences here</a>
+<li>JOAN LIM KAI LI (s68): 55826-55842 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55826'>Sentences here</a>
+<li>JOHN ANG WEN HAN (s69): 55843-55853 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55843'>Sentences here</a>
+<li>KANG YONG SHENG FABIAN (s70): 55854-55860 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55854'>Sentences here</a>
+<li>KENNETH TAN JIA JUN (s71): 55861-55870 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55861'>Sentences here</a>
+<li>KESSA CHOO HUI YI (s72): 55871-55883 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55871'>Sentences here</a>
+<li>KEZIA TAN KAI XIN (s73): 55884-55901 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55884'>Sentences here</a>
+<li>KHAIRATUL AMIRAH BINTE KAHAR (s74): 55902-55911 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55902'>Sentences here</a>
+<li>KHATIJAH BEGUM D/O SADAKAT ALI (s75): 55912-55927 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55912'>Sentences here</a>
+<li>KHENG NARELLE SONGYI (s76): 55928-55948 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55928'>Sentences here</a>
+<li>KHIU WEN JIE (s77): 55949-55959 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55949'>Sentences here</a>
+<li>KISHEN SIVAYAM S/O YOGA RAJA (s78): 55960-55971 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55960'>Sentences here</a>
+<li>KNG YOONG THENG (s79): 55972-55978 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55972'>Sentences here</a>
+<li>KO MING WEI (s80): 55979-55995 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55979'>Sentences here</a>
+<li>KOH PEI LING SERENE (s81): 55996-56004 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=55996'>Sentences here</a>
+<li>KOH TIAN LUCK (s82): 56005-56008 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=56005'>Sentences here</a>
+<li>KYLIE KAY (s83): 56009-56025 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=56009'>Sentences here</a>
+<li>LAU AIK MENG (s84): 56026-56032 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=56026'>Sentences here</a>
+<li>LAU XIN YI (s85): 56033-56041 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=56033'>Sentences here</a>
+<li>LE DUY KHANH (s86): 56042-56050 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=56042'>Sentences here</a>
+<li>LEA WONG LAY YI (s87): 56051-56060 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=56051'>Sentences here</a>
+<li>LEE JED (s88): 56061-56072 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=56061'>Sentences here</a>
+<li>LEE JIA FU JOLYN (s89): 56073-56082 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=56073'>Sentences here</a>
+<li>LEE JIN (s90): 56083-56092 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=56083'>Sentences here</a>
+<li>LEE SHU AN SALANNE (s91): 56093-56103 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=56093'>Sentences here</a>
+<li>LEE SHU WEN (s92): 56104-56113 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=56104'>Sentences here</a>
+<li>LEE TAT WEE (s93): 56114-56125 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=56114'>Sentences here</a>
+<li>LEE WEI JIE (s94): 56126-56134 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=56126'>Sentences here</a>
+<li>LEE YI JIA (s95): 56135-56151 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=56135'>Sentences here</a>
+<li>LEE YING, AIKO (s96): 56152-56161 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=56152'>Sentences here</a>
+<li>LEE YUN HUA (s97): 56162-56167 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=56162'>Sentences here</a>
+<li>LEE ZHI RONG LYSANDER (s98): 56168-56181 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=56168'>Sentences here</a>
+<li>LEONG WEI SHAN (s99): 56182-56195 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=56182'>Sentences here</a>
+<li>LEONG WENG ONN ROYSTON (s100): 56196-56209 [engB] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=56196'>Sentences here</a>
+<li>LEONG WING TONG (s101): 55657-55667 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55657'>Sentences here</a>
+<li>LETITIA KOH RUI XIN (s102): 55668-55674 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55668'>Sentences here</a>
+<li>LIANG SU EN, TESSA (s103): 55675-55681 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55675'>Sentences here</a>
+<li>LIANG YINGYI ENID (s104): 55682-55688 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55682'>Sentences here</a>
+<li>LIM DEBORAH (s105): 55689-55699 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55689'>Sentences here</a>
+<li>LIM JASMINE (s106): 55700-55712 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55700'>Sentences here</a>
+<li>LIM WEN XUAN VENUS (s107): 55713-55724 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55713'>Sentences here</a>
+<li>LIM WONG CHUN LEONARD (s108): 55725-55736 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55725'>Sentences here</a>
+<li>LIM XIN YI CHERYL (s109): 55737-55750 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55737'>Sentences here</a>
+<li>LIM YING LING ELIZABETH (s110): 55751-55759 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55751'>Sentences here</a>
+<li>LIN YUJUN, AMANDA (s111): 55760-55769 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55760'>Sentences here</a>
+<li>LINETTE LEONG JIARU (s112): 55770-55777 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55770'>Sentences here</a>
+<li>LING WEN HUAN (s113): 55778-55783 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55778'>Sentences here</a>
+<li>LIU SHIJIE (s114): 55784-55790 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55784'>Sentences here</a>
+<li>LIU XUAN JIM (s115): 55791-55800 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55791'>Sentences here</a>
+<li>LIYANA NASHITA BTE KAMAL FASHAR (s116): 55801-55811 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55801'>Sentences here</a>
+<li>LOI EN QI JANINE (s117): 55812-55825 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55812'>Sentences here</a>
+<li>LOW JIA HUI (s118): 55826-55842 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55826'>Sentences here</a>
+<li>LOW SIOK HUI, ESTHER (s119): 55843-55853 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55843'>Sentences here</a>
+<li>MA XINNING (s120): 55854-55860 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55854'>Sentences here</a>
+<li>MAI HOANG LAM (s121): 55861-55870 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55861'>Sentences here</a>
+<li>MARISSA TITUS (s122): 55871-55883 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55871'>Sentences here</a>
+<li>MARJORIE NG SHU FEN (s123): 55884-55901 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55884'>Sentences here</a>
+<li>MAVERICK TEO WEI JIE (s124): 55902-55911 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55902'>Sentences here</a>
+<li>MOHAMED FARSHAD BIN MOHAMED ISMAIL (s125): 55912-55927 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55912'>Sentences here</a>
+<li>MUHAMMAD ASYRAF BIN SAMAD (s126): 55928-55948 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55928'>Sentences here</a>
+<li>MUHAMMAD IRWAN SHAH BIN JUHARI (s127): 55949-55959 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55949'>Sentences here</a>
+<li>MUHAMMAD SALIHAN BIN ZAOL-KEFLI (s128): 55960-55971 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55960'>Sentences here</a>
+<li>MUHAMMAD WALIYUDDIN BIN AHMAD KAMAL (s129): 55972-55978 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55972'>Sentences here</a>
+<li>NAW PAW PAW (s130): 55979-55995 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55979'>Sentences here</a>
+<li>NEO HAK YONG (s131): 55996-56004 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=55996'>Sentences here</a>
+<li>NG CHI TING (s132): 56005-56008 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=56005'>Sentences here</a>
+<li>NG KAI LING CONSTANCE (s133): 56009-56025 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=56009'>Sentences here</a>
+<li>NG SOK WOON, DESIREE (s134): 56026-56032 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=56026'>Sentences here</a>
+<li>NGAI CHIN PANG (s135): 56033-56041 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=56033'>Sentences here</a>
+<li>NGIAM ZHENG HUI (s136): 56042-56050 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=56042'>Sentences here</a>
+<li>NINA MELANIE KONG YEN YEN (s137): 56051-56060 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=56051'>Sentences here</a>
+<li>NOOR ZAMIR BIN MOHAMED YUNOS (s138): 56061-56072 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=56061'>Sentences here</a>
+<li>NORAINE BINTE KUSWADI (s139): 56073-56082 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=56073'>Sentences here</a>
+<li>NURHAKIMAH BINTE RAFFEEI (s140): 56083-56092 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=56083'>Sentences here</a>
+<li>OBBANA N RAJAH (s141): 56093-56103 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=56093'>Sentences here</a>
+<li>ONG KEYUAN (s142): 56104-56113 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=56104'>Sentences here</a>
+<li>ONG WEN JING (s143): 56114-56125 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=56114'>Sentences here</a>
+<li>ONG YONGXIANG (s144): 56126-56134 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=56126'>Sentences here</a>
+<li>PAVNEET KAUR DHILLON (s145): 56135-56151 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=56135'>Sentences here</a>
+<li>PEE HAI ROU (s146): 56152-56161 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=56152'>Sentences here</a>
+<li>PHAM DUY KHANH (s147): 56162-56167 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=56162'>Sentences here</a>
+<li>PRIYAA NEDUNZELIYAN (s148): 56168-56181 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=56168'>Sentences here</a>
+<li>PUAH ZHE MIN (s149): 56182-56195 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=56182'>Sentences here</a>
+<li>QUAH ZHENG WEI (s150): 56196-56209 [engC] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=56196'>Sentences here</a>
+<li>R SREE KEERTHANA CHOWDARY (s151): 55657-55667 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55657'>Sentences here</a>
+<li>RACHEL ANDREA CHEA YUEN FONG (s152): 55668-55674 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55668'>Sentences here</a>
+<li>SABRINA ABDULLAH@ASHLEY BOEY CHING WERN (s153): 55675-55681 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55675'>Sentences here</a>
+<li>SARAH SOON YU MEI (s154): 55682-55688 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55682'>Sentences here</a>
+<li>SEAN POON YEW LOONG (s155): 55689-55699 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55689'>Sentences here</a>
+<li>SHANKER S/O JAVAHAR (s156): 55700-55712 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55700'>Sentences here</a>
+<li>SIAN CHAN YUI HIN (s157): 55713-55724 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55713'>Sentences here</a>
+<li>SIM WEI CHUN DEWEY (s158): 55725-55736 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55725'>Sentences here</a>
+<li>SITI MAISARAH BTE MD KAMAL (s159): 55737-55750 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55737'>Sentences here</a>
+<li>SNG LI TING STEPHANIE (s160): 55751-55759 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55751'>Sentences here</a>
+<li>SOH JIA HUI (s161): 55760-55769 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55760'>Sentences here</a>
+<li>SOH MIN MIN (s162): 55770-55777 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55770'>Sentences here</a>
+<li>SONG RUI HAO MELVIN (s163): 55778-55783 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55778'>Sentences here</a>
+<li>SONG WAN LIN (s164): 55784-55790 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55784'>Sentences here</a>
+<li>SOO JALYN (s165): 55791-55800 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55791'>Sentences here</a>
+<li>STEFFANIE JOY T. MOSQUERA (s166): 55801-55811 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55801'>Sentences here</a>
+<li>SU LUPING (s167): 55812-55825 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55812'>Sentences here</a>
+<li>SUHAILAH SULAIMAN (s168): 55826-55842 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55826'>Sentences here</a>
+<li>SUI HUI CHING (s169): 55843-55853 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55843'>Sentences here</a>
+<li>SYED MUHAMMAD FARIS B S A R (s170): 55854-55860 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55854'>Sentences here</a>
+<li>SYUHAIDAH BINTE MOHD NOOR (s171): 55861-55870 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55861'>Sentences here</a>
+<li>TAN HUI LING, ISABEL (s172): 55871-55883 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55871'>Sentences here</a>
+<li>TAN JIA QI Chinese yr 1 (s173): 55884-55901 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55884'>Sentences here</a>
+<li>TAN JIA QI Chinese yr 3 (s174): 55902-55911 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55902'>Sentences here</a>
+<li>TAN JIE LIN (s175): 55912-55927 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55912'>Sentences here</a>
+<li>TAN JUN DAO JOSEPH (s176): 55928-55948 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55928'>Sentences here</a>
+<li>TAN KAH BING (s177): 55949-55959 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55949'>Sentences here</a>
+<li>TAN KAR GIN (s178): 55960-55971 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55960'>Sentences here</a>
+<li>TAN KIAN SIONG (s179): 55972-55978 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55972'>Sentences here</a>
+<li>TAN LI HOEY (s180): 55979-55995 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55979'>Sentences here</a>
+<li>TAN QIA ZONG, DONOVAN (s181): 55996-56004 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=55996'>Sentences here</a>
+<li>TAN SI TING IRIS (s182): 56005-56008 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=56005'>Sentences here</a>
+<li>TAN SIEW HUA (s183): 56009-56025 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=56009'>Sentences here</a>
+<li>TAN TECK MIN ABIGAIL (s184): 56026-56032 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=56026'>Sentences here</a>
+<li>TAN WEI JIE, KENNETH (s185): 56033-56041 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=56033'>Sentences here</a>
+<li>TAN WEN DE LESTER (s186): 56042-56050 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=56042'>Sentences here</a>
+<li>TAN YANG ER (s187): 56051-56060 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=56051'>Sentences here</a>
+<li>TAY KOONG JYE (s188): 56061-56072 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=56061'>Sentences here</a>
+<li>TAY SHU MING (s189): 56073-56082 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=56073'>Sentences here</a>
+<li>TEE JUN HAO SAMUEL (s190): 56083-56092 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=56083'>Sentences here</a>
+<li>TEE KAI REN (s191): 56093-56103 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=56093'>Sentences here</a>
+<li>TENG KAH SENG (s192): 56104-56113 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=56104'>Sentences here</a>
+<li>TEO KAI SHIN (s193): 56114-56125 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=56114'>Sentences here</a>
+<li>TEO TING WEI (s194): 56126-56134 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=56126'>Sentences here</a>
+<li>TEO YI SI (s195): 56135-56151 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=56135'>Sentences here</a>
+<li>TEOH XUE MING (s196): 56152-56161 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=56152'>Sentences here</a>
+<li>TIARA BINTE M HAMARIAN (s197): 56162-56167 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=56162'>Sentences here</a>
+<li>TNG KAO WEI DANNY (s198): 56168-56181 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=56168'>Sentences here</a>
+<li>TOH YI HUI (s199): 56182-56195 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=56182'>Sentences here</a>
+<li>TONG LIVIA (s200): 56196-56209 [engD] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=56196'>Sentences here</a>
+<li>VALARMATHI D/O MAHENDRAN (s201): 55657-55667 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55657'>Sentences here</a>
+<li>VALERIE ONG (s202): 55668-55674 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55668'>Sentences here</a>
+<li>VANESSA NG QIU RUI (s203): 55675-55681 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55675'>Sentences here</a>
+<li>VANESSA TAN YU QING (s204): 55682-55688 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55682'>Sentences here</a>
+<li>VISHALINI D/O K VISVANATHAN (s205): 55689-55699 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55689'>Sentences here</a>
+<li>WAN KHALISAH BINTI WAN KAMARUDDIN (s206): 55700-55712 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55700'>Sentences here</a>
+<li>WANG JING WEN (s207): 55713-55724 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55713'>Sentences here</a>
+<li>WEI QI ZI KEZIAH (s208): 55725-55736 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55725'>Sentences here</a>
+<li>WENG JING YING (s209): 55737-55750 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55737'>Sentences here</a>
+<li>WONG CHONG HAO (s210): 55751-55759 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55751'>Sentences here</a>
+<li>WU ZI'AN (s211): 55760-55769 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55760'>Sentences here</a>
+<li>YANG WU XI (s212): 55770-55777 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55770'>Sentences here</a>
+<li>YAP SIOK HWEE, VICTORIA (s213): 55778-55783 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55778'>Sentences here</a>
+<li>YEE JING WEI (s214): 55784-55790 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55784'>Sentences here</a>
+<li>YEO LEE MING JULIA (s215): 55791-55800 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55791'>Sentences here</a>
+<li>YEO XIN YING VANESSA (s216): 55801-55811 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55801'>Sentences here</a>
+<li>YEONG CHI HENG (s217): 55812-55825 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55812'>Sentences here</a>
+<li>YIP TING FONG (s218): 55826-55842 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55826'>Sentences here</a>
+<li>YONG YAQING ELENA (s219): 55843-55853 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55843'>Sentences here</a>
+<li>YUE MINKANG (s220): 55854-55860 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55854'>Sentences here</a>
+<li>YVONNE TAN SIN LIAN (s221): 55861-55870 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55861'>Sentences here</a>
+<li>ZHANG ZIYU, VIOLET (s222): 55871-55883 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55871'>Sentences here</a>    
+<li>TAN ZHI EN, ANDREAS (s224): 55902-55911 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55902'>Sentences here</a>    
+<li>LOH SIYUAN (s225): 55912-55927 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55912'>Sentences here</a>    
+<li>LUM JUN KIT DANIEL (s226): 55928-55948 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55928'>Sentences here</a>
+<li>SEETOH MIN YI (s227): 55949-55959 [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55949'>Sentences here</a>
+
+</ul>
+<hr />
+
+<h3><a name="stories">Your Stories</a></h3>
+<ul>
+<li> ABIGAIL LAY YAN JUN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=3STU'>The Adventure of the Three Students</a> (3STU)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=ABIGAIL LAY YAN JUN&entry.1554122644&entry.1925317742=U1322081E&entry.633860705=3STU'>here</a>
+  </ul>
+<li> AMANDA CHIA WAN YING
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=FIVE'>The Five Orange Pips</a> (FIVE)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=AMANDA CHIA WAN YING&entry.1554122644&entry.1925317742=U1421258J&entry.633860705=FIVE'>here</a>
+  </ul>
+<li> AMANDA CHLOE LAU
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=CROO'>The Adventure of the Crooked Man</a> (CROO)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=AMANDA CHLOE LAU&entry.1554122644&entry.1925317742=U1530924E&entry.633860705=CROO'>here</a>
+  </ul>
+<li> ANG LI TING
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BERY'>The Adventure of the Beryl Coronet</a> (BERY)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=ANG LI TING&entry.1554122644&entry.1925317742=U1230854J&entry.633860705=BERY'>here</a>
+  </ul>
+<li> ANG SHI XUAN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=REDC'>The Adventure of the Red Circle</a> (REDC)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=ANG SHI XUAN&entry.1554122644&entry.1925317742=U1540261G&entry.633860705=REDC'>here</a>
+  </ul>
+<li> ANG WEI YANG
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BLAC'>The Adventure of Black Peter</a> (BLAC)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=ANG WEI YANG&entry.1554122644&entry.1925317742=U1230969E&entry.633860705=BLAC'>here</a>
+  </ul>
+<li> AUO XIN YUAN, CHELSEA
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BLAN'>The Adventure of the Blanched Soldier</a> (BLAN)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=AUO XIN YUAN, CHELSEA&entry.1554122644&entry.1925317742=U1530394A&entry.633860705=BLAN'>here</a>
+  </ul>
+<li> AW JINYUE JUSTUS
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=3GAB'>The Adventure of the Three Gables</a> (3GAB)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=AW JINYUE JUSTUS&entry.1554122644&entry.1925317742=U1330693G&entry.633860705=3GAB'>here</a>
+  </ul>
+<li> BAXTER CHAN ZU HE
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=RETI'>The Adventure of the Retired Colourman</a> (RETI)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=BAXTER CHAN ZU HE&entry.1554122644&entry.1925317742=U1440676B&entry.633860705=RETI'>here</a>
+  </ul>
+<li> BENJAMIN HENSON YEO RUI XIANG
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SCAN'>A Scandal in Bohemia</a> (SCAN)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=BENJAMIN HENSON YEO RUI XIANG&entry.1554122644&entry.1925317742=U1421724D&entry.633860705=SCAN'>here</a>
+  </ul>
+<li> BENJAMIN KITSON BOK JIA WEI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=PRIO'>The Adventure of the Priory School</a> (PRIO)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=BENJAMIN KITSON BOK JIA WEI&entry.1554122644&entry.1925317742=U1430463E&entry.633860705=PRIO'>here</a>
+  </ul>
+<li> BETHANIE PAMELA XAVIER
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SIXN'>The Adventure of the Six Napoleons</a> (SIXN)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=BETHANIE PAMELA XAVIER&entry.1554122644&entry.1925317742=U1410936D&entry.633860705=SIXN'>here</a>
+  </ul>
+<li> BHAVIKA SONYA D/O BHARAT KAPOOR
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SUSS'>The Adventure of the Sussex Vampire</a> (SUSS)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=BHAVIKA SONYA D/O BHARAT KAPOOR&entry.1554122644&entry.1925317742=U1430865G&entry.633860705=SUSS'>here</a>
+  </ul>
+<li> CHAN MUN CHEW KENNETH
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=GOLD'>The Adventure of the Golden Pince-Nez</a> (GOLD)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=CHAN MUN CHEW KENNETH&entry.1554122644&entry.1925317742=U1422698A&entry.633860705=GOLD'>here</a>
+  </ul>
+<li> CHARISSE ONG MIN QI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SECO'>The Adventure of the Second Stain</a> (SECO)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=CHARISSE ONG MIN QI&entry.1554122644&entry.1925317742=U1430656B&entry.633860705=SECO'>here</a>
+  </ul>
+<li> CHEN MEIHUI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=CHAS'>The Adventure of Charles Augustus Milverton</a> (CHAS)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=CHEN MEIHUI&entry.1554122644&entry.1925317742=U1430924J&entry.633860705=CHAS'>here</a>
+  </ul>
+<li> CHERYL TAN LI-SHIAN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SILV'>The Adventure of Silver Blaze</a> (SILV)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=CHERYL TAN LI-SHIAN&entry.1554122644&entry.1925317742=U1330188F&entry.633860705=SILV'>here</a>
+  </ul>
+<li> CHIA KAIYIN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=MUSG'>The Adventure of the Musgrave Ritual</a> (MUSG)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=CHIA KAIYIN&entry.1554122644&entry.1925317742=U1541010H&entry.633860705=MUSG'>here</a>
+  </ul>
+<li> CHIN WEI LU
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=NAVA'>The Adventure of the Naval Treaty</a> (NAVA)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=CHIN WEI LU&entry.1554122644&entry.1925317742=U1540553J&entry.633860705=NAVA'>here</a>
+  </ul>
+<li> CHOO SHUN YUAN KUANG
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=CREE'>The Adventure of the Creeping Man</a> (CREE)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=CHOO SHUN YUAN KUANG&entry.1554122644&entry.1925317742=U1440117A&entry.633860705=CREE'>here</a>
+  </ul>
+<li> CHOW KIN MING
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=GREE'>The Adventure of the Greek Interpreter</a> (GREE)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=CHOW KIN MING&entry.1554122644&entry.1925317742=U1380053A&entry.633860705=GREE'>here</a>
+  </ul>
+<li> CHRIS-ANABEL KHAW JING YI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=YELL'>The Adventure of the Yellow Face</a> (YELL)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=CHRIS-ANABEL KHAW JING YI&entry.1554122644&entry.1925317742=U1430286K&entry.633860705=YELL'>here</a>
+  </ul>
+<li> CHRISTIE YEO QING WEN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=VEIL'>The Adventure of the Veiled Lodger</a> (VEIL)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=CHRISTIE YEO QING WEN&entry.1554122644&entry.1925317742=U1531190A&entry.633860705=VEIL'>here</a>
+  </ul>
+<li> CHRISTY ANGKA
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=ENGR'>The Adventure of the Engineer's Thumb</a> (ENGR)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=CHRISTY ANGKA&entry.1554122644&entry.1925317742=U1530051A&entry.633860705=ENGR'>here</a>
+  </ul>
+<li> CHUA CHIN ING, IVY
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=COPP'>The Adventure of the Copper Beeches</a> (COPP)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=CHUA CHIN ING, IVY&entry.1554122644&entry.1925317742=U1430742G&entry.633860705=COPP'>here</a>
+  </ul>
+<li> CHUA MEI HUI VALERIE
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=DYIN'>The Adventure of the Dying Detective</a> (DYIN)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=CHUA MEI HUI VALERIE&entry.1554122644&entry.1925317742=U1430975G&entry.633860705=DYIN'>here</a>
+  </ul>
+<li> DARSHINEE RAMAN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BRUC'>The Adventure of the Bruce-Partington Plans</a> (BRUC)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=DARSHINEE RAMAN&entry.1554122644&entry.1925317742=U1440471B&entry.633860705=BRUC'>here</a>
+  </ul>
+<li> DE ALMEIDA DEVINDA IROSHAN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=FINA'>The Adventure of the Final Problem</a> (FINA)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=DE ALMEIDA DEVINDA IROSHAN&entry.1554122644&entry.1925317742=U1322824B&entry.633860705=FINA'>here</a>
+  </ul>
+<li> DESKER REESA CORRIE
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=NOBL'>The Adventure of the Noble Bachelor</a> (NOBL)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=DESKER REESA CORRIE&entry.1554122644&entry.1925317742=U1430256E&entry.633860705=NOBL'>here</a>
+  </ul>
+<li> DHANEESHA RATANKUMAR CHUGANI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=LADY'>The Disappearance of Lady Frances Carfax</a> (LADY)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=DHANEESHA RATANKUMAR CHUGANI&entry.1554122644&entry.1925317742=U1331161A&entry.633860705=LADY'>here</a>
+  </ul>
+<li> ELISSA CHAN YI LING
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=STOC'>The Adventure of the Stockbroker's Clerk</a> (STOC)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=ELISSA CHAN YI LING&entry.1554122644&entry.1925317742=U1410178G&entry.633860705=STOC'>here</a>
+  </ul>
+<li> EMILYN BOH LI HUAN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=DEVI'>The Adventure of the Devil's Foot</a> (DEVI)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=EMILYN BOH LI HUAN&entry.1554122644&entry.1925317742=U1310523L&entry.633860705=DEVI'>here</a>
+  </ul>
+<li> EMMA LI-CHEN EVERITT
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=CARD'>The Adventure of the Cardboard Box</a> (CARD)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=EMMA LI-CHEN EVERITT&entry.1554122644&entry.1925317742=U1430684B&entry.633860705=CARD'>here</a>
+  </ul>
+<li> EUGENE MOK CHIA CHUN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=ABBE'>The Adventure of the Abbey Grange</a> (ABBE)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=EUGENE MOK CHIA CHUN&entry.1554122644&entry.1925317742=U1422707B&entry.633860705=ABBE'>here</a>
+  </ul>
+<li> FAN FAN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=RESI'>The Adventure of the Resident Patient</a> (RESI)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=FAN FAN&entry.1554122644&entry.1925317742=U1310332H&entry.633860705=RESI'>here</a>
+  </ul>
+<li> FARM HUI JIA
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=3GAR'>The Adventure of the Three Garridebs</a> (3GAR)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=FARM HUI JIA&entry.1554122644&entry.1925317742=U1440007A&entry.633860705=3GAR'>here</a>
+  </ul>
+<li> FAYYADHAH BTE ZAINALABIDEN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=THOR'>The Problem of Thor Bridge</a> (THOR)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=FAYYADHAH BTE ZAINALABIDEN&entry.1554122644&entry.1925317742=U1430766B&entry.633860705=THOR'>here</a>
+  </ul>
+<li> FOO JIA LIN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=MAZA'>The Adventure of the Mazarin Stone</a> (MAZA)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=FOO JIA LIN&entry.1554122644&entry.1925317742=U1530966B&entry.633860705=MAZA'>here</a>
+  </ul>
+<li> GENEVIE GAN JIA YEE
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=TWIS'>The Man with the Twisted Lip</a> (TWIS)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=GENEVIE GAN JIA YEE&entry.1554122644&entry.1925317742=U1330740F&entry.633860705=TWIS'>here</a>
+  </ul>
+<li> GILLIAN TAN LISI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=REIG'>The Adventure of the Reigate Squire</a> (REIG)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=GILLIAN TAN LISI&entry.1554122644&entry.1925317742=U1430401A&entry.633860705=REIG'>here</a>
+  </ul>
+<li> GLADYS LEE JIA YAN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BLUE'>The Adventure of the Blue Carbuncle</a> (BLUE)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=GLADYS LEE JIA YAN&entry.1554122644&entry.1925317742=U1340916B&entry.633860705=BLUE'>here</a>
+  </ul>
+<li> GOH KENG SIANG
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=MISS'>The Adventure of the Missing Three-Quarter</a> (MISS)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=GOH KENG SIANG&entry.1554122644&entry.1925317742=U1321743G&entry.633860705=MISS'>here</a>
+  </ul>
+<li> GOH LI XUAN SHERRIE
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=WIST'>The Adventure of Wisteria Lodge</a> (WIST)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=GOH LI XUAN SHERRIE&entry.1554122644&entry.1925317742=U1330533F&entry.633860705=WIST'>here</a>
+  </ul>
+<li> GOH MEI HUI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=ILLU'>The Adventure of the Illustrious Client</a> (ILLU)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=GOH MEI HUI&entry.1554122644&entry.1925317742=U1220876F&entry.633860705=ILLU'>here</a>
+  </ul>
+<li> GOH MIN YI VANESSA
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=EMPT'>The Adventure of the Empty House</a> (EMPT)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=GOH MIN YI VANESSA&entry.1554122644&entry.1925317742=U1330497B&entry.633860705=EMPT'>here</a>
+  </ul>
+<li> GOH XU YAO, JONATHAN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=LION'>The Adventure of the Lion's Mane</a> (LION)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=GOH XU YAO, JONATHAN&entry.1554122644&entry.1925317742=U1530882H&entry.633860705=LION'>here</a>
+  </ul>
+<li> GOH YING LI CHERYL JOY
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SHOS'>The Adventure of Shoscombe Old Place</a> (SHOS)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=GOH YING LI CHERYL JOY&entry.1554122644&entry.1925317742=U1321344G&entry.633860705=SHOS'>here</a>
+  </ul>
+<li> GOH ZHEN XIANG
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SOLI'>The Adventure of the Solitary Cyclist</a> (SOLI)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=GOH ZHEN XIANG&entry.1554122644&entry.1925317742=U1430522G&entry.633860705=SOLI'>here</a>
+  </ul>
+<li> GU XINGZHI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BOSC'>The Boscombe Valley Mystery</a> (BOSC)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=GU XINGZHI&entry.1554122644&entry.1925317742=U1330941G&entry.633860705=BOSC'>here</a>
+  </ul>
+<li> GUO WEI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=IDEN'>A Case of Identity</a> (IDEN)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=GUO WEI&entry.1554122644&entry.1925317742=U1520604K&entry.633860705=IDEN'>here</a>
+  </ul>
+<li> HAW MAN YUN TIFFANY
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=LAST'>His Last Bow</a> (LAST)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=HAW MAN YUN TIFFANY&entry.1554122644&entry.1925317742=U1422464D&entry.633860705=LAST'>here</a>
+  </ul>
+<li> HAZEL LIU JIANJIA
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=NORW'>The Adventure of the Norwood Builder</a> (NORW)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=HAZEL LIU JIANJIA&entry.1554122644&entry.1925317742=U1530251E&entry.633860705=NORW'>here</a>
+  </ul>
+<li> HEAH YONG RUAY
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=GLOR'>The Adventure of the Gloria Scott</a> (GLOR)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=HEAH YONG RUAY&entry.1554122644&entry.1925317742=U1430255H&entry.633860705=GLOR'>here</a>
+  </ul>
+<li> HERDIYENTI HOWARD
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=MAZA'>The Adventure of the Mazarin Stone</a> (MAZA)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=HERDIYENTI HOWARD&entry.1554122644&entry.1925317742=U1310016E&entry.633860705=MAZA'>here</a>
+  </ul>
+<li> HO PING GHEE
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=3STU'>The Adventure of the Three Students</a> (3STU)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=HO PING GHEE&entry.1554122644&entry.1925317742=U1440324A&entry.633860705=3STU'>here</a>
+  </ul>
+<li> HO WANTING BERNICE
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SOLI'>The Adventure of the Solitary Cyclist</a> (SOLI)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=HO WANTING BERNICE&entry.1554122644&entry.1925317742=U1531166L&entry.633860705=SOLI'>here</a>
+  </ul>
+<li> HO YI EN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=ILLU'>The Adventure of the Illustrious Client</a> (ILLU)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=HO YI EN&entry.1554122644&entry.1925317742=U1530669J&entry.633860705=ILLU'>here</a>
+  </ul>
+<li> HOH LI YUEN EMILY
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=REIG'>The Adventure of the Reigate Squire</a> (REIG)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=HOH LI YUEN EMILY&entry.1554122644&entry.1925317742=U1341047L&entry.633860705=REIG'>here</a>
+  </ul>
+<li> ISAAC CHING XIANG GUO
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=GLOR'>The Adventure of the Gloria Scott</a> (GLOR)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=ISAAC CHING XIANG GUO&entry.1554122644&entry.1925317742=U1430364L&entry.633860705=GLOR'>here</a>
+  </ul>
+<li> ISABELLE TENG HUI FANG
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=3GAR'>The Adventure of the Three Garridebs</a> (3GAR)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=ISABELLE TENG HUI FANG&entry.1554122644&entry.1925317742=U1530484E&entry.633860705=3GAR'>here</a>
+  </ul>
+<li> IVAN NG KERT FON
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BLAN'>The Adventure of the Blanched Soldier</a> (BLAN)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=IVAN NG KERT FON&entry.1554122644&entry.1925317742=U1521378C&entry.633860705=BLAN'>here</a>
+  </ul>
+<li> JACKIE ONG
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SHOS'>The Adventure of Shoscombe Old Place</a> (SHOS)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=JACKIE ONG&entry.1554122644&entry.1925317742=U1340950A&entry.633860705=SHOS'>here</a>
+  </ul>
+<li> JASMINE BTE SADIMIN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BLUE'>The Adventure of the Blue Carbuncle</a> (BLUE)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=JASMINE BTE SADIMIN&entry.1554122644&entry.1925317742=U1222586D&entry.633860705=BLUE'>here</a>
+  </ul>
+<li> JASON HENG TEIK OOI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=MUSG'>The Adventure of the Musgrave Ritual</a> (MUSG)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=JASON HENG TEIK OOI&entry.1554122644&entry.1925317742=U1431053B&entry.633860705=MUSG'>here</a>
+  </ul>
+<li> JASPER CHUA DONG QIU
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=DEVI'>The Adventure of the Devil's Foot</a> (DEVI)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=JASPER CHUA DONG QIU&entry.1554122644&entry.1925317742=U1222186G&entry.633860705=DEVI'>here</a>
+  </ul>
+<li> JEREMY CHUA KUN DA
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BOSC'>The Boscombe Valley Mystery</a> (BOSC)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=JEREMY CHUA KUN DA&entry.1554122644&entry.1925317742=U1230647J&entry.633860705=BOSC'>here</a>
+  </ul>
+<li> JOAN LIM KAI LI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=LADY'>The Disappearance of Lady Frances Carfax</a> (LADY)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=JOAN LIM KAI LI&entry.1554122644&entry.1925317742=U1422660J&entry.633860705=LADY'>here</a>
+  </ul>
+<li> JOHN ANG WEN HAN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=CROO'>The Adventure of the Crooked Man</a> (CROO)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=JOHN ANG WEN HAN&entry.1554122644&entry.1925317742=U1530960J&entry.633860705=CROO'>here</a>
+  </ul>
+<li> KANG YONG SHENG FABIAN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=PRIO'>The Adventure of the Priory School</a> (PRIO)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=KANG YONG SHENG FABIAN&entry.1554122644&entry.1925317742=U1530901G&entry.633860705=PRIO'>here</a>
+  </ul>
+<li> KENNETH TAN JIA JUN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=DYIN'>The Adventure of the Dying Detective</a> (DYIN)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=KENNETH TAN JIA JUN&entry.1554122644&entry.1925317742=U1320970L&entry.633860705=DYIN'>here</a>
+  </ul>
+<li> KESSA CHOO HUI YI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=THOR'>The Problem of Thor Bridge</a> (THOR)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=KESSA CHOO HUI YI&entry.1554122644&entry.1925317742=U1530628J&entry.633860705=THOR'>here</a>
+  </ul>
+<li> KHAIRATUL AMIRAH BINTE KAHAR
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BLAC'>The Adventure of Black Peter</a> (BLAC)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=KHAIRATUL AMIRAH BINTE KAHAR&entry.1554122644&entry.1925317742=U1430340E&entry.633860705=BLAC'>here</a>
+  </ul>
+<li> KHATIJAH BEGUM D/O SADAKAT ALI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=ENGR'>The Adventure of the Engineer's Thumb</a> (ENGR)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=KHATIJAH BEGUM D/O SADAKAT ALI&entry.1554122644&entry.1925317742=U1230364H&entry.633860705=ENGR'>here</a>
+  </ul>
+<li> KHENG NARELLE SONGYI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=ABBE'>The Adventure of the Abbey Grange</a> (ABBE)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=KHENG NARELLE SONGYI&entry.1554122644&entry.1925317742=U1230173E&entry.633860705=ABBE'>here</a>
+  </ul>
+<li> KISHEN SIVAYAM S/O YOGA RAJA
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=WIST'>The Adventure of Wisteria Lodge</a> (WIST)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=KISHEN SIVAYAM S/O YOGA RAJA&entry.1554122644&entry.1925317742=U1321565D&entry.633860705=WIST'>here</a>
+  </ul>
+<li> KO MING WEI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=FIVE'>The Five Orange Pips</a> (FIVE)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=KO MING WEI&entry.1554122644&entry.1925317742=U1410078E&entry.633860705=FIVE'>here</a>
+  </ul>
+<li> KOH PEI LING SERENE
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=STOC'>The Adventure of the Stockbroker's Clerk</a> (STOC)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=KOH PEI LING SERENE&entry.1554122644&entry.1925317742=U1310439L&entry.633860705=STOC'>here</a>
+  </ul>
+<li> KOH TIAN LUCK
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SCAN'>A Scandal in Bohemia</a> (SCAN)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=KOH TIAN LUCK&entry.1554122644&entry.1925317742=U1540692F&entry.633860705=SCAN'>here</a>
+  </ul>
+<li> KYLIE KAY
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=EMPT'>The Adventure of the Empty House</a> (EMPT)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=KYLIE KAY&entry.1554122644&entry.1925317742=U1530625G&entry.633860705=EMPT'>here</a>
+  </ul>
+<li> LAU AIK MENG
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BRUC'>The Adventure of the Bruce-Partington Plans</a> (BRUC)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LAU AIK MENG&entry.1554122644&entry.1925317742=U1440895E&entry.633860705=BRUC'>here</a>
+  </ul>
+<li> LAU XIN YI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=TWIS'>The Man with the Twisted Lip</a> (TWIS)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LAU XIN YI&entry.1554122644&entry.1925317742=U1430700K&entry.633860705=TWIS'>here</a>
+  </ul>
+<li> LE DUY KHANH
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=IDEN'>A Case of Identity</a> (IDEN)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LE DUY KHANH&entry.1554122644&entry.1925317742=U1310418G&entry.633860705=IDEN'>here</a>
+  </ul>
+<li> LEA WONG LAY YI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=NOBL'>The Adventure of the Noble Bachelor</a> (NOBL)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LEA WONG LAY YI&entry.1554122644&entry.1925317742=U1530146A&entry.633860705=NOBL'>here</a>
+  </ul>
+<li> LEE JED
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=3GAB'>The Adventure of the Three Gables</a> (3GAB)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LEE JED&entry.1554122644&entry.1925317742=U1221181H&entry.633860705=3GAB'>here</a>
+  </ul>
+<li> LEE JIA FU JOLYN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SILV'>The Adventure of Silver Blaze</a> (SILV)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LEE JIA FU JOLYN&entry.1554122644&entry.1925317742=U1310407A&entry.633860705=SILV'>here</a>
+  </ul>
+<li> LEE JIN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=RESI'>The Adventure of the Resident Patient</a> (RESI)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LEE JIN&entry.1554122644&entry.1925317742=U1440849C&entry.633860705=RESI'>here</a>
+  </ul>
+<li> LEE SHU AN SALANNE
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=MISS'>The Adventure of the Missing Three-Quarter</a> (MISS)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LEE SHU AN SALANNE&entry.1554122644&entry.1925317742=U1440739C&entry.633860705=MISS'>here</a>
+  </ul>
+<li> LEE SHU WEN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=LAST'>His Last Bow</a> (LAST)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LEE SHU WEN&entry.1554122644&entry.1925317742=U1330301C&entry.633860705=LAST'>here</a>
+  </ul>
+<li> LEE TAT WEE
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=YELL'>The Adventure of the Yellow Face</a> (YELL)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LEE TAT WEE&entry.1554122644&entry.1925317742=U1430832L&entry.633860705=YELL'>here</a>
+  </ul>
+<li> LEE WEI JIE
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=REDC'>The Adventure of the Red Circle</a> (REDC)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LEE WEI JIE&entry.1554122644&entry.1925317742=U1221840L&entry.633860705=REDC'>here</a>
+  </ul>
+<li> LEE YI JIA
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=NAVA'>The Adventure of the Naval Treaty</a> (NAVA)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LEE YI JIA&entry.1554122644&entry.1925317742=U1530582B&entry.633860705=NAVA'>here</a>
+  </ul>
+<li> LEE YING, AIKO
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BERY'>The Adventure of the Beryl Coronet</a> (BERY)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LEE YING, AIKO&entry.1554122644&entry.1925317742=U1430131L&entry.633860705=BERY'>here</a>
+  </ul>
+<li> LEE YUN HUA
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=VEIL'>The Adventure of the Veiled Lodger</a> (VEIL)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LEE YUN HUA&entry.1554122644&entry.1925317742=U1340422B&entry.633860705=VEIL'>here</a>
+  </ul>
+<li> LEE ZHI RONG LYSANDER
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=CHAS'>The Adventure of Charles Augustus Milverton</a> (CHAS)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LEE ZHI RONG LYSANDER&entry.1554122644&entry.1925317742=U1430793E&entry.633860705=CHAS'>here</a>
+  </ul>
+<li> LEONG WEI SHAN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=GOLD'>The Adventure of the Golden Pince-Nez</a> (GOLD)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LEONG WEI SHAN&entry.1554122644&entry.1925317742=U1530996G&entry.633860705=GOLD'>here</a>
+  </ul>
+<li> LEONG WENG ONN ROYSTON
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=GREE'>The Adventure of the Greek Interpreter</a> (GREE)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LEONG WENG ONN ROYSTON&entry.1554122644&entry.1925317742=U1440722D&entry.633860705=GREE'>here</a>
+  </ul>
+<li> LEONG WING TONG
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=FINA'>The Adventure of the Final Problem</a> (FINA)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LEONG WING TONG&entry.1554122644&entry.1925317742=U1230273G&entry.633860705=FINA'>here</a>
+  </ul>
+<li> LETITIA KOH RUI XIN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=RETI'>The Adventure of the Retired Colourman</a> (RETI)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LETITIA KOH RUI XIN&entry.1554122644&entry.1925317742=U1530597G&entry.633860705=RETI'>here</a>
+  </ul>
+<li> LIANG SU EN, TESSA
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SECO'>The Adventure of the Second Stain</a> (SECO)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LIANG SU EN, TESSA&entry.1554122644&entry.1925317742=U1531037A&entry.633860705=SECO'>here</a>
+  </ul>
+<li> LIANG YINGYI ENID
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=COPP'>The Adventure of the Copper Beeches</a> (COPP)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LIANG YINGYI ENID&entry.1554122644&entry.1925317742=U1530688H&entry.633860705=COPP'>here</a>
+  </ul>
+<li> LIM DEBORAH
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=NORW'>The Adventure of the Norwood Builder</a> (NORW)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LIM DEBORAH&entry.1554122644&entry.1925317742=U1531352G&entry.633860705=NORW'>here</a>
+  </ul>
+<li> LIM JASMINE
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SUSS'>The Adventure of the Sussex Vampire</a> (SUSS)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LIM JASMINE&entry.1554122644&entry.1925317742=U1530712J&entry.633860705=SUSS'>here</a>
+  </ul>
+<li> LIM WEN XUAN VENUS
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=LION'>The Adventure of the Lion's Mane</a> (LION)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LIM WEN XUAN VENUS&entry.1554122644&entry.1925317742=U1540384G&entry.633860705=LION'>here</a>
+  </ul>
+<li> LIM WONG CHUN LEONARD
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=CREE'>The Adventure of the Creeping Man</a> (CREE)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LIM WONG CHUN LEONARD&entry.1554122644&entry.1925317742=U1330392D&entry.633860705=CREE'>here</a>
+  </ul>
+<li> LIM XIN YI CHERYL
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=CARD'>The Adventure of the Cardboard Box</a> (CARD)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LIM XIN YI CHERYL&entry.1554122644&entry.1925317742=U1321144C&entry.633860705=CARD'>here</a>
+  </ul>
+<li> LIN YUJUN, AMANDA
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SIXN'>The Adventure of the Six Napoleons</a> (SIXN)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LIN YUJUN, AMANDA&entry.1554122644&entry.1925317742=U1530757H&entry.633860705=SIXN'>here</a>
+  </ul>
+<li> LINETTE LEONG JIARU
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SILV'>The Adventure of Silver Blaze</a> (SILV)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LINETTE LEONG JIARU&entry.1554122644&entry.1925317742=U1530521F&entry.633860705=SILV'>here</a>
+  </ul>
+<li> LING WEN HUAN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=CHAS'>The Adventure of Charles Augustus Milverton</a> (CHAS)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LING WEN HUAN&entry.1554122644&entry.1925317742=U1440768L&entry.633860705=CHAS'>here</a>
+  </ul>
+<li> LIU SHIJIE
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=FINA'>The Adventure of the Final Problem</a> (FINA)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LIU SHIJIE&entry.1554122644&entry.1925317742=U1220471B&entry.633860705=FINA'>here</a>
+  </ul>
+<li> LIU XUAN JIM
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=THOR'>The Problem of Thor Bridge</a> (THOR)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LIU XUAN JIM&entry.1554122644&entry.1925317742=U1530879L&entry.633860705=THOR'>here</a>
+  </ul>
+<li> LIYANA NASHITA BTE KAMAL FASHAR
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=GLOR'>The Adventure of the Gloria Scott</a> (GLOR)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LIYANA NASHITA BTE KAMAL FASHAR&entry.1554122644&entry.1925317742=U1321677J&entry.633860705=GLOR'>here</a>
+  </ul>
+<li> LOH SIYUAN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=LION'>The Adventure of the Lion's Mane</a> (LION)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LOH SIYUAN&entry.1554122644&entry.1925317742=U1530282G&entry.633860705=LION'>here</a>
+  </ul>
+<li> LOI EN QI JANINE
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=REDC'>The Adventure of the Red Circle</a> (REDC)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LOI EN QI JANINE&entry.1554122644&entry.1925317742=U1430269E&entry.633860705=REDC'>here</a>
+  </ul>
+<li> LOW JIA HUI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=NORW'>The Adventure of the Norwood Builder</a> (NORW)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LOW JIA HUI&entry.1554122644&entry.1925317742=U1540238C&entry.633860705=NORW'>here</a>
+  </ul>
+<li> LOW SIOK HUI, ESTHER
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SECO'>The Adventure of the Second Stain</a> (SECO)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LOW SIOK HUI, ESTHER&entry.1554122644&entry.1925317742=U1510814H&entry.633860705=SECO'>here</a>
+  </ul>
+<li> LUM JUN KIT DANIEL
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BLUE'>The Adventure of the Blue Carbuncle</a> (BLUE)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=LUM JUN KIT DANIEL&entry.1554122644&entry.1925317742=U1221575F&entry.633860705=BLUE'>here</a>
+  </ul>
+<li> MA XINNING
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=FIVE'>The Five Orange Pips</a> (FIVE)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=MA XINNING&entry.1554122644&entry.1925317742=U1210052B&entry.633860705=FIVE'>here</a>
+  </ul>
+<li> MAI HOANG LAM
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=MISS'>The Adventure of the Missing Three-Quarter</a> (MISS)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=MAI HOANG LAM&entry.1554122644&entry.1925317742=U1340069J&entry.633860705=MISS'>here</a>
+  </ul>
+<li> MARISSA TITUS
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SUSS'>The Adventure of the Sussex Vampire</a> (SUSS)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=MARISSA TITUS&entry.1554122644&entry.1925317742=U1440298F&entry.633860705=SUSS'>here</a>
+  </ul>
+<li> MARJORIE NG SHU FEN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=MUSG'>The Adventure of the Musgrave Ritual</a> (MUSG)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=MARJORIE NG SHU FEN&entry.1554122644&entry.1925317742=U1420764D&entry.633860705=MUSG'>here</a>
+  </ul>
+<li> MAVERICK TEO WEI JIE
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=ABBE'>The Adventure of the Abbey Grange</a> (ABBE)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=MAVERICK TEO WEI JIE&entry.1554122644&entry.1925317742=U1531156B&entry.633860705=ABBE'>here</a>
+  </ul>
+<li> MOHAMED FARSHAD BIN MOHAMED ISMAIL
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SHOS'>The Adventure of Shoscombe Old Place</a> (SHOS)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=MOHAMED FARSHAD BIN MOHAMED ISMAIL&entry.1554122644&entry.1925317742=U1531312D&entry.633860705=SHOS'>here</a>
+  </ul>
+<li> MUHAMMAD ASYRAF BIN SAMAD
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=REIG'>The Adventure of the Reigate Squire</a> (REIG)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=MUHAMMAD ASYRAF BIN SAMAD&entry.1554122644&entry.1925317742=U1522664D&entry.633860705=REIG'>here</a>
+  </ul>
+<li> MUHAMMAD IRWAN SHAH BIN JUHARI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=RETI'>The Adventure of the Retired Colourman</a> (RETI)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=MUHAMMAD IRWAN SHAH BIN JUHARI&entry.1554122644&entry.1925317742=U1431027G&entry.633860705=RETI'>here</a>
+  </ul>
+<li> MUHAMMAD SALIHAN BIN ZAOL-KEFLI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=TWIS'>The Man with the Twisted Lip</a> (TWIS)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=MUHAMMAD SALIHAN BIN ZAOL-KEFLI&entry.1554122644&entry.1925317742=U1221712J&entry.633860705=TWIS'>here</a>
+  </ul>
+<li> MUHAMMAD WALIYUDDIN BIN AHMAD KAMAL
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=VEIL'>The Adventure of the Veiled Lodger</a> (VEIL)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=MUHAMMAD WALIYUDDIN BIN AHMAD KAMAL&entry.1554122644&entry.1925317742=U1430711E&entry.633860705=VEIL'>here</a>
+  </ul>
+<li> NAW PAW PAW
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BRUC'>The Adventure of the Bruce-Partington Plans</a> (BRUC)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=NAW PAW PAW&entry.1554122644&entry.1925317742=U1440639A&entry.633860705=BRUC'>here</a>
+  </ul>
+<li> NEO HAK YONG
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=MAZA'>The Adventure of the Mazarin Stone</a> (MAZA)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=NEO HAK YONG&entry.1554122644&entry.1925317742=U1121260K&entry.633860705=MAZA'>here</a>
+  </ul>
+<li> NG CHI TING
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=COPP'>The Adventure of the Copper Beeches</a> (COPP)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=NG CHI TING&entry.1554122644&entry.1925317742=U1321622A&entry.633860705=COPP'>here</a>
+  </ul>
+<li> NG KAI LING CONSTANCE
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=ILLU'>The Adventure of the Illustrious Client</a> (ILLU)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=NG KAI LING CONSTANCE&entry.1554122644&entry.1925317742=U1221531D&entry.633860705=ILLU'>here</a>
+  </ul>
+<li> NG SOK WOON, DESIREE
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=YELL'>The Adventure of the Yellow Face</a> (YELL)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=NG SOK WOON, DESIREE&entry.1554122644&entry.1925317742=U1530462D&entry.633860705=YELL'>here</a>
+  </ul>
+<li> NGAI CHIN PANG
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=LAST'>His Last Bow</a> (LAST)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=NGAI CHIN PANG&entry.1554122644&entry.1925317742=U1422296K&entry.633860705=LAST'>here</a>
+  </ul>
+<li> NGIAM ZHENG HUI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=3GAR'>The Adventure of the Three Garridebs</a> (3GAR)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=NGIAM ZHENG HUI&entry.1554122644&entry.1925317742=U1330318B&entry.633860705=3GAR'>here</a>
+  </ul>
+<li> NINA MELANIE KONG YEN YEN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=GOLD'>The Adventure of the Golden Pince-Nez</a> (GOLD)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=NINA MELANIE KONG YEN YEN&entry.1554122644&entry.1925317742=U1331150F&entry.633860705=GOLD'>here</a>
+  </ul>
+<li> NOOR ZAMIR BIN MOHAMED YUNOS
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=ENGR'>The Adventure of the Engineer's Thumb</a> (ENGR)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=NOOR ZAMIR BIN MOHAMED YUNOS&entry.1554122644&entry.1925317742=U1341110G&entry.633860705=ENGR'>here</a>
+  </ul>
+<li> NORAINE BINTE KUSWADI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=PRIO'>The Adventure of the Priory School</a> (PRIO)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=NORAINE BINTE KUSWADI&entry.1554122644&entry.1925317742=U1530445K&entry.633860705=PRIO'>here</a>
+  </ul>
+<li> NURHAKIMAH BINTE RAFFEEI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SOLI'>The Adventure of the Solitary Cyclist</a> (SOLI)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=NURHAKIMAH BINTE RAFFEEI&entry.1554122644&entry.1925317742=U1280072D&entry.633860705=SOLI'>here</a>
+  </ul>
+<li> OBBANA N RAJAH
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=CARD'>The Adventure of the Cardboard Box</a> (CARD)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=OBBANA N RAJAH&entry.1554122644&entry.1925317742=U1331262L&entry.633860705=CARD'>here</a>
+  </ul>
+<li> ONG KEYUAN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=NAVA'>The Adventure of the Naval Treaty</a> (NAVA)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=ONG KEYUAN&entry.1554122644&entry.1925317742=U1440705K&entry.633860705=NAVA'>here</a>
+  </ul>
+<li> ONG WEN JING
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=STOC'>The Adventure of the Stockbroker's Clerk</a> (STOC)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=ONG WEN JING&entry.1554122644&entry.1925317742=U1530801E&entry.633860705=STOC'>here</a>
+  </ul>
+<li> ONG YONGXIANG
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=CREE'>The Adventure of the Creeping Man</a> (CREE)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=ONG YONGXIANG&entry.1554122644&entry.1925317742=U1331287C&entry.633860705=CREE'>here</a>
+  </ul>
+<li> PAVNEET KAUR DHILLON
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BERY'>The Adventure of the Beryl Coronet</a> (BERY)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=PAVNEET KAUR DHILLON&entry.1554122644&entry.1925317742=U1331216J&entry.633860705=BERY'>here</a>
+  </ul>
+<li> PEE HAI ROU
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=CROO'>The Adventure of the Crooked Man</a> (CROO)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=PEE HAI ROU&entry.1554122644&entry.1925317742=U1321608J&entry.633860705=CROO'>here</a>
+  </ul>
+<li> PHAM DUY KHANH
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=DEVI'>The Adventure of the Devil's Foot</a> (DEVI)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=PHAM DUY KHANH&entry.1554122644&entry.1925317742=U1120197L&entry.633860705=DEVI'>here</a>
+  </ul>
+<li> PRIYAA NEDUNZELIYAN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=IDEN'>A Case of Identity</a> (IDEN)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=PRIYAA NEDUNZELIYAN&entry.1554122644&entry.1925317742=U1530696A&entry.633860705=IDEN'>here</a>
+  </ul>
+<li> PUAH ZHE MIN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=RESI'>The Adventure of the Resident Patient</a> (RESI)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=PUAH ZHE MIN&entry.1554122644&entry.1925317742=U1310137L&entry.633860705=RESI'>here</a>
+  </ul>
+<li> QUAH ZHENG WEI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=3STU'>The Adventure of the Three Students</a> (3STU)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=QUAH ZHENG WEI&entry.1554122644&entry.1925317742=U1311042C&entry.633860705=3STU'>here</a>
+  </ul>
+<li> R SREE KEERTHANA CHOWDARY
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=3GAB'>The Adventure of the Three Gables</a> (3GAB)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=R SREE KEERTHANA CHOWDARY&entry.1554122644&entry.1925317742=U1421662L&entry.633860705=3GAB'>here</a>
+  </ul>
+<li> RACHEL ANDREA CHEA YUEN FONG
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=EMPT'>The Adventure of the Empty House</a> (EMPT)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=RACHEL ANDREA CHEA YUEN FONG&entry.1554122644&entry.1925317742=U1440624G&entry.633860705=EMPT'>here</a>
+  </ul>
+<li> SABRINA ABDULLAH@ASHLEY BOEY CHING WERN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BOSC'>The Boscombe Valley Mystery</a> (BOSC)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=SABRINA ABDULLAH@ASHLEY BOEY CHING WERN&entry.1554122644&entry.1925317742=U1530781J&entry.633860705=BOSC'>here</a>
+  </ul>
+<li> SARAH SOON YU MEI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=GREE'>The Adventure of the Greek Interpreter</a> (GREE)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=SARAH SOON YU MEI&entry.1554122644&entry.1925317742=U1530661L&entry.633860705=GREE'>here</a>
+  </ul>
+<li> SEAN POON YEW LOONG
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SIXN'>The Adventure of the Six Napoleons</a> (SIXN)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=SEAN POON YEW LOONG&entry.1554122644&entry.1925317742=U1410961B&entry.633860705=SIXN'>here</a>
+  </ul>
+<li> SEETOH MIN YI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SCAN'>A Scandal in Bohemia</a> (SCAN)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=SEETOH MIN YI&entry.1554122644&entry.1925317742=U1430183F&entry.633860705=SCAN'>here</a>
+  </ul>
+<li> SHANKER S/O JAVAHAR
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=DYIN'>The Adventure of the Dying Detective</a> (DYIN)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=SHANKER S/O JAVAHAR&entry.1554122644&entry.1925317742=U1410010H&entry.633860705=DYIN'>here</a>
+  </ul>
+<li> SIAN CHAN YUI HIN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BLAN'>The Adventure of the Blanched Soldier</a> (BLAN)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=SIAN CHAN YUI HIN&entry.1554122644&entry.1925317742=U1440383C&entry.633860705=BLAN'>here</a>
+  </ul>
+<li> SIM WEI CHUN DEWEY
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=NOBL'>The Adventure of the Noble Bachelor</a> (NOBL)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=SIM WEI CHUN DEWEY&entry.1554122644&entry.1925317742=U1530120A&entry.633860705=NOBL'>here</a>
+  </ul>
+<li> SITI MAISARAH BTE MD KAMAL
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BLAC'>The Adventure of Black Peter</a> (BLAC)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=SITI MAISARAH BTE MD KAMAL&entry.1554122644&entry.1925317742=U1530499K&entry.633860705=BLAC'>here</a>
+  </ul>
+<li> SNG LI TING STEPHANIE
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=LADY'>The Disappearance of Lady Frances Carfax</a> (LADY)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=SNG LI TING STEPHANIE&entry.1554122644&entry.1925317742=U1440230J&entry.633860705=LADY'>here</a>
+  </ul>
+<li> SOH JIA HUI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=WIST'>The Adventure of Wisteria Lodge</a> (WIST)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=SOH JIA HUI&entry.1554122644&entry.1925317742=U1531370J&entry.633860705=WIST'>here</a>
+  </ul>
+<li> SOH MIN MIN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=GOLD'>The Adventure of the Golden Pince-Nez</a> (GOLD)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=SOH MIN MIN&entry.1554122644&entry.1925317742=U1440366J&entry.633860705=GOLD'>here</a>
+  </ul>
+<li> SONG RUI HAO MELVIN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SILV'>The Adventure of Silver Blaze</a> (SILV)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=SONG RUI HAO MELVIN&entry.1554122644&entry.1925317742=U1440799B&entry.633860705=SILV'>here</a>
+  </ul>
+<li> SONG WAN LIN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BLUE'>The Adventure of the Blue Carbuncle</a> (BLUE)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=SONG WAN LIN&entry.1554122644&entry.1925317742=U1530600D&entry.633860705=BLUE'>here</a>
+  </ul>
+<li> SOO JALYN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=CREE'>The Adventure of the Creeping Man</a> (CREE)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=SOO JALYN&entry.1554122644&entry.1925317742=U1530434D&entry.633860705=CREE'>here</a>
+  </ul>
+<li> STEFFANIE JOY T. MOSQUERA
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=GLOR'>The Adventure of the Gloria Scott</a> (GLOR)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=STEFFANIE JOY T. MOSQUERA&entry.1554122644&entry.1925317742=U1430966F&entry.633860705=GLOR'>here</a>
+  </ul>
+<li> SU LUPING
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SHOS'>The Adventure of Shoscombe Old Place</a> (SHOS)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=SU LUPING&entry.1554122644&entry.1925317742=U1310881L&entry.633860705=SHOS'>here</a>
+  </ul>
+<li> SUHAILAH SULAIMAN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SOLI'>The Adventure of the Solitary Cyclist</a> (SOLI)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=SUHAILAH SULAIMAN&entry.1554122644&entry.1925317742=U1540413D&entry.633860705=SOLI'>here</a>
+  </ul>
+<li> SUI HUI CHING
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SECO'>The Adventure of the Second Stain</a> (SECO)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=SUI HUI CHING&entry.1554122644&entry.1925317742=U1330976H&entry.633860705=SECO'>here</a>
+  </ul>
+<li> SYED MUHAMMAD FARIS B S A R
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=CROO'>The Adventure of the Crooked Man</a> (CROO)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=SYED MUHAMMAD FARIS B S A R&entry.1554122644&entry.1925317742=U1531144K&entry.633860705=CROO'>here</a>
+  </ul>
+<li> SYUHAIDAH BINTE MOHD NOOR
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BOSC'>The Boscombe Valley Mystery</a> (BOSC)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=SYUHAIDAH BINTE MOHD NOOR&entry.1554122644&entry.1925317742=U1540547K&entry.633860705=BOSC'>here</a>
+  </ul>
+<li> TAN HUI LING, ISABEL
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=YELL'>The Adventure of the Yellow Face</a> (YELL)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TAN HUI LING, ISABEL&entry.1554122644&entry.1925317742=U1430167J&entry.633860705=YELL'>here</a>
+  </ul>
+<li> TAN JIA QI Chinese yr 1
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=FINA'>The Adventure of the Final Problem</a> (FINA)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TAN JIA QI Chinese yr 1&entry.1554122644&entry.1925317742=U1530719K&entry.633860705=FINA'>here</a>
+  </ul>
+<li> TAN JIA QI Chinese yr 3
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=3GAR'>The Adventure of the Three Garridebs</a> (3GAR)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TAN JIA QI Chinese yr 3&entry.1554122644&entry.1925317742=U1330563L&entry.633860705=3GAR'>here</a>
+  </ul>
+<li> TAN JIE LIN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=TWIS'>The Man with the Twisted Lip</a> (TWIS)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TAN JIE LIN&entry.1554122644&entry.1925317742=U1530935L&entry.633860705=TWIS'>here</a>
+  </ul>
+<li> TAN JUN DAO JOSEPH
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BLAC'>The Adventure of Black Peter</a> (BLAC)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TAN JUN DAO JOSEPH&entry.1554122644&entry.1925317742=U1221528G&entry.633860705=BLAC'>here</a>
+  </ul>
+<li> TAN KAH BING
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=RESI'>The Adventure of the Resident Patient</a> (RESI)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TAN KAH BING&entry.1554122644&entry.1925317742=U1440589L&entry.633860705=RESI'>here</a>
+  </ul>
+<li> TAN KAR GIN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=LAST'>His Last Bow</a> (LAST)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TAN KAR GIN&entry.1554122644&entry.1925317742=U1531129K&entry.633860705=LAST'>here</a>
+  </ul>
+<li> TAN KIAN SIONG
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=CHAS'>The Adventure of Charles Augustus Milverton</a> (CHAS)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TAN KIAN SIONG&entry.1554122644&entry.1925317742=U1222039F&entry.633860705=CHAS'>here</a>
+  </ul>
+<li> TAN LI HOEY
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=PRIO'>The Adventure of the Priory School</a> (PRIO)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TAN LI HOEY&entry.1554122644&entry.1925317742=U1240869G&entry.633860705=PRIO'>here</a>
+  </ul>
+<li> TAN QIA ZONG, DONOVAN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BRUC'>The Adventure of the Bruce-Partington Plans</a> (BRUC)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TAN QIA ZONG, DONOVAN&entry.1554122644&entry.1925317742=U1420883E&entry.633860705=BRUC'>here</a>
+  </ul>
+<li> TAN SI TING IRIS
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=THOR'>The Problem of Thor Bridge</a> (THOR)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TAN SI TING IRIS&entry.1554122644&entry.1925317742=U1430485F&entry.633860705=THOR'>here</a>
+  </ul>
+<li> TAN SIEW HUA
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=FIVE'>The Five Orange Pips</a> (FIVE)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TAN SIEW HUA&entry.1554122644&entry.1925317742=U1530437F&entry.633860705=FIVE'>here</a>
+  </ul>
+<li> TAN TECK MIN ABIGAIL
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SUSS'>The Adventure of the Sussex Vampire</a> (SUSS)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TAN TECK MIN ABIGAIL&entry.1554122644&entry.1925317742=U1380083F&entry.633860705=SUSS'>here</a>
+  </ul>
+<li> TAN WEI JIE, KENNETH
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=COPP'>The Adventure of the Copper Beeches</a> (COPP)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TAN WEI JIE, KENNETH&entry.1554122644&entry.1925317742=U1511151J&entry.633860705=COPP'>here</a>
+  </ul>
+<li> TAN WEN DE LESTER
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BLAN'>The Adventure of the Blanched Soldier</a> (BLAN)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TAN WEN DE LESTER&entry.1554122644&entry.1925317742=U1530246C&entry.633860705=BLAN'>here</a>
+  </ul>
+<li> TAN YANG ER
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=NAVA'>The Adventure of the Naval Treaty</a> (NAVA)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TAN YANG ER&entry.1554122644&entry.1925317742=U1230949J&entry.633860705=NAVA'>here</a>
+  </ul>
+<li> TAN ZHI EN, ANDREAS
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=STOC'>The Adventure of the Stockbroker's Clerk</a> (STOC)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TAN ZHI EN, ANDREAS&entry.1554122644&entry.1925317742=U1530783C&entry.633860705=STOC'>here</a>
+  </ul>
+<li> TAY KOONG JYE
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=GREE'>The Adventure of the Greek Interpreter</a> (GREE)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TAY KOONG JYE&entry.1554122644&entry.1925317742=U1220878L&entry.633860705=GREE'>here</a>
+  </ul>
+<li> TAY SHU MING
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=VEIL'>The Adventure of the Veiled Lodger</a> (VEIL)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TAY SHU MING&entry.1554122644&entry.1925317742=U1421796F&entry.633860705=VEIL'>here</a>
+  </ul>
+<li> TEE JUN HAO SAMUEL
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=IDEN'>A Case of Identity</a> (IDEN)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TEE JUN HAO SAMUEL&entry.1554122644&entry.1925317742=U1322701B&entry.633860705=IDEN'>here</a>
+  </ul>
+<li> TEE KAI REN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=MAZA'>The Adventure of the Mazarin Stone</a> (MAZA)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TEE KAI REN&entry.1554122644&entry.1925317742=U1421450D&entry.633860705=MAZA'>here</a>
+  </ul>
+<li> TENG KAH SENG
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=REDC'>The Adventure of the Red Circle</a> (REDC)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TENG KAH SENG&entry.1554122644&entry.1925317742=U1240519L&entry.633860705=REDC'>here</a>
+  </ul>
+<li> TEO KAI SHIN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=EMPT'>The Adventure of the Empty House</a> (EMPT)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TEO KAI SHIN&entry.1554122644&entry.1925317742=U1530047G&entry.633860705=EMPT'>here</a>
+  </ul>
+<li> TEO TING WEI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=ILLU'>The Adventure of the Illustrious Client</a> (ILLU)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TEO TING WEI&entry.1554122644&entry.1925317742=U1421478J&entry.633860705=ILLU'>here</a>
+  </ul>
+<li> TEO YI SI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=DYIN'>The Adventure of the Dying Detective</a> (DYIN)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TEO YI SI&entry.1554122644&entry.1925317742=U1531107J&entry.633860705=DYIN'>here</a>
+  </ul>
+<li> TEOH XUE MING
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SCAN'>A Scandal in Bohemia</a> (SCAN)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TEOH XUE MING&entry.1554122644&entry.1925317742=U1310412C&entry.633860705=SCAN'>here</a>
+  </ul>
+<li> TIARA BINTE M HAMARIAN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=3GAB'>The Adventure of the Three Gables</a> (3GAB)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TIARA BINTE M HAMARIAN&entry.1554122644&entry.1925317742=U1430697B&entry.633860705=3GAB'>here</a>
+  </ul>
+<li> TNG KAO WEI DANNY
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=REIG'>The Adventure of the Reigate Squire</a> (REIG)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TNG KAO WEI DANNY&entry.1554122644&entry.1925317742=U1221124L&entry.633860705=REIG'>here</a>
+  </ul>
+<li> TOH YI HUI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=ABBE'>The Adventure of the Abbey Grange</a> (ABBE)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TOH YI HUI&entry.1554122644&entry.1925317742=U1410353H&entry.633860705=ABBE'>here</a>
+  </ul>
+<li> TONG LIVIA
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=LADY'>The Disappearance of Lady Frances Carfax</a> (LADY)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=TONG LIVIA&entry.1554122644&entry.1925317742=U1310541B&entry.633860705=LADY'>here</a>
+  </ul>
+<li> VALARMATHI D/O MAHENDRAN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=CARD'>The Adventure of the Cardboard Box</a> (CARD)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=VALARMATHI D/O MAHENDRAN&entry.1554122644&entry.1925317742=U1530814E&entry.633860705=CARD'>here</a>
+  </ul>
+<li> VALERIE ONG
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=3STU'>The Adventure of the Three Students</a> (3STU)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=VALERIE ONG&entry.1554122644&entry.1925317742=U1420966B&entry.633860705=3STU'>here</a>
+  </ul>
+<li> VANESSA NG QIU RUI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=MUSG'>The Adventure of the Musgrave Ritual</a> (MUSG)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=VANESSA NG QIU RUI&entry.1554122644&entry.1925317742=U1310425C&entry.633860705=MUSG'>here</a>
+  </ul>
+<li> VANESSA TAN YU QING
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=DEVI'>The Adventure of the Devil's Foot</a> (DEVI)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=VANESSA TAN YU QING&entry.1554122644&entry.1925317742=U1230106K&entry.633860705=DEVI'>here</a>
+  </ul>
+<li> VISHALINI D/O K VISVANATHAN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=ENGR'>The Adventure of the Engineer's Thumb</a> (ENGR)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=VISHALINI D/O K VISVANATHAN&entry.1554122644&entry.1925317742=U1320948D&entry.633860705=ENGR'>here</a>
+  </ul>
+<li> WAN KHALISAH BINTI WAN KAMARUDDIN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=LION'>The Adventure of the Lion's Mane</a> (LION)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=WAN KHALISAH BINTI WAN KAMARUDDIN&entry.1554122644&entry.1925317742=U1530093J&entry.633860705=LION'>here</a>
+  </ul>
+<li> WANG JING WEN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=NORW'>The Adventure of the Norwood Builder</a> (NORW)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=WANG JING WEN&entry.1554122644&entry.1925317742=U1530421D&entry.633860705=NORW'>here</a>
+  </ul>
+<li> WEI QI ZI KEZIAH
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=MISS'>The Adventure of the Missing Three-Quarter</a> (MISS)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=WEI QI ZI KEZIAH&entry.1554122644&entry.1925317742=U1531004E&entry.633860705=MISS'>here</a>
+  </ul>
+<li> WENG JING YING
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=WIST'>The Adventure of Wisteria Lodge</a> (WIST)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=WENG JING YING&entry.1554122644&entry.1925317742=U1310270D&entry.633860705=WIST'>here</a>
+  </ul>
+<li> WONG CHONG HAO
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=NOBL'>The Adventure of the Noble Bachelor</a> (NOBL)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=WONG CHONG HAO&entry.1554122644&entry.1925317742=U1510206C&entry.633860705=NOBL'>here</a>
+  </ul>
+<li> WU ZI'AN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=RETI'>The Adventure of the Retired Colourman</a> (RETI)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=WU ZI'AN&entry.1554122644&entry.1925317742=U1422124F&entry.633860705=RETI'>here</a>
+  </ul>
+<li> YANG WU XI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BERY'>The Adventure of the Beryl Coronet</a> (BERY)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=YANG WU XI&entry.1554122644&entry.1925317742=U1320982C&entry.633860705=BERY'>here</a>
+  </ul>
+<li> YAP SIOK HWEE, VICTORIA
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=SIXN'>The Adventure of the Six Napoleons</a> (SIXN)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=YAP SIOK HWEE, VICTORIA&entry.1554122644&entry.1925317742=U1522160F&entry.633860705=SIXN'>here</a>
+  </ul>
+<li> YEE JING WEI
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=VEIL'>The Adventure of the Veiled Lodger</a> (VEIL)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=YEE JING WEI&entry.1554122644&entry.1925317742=U1421093A&entry.633860705=VEIL'>here</a>
+  </ul>
+<li> YEO LEE MING JULIA
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BLUE'>The Adventure of the Blue Carbuncle</a> (BLUE)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=YEO LEE MING JULIA&entry.1554122644&entry.1925317742=U1531059B&entry.633860705=BLUE'>here</a>
+  </ul>
+<li> YEO XIN YING VANESSA
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=ENGR'>The Adventure of the Engineer's Thumb</a> (ENGR)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=YEO XIN YING VANESSA&entry.1554122644&entry.1925317742=U1531354A&entry.633860705=ENGR'>here</a>
+  </ul>
+<li> YEONG CHI HENG
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=YELL'>The Adventure of the Yellow Face</a> (YELL)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=YEONG CHI HENG&entry.1554122644&entry.1925317742=U1421601D&entry.633860705=YELL'>here</a>
+  </ul>
+<li> YIP TING FONG
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=CARD'>The Adventure of the Cardboard Box</a> (CARD)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=YIP TING FONG&entry.1554122644&entry.1925317742=U1322477H&entry.633860705=CARD'>here</a>
+  </ul>
+<li> YONG YAQING ELENA
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=CHAS'>The Adventure of Charles Augustus Milverton</a> (CHAS)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=YONG YAQING ELENA&entry.1554122644&entry.1925317742=U1440667A&entry.633860705=CHAS'>here</a>
+  </ul>
+<li> YUE MINKANG
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=MUSG'>The Adventure of the Musgrave Ritual</a> (MUSG)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=YUE MINKANG&entry.1554122644&entry.1925317742=U1220842B&entry.633860705=MUSG'>here</a>
+  </ul>
+<li> YVONNE TAN SIN LIAN
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=BOSC'>The Boscombe Valley Mystery</a> (BOSC)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=YVONNE TAN SIN LIAN&entry.1554122644&entry.1925317742=U1540836K&entry.633860705=BOSC'>here</a>
+  </ul>
+<li> ZHANG ZIYU, VIOLET
+  <ul>
+    <li>Find your multi-word expressions in  <a href='http://www.arthur-conan-doyle.com/index.php?title=IDEN'>A Case of Identity</a> (IDEN)
+    <li>Enter them <a href='https://docs.google.com/forms/d/1H3IU-2WEs8U_zonpsllE2a_1Xee8-BftzvGlq8EeVxA/viewform?entry.1294375209=ZHANG ZIYU, VIOLET&entry.1554122644&entry.1925317742=U1530411F&entry.633860705=IDEN'>here</a>
+  </ul>
+</ul>
+
+
+<hr />
+
+
+
+
+    <h6>References:</h6>
+    <p><b>Canonical Citation:</b></p>
+    <p>Liling Tan and Francis Bond. 2012. <a href"http://web.mysites.ntu.edu.sg/fcbond/open/pubs/2012-ijalp-ntumc.pdf">Building and annotating the linguistically diverse NTU-MC (NTU-multilingual corpus)</a>. In International Journal of Asian Language Processing 22(4) pp 161–174.</p>
+    <p><b>Other References:</b><br></p>
+    <p>Francis Bond, Shan Wang, Eshley Huini Gao, Hazel Shuwen Mok, and Jeanette Yiwen Tan. 2013. <a href="http://www.aclweb.org/anthology/W13-2319">Developing parallel sense-tagged corpora with wordnets</a>. In Proceedings of the 7th Linguistic Annotation Workshop and Interoperability with Discourse (LAW 2013). Sofia. pp 149–158. </p>
+    <p>Yu Jie Seah and Francis Bond. 2014. <a href="http://compling.hss.ntu.edu.sg/pdf/2014-lrec-pronouns.pdf">Annotation of Pronouns in a Multilingual Corpus of Mandarin Chinese, English and Japanese</a>. In 10th Joint ACL - ISO Workshop on Interoperable Semantic Annotation Reykjavik.</p>
+    <p>Slav Petrov, Dipanjan Das, and Ryan McDonald. 2011. <a href="http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf">A universal part-of-speech tagset</a>. arXiv preprint arXiv:1104.2086.
+    <p>Shan Wang and Francis Bond. 2014. <a href="http://compling.hss.ntu.edu.sg/pdf/2014-lrec-xling.pdf">Building The Sense-Tagged Multilingual Parallel Corpus</a>. In 9th Edition of the Language Resources and Evaluation Conference (LREC 2014), Reykjavik.</p>
+
+    </p>
+
+
+
+
+    <hr>
+    <p><strong>Contributors:</strong> Francis Bond, Luís Morgado da Costa, Tuan Anh Le.
+
+      <hr>
+      <address>
+	<a href="http://www3.ntu.edu.sg/home/fcbond/"><strong>Francis Bond</strong></a>
+	&lt;<a href="mailto:bond@ieee.org">bond@ieee.org</a>&gt;
+	<br> <a href="http://linguistics.hss.ntu.edu.sg/">Division of Linguistics and Multilingual Studies</a>
+	<br> <a href="http://www.ntu.edu.sg/">Nanyang Technological University</a>
+	<br>Level 3, Room 55, 14 Nanyang Drive, Singapore 637332
+	<br>Tel:  (+65) 6592 1568; Fax: (+65) 6794 6303
+      </address>
+  </body>
+</html>
