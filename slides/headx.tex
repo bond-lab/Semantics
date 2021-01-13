@@ -33,10 +33,14 @@
 %%
 \usepackage[a4paper,landscape,margin=25mm]{geometry}
 
+
+
+
 \usepackage{fontenc}
 \usepackage{polyglossia}
 \setmainlanguage{english}
 \setmainfont{TeX Gyre Pagella}
+\setsansfont[Ligatures=TeX]{TeX Gyre Heros}
 \usepackage{xeCJK}
 \setCJKmainfont{Noto Sans CJK SC}
 \setCJKsansfont{Noto Sans CJK SC}
@@ -45,6 +49,9 @@
 %\setCJKmainfont{WenQuanYi Micro Hei}
 %\clearpage
 %\setCJKmainfont{AR PL SungtiL GB}
+\newfontfamily\ipafont{Charis SIL}
+\newcommand\ipa[1]{\mtcitestyle{\ipafont #1}}
+
 
 \usepackage[xetex]{xcolor}
 \usepackage[xetex]{graphicx}
