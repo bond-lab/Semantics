@@ -175,10 +175,10 @@ with another) helps us build the semantic model.
   This requires a richer lexicon
 \item There are many other ways of composing words (not just modification)
   \begin{itemize}
-  \item Semantic roles: \eng{The dog barked}
-  \item Intensification: \eng{They have a very big head}
-  \item Embedding: \eng{I think they have a big head}
-  \item Quantification: \eng{They have two heads/no head}
+  \item Semantic roles: \eng{\ul{The dog} \ull{barked}}
+  \item Intensification: \eng{They have a \ul{very} \ull{big} head}
+  \item Embedding: \eng{I \ull{think} \ul{they have a big head}}
+  \item Quantification: \eng{They have \ul{two} \ull{heads}/\ul{no} \ull{head}}
 %  \item [\ldots]
   \end{itemize}
 \end{itemize}
@@ -266,9 +266,9 @@ with another) helps us build the semantic model.
 \item \eng{Recognising, as I do, that you are the second highest
     expert in Europe-'}
 \item \eng{'Indeed, sir! May I inquire who has the honour to be the
-    first?' asked Holmes, with some asperity.} \ldots
+    first?' asked Holmes, with some asperity. \ldots}
   \item \eng{But as a practical man of affairs it is acknowledged that
-      you stand alone. I trust, sir, that I have not inadvertently-'}
+      you stand alone. I trust, sir, that I have not inadvertently-'} ???
   \item \eng{'Just a little,' said Holmes. '}
   \end{itemize}
 \item What is missing here?\task
@@ -325,7 +325,7 @@ He \& seized \& the poker, \& and \& bent \& it \& into \& a curve \ldots \\ %wi
 \depedge{6}{5}{PATIENT}
 \depedge{7}{6}{GOAL}
 \end{dependency}
- 
+ \newpage
 \item  Also known as
 \begin{itemize}
 \item  Deep case \citep{Fillmore:1968}
@@ -497,7 +497,7 @@ being in a state or position.
 
 \myslide{PropBank Roles}
 
-\begin{itemize}
+\begin{itemize}\addtolength{\itemsep}{-1ex}
 \item An influential set of semantic roles comes from  PropBank \citep{Palmer:Gildea:Kingsbury:2005}
 \item They have 6 core roles and 17 modifier roles
 \item The core roles, meaning is defined per verb sense \\
@@ -574,7 +574,7 @@ the verb from their semantic roles, and hence their
 grammatical functions.
 % \end{itemize}
 
-\item Many verbs allow alternations ``syntactic variants with different roles''
+\item Many verbs allow \txx{alternation}s ``syntactic variants with different roles''
 
 \begin{exe}
   \ex \eng{Jo broke the ice with a pickaxe}  \sr{AGENT, PATIENT, INSTRUMENT}
@@ -681,7 +681,7 @@ grammatical functions.
     \end{xlist}
   \end{exe}  
 \item  The relations between them are called \txx{alternations}
-\item  English Verb Classes and Alternation \citep{Levin:1993}
+\item  \textit{English Verb Classes and Alternations} \citep{Levin:1993}
 \end{itemize}
 
 
@@ -1130,6 +1130,7 @@ not strongly grammaticalized.
   \item Once we have identified a sense, it is then easy to look at
     synonyms and other closely related words
   \end{itemize}
+  \newpage
 \item \eng{Sherlock Holmes had been leaning back in his chair with his
     eyes closed and his head sunk in a cushion, but he half opened his
     \ul{lids} now and glanced across at his visitor.}\task{}
@@ -1154,22 +1155,25 @@ not strongly grammaticalized.
     \end{itemize}
   \item Processing a text by computer is difficult
     \begin{itemize}
-    \item The computer may have misinterpreted the part-of-speech
+    \item The computer may have misinterpreted
+    \begin{itemize}
+    \item the part-of-speech
       \\ \eng{Does that go}  ``Female deer which go'' ``Is it the case that is goes?''
       \\ \eng{The speckled band} ``the band that is speckled'' ``the band that someone speckled''
     \item Or the sentence boundaries
     \item Or the words boundaries
     \end{itemize}
+        \end{itemize}
   \item People use language idiosyncratically 
     \begin{itemize}
     \item extending meanings metaphorically
-    \item sometimes so strangely that we might even to say wrongly
+    \item sometimes so strangely that we might even say wrongly
     \end{itemize}
 \newpage
   \item Typically people agree around 72.5\% of the time \citep{Snyder:Palmer:2004}.
     \begin{itemize}
     \item  Verbs are hardest (67.8\%), then nouns (74.9\%) and adjectives (78.5\%)
-    \item Disagreements tended to cluster around a relatively small group of difficult words.
+    \item Disagreements tend to cluster around a relatively small group of difficult words.
     \item For example \lex{national}
       \begin{itemize}
       \item In six out of seven instances one annotator chose
