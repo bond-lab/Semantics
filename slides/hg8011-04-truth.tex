@@ -1086,6 +1086,64 @@ good or bad.
 %★★★★★　
 \end{itemize}
 
+\myslide{Annotating Sentiment}
+\MyLogo{Sentiment Analysis/Opinion Mining is very popular these days}
+   \begin{tabular}{r>{\itshape}l>{\itshape}l>{\itshape}l>{\itshape}l}
+      \textbf{Score} & \textbf{Example} & \textbf{Example} & \textbf{Example} & 
+      \textbf{Corpus Examples} \\
+      \hline
+      95 & fantastic & very good     &            & {perfect}, splendidly  \\ 
+      64 & good      & good          &            & {soothing}, pleasure  \\
+      34 & ok        & sort of good  & not bad    & {easy}, interesting  \\ 
+      0  & beige     & neutral       &            & {puff}  \\  
+      -34 & poorly    & a bit bad     &            & rumour, cripple  \\
+      -64 & bad       & bad           & not good   & {hideous}, death  \\
+      -95 & awful     & very bad      &            & {deadly}, horror-stricken     
+   \end{tabular}
+
+   We annotate \txx{senses}: words given their meaning, before they
+   are transformed by the syntax.  So \lex{good} in \eng{That is very
+     very good}
+   and \lex{good} in \eng{That is no good} get the same score.
+   
+ \end{itemize}
+
+
+
+\begin{itemize}
+\item Note that most words carry no sentiment.
+\end{itemize}
+
+
+
+ 
+ \myslide{High and Low Examples in multiple languages}
+\newcommand{\ili}[1]{\href{https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/#1}{\url{i#1}}}
+
+
+\begin{small}
+  \begin{tabular}{lrr>{\itshape}lrlrlr}
+    Concept & freq & score & English & score & Chinese & score & Japanese & Score \\
+    \hline
+    % 01036996-n
+    \ili{40833}  &   24 &  50 & marriage & 39 & 婚事 & 34 & 結婚	& 58\\
+            &      &  & wedding  & 34 \\   
+            % 02021905-a
+    \ili{11080}  & 5& 40  &  rich & 33 & 有钱 & 34 &  裕福 & 66  \\
+    % 06878071-n
+    \ili{72643} & 4 & 33 &  smile &   32 & 微笑	& 34 & 笑み & 34 \\
+    % 00358431-v
+    \ili{23529}  & 40 & $-$68  & die & $-$80 &  去世 & $-$60 &亡くなる & $-$63 \\
+            &        &  &  &       & 死亡  & $-$64 & 死ぬ & $-$62\\
+            % 00220522-n
+    \ili{36562}  & 5  & $-$83 & murder &$-$95  & 谋杀 & $-$95	 & 殺し & 	$-$64 \\
+            &     &      && & & & 殺害 & $-$63 \\
+  \end{tabular}
+\end{small}
+
+By generalizing to the concept, we can share sentiment values across
+languages \citep{Bond:Ohkuma:daCosta:Miura:Chen:Kuribayashi:Wang:2016,Bond:Janz:Piasecki:2019}.
+
 \myslide{Conclusions}
 
 \begin{itemize}
@@ -1093,10 +1151,15 @@ good or bad.
 \item We reason unconsciously when we decide which words to use
 \item Language can be used to convey impressions and opinions
   \begin{itemize}
-  \item You will try to do this in Project 3: Lexical Sentiment
+  \item You will try to do this as part of projects 1 and 2
   \end{itemize}
 \end{itemize}
 
+
+  
+\small
+\bibliographystyle{aclnat}
+\bibliography{abb,mtg,nlp,ling}
 
 \end{document}
 
