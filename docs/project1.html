@@ -67,41 +67,45 @@
 
     <!-- <h6>Welcome to the NTU Multilingual Corpus Tools!</h6> -->
 
-<h4>Project 1 (Individual: 15%) pass/fail</h4>  
+<h4>Project 1 (Individual: 20%) pass/fail</h4>  
 
 <ul>
 
   <li>If you have not yet done so, read the whole story:
-<a href='http://compling.hss.ntu.edu.sg/canon/scan.html'>A
-      Scandal In Bohemia</a>
-    (SCAN)
-    (<a href='http://www.arthur-conan-doyle.com/index.php?title=SCAN'>A
-      Scandal In Bohemia</a>)
+<a href='http://compling.hss.ntu.edu.sg/canon/fina.html'>The Final Problem</a>
+    (FINA)
+    (<a href='http://www.arthur-conan-doyle.com/index.php?title=FINA'>The Final Problem</a>)
    
-  <li>Tag all words that need to be tagged in <a href="#sentences">the sentences assigned to you</a>.
+  <li>Tag all words that need to be tagged in the sentences assigned to you.
     <br>You can find your name in the list below
     <ul>
       <li> For each word you should chose one of the senses in wordnet
 	(Fellbaum 1998) or indicate why this is not possible.
+      <li>If you think it is marked for <a href='https://bond-lab.github.io/IMI/guide/sentiment.html'>sentiment</a>, you should note its
+	polarity and strength
+      <li> There is a <a href='https://bond-lab.github.io/IMI/guide/'>quick start guide</a>.
+	
       <li> More detailed instructions are given in the <a href='tagdoc.html'>Detailed Tagging Guidelines</a>
       <li>The tool works best under Chrome or Firefox.
-      <li><p style="font-size: 1.3em; font-weight: bold;">&raquo; <span style="color: red">NEW!</span> <a href="guide/hg8011_proj1_simple.html" target="qsguide">Quick Start Guide</a> &laquo;</li>
+     
       <li>You will be assessed on
 	<ul>
 	  <li>Completion: is everything tagged
-	  <li>Accuracy: are the tags reasonable (do they agree more than a threshold with an expert annotation)
+	  <li>Accuracy: are the tags reasonable (do they agree more
+	    than a threshold with an expert annotation)
+	  <li><a href='annotation.html#phase1.html'>Your assigned sentences are here</a>
 	  <li>If you have tagged everything reasonably accurately then you will pass
 	</ul>
     </ul>
-  <li> Estimated time 2-5 hours (but it may take longer).  Don't overthink things.
+  <li> Estimated time 3-5 hours (but it may take longer).  Don't overthink things.
   <li> <b>You should have annotated every word by the due date.</b>  It is
       important you make this deadline so that we can merge the data
       for part 2.
   <li>Comment words where you are not sure of the tag
-  <li>Due date: 2018-03-02 23:59 (Fri)
+  <li>The due date is on the <a href='index.html'>main page</a>
 </ul>
 
-<h4>Project 2 (Group: 15%)</h4>  
+<h4>Project 2 (Group: 20%)</h4>  
 
 <ul>
   <li> After the task is completed, you will be given a comparison of
@@ -113,563 +117,33 @@
   <li>You should add comments for
     <ul>
       <li>Anything marked 'e', with suggestions as to how to fix the corpus
-      <li>Anything marked 'w', with suggestions as to how to fix wordnet
-      <li>
+      <li>Anything marked 'w', with suggestions as to how to fix
+	wordnet
+	<li> If the same word appears many times with the same issue,
+	you only need to comment on the <strong>first</strong> occurence 
     </ul>
+  <li>Note that the final annotator is a naive computer
+    &mdash; it just tags most frequent sense (mfs)
+    <ul>
+      <li>mfs is calculated from the semcor corpus and three Sherlock
+	Holmes Stories (DANC, SPEC and REDH) weighted 1:3 to normalize frequencies
+      <li>Unseen proper nouns are tagged as <tt>per</tt>
+      <li>Unseen closed class words are tagged as <tt>x</tt>
+      <li>Unseen monosemous words are tagged with their single sense
+      <li>Other unseen words are tagged <tt>None</tt>
+      <li>If there are two or more equally frequent senses for a lemma
+	then it is tagged <tt>None</tt>
+    </ul>
+  <li>So feel free to over-ride them!
   <li>You will be assessed (as a group) on
     <ul>
       <li>Completion: is everything tagged
       <li>Accuracy: are the tags reasonable (do they agree more than a threshold with an expert annotation)
       <li>How insightful your comments are
+      <li>How reasonable the sentiment marking is
     </ul>
  <li>Due date: 2018-03-30 23:59 (Fri)
 </ul>
-
-<br>
-<!--
-DEMO:
-<li>WANG WENJIE (wangwenjie): 55884-55901    [engE] <a href = 'http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engE&lang=eng&sid=55884'>Start here</a>
-
-<p>If you have questions about the task, or trouble logging in, please email Wenjie: &lt;WWANG5@e.ntu.edu.sg&gt;. 
--->
-
-<h3><a name="sentences">Project 1: Your Sentences</a></h3>
-
-<ul>
-	<li>Look for your name. You will see your username (s#) and the sentences to work on beside it. <code>NAME (s#): First Sentence-Last Sentence</code></li>
-	<li>Click <em>Start here</em> > Login > <b>Return this page again</b> > Click <em>Start here</em> <b>again</b></li>
-	<li>If you have questions about the task, or trouble logging
-	  in, please email both me and
-	  Luis <a href='mailto:bond@ieee.org?subject=[HG8011]&CC=depa0003@e.ntu.edu.sg'>&lt;bond@ieee.org,
-	  depa0003@e.ntu.edu.sg&gt;</a>.</li>
-</ul>
-
-<p style="display: inline-block; margin-bottom: 20px; padding: 5px; border: 2px solid #336; border-width: 1px 3px; background-color: #eef; font-size: 1.3em; font-weight: bold;">NEW! <a href="guide/hg8011_proj1_simple.html" target="qsguide">Quick Start Guide</a></p>
-
-<p><a href="#" id="toggle_sents" toggle_act="show">► Show Project 1 Sentences</a> <b>(Ignore these for Project 2!)</b></p> 
-
-<hr />
- 
-<ul id="proj1_sents" style="margin-left: 50px">
-
-<li>ABIGAIL TEO YUE MIN (s1): 50804-50815 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=50804'>Start here</a> 
-<li>AFIQAH BINTE NORAZMI (s2): 50816-50819 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=50816'>Start here</a> 
-<li>AHMAD ADNAN BIN FIRDAUS (s3): 50820-50824 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=50820'>Start here</a> 
-<li>AMIERUL BIN RASHID (s4): 50825-50842 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=50825'>Start here</a> 
-<li>ANGEL MARIE JASON (s5): 50843-50851 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=50843'>Start here</a> 
-<li>ANGELOVE CHUA (s6): 50852-50862 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=50852'>Start here</a> 
-<li>ANTHEBERTHER LOW HUI SI (s7): 50863-50881 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=50863'>Start here</a> 
-<li>B ASHWINI D/O M BALAN (s8): 50882-50900 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=50882'>Start here</a> 
-<li>BAY JING'EN BELVY (s9): 50901-50920 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=50901'>Start here</a> 
-<li>BAY JUN YU BERNICE (s10): 50921-50936 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=50921'>Start here</a> 
-<li>BRENNAN KAZUKI SATO (s11): 50937-50944 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=50937'>Start here</a> 
-<li>BRYANT LEE HAN WEI (s12): 50945-50959 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=50945'>Start here</a> 
-<li>CAITLIN NATHALIE LIM LI YUN (s13): 50960-50973 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=50960'>Start here</a> 
-<li>CARLA GABRIELA CITRADEWI (s14): 50974-50980 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=50974'>Start here</a> 
-<li>CASSIE ONG WEN TING (s15): 50981-51009 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=50981'>Start here</a> 
-<li>CELESTINE CHEN YI RU (s16): 51010-51042 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51010'>Start here</a> 
-<li>CELINE LEE QIAN HUI (s17): 51043-51061 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51043'>Start here</a> 
-<li>CHA CHAO JING (s18): 51062-51081 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51062'>Start here</a> 
-<li>CHAN JING TING (s19): 51082-51087 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51082'>Start here</a> 
-<li>CHAN JU YING, EVELYN (s20): 51088-51098 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51088'>Start here</a> 
-<li>CHANG WEI TONG, VALANTIA (s21): 51099-51108 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51099'>Start here</a> 
-<li>CHARMAINE TAN HUI QI (s22): 51109-51119 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51109'>Start here</a> 
-<li>CHEE CELINE (s23): 51120-51134 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51120'>Start here</a> 
-<li>CHEN MI MIN CHRISTINE (s24): 51135-51143 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51135'>Start here</a> 
-<li>CHONG LE WEN (s25): 51144-51150 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51144'>Start here</a> 
-<li>CLARISSA TAN JIE XIN (s26): 51151-51165 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51151'>Start here</a> 
-<li>CLEMENT LEO TEO HUAN KAI (s27): 51166-51170 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51166'>Start here</a> 
-<li>DARSICIUS GOH YIHAN (s28): 51171-51178 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51171'>Start here</a> 
-<li>DEDRICK POH KAI KIAT (s29): 51179-51194 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51179'>Start here</a> 
-<li>DENA ANDINA SUHADI (s30): 51195-51211 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51195'>Start here</a> 
-<li>DHYA SYARAH WINIASIH M S K P (s31): 51212-51224 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51212'>Start here</a> 
-<li>EDDIE LEE KUAN SENG (s32): 51225-51232 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51225'>Start here</a> 
-<li>EDITH SNG YA SI (s33): 51233-51238 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51233'>Start here</a> 
-<li>EDMOND SOH CUN YU (s34): 51239-51252 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51239'>Start here</a> 
-<li>ENG WEI MIN KELVIN (s35): 51253-51272 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51253'>Start here</a> 
-<li>ENOCH TEH SEEN TAO (s36): 51273-51278 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51273'>Start here</a> 
-<li>ERIC PEH ZHENG QUAN (s37): 51279-51293 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51279'>Start here</a> 
-<li>ESTHER VILARSHINI D/O PANNEER SELVAM (s38): 51294-51300 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51294'>Start here</a> 
-<li>EVELYN CHOW KAR LING (s39): 51301-51310 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51301'>Start here</a> 
-<li>FIDELLITHY TAN (s40): 51311-51328 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51311'>Start here</a> 
-<li>FUNG RUI QI (s41): 51329-51337 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51329'>Start here</a> 
-<li>GABRIELLA BENEDICTA CHRISTIANTI (s42): 51338-51349 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51338'>Start here</a> 
-<li>GLEN TANG JUN HAO (s43): 51350-51361 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51350'>Start here</a> 
-<li>GOH WEE KIAT NATHANAEL (s44): 51362-51379 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51362'>Start here</a> 
-<li>GRACE LIM ZHUO YAH (s45): 51380-51400 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51380'>Start here</a> 
-<li>GUI LI HIANG (s46): 51401-51413 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51401'>Start here</a> 
-<li>GUO LI (s47): 51414-51426 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51414'>Start here</a> 
-<li>HANNAH WU YUANMIN (s48): 51427-51433 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51427'>Start here</a> 
-<li>HANS TANANDA (s49): 51434-51442 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51434'>Start here</a> 
-<li>HASBI ONG (s50): 51443-51458 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51443'>Start here</a> 
-<li>HILMAN HARIS HOR WAI MAN (s51): 51459-51464 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engA&lang=eng&sid=51459'>Start here</a> 
-<li>HO JIA YU (s52): 50804-50815 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=50804'>Start here</a> 
-<li>HO SHAO YANG (s53): 50816-50819 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=50816'>Start here</a> 
-<li>HO SHI YUN ALVINA (s54): 50820-50824 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=50820'>Start here</a> 
-<li>HO WEI TECK (s55): 50825-50842 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=50825'>Start here</a> 
-<li>HO YEE SUAN MICHELLE (s56): 50843-50851 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=50843'>Start here</a> 
-<li>HUANG BAOFEN (s57): 50852-50862 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=50852'>Start here</a> 
-<li>HWAN RUI QI RACHEAL (s58): 50863-50881 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=50863'>Start here</a> 
-<li>IAN TAY JIA JUN (s59): 50882-50900 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=50882'>Start here</a> 
-<li>IRENE LAI WEI LIN (s60): 50901-50920 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=50901'>Start here</a> 
-<li>IZZA HAZIQAH BINTE ABDUL RAHMAN (s61): 50921-50936 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=50921'>Start here</a> 
-<li>JACY TEO (s62): 50937-50944 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=50937'>Start here</a> 
-<li>JAMIE LIAN ZHEN NING (s63): 50945-50959 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=50945'>Start here</a> 
-<li>JANELLE LOW XIN WEI (s64): 50960-50973 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=50960'>Start here</a> 
-<li>JASMINE LAU JIA MIN (s65): 50974-50980 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=50974'>Start here</a> 
-<li>JASON GUNAWAN LIMANTORO (s66): 50981-51009 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=50981'>Start here</a> 
-<li>JAVON CHAN YI DA (s67): 51010-51042 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51010'>Start here</a> 
-<li>JAYAKUMAR SANDHYA PILLAI (s68): 51043-51061 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51043'>Start here</a> 
-<li>JERRELL ONG ZHE HENG (s69): 51062-51081 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51062'>Start here</a> 
-<li>JESSLYN (s70): 51082-51087 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51082'>Start here</a> 
-<li>JOANNE TAN (s71): 51088-51098 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51088'>Start here</a> 
-<li>JOSEPH LIU WOON KEONG (s72): 51099-51108 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51099'>Start here</a> 
-<li>JOSHUA CHAN ZHEN AN (s73): 51109-51119 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51109'>Start here</a> 
-<li>JOSHUA NG JIAWEI (s74): 51120-51134 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51120'>Start here</a> 
-<li>JOVEN CHIA KAH SENG (s75): 51135-51143 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51135'>Start here</a> 
-<li>JUSTIN TEO ZHONGHENG (s76): 51144-51150 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51144'>Start here</a> 
-<li>KEITH LAU XUAN LIANG (s77): 51151-51165 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51151'>Start here</a> 
-<li>KENNETH NG YONG CHIN (s78): 51166-51170 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51166'>Start here</a> 
-<li>KHAIRUNNIZAM BIN KHAMIS (s79): 51171-51178 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51171'>Start here</a> 
-<li>KHOO HWEE LIN MELISSA (s80): 51179-51194 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51179'>Start here</a> 
-<li>KIMBERLY YEAP SZE ERN (s81): 51195-51211 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51195'>Start here</a> 
-<li>KOH JIA SHENG (s82): 51212-51224 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51212'>Start here</a> 
-<li>KOH XIAO XIAN SAMANTHA (s83): 51225-51232 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51225'>Start here</a> 
-<li>KONG QI WEI (s84): 51233-51238 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51233'>Start here</a> 
-<li>LAM CHENG MUN (s85): 51239-51252 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51239'>Start here</a> 
-<li>LAM KAH HUI (s86): 51253-51272 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51253'>Start here</a> 
-<li>LEE CHUN WAYNE (s87): 51273-51278 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51273'>Start here</a> 
-<li>LEE HWEE (s88): 51279-51293 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51279'>Start here</a> 
-<li>LEE JUN HIANG (s89): 51294-51300 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51294'>Start here</a> 
-<li>LEE ROU XUAN (s90): 51301-51310 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51301'>Start here</a> 
-<li>LEE WAI CHONG GLEN (s91): 51311-51328 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51311'>Start here</a> 
-<li>LEE WERN SING, JOY (s92): 51329-51337 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51329'>Start here</a> 
-<li>LEE XIN YING EDINA (s93): 51338-51349 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51338'>Start here</a> 
-<li>LEONG JIA EN (s94): 51350-51361 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51350'>Start here</a> 
-<li>LEONG KIT YEE (s95): 51362-51379 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51362'>Start here</a> 
-<li>LER ZHI HENG (s96): 51380-51400 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51380'>Start here</a> 
-<li>LIM KAH YE (s97): 51401-51413 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51401'>Start here</a> 
-<li>LIM LAY QI EVELYN (s98): 51414-51426 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51414'>Start here</a> 
-<li>LIM SZU WEN ISABELLE (s99): 51427-51433 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51427'>Start here</a> 
-<li>LIM WEI JIE TIMOTHY (s100): 51434-51442 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51434'>Start here</a> 
-<li>LIM YI XIAN, LUKE (s101): 51443-51458 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51443'>Start here</a> 
-<li>LIM YU LOONG NICHOLAS (s102): 51459-51464 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engB&lang=eng&sid=51459'>Start here</a> 
-<li>LIM ZENG HAO (s103): 50804-50815 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=50804'>Start here</a> 
-<li>LIM ZHI YANG DOMINIC (s104): 50816-50819 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=50816'>Start here</a> 
-<li>LINGEYSHWARAN PARAMASILVAM (s105): 50820-50824 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=50820'>Start here</a> 
-<li>LIU JUNXI (s106): 50825-50842 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=50825'>Start here</a> 
-<li>LOH YAN YU JACQUELINE (s107): 50843-50851 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=50843'>Start here</a> 
-<li>LOO JUN YUAN (s108): 50852-50862 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=50852'>Start here</a> 
-<li>LOW GUAI MUN CHERNIS (s109): 50863-50881 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=50863'>Start here</a> 
-<li>LUA MING LI (s110): 50882-50900 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=50882'>Start here</a> 
-<li>LYNETTE LIM ENXUAN (s111): 50901-50920 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=50901'>Start here</a> 
-<li>MARGARET SUHASINI ANTHONY (s112): 50921-50936 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=50921'>Start here</a> 
-<li>MARION YEO CHUN HUI (s113): 50937-50944 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=50937'>Start here</a> 
-<li>MARK CHENG YEUNG SHEN (s114): 50945-50959 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=50945'>Start here</a> 
-<li>MATTHEW JOSE TUNG KIT (s115): 50960-50973 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=50960'>Start here</a> 
-<li>MAVIS LIM WEI (s116): 50974-50980 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=50974'>Start here</a> 
-<li>MELISSA LEE QIN (s117): 50981-51009 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=50981'>Start here</a> 
-<li>MICHELLE LIM YING YI (s118): 51010-51042 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51010'>Start here</a> 
-<li>MUHAMMAD AMIRUDDIN BIN AMAN (s119): 51043-51061 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51043'>Start here</a> 
-<li>MUHAMMAD FAAIZ KHAN BIN ABDUL HALIL (s120): 51062-51081 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51062'>Start here</a> 
-<li>MUSTAFA ALI BIN MOHAMED BASIR (s121): 51082-51087 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51082'>Start here</a> 
-<li>NAIR VINITH (s122): 51088-51098 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51088'>Start here</a> 
-<li>NEO KAI PING (s123): 51099-51108 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51099'>Start here</a> 
-<li>NG KIM LI (s124): 51109-51119 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51109'>Start here</a> 
-<li>NG SEE HUI LYNETTE (s125): 51120-51134 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51120'>Start here</a> 
-<li>NG SU EN@LEONG SU EN (s126): 51135-51143 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51135'>Start here</a> 
-<li>NG YEE TECK, GALEN (s127): 51144-51150 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51144'>Start here</a> 
-<li>NG YEW KONG (s128): 51151-51165 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51151'>Start here</a> 
-<li>NGUYEN HA THIEN KIM (s129): 51166-51170 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51166'>Start here</a> 
-<li>NUR LIYANA BINTI MOHMAD AZHAR (s130): 51171-51178 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51171'>Start here</a> 
-<li>NURUL 'UBAIDAH BINTE MOHAMMED IZAM (s131): 51179-51194 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51179'>Start here</a> 
-<li>ONG JU (s132): 51195-51211 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51195'>Start here</a> 
-<li>ONG KIAT MENG IVAN (s133): 51212-51224 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51212'>Start here</a> 
-<li>ONG KIT MUN (s134): 51225-51232 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51225'>Start here</a> 
-<li>ONG WAN JUIN (s135): 51233-51238 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51233'>Start here</a> 
-<li>PANG AN QI (s136): 51239-51252 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51239'>Start here</a> 
-<li>PEH SHENG WU (s137): 51253-51272 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51253'>Start here</a> 
-<li>PERSISCA BUK LE PING (s138): 51273-51278 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51273'>Start here</a> 
-<li>PHOEBE NG HUI YIN (s139): 51279-51293 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51279'>Start here</a> 
-<li>POON WENHUI ESTHER (s140): 51294-51300 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51294'>Start here</a> 
-<li>PRADEEPTHA VENKAT (s141): 51301-51310 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51301'>Start here</a> 
-<li>RAJA SYAZANA KHAIRUNNAS BINTE RAJA EMRAN (s142): 51311-51328 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51311'>Start here</a> 
-<li>RYAN KIERAN NAIR (s143): 51329-51337 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51329'>Start here</a> 
-<li>SEBASTIAN JOSEPH TEO WANGXIAN (s144): 51338-51349 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51338'>Start here</a> 
-<li>SHANNON LOW SI-EN (s145): 51350-51361 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51350'>Start here</a> 
-<li>SHARLENE MARIA SANKARAN (s146): 51362-51379 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51362'>Start here</a> 
-<li>SHAUN TAN KEI WEN (s147): 51380-51400 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51380'>Start here</a> 
-<li>SHAWN SEAH WEI XUN (s148): 51401-51413 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51401'>Start here</a> 
-<li>SIOW TING MEI TANIA (s149): 51414-51426 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51414'>Start here</a> 
-<li>SITI MASTURAH BINTE MOHD RODHI (s150): 51427-51433 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51427'>Start here</a> 
-<li>SITI NADIA AMIRAH BTE MUHD ARIFF KHOO (s151): 51434-51442 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51434'>Start here</a> 
-<li>SITI SYAKURAH BINTE MOHAMED SAIF (s152): 51443-51458 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51443'>Start here</a> 
-<li>SOH GEK NING (s153): 51459-51464 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engC&lang=eng&sid=51459'>Start here</a> 
-<li>SOH JUN JIE BENJAMIN (s154): 50804-50815 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=50804'>Start here</a> 
-<li>SOH RUI EN, KRYSTAL RUTH (s155): 50816-50819 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=50816'>Start here</a> 
-<li>SOON WEI RU, CLARISSA (s156): 50820-50824 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=50820'>Start here</a> 
-<li>SOONG CHECK ENG (s157): 50825-50842 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=50825'>Start here</a> 
-<li>SOPHIA HYDER (s158): 50843-50851 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=50843'>Start here</a> 
-<li>SREYA KOMAN (s159): 50852-50862 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=50852'>Start here</a> 
-<li>STACY D CRUZ (s160): 50863-50881 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=50863'>Start here</a> 
-<li>STEPHANIE AUDREY SUSANTO (s161): 50882-50900 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=50882'>Start here</a> 
-<li>STUART JAMES LEE SHENG EN (s162): 50901-50920 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=50901'>Start here</a> 
-<li>TAN DAI YUE (s163): 50921-50936 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=50921'>Start here</a> 
-<li>TAN HUI LIN TOMIKO (s164): 50937-50944 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=50937'>Start here</a> 
-<li>TAN JIE XUAN (s165): 50945-50959 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=50945'>Start here</a> 
-<li>TAN KO HUI (s166): 50960-50973 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=50960'>Start here</a> 
-<li>TAN LI XUAN (s167): 50974-50980 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=50974'>Start here</a> 
-<li>TAN MEI HUI, CHARLOTTE (s168): 50981-51009 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=50981'>Start here</a> 
-<li>TAN SHI YUN SHIRLYNN (s169): 51010-51042 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51010'>Start here</a> 
-<li>TAN SI NING GERMAINE (s170): 51043-51061 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51043'>Start here</a> 
-<li>TAN WEI TING CLEO (s171): 51062-51081 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51062'>Start here</a> 
-<li>TAN YAN PEI (s172): 51082-51087 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51082'>Start here</a> 
-<li>TAN YANZI DESIREE (s173): 51088-51098 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51088'>Start here</a> 
-<li>TAN YONG JING (s174): 51099-51108 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51099'>Start here</a> 
-<li>TAN ZI YING (s175): 51109-51119 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51109'>Start here</a> 
-<li>TANG QIN XIANG, CORNELIUS (s176): 51120-51134 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51120'>Start here</a> 
-<li>TAY VINCENT (s177): 51135-51143 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51135'>Start here</a> 
-<li>TENGKU NAZIHAH BINTE TENGKU AB HAMID (s178): 51144-51150 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51144'>Start here</a> 
-<li>TEO CASSIA (s179): 51151-51165 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51151'>Start here</a> 
-<li>TEO HUI SI CHARLENE (s180): 51166-51170 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51166'>Start here</a> 
-<li>TEO JIA HUI (s181): 51171-51178 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51171'>Start here</a> 
-<li>TEO YOCK LEONG THOMAS (s182): 51179-51194 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51179'>Start here</a> 
-<li>TEO ZHI YAN (s183): 51195-51211 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51195'>Start here</a> 
-<li>THIO CHONG JING CYRUS (s184): 51212-51224 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51212'>Start here</a> 
-<li>TIFFANY LIM TIEN YI (s185): 51225-51232 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51225'>Start here</a> 
-<li>TIMOTHY YU YUDIAN (s186): 51233-51238 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51233'>Start here</a> 
-<li>TOH WEI JIE (s187): 51239-51252 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51239'>Start here</a> 
-<li>TOH YI JIE (s188): 51253-51272 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51253'>Start here</a> 
-<li>VALERIE KAN EN PING (s189): 51273-51278 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51273'>Start here</a> 
-<li>WAN WEI YANG (s190): 51279-51293 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51279'>Start here</a> 
-<li>WHITNEY TAN YUIN WEN (s191): 51294-51300 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51294'>Start here</a> 
-<li>WONG HUI-LIN, TISYA (s192): 51301-51310 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51301'>Start here</a> 
-<li>WONG JING HUI (s193): 51311-51328 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51311'>Start here</a> 
-<li>WONG JUN XIANG MARCUS (s194): 51329-51337 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51329'>Start here</a> 
-<li>WONG MELISSA HIU MEI (s195): 51338-51349 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51338'>Start here</a> 
-<li>WONG TZE MUN, WAYNE (s196): 51350-51361 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51350'>Start here</a> 
-<li>WORTH SIM JIA YUE (s197): 51362-51379 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51362'>Start here</a> 
-<li>YANG XIANZHE RYAN (s198): 51380-51400 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51380'>Start here</a> 
-<li>YASMEEN AULIA AZAHARI (s199): 51401-51413 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51401'>Start here</a> 
-<li>YEO WEI LIN (s200): 51414-51426 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51414'>Start here</a> 
-<li>YONG YAN LIN (s201): 51427-51433 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51427'>Start here</a> 
-<li>YOON ZHEN YU (s202): 51434-51442 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51434'>Start here</a> 
-<li>YURI YAMAGUCHI (s203): 51443-51458 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51443'>Start here</a> 
-<li>ZHOU MANQI (s204): 51459-51464 <a href='http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/tag-word.cgi?gridmode=ntumc-noedit&corpus=engD&lang=eng&sid=51459'>Start here</a> 
-</ul>
-
-<h3><a name='groups'>Project 2: Groups</a></h3>
-
-<h4>Group 1</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=50804&amp;sid_to=50815" target="_blank">Sentences: 50804--50815</a> 
- <ul> <li><b>ABIGAIL TEO YUE MIN</b> Annotator <span style="color:red"><b>A</b></span> - ID: s1</li>
-<li><b>HO JIA YU</b> Annotator <span style="color:red"><b>B</b></span> - ID: s52</li>
-<li><b>LIM ZENG HAO</b> Annotator <span style="color:red"><b>C</b></span> - ID: s103</li>
-<li><b>SOH JUN JIE BENJAMIN</b> Annotator <span style="color:red"><b>D</b></span> - ID: s154</li>
-</ul>
-<h4>Group 2</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=50816&amp;sid_to=50819" target="_blank">Sentences: 50816--50819</a> 
- <ul> <li><b>AFIQAH BINTE NORAZMI</b> Annotator <span style="color:red"><b>A</b></span> - ID: s2</li>
-<li><b>HO SHAO YANG</b> Annotator <span style="color:red"><b>B</b></span> - ID: s53</li>
-<li><b>LIM ZHI YANG DOMINIC</b> Annotator <span style="color:red"><b>C</b></span> - ID: s104</li>
-<li><b>SOH RUI EN, KRYSTAL RUTH</b> Annotator <span style="color:red"><b>D</b></span> - ID: s155</li>
-</ul>
-<h4>Group 3</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=50820&amp;sid_to=50824" target="_blank">Sentences: 50820--50824</a> 
- <ul> <li><b>AHMAD ADNAN BIN FIRDAUS</b> Annotator <span style="color:red"><b>A</b></span> - ID: s3</li>
-<li><b>HO SHI YUN ALVINA</b> Annotator <span style="color:red"><b>B</b></span> - ID: s54</li>
-<li><b>LINGEYSHWARAN PARAMASILVAM</b> Annotator <span style="color:red"><b>C</b></span> - ID: s105</li>
-<li><b>SOON WEI RU, CLARISSA</b> Annotator <span style="color:red"><b>D</b></span> - ID: s156</li>
-</ul>
-<h4>Group 4</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=50825&amp;sid_to=50842" target="_blank">Sentences: 50825--50842</a> 
- <ul> <li><b>AMIERUL BIN RASHID</b> Annotator <span style="color:red"><b>A</b></span> - ID: s4</li>
-<li><b>HO WEI TECK</b> Annotator <span style="color:red"><b>B</b></span> - ID: s55</li>
-<li><b>LIU JUNXI</b> Annotator <span style="color:red"><b>C</b></span> - ID: s106</li>
-<li><b>SOONG CHECK ENG</b> Annotator <span style="color:red"><b>D</b></span> - ID: s157</li>
-</ul>
-<h4>Group 5</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=50843&amp;sid_to=50851" target="_blank">Sentences: 50843--50851</a> 
- <ul> <li><b>ANGEL MARIE JASON</b> Annotator <span style="color:red"><b>A</b></span> - ID: s5</li>
-<li><b>HO YEE SUAN MICHELLE</b> Annotator <span style="color:red"><b>B</b></span> - ID: s56</li>
-<li><b>LOH YAN YU JACQUELINE</b> Annotator <span style="color:red"><b>C</b></span> - ID: s107</li>
-<li><b>SOPHIA HYDER</b> Annotator <span style="color:red"><b>D</b></span> - ID: s158</li>
-</ul>
-<h4>Group 6</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=50852&amp;sid_to=50862" target="_blank">Sentences: 50852--50862</a> 
- <ul> <li><b>ANGELOVE CHUA</b> Annotator <span style="color:red"><b>A</b></span> - ID: s6</li>
-<li><b>HUANG BAOFEN</b> Annotator <span style="color:red"><b>B</b></span> - ID: s57</li>
-<li><b>LOO JUN YUAN</b> Annotator <span style="color:red"><b>C</b></span> - ID: s108</li>
-<li><b>SREYA KOMAN</b> Annotator <span style="color:red"><b>D</b></span> - ID: s159</li>
-</ul>
-<h4>Group 7</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=50863&amp;sid_to=50881" target="_blank">Sentences: 50863--50881</a> 
- <ul> <li><b>ANTHEBERTHER LOW HUI SI</b> Annotator <span style="color:red"><b>A</b></span> - ID: s7</li>
-<li><b>HWAN RUI QI RACHEAL</b> Annotator <span style="color:red"><b>B</b></span> - ID: s58</li>
-<li><b>LOW GUAI MUN CHERNIS</b> Annotator <span style="color:red"><b>C</b></span> - ID: s109</li>
-<li><b>STACY D CRUZ</b> Annotator <span style="color:red"><b>D</b></span> - ID: s160</li>
-</ul>
-<h4>Group 8</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=50882&amp;sid_to=50900" target="_blank">Sentences: 50882--50900</a> 
- <ul> <li><b>B ASHWINI D/O M BALAN</b> Annotator <span style="color:red"><b>A</b></span> - ID: s8</li>
-<li><b>IAN TAY JIA JUN</b> Annotator <span style="color:red"><b>B</b></span> - ID: s59</li>
-<li><b>LUA MING LI</b> Annotator <span style="color:red"><b>C</b></span> - ID: s110</li>
-<li><b>STEPHANIE AUDREY SUSANTO</b> Annotator <span style="color:red"><b>D</b></span> - ID: s161</li>
-</ul>
-<h4>Group 9</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=50901&amp;sid_to=50920" target="_blank">Sentences: 50901--50920</a> 
- <ul> <li><b>BAY JING'EN BELVY</b> Annotator <span style="color:red"><b>A</b></span> - ID: s9</li>
-<li><b>IRENE LAI WEI LIN</b> Annotator <span style="color:red"><b>B</b></span> - ID: s60</li>
-<li><b>LYNETTE LIM ENXUAN</b> Annotator <span style="color:red"><b>C</b></span> - ID: s111</li>
-<li><b>STUART JAMES LEE SHENG EN</b> Annotator <span style="color:red"><b>D</b></span> - ID: s162</li>
-</ul>
-<h4>Group 10</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=50921&amp;sid_to=50936" target="_blank">Sentences: 50921--50936</a> 
- <ul> <li><b>BAY JUN YU BERNICE</b> Annotator <span style="color:red"><b>A</b></span> - ID: s10</li>
-<li><b>IZZA HAZIQAH BINTE ABDUL RAHMAN</b> Annotator <span style="color:red"><b>B</b></span> - ID: s61</li>
-<li><b>MARGARET SUHASINI ANTHONY</b> Annotator <span style="color:red"><b>C</b></span> - ID: s112</li>
-<li><b>TAN DAI YUE</b> Annotator <span style="color:red"><b>D</b></span> - ID: s163</li>
-</ul>
-<h4>Group 11</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=50937&amp;sid_to=50944" target="_blank">Sentences: 50937--50944</a> 
- <ul> <li><b>BRENNAN KAZUKI SATO</b> Annotator <span style="color:red"><b>A</b></span> - ID: s11</li>
-<li><b>JACY TEO</b> Annotator <span style="color:red"><b>B</b></span> - ID: s62</li>
-<li><b>MARION YEO CHUN HUI</b> Annotator <span style="color:red"><b>C</b></span> - ID: s113</li>
-<li><b>TAN HUI LIN TOMIKO</b> Annotator <span style="color:red"><b>D</b></span> - ID: s164</li>
-</ul>
-<h4>Group 12</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=50945&amp;sid_to=50959" target="_blank">Sentences: 50945--50959</a> 
- <ul> <li><b>BRYANT LEE HAN WEI</b> Annotator <span style="color:red"><b>A</b></span> - ID: s12</li>
-<li><b>JAMIE LIAN ZHEN NING</b> Annotator <span style="color:red"><b>B</b></span> - ID: s63</li>
-<li><b>MARK CHENG YEUNG SHEN</b> Annotator <span style="color:red"><b>C</b></span> - ID: s114</li>
-<li><b>TAN JIE XUAN</b> Annotator <span style="color:red"><b>D</b></span> - ID: s165</li>
-</ul>
-<h4>Group 13</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=50960&amp;sid_to=50973" target="_blank">Sentences: 50960--50973</a> 
- <ul> <li><b>CAITLIN NATHALIE LIM LI YUN</b> Annotator <span style="color:red"><b>A</b></span> - ID: s13</li>
-<li><b>JANELLE LOW XIN WEI</b> Annotator <span style="color:red"><b>B</b></span> - ID: s64</li>
-<li><b>MATTHEW JOSE TUNG KIT</b> Annotator <span style="color:red"><b>C</b></span> - ID: s115</li>
-<li><b>TAN KO HUI</b> Annotator <span style="color:red"><b>D</b></span> - ID: s166</li>
-</ul>
-<h4>Group 14</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=50974&amp;sid_to=50980" target="_blank">Sentences: 50974--50980</a> 
- <ul> <li><b>CARLA GABRIELA CITRADEWI</b> Annotator <span style="color:red"><b>A</b></span> - ID: s14</li>
-<li><b>JASMINE LAU JIA MIN</b> Annotator <span style="color:red"><b>B</b></span> - ID: s65</li>
-<li><b>MAVIS LIM WEI</b> Annotator <span style="color:red"><b>C</b></span> - ID: s116</li>
-<li><b>TAN LI XUAN</b> Annotator <span style="color:red"><b>D</b></span> - ID: s167</li>
-</ul>
-<h4>Group 15</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=50981&amp;sid_to=51009" target="_blank">Sentences: 50981--51009</a> 
- <ul> <li><b>CASSIE ONG WEN TING</b> Annotator <span style="color:red"><b>A</b></span> - ID: s15</li>
-<li><b>JASON GUNAWAN LIMANTORO</b> Annotator <span style="color:red"><b>B</b></span> - ID: s66</li>
-<li><b>MELISSA LEE QIN</b> Annotator <span style="color:red"><b>C</b></span> - ID: s117</li>
-<li><b>TAN MEI HUI, CHARLOTTE</b> Annotator <span style="color:red"><b>D</b></span> - ID: s168</li>
-</ul>
-<h4>Group 16</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51010&amp;sid_to=51042" target="_blank">Sentences: 51010--51042</a> 
- <ul> <li><b>CELESTINE CHEN YI RU</b> Annotator <span style="color:red"><b>A</b></span> - ID: s16</li>
-<li><b>JAVON CHAN YI DA</b> Annotator <span style="color:red"><b>B</b></span> - ID: s67</li>
-<li><b>MICHELLE LIM YING YI</b> Annotator <span style="color:red"><b>C</b></span> - ID: s118</li>
-<li><b>TAN SHI YUN SHIRLYNN</b> Annotator <span style="color:red"><b>D</b></span> - ID: s169</li>
-</ul>
-<h4>Group 17</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51043&amp;sid_to=51061" target="_blank">Sentences: 51043--51061</a> 
- <ul> <li><b>CELINE LEE QIAN HUI</b> Annotator <span style="color:red"><b>A</b></span> - ID: s17</li>
-<li><b>JAYAKUMAR SANDHYA PILLAI</b> Annotator <span style="color:red"><b>B</b></span> - ID: s68</li>
-<li><b>MUHAMMAD AMIRUDDIN BIN AMAN</b> Annotator <span style="color:red"><b>C</b></span> - ID: s119</li>
-<li><b>TAN SI NING GERMAINE</b> Annotator <span style="color:red"><b>D</b></span> - ID: s170</li>
-</ul>
-<h4>Group 18</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51062&amp;sid_to=51081" target="_blank">Sentences: 51062--51081</a> 
- <ul> <li><b>CHA CHAO JING</b> Annotator <span style="color:red"><b>A</b></span> - ID: s18</li>
-<li><b>JERRELL ONG ZHE HENG</b> Annotator <span style="color:red"><b>B</b></span> - ID: s69</li>
-<li><b>MUHAMMAD FAAIZ KHAN BIN ABDUL HALIL</b> Annotator <span style="color:red"><b>C</b></span> - ID: s120</li>
-<li><b>TAN WEI TING CLEO</b> Annotator <span style="color:red"><b>D</b></span> - ID: s171</li>
-</ul>
-<h4>Group 19</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51082&amp;sid_to=51087" target="_blank">Sentences: 51082--51087</a> 
- <ul> <li><b>CHAN JING TING</b> Annotator <span style="color:red"><b>A</b></span> - ID: s19</li>
-<li><b>JESSLYN</b> Annotator <span style="color:red"><b>B</b></span> - ID: s70</li>
-<li><b>MUSTAFA ALI BIN MOHAMED BASIR</b> Annotator <span style="color:red"><b>C</b></span> - ID: s121</li>
-<li><b>TAN YAN PEI</b> Annotator <span style="color:red"><b>D</b></span> - ID: s172</li>
-</ul>
-<h4>Group 20</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51088&amp;sid_to=51098" target="_blank">Sentences: 51088--51098</a> 
- <ul> <li><b>CHAN JU YING, EVELYN</b> Annotator <span style="color:red"><b>A</b></span> - ID: s20</li>
-<li><b>JOANNE TAN</b> Annotator <span style="color:red"><b>B</b></span> - ID: s71</li>
-<li><b>NAIR VINITH</b> Annotator <span style="color:red"><b>C</b></span> - ID: s122</li>
-<li><b>TAN YANZI DESIREE</b> Annotator <span style="color:red"><b>D</b></span> - ID: s173</li>
-</ul>
-<h4>Group 21</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51099&amp;sid_to=51108" target="_blank">Sentences: 51099--51108</a> 
- <ul> <li><b>CHANG WEI TONG, VALANTIA</b> Annotator <span style="color:red"><b>A</b></span> - ID: s21</li>
-<li><b>JOSEPH LIU WOON KEONG</b> Annotator <span style="color:red"><b>B</b></span> - ID: s72</li>
-<li><b>NEO KAI PING</b> Annotator <span style="color:red"><b>C</b></span> - ID: s123</li>
-<li><b>TAN YONG JING</b> Annotator <span style="color:red"><b>D</b></span> - ID: s174</li>
-</ul>
-<h4>Group 22</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51109&amp;sid_to=51119" target="_blank">Sentences: 51109--51119</a> 
- <ul> <li><b>CHARMAINE TAN HUI QI</b> Annotator <span style="color:red"><b>A</b></span> - ID: s22</li>
-<li><b>JOSHUA CHAN ZHEN AN</b> Annotator <span style="color:red"><b>B</b></span> - ID: s73</li>
-<li><b>NG KIM LI</b> Annotator <span style="color:red"><b>C</b></span> - ID: s124</li>
-<li><b>TAN ZI YING</b> Annotator <span style="color:red"><b>D</b></span> - ID: s175</li>
-</ul>
-<h4>Group 23</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51120&amp;sid_to=51134" target="_blank">Sentences: 51120--51134</a> 
- <ul> <li><b>CHEE CELINE</b> Annotator <span style="color:red"><b>A</b></span> - ID: s23</li>
-<li><b>JOSHUA NG JIAWEI</b> Annotator <span style="color:red"><b>B</b></span> - ID: s74</li>
-<li><b>NG SEE HUI LYNETTE</b> Annotator <span style="color:red"><b>C</b></span> - ID: s125</li>
-<li><b>TANG QIN XIANG, CORNELIUS</b> Annotator <span style="color:red"><b>D</b></span> - ID: s176</li>
-</ul>
-<h4>Group 24</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51135&amp;sid_to=51143" target="_blank">Sentences: 51135--51143</a> 
- <ul> <li><b>CHEN MI MIN CHRISTINE</b> Annotator <span style="color:red"><b>A</b></span> - ID: s24</li>
-<li><b>JOVEN CHIA KAH SENG</b> Annotator <span style="color:red"><b>B</b></span> - ID: s75</li>
-<li><b>NG SU EN@LEONG SU EN</b> Annotator <span style="color:red"><b>C</b></span> - ID: s126</li>
-<li><b>TAY VINCENT</b> Annotator <span style="color:red"><b>D</b></span> - ID: s177</li>
-</ul>
-<h4>Group 25</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51144&amp;sid_to=51150" target="_blank">Sentences: 51144--51150</a> 
- <ul> <li><b>CHONG LE WEN</b> Annotator <span style="color:red"><b>A</b></span> - ID: s25</li>
-<li><b>JUSTIN TEO ZHONGHENG</b> Annotator <span style="color:red"><b>B</b></span> - ID: s76</li>
-<li><b>NG YEE TECK, GALEN</b> Annotator <span style="color:red"><b>C</b></span> - ID: s127</li>
-<li><b>TENGKU NAZIHAH BINTE TENGKU AB HAMID</b> Annotator <span style="color:red"><b>D</b></span> - ID: s178</li>
-</ul>
-<h4>Group 26</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51151&amp;sid_to=51165" target="_blank">Sentences: 51151--51165</a> 
- <ul> <li><b>CLARISSA TAN JIE XIN</b> Annotator <span style="color:red"><b>A</b></span> - ID: s26</li>
-<li><b>KEITH LAU XUAN LIANG</b> Annotator <span style="color:red"><b>B</b></span> - ID: s77</li>
-<li><b>NG YEW KONG</b> Annotator <span style="color:red"><b>C</b></span> - ID: s128</li>
-<li><b>TEO CASSIA</b> Annotator <span style="color:red"><b>D</b></span> - ID: s179</li>
-</ul>
-<h4>Group 27</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51166&amp;sid_to=51170" target="_blank">Sentences: 51166--51170</a> 
- <ul> <li><b>CLEMENT LEO TEO HUAN KAI</b> Annotator <span style="color:red"><b>A</b></span> - ID: s27</li>
-<li><b>KENNETH NG YONG CHIN</b> Annotator <span style="color:red"><b>B</b></span> - ID: s78</li>
-<li><b>NGUYEN HA THIEN KIM</b> Annotator <span style="color:red"><b>C</b></span> - ID: s129</li>
-<li><b>TEO HUI SI CHARLENE</b> Annotator <span style="color:red"><b>D</b></span> - ID: s180</li>
-</ul>
-<h4>Group 28</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51171&amp;sid_to=51178" target="_blank">Sentences: 51171--51178</a> 
- <ul> <li><b>DARSICIUS GOH YIHAN</b> Annotator <span style="color:red"><b>A</b></span> - ID: s28</li>
-<li><b>KHAIRUNNIZAM BIN KHAMIS</b> Annotator <span style="color:red"><b>B</b></span> - ID: s79</li>
-<li><b>NUR LIYANA BINTI MOHMAD AZHAR</b> Annotator <span style="color:red"><b>C</b></span> - ID: s130</li>
-<li><b>TEO JIA HUI</b> Annotator <span style="color:red"><b>D</b></span> - ID: s181</li>
-</ul>
-<h4>Group 29</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51179&amp;sid_to=51194" target="_blank">Sentences: 51179--51194</a> 
- <ul> <li><b>DEDRICK POH KAI KIAT</b> Annotator <span style="color:red"><b>A</b></span> - ID: s29</li>
-<li><b>KHOO HWEE LIN MELISSA</b> Annotator <span style="color:red"><b>B</b></span> - ID: s80</li>
-<li><b>NURUL 'UBAIDAH BINTE MOHAMMED IZAM</b> Annotator <span style="color:red"><b>C</b></span> - ID: s131</li>
-<li><b>TEO YOCK LEONG THOMAS</b> Annotator <span style="color:red"><b>D</b></span> - ID: s182</li>
-</ul>
-<h4>Group 30</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51195&amp;sid_to=51211" target="_blank">Sentences: 51195--51211</a> 
- <ul> <li><b>DENA ANDINA SUHADI</b> Annotator <span style="color:red"><b>A</b></span> - ID: s30</li>
-<li><b>KIMBERLY YEAP SZE ERN</b> Annotator <span style="color:red"><b>B</b></span> - ID: s81</li>
-<li><b>ONG JU</b> Annotator <span style="color:red"><b>C</b></span> - ID: s132</li>
-<li><b>TEO ZHI YAN</b> Annotator <span style="color:red"><b>D</b></span> - ID: s183</li>
-</ul>
-<h4>Group 31</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51212&amp;sid_to=51224" target="_blank">Sentences: 51212--51224</a> 
- <ul> <li><b>DHYA SYARAH WINIASIH M S K P</b> Annotator <span style="color:red"><b>A</b></span> - ID: s31</li>
-<li><b>KOH JIA SHENG</b> Annotator <span style="color:red"><b>B</b></span> - ID: s82</li>
-<li><b>ONG KIAT MENG IVAN</b> Annotator <span style="color:red"><b>C</b></span> - ID: s133</li>
-<li><b>THIO CHONG JING CYRUS</b> Annotator <span style="color:red"><b>D</b></span> - ID: s184</li>
-</ul>
-<h4>Group 32</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51225&amp;sid_to=51232" target="_blank">Sentences: 51225--51232</a> 
- <ul> <li><b>EDDIE LEE KUAN SENG</b> Annotator <span style="color:red"><b>A</b></span> - ID: s32</li>
-<li><b>KOH XIAO XIAN SAMANTHA</b> Annotator <span style="color:red"><b>B</b></span> - ID: s83</li>
-<li><b>ONG KIT MUN</b> Annotator <span style="color:red"><b>C</b></span> - ID: s134</li>
-<li><b>TIFFANY LIM TIEN YI</b> Annotator <span style="color:red"><b>D</b></span> - ID: s185</li>
-</ul>
-<h4>Group 33</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51233&amp;sid_to=51238" target="_blank">Sentences: 51233--51238</a> 
- <ul> <li><b>EDITH SNG YA SI</b> Annotator <span style="color:red"><b>A</b></span> - ID: s33</li>
-<li><b>KONG QI WEI</b> Annotator <span style="color:red"><b>B</b></span> - ID: s84</li>
-<li><b>ONG WAN JUIN</b> Annotator <span style="color:red"><b>C</b></span> - ID: s135</li>
-<li><b>TIMOTHY YU YUDIAN</b> Annotator <span style="color:red"><b>D</b></span> - ID: s186</li>
-</ul>
-<h4>Group 34</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51239&amp;sid_to=51252" target="_blank">Sentences: 51239--51252</a> 
- <ul> <li><b>EDMOND SOH CUN YU</b> Annotator <span style="color:red"><b>A</b></span> - ID: s34</li>
-<li><b>LAM CHENG MUN</b> Annotator <span style="color:red"><b>B</b></span> - ID: s85</li>
-<li><b>PANG AN QI</b> Annotator <span style="color:red"><b>C</b></span> - ID: s136</li>
-<li><b>TOH WEI JIE</b> Annotator <span style="color:red"><b>D</b></span> - ID: s187</li>
-</ul>
-<h4>Group 35</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51253&amp;sid_to=51272" target="_blank">Sentences: 51253--51272</a> 
- <ul> <li><b>ENG WEI MIN KELVIN</b> Annotator <span style="color:red"><b>A</b></span> - ID: s35</li>
-<li><b>LAM KAH HUI</b> Annotator <span style="color:red"><b>B</b></span> - ID: s86</li>
-<li><b>PEH SHENG WU</b> Annotator <span style="color:red"><b>C</b></span> - ID: s137</li>
-<li><b>TOH YI JIE</b> Annotator <span style="color:red"><b>D</b></span> - ID: s188</li>
-</ul>
-<h4>Group 36</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51273&amp;sid_to=51278" target="_blank">Sentences: 51273--51278</a> 
- <ul> <li><b>ENOCH TEH SEEN TAO</b> Annotator <span style="color:red"><b>A</b></span> - ID: s36</li>
-<li><b>LEE CHUN WAYNE</b> Annotator <span style="color:red"><b>B</b></span> - ID: s87</li>
-<li><b>PERSISCA BUK LE PING</b> Annotator <span style="color:red"><b>C</b></span> - ID: s138</li>
-<li><b>VALERIE KAN EN PING</b> Annotator <span style="color:red"><b>D</b></span> - ID: s189</li>
-</ul>
-<h4>Group 37</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51279&amp;sid_to=51293" target="_blank">Sentences: 51279--51293</a> 
- <ul> <li><b>ERIC PEH ZHENG QUAN</b> Annotator <span style="color:red"><b>A</b></span> - ID: s37</li>
-<li><b>LEE HWEE</b> Annotator <span style="color:red"><b>B</b></span> - ID: s88</li>
-<li><b>PHOEBE NG HUI YIN</b> Annotator <span style="color:red"><b>C</b></span> - ID: s139</li>
-<li><b>WAN WEI YANG</b> Annotator <span style="color:red"><b>D</b></span> - ID: s190</li>
-</ul>
-<h4>Group 38</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51294&amp;sid_to=51300" target="_blank">Sentences: 51294--51300</a> 
- <ul> <li><b>ESTHER VILARSHINI D/O PANNEER SELVAM</b> Annotator <span style="color:red"><b>A</b></span> - ID: s38</li>
-<li><b>LEE JUN HIANG</b> Annotator <span style="color:red"><b>B</b></span> - ID: s89</li>
-<li><b>POON WENHUI ESTHER</b> Annotator <span style="color:red"><b>C</b></span> - ID: s140</li>
-<li><b>WHITNEY TAN YUIN WEN</b> Annotator <span style="color:red"><b>D</b></span> - ID: s191</li>
-</ul>
-<h4>Group 39</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51301&amp;sid_to=51310" target="_blank">Sentences: 51301--51310</a> 
- <ul> <li><b>EVELYN CHOW KAR LING</b> Annotator <span style="color:red"><b>A</b></span> - ID: s39</li>
-<li><b>LEE ROU XUAN</b> Annotator <span style="color:red"><b>B</b></span> - ID: s90</li>
-<li><b>PRADEEPTHA VENKAT</b> Annotator <span style="color:red"><b>C</b></span> - ID: s141</li>
-<li><b>WONG HUI-LIN, TISYA</b> Annotator <span style="color:red"><b>D</b></span> - ID: s192</li>
-</ul>
-<h4>Group 40</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51311&amp;sid_to=51328" target="_blank">Sentences: 51311--51328</a> 
- <ul> <li><b>FIDELLITHY TAN</b> Annotator <span style="color:red"><b>A</b></span> - ID: s40</li>
-<li><b>LEE WAI CHONG GLEN</b> Annotator <span style="color:red"><b>B</b></span> - ID: s91</li>
-<li><b>RAJA SYAZANA KHAIRUNNAS BINTE RAJA EMRAN</b> Annotator <span style="color:red"><b>C</b></span> - ID: s142</li>
-<li><b>WONG JING HUI</b> Annotator <span style="color:red"><b>D</b></span> - ID: s193</li>
-</ul>
-<h4>Group 41</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51329&amp;sid_to=51337" target="_blank">Sentences: 51329--51337</a> 
- <ul> <li><b>FUNG RUI QI</b> Annotator <span style="color:red"><b>A</b></span> - ID: s41</li>
-<li><b>LEE WERN SING, JOY</b> Annotator <span style="color:red"><b>B</b></span> - ID: s92</li>
-<li><b>RYAN KIERAN NAIR</b> Annotator <span style="color:red"><b>C</b></span> - ID: s143</li>
-<li><b>WONG JUN XIANG MARCUS</b> Annotator <span style="color:red"><b>D</b></span> - ID: s194</li>
-</ul>
-<h4>Group 42</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51338&amp;sid_to=51349" target="_blank">Sentences: 51338--51349</a> 
- <ul> <li><b>GABRIELLA BENEDICTA CHRISTIANTI</b> Annotator <span style="color:red"><b>A</b></span> - ID: s42</li>
-<li><b>LEE XIN YING EDINA</b> Annotator <span style="color:red"><b>B</b></span> - ID: s93</li>
-<li><b>SEBASTIAN JOSEPH TEO WANGXIAN</b> Annotator <span style="color:red"><b>C</b></span> - ID: s144</li>
-<li><b>WONG MELISSA HIU MEI</b> Annotator <span style="color:red"><b>D</b></span> - ID: s195</li>
-</ul>
-<h4>Group 43</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51350&amp;sid_to=51361" target="_blank">Sentences: 51350--51361</a> 
- <ul> <li><b>GLEN TANG JUN HAO</b> Annotator <span style="color:red"><b>A</b></span> - ID: s43</li>
-<li><b>LEONG JIA EN</b> Annotator <span style="color:red"><b>B</b></span> - ID: s94</li>
-<li><b>SHANNON LOW SI-EN</b> Annotator <span style="color:red"><b>C</b></span> - ID: s145</li>
-<li><b>WONG TZE MUN, WAYNE</b> Annotator <span style="color:red"><b>D</b></span> - ID: s196</li>
-</ul>
-<h4>Group 44</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51362&amp;sid_to=51379" target="_blank">Sentences: 51362--51379</a> 
- <ul> <li><b>GOH WEE KIAT NATHANAEL</b> Annotator <span style="color:red"><b>A</b></span> - ID: s44</li>
-<li><b>LEONG KIT YEE</b> Annotator <span style="color:red"><b>B</b></span> - ID: s95</li>
-<li><b>SHARLENE MARIA SANKARAN</b> Annotator <span style="color:red"><b>C</b></span> - ID: s146</li>
-<li><b>WORTH SIM JIA YUE</b> Annotator <span style="color:red"><b>D</b></span> - ID: s197</li>
-</ul>
-<h4>Group 45</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51380&amp;sid_to=51400" target="_blank">Sentences: 51380--51400</a> 
- <ul> <li><b>GRACE LIM ZHUO YAH</b> Annotator <span style="color:red"><b>A</b></span> - ID: s45</li>
-<li><b>LER ZHI HENG</b> Annotator <span style="color:red"><b>B</b></span> - ID: s96</li>
-<li><b>SHAUN TAN KEI WEN</b> Annotator <span style="color:red"><b>C</b></span> - ID: s147</li>
-<li><b>YANG XIANZHE RYAN</b> Annotator <span style="color:red"><b>D</b></span> - ID: s198</li>
-</ul>
-<h4>Group 46</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51401&amp;sid_to=51413" target="_blank">Sentences: 51401--51413</a> 
- <ul> <li><b>GUI LI HIANG</b> Annotator <span style="color:red"><b>A</b></span> - ID: s46</li>
-<li><b>LIM KAH YE</b> Annotator <span style="color:red"><b>B</b></span> - ID: s97</li>
-<li><b>SHAWN SEAH WEI XUN</b> Annotator <span style="color:red"><b>C</b></span> - ID: s148</li>
-<li><b>YASMEEN AULIA AZAHARI</b> Annotator <span style="color:red"><b>D</b></span> - ID: s199</li>
-</ul>
-<h4>Group 47</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51414&amp;sid_to=51426" target="_blank">Sentences: 51414--51426</a> 
- <ul> <li><b>GUO LI</b> Annotator <span style="color:red"><b>A</b></span> - ID: s47</li>
-<li><b>LIM LAY QI EVELYN</b> Annotator <span style="color:red"><b>B</b></span> - ID: s98</li>
-<li><b>SIOW TING MEI TANIA</b> Annotator <span style="color:red"><b>C</b></span> - ID: s149</li>
-<li><b>YEO WEI LIN</b> Annotator <span style="color:red"><b>D</b></span> - ID: s200</li>
-</ul>
-<h4>Group 48</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51427&amp;sid_to=51433" target="_blank">Sentences: 51427--51433</a> 
- <ul> <li><b>HANNAH WU YUANMIN</b> Annotator <span style="color:red"><b>A</b></span> - ID: s48</li>
-<li><b>LIM SZU WEN ISABELLE</b> Annotator <span style="color:red"><b>B</b></span> - ID: s99</li>
-<li><b>SITI MASTURAH BINTE MOHD RODHI</b> Annotator <span style="color:red"><b>C</b></span> - ID: s150</li>
-<li><b>YONG YAN LIN</b> Annotator <span style="color:red"><b>D</b></span> - ID: s201</li>
-</ul>
-<h4>Group 49</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51434&amp;sid_to=51442" target="_blank">Sentences: 51434--51442</a> 
- <ul> <li><b>HANS TANANDA</b> Annotator <span style="color:red"><b>A</b></span> - ID: s49</li>
-<li><b>LIM WEI JIE TIMOTHY</b> Annotator <span style="color:red"><b>B</b></span> - ID: s100</li>
-<li><b>SITI NADIA AMIRAH BTE MUHD ARIFF KHOO</b> Annotator <span style="color:red"><b>C</b></span> - ID: s151</li>
-<li><b>YOON ZHEN YU</b> Annotator <span style="color:red"><b>D</b></span> - ID: s202</li>
-</ul>
-<h4>Group 50</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51443&amp;sid_to=51458" target="_blank">Sentences: 51443--51458</a> 
- <ul> <li><b>HASBI ONG</b> Annotator <span style="color:red"><b>A</b></span> - ID: s50</li>
-<li><b>LIM YI XIAN, LUKE</b> Annotator <span style="color:red"><b>B</b></span> - ID: s101</li>
-<li><b>SITI SYAKURAH BINTE MOHAMED SAIF</b> Annotator <span style="color:red"><b>C</b></span> - ID: s152</li>
-<li><b>YURI YAMAGUCHI</b> Annotator <span style="color:red"><b>D</b></span> - ID: s203</li>
-</ul>
-<h4>Group 51</h4><a href="http://compling.hss.ntu.edu.sg/ntumc-unipi/cgi-bin/agreement.cgi?lang=eng&amp;sid_from=51459&amp;sid_to=51464" target="_blank">Sentences: 51459--51464</a> 
- <ul> <li><b>HILMAN HARIS HOR WAI MAN</b> Annotator <span style="color:red"><b>A</b></span> - ID: s51</li>
-<li><b>LIM YU LOONG NICHOLAS</b> Annotator <span style="color:red"><b>B</b></span> - ID: s102</li>
-<li><b>SOH GEK NING</b> Annotator <span style="color:red"><b>C</b></span> - ID: s153</li>
-<li><b>ZHOU MANQI</b> Annotator <span style="color:red"><b>D</b></span> - ID: s204</li>
-</ul>
-
-
-<hr/>
-
 
 
     <h6>References:</h6>
