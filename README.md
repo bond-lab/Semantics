@@ -1,3 +1,6 @@
-# Detecting-Meaning
-Detecting Meaning with Sherlock Holmes --- a semantic introduction to the great detective.
+# Semantics
+Teaching semantics while reading things.
 
+
+
+https://www.lookoutnow.com/newts.htm

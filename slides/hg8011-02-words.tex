@@ -11,153 +11,12 @@
 %\include{schedule}
 
 
-\myslide{The Adventure of the Word's Meaning}
-
-\begin{itemize}
-\item Revision
-  \begin{itemize}
-  \item Introduction to Sherlock Holmes
-  \item Introduction to Semantics
-  \end{itemize}
-\item How to represent meaning
-\item Referential theories
-\item Deixis
-%\item Concepts
-%\item Derivation
-
-\end{itemize}
-
-
-
-
-%%%
-%%% Review
-%%%
-
-
-%%
-%% FIXME Intro to Sherlock Holmes
-%%
-
-
-\section{Revision: Sherlock Holmes}
-\begin{center}
-  \includegraphics[width=0.3\textwidth]{pics/detectiveprofile}
-\end{center}
-
-\myslide{Why Sherlock Holmes?}
-\MyLogo{I want to make studying semantics more accessible}
-\begin{itemize}
-\item Enjoyable, accessible, popular  stories (and adaptions)
-\item Sherlock Holmes 
-  \begin{itemize}
-  \item A London-based consulting detective
-    
-  \item who solves many cases with a quirky personality
-  \item and immense powers of observation and raticionation
-    \ \ \ \ \ \ \raisebox{-15ex}[0ex][0ex]{\includegraphics[width=0.3\textwidth]{pics/Sherlock_Holmes_Portrait_Paget}}
-  \item and his faithful friend: John Watson
-\end{itemize}
-\item A fictional character, invented by Sir Arthur Conan Doyle
-  \begin{itemize}
-  \item in 60 stories,  published between 1887 and 1927
-  \item Mainly narrated by Watson
-  \end{itemize}
-\item Some stories are annotated with word senses as part of our
-  research in semantics
-  \begin{itemize}
-  \item The NTU --- Multilingual Corpus (NTU-MC)
-  \item We will use and experience this during the course --- learn by doing
-  \end{itemize}
-\end{itemize}
-
-
-\section{Revision: \\ Introduction to Semantics}
-
-\myslide{What is Semantics}
-\begin{itemize}
-\item Very broadly, semantics is the study of meaning
-  \begin{itemize}
-  \item Word meaning
-  \item Sentence meaning
-  \end{itemize}
-\item Layers of Linguistic Analysis
-  \begin{enumerate}%\addtolength{\itemsep}{-0.75ex}
-  \item Phonetics \& Phonology
-  \item Morphology
-  \item Syntax
-  \item \emp{Semantics}
-  \item Pragmatics
-  \item Stylistics
-  \end{enumerate}
-\end{itemize}
-
-
-
-\myslide{Meaning in the larger context}
-
-\begin{itemize}
-\item \txx{Semiotics} is the study of interpreting symbols, or \txx{signification}
-  \begin{itemize}
-  \item We refer to the \txx{signified}
-  \item Using a \txx{signifier}\hfill Saussure
-  \end{itemize}
-% \item Problems with defining meaning
-%   \begin{itemize}
-%   \item The \txx{grounding} problem and \txx{circularity}
-%   \item The boundaries of meaning: \txx{linguistic} vs \txx{encyclopedic knowledge}
-%   \item Individual variation in meaning: \txx{idiolects}
-%   \item Words can be combined to form an infinite number of expressions
-%     \begin{itemize}
-%     \item This building up of meaning is referred to as \txx{composition}
-%     \item If the meaning of the whole can be built up from the parts then it is \txx{compositional}
-%   \end{itemize}
-% \end{itemize}
-% \end{itemize}
-
-% \myslide{Metalanguages and Notational Conventions}
-\item We use language to talk about language, which can get messy.  So we
-try to use certain words with very specific technical senses.
-
-\begin{itemize}
-\item \txx{technical term} $\leftarrow$ remember me!
-\item \eng[gloss]{word} or \eng{utterance}: example of a word/expression being used
-\item \lex{lexeme}: the abstraction of word in the lexicon
-\item \iz{predicate}: the abstraction of the meaning in the lexicon/formal semantic system
-\item \con{concept}: the meaning in a person's mind
-\end{itemize}
-\end{itemize}
-
-\myslide{Utterances, Sentences and Propositions}
-
-\begin{itemize}
-\item \txx{utterance}: an actual instance of saying (or writing  or \ldots) something
-\item \txx{sentence}: an abstraction, the type of what was said
-  \begin{exe}
-    \ex \eng{Caesar invades Gaul}
-  \end{exe}
-\item \txx{proposition}: a further abstraction, normally ignoring some non-literal meaning
-  \begin{exe}
-    \ex \iz{invade(Caesar, Gaul)}
-  \end{exe}
-\item \txx{interpretation}: our mental representation (linked to our
-  existing knowledge)
-\end{itemize}
-
-
-
-% \section{Meaning, Thought and Reality}
-% \MyLogo{}
-
-
-
-
 \section{The meanings of words}
  \MyLogo{}
 
 
 \myslide{Words carry different meanings: \lex{leave}}
-\MyLogo{\url{https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/showcorpus.cgi?sid_from=10000&sid_to=11000&clemma=leave}}
+\MyLogo{\url{https://compling.upol.cz/ntumc/cgi-bin/showcorpus.cgi?sid_from=10000&sid_to=11000&clemma=leave}}
 \begin{itemize} \addtolength{\itemsep}{0ex}
 \item[10070] \eng{Nothing was \ul{left} save a few acres of ground , and the
   two-hundred-year-old house , which is itself crushed under a heavy
@@ -274,7 +133,7 @@ How many different meanings?\task
 \end{itemize}
 
 \myslide{Entries for \lex{leave}}
-\MyLogo{\url{https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/cgi-bin/wn-gridx.cgi?gridmode=ntumc-noedit&lang=eng&lemma=leave}}
+\MyLogo{\url{https://compling.upol.cz/ntumc/cgi-bin/cgi-bin/wn-gridx.cgi?gridmode=ntumc-noedit&lang=eng&lemma=leave}}
 \begin{description}
 %  00613683-v (63)
 % V2 	leave 	     	go and leave behind, either intentionally or by neglect or forgetfulness
@@ -805,15 +664,16 @@ Some \con{golf} terms: \lex{approach$_9$}, \lex{approach shot$_1$}, \lex{golf co
   \end{quote}
 \item Made up of four separate semantic nets, for each of nouns, verbs,
   adjectives and adverbs
-\item WordNets exist for many languages, at LMS we work on:
+\item WordNets exist for many languages, my group has worked on:
   \begin{itemize}
   \item Japanese 
   \item Bahasa Malay/Indonesian
-  \item Chinese
+  \item Chinese (Mandarin and Cantonese)
   \item The shared open multi-lingual wordnet (150+ languages) 
-    \\ \url{http://compling.hss.ntu.edu.sg/omw/}
+    \\ \url{https://omwn.org/}
   \item Kristang
   \item Myanmar
+  \item Czech
 \end{itemize}
 \end{itemize}
 
@@ -1158,11 +1018,13 @@ for ``you''.
 
 \begin{itemize}
 \item T/V distinctions in European languages
-\\[2ex]  \begin{tabular}{lll}
+  \\[2ex]
+  \begin{tabular}{lll}
     & Familiar 2sg & Polite 2sg \\ \hline
     French & \lex{tu} & \lex{vous} \\
     German & \lex{du} & \lex{Sie} \\
-    Spanish & \lex{t\'u} & \lex{usted}
+    Spanish & \lex{t\'u} & \lex{usted} \\
+    Czech & \lex{ty} & \lex{vy} \\ 
   \end{tabular}
 
 \item Shift from asymmetric use showing \txx{power} (superior uses \lex{du}; inferior uses \lex{vous}) to symmetric use showing \txx{solidarity} (strangers use  \lex{vous}; intimates use \lex{du}): typically the socially superior person must invite the socially
@@ -1190,434 +1052,16 @@ for ``you''.
 \item Find examples where someone addresses Sherlock as \eng{Holmes}
   and compare then to examples where he is addressed as \eng{Mr
     Holmes}: what is the difference? \task
-\end{itemize}
-
-
-\myslide{Types of Deixis}
-\MyLogo{}
-(a) Gestural; (b) Symbolic: (c) Non-deictic uses (Levinson 1983:66):
-\begin{exe}
-\ex \begin{xlist}
-\ex \eng{You, you, but not you, are dismissed}
-\ex \eng{What did you say?}
-\ex \eng{You can never tell what they want  nowadays}
-\end{xlist}
-\ex \begin{xlist} 
-\ex \eng{This finger hurts}
-\ex \eng{This city stinks}
-\ex \eng{I met this weird guy the other day}
-\end{xlist}
-\ex \begin{xlist} 
-\ex \eng{Push, not now, but now}
-\ex \eng{Let's go now rather than tomorrow}
-\ex \eng{Now, that is not what I said}
-\end{xlist}
-\ex \begin{xlist} 
-\ex \eng{Not that one, idiot, that one}
-\ex \eng{That's a beautiful view}
-\ex \eng{Oh, I did this and that}
-\end{xlist}
-% \ex \begin{xlist}
-% \ex \eng{Move it from there to there
-% \ex \eng{Hello, is Harry there?
-% \ex \eng{There we go
-% \end{xlist}  
-\end{exe}
-
-
-
-
-\myslide{Non-standard usage of deixis}
-
-\begin{exe}
-  \ex \eng{You take your screwdriver, right, and screw her home}
-  \ex \eng{Are we ready for our medicine now, Dr Smith? }
-  \ex \eng{We now turn to a discussion of globalisation in Chapter Three}
-  \ex \eng{When you're hot you're hot}
-  \ex \eng{Sometimes you wonder about the quality of the political leadership}
-  \ex \eng{She's a beauty all right} \textnormal{[said of a car]}
-\end{exe}
-
-
-
-% \myslide{Anaphora}
-% \begin{itemize}
-% \item Referring to some referent described elsewhere in the discourse
-% \begin{itemize}
-%   \item Nominal: \eng{it, the animal}
-%   \item Temporal: \eng{then} 
-%   \item Backward (cataphora): if the referent comes after.
-%   \end{itemize}
-% \item Anaphoric elements
-%   \begin{itemize}
-%   \item are semantically underspecified, thus are referentially dependent upon their
-%     antecedents
-%   \item play an important referent tracking role in discourse, because they encode
-%     topic continuity
-%   \end{itemize}
-% \end{itemize}
-
-
-% \myslide{Strict and Sloppy Readings}
-% \MyLogo{Today's joke}
-% \begin{exe}
-%   \ex Wife: \eng{Jim kisses \ul{his wife} goodbye before he leaves for work every morning. Why don’t you do that?}
-%   \ex Husband: \eng{I don't know \ul{her} that well.}
-% \end{exe}
-% \begin{itemize}
-% \item \txx{Sloppy anaphora}  is the wife’s intended
-%   reading, where \eng{do that} is understood as ``kiss one's wife'',
-%   resolving to ``kiss your (own) wife''.
-% \item \txx{Strict anaphora} is the funny reading, where \eng{do that}
-%   is understood as ``kiss Jim’s wife''
-% \end{itemize}
-
-
-%\section{Concepts}
-
-% \myslide{Prototypes}
-% \MyLogo{How things are represented in our minds}
-% \begin{itemize}
-% \item Concepts are organized in groups around a \txx{prototype}
-% \item These have typical members (remembered as \txx{exemplars}) 
-%   \begin{itemize}
-%   \item What is typical \con{furniture}?
-%   \item What is a typical \con{bird}?
-%   \end{itemize}
-% \item prototypes have \txx{characteristic feature}s
-%   \begin{itemize}
-%   \item has feathers
-%   \item warbles
-%   \item flies
-%   \item lays eggs
-%   \end{itemize}
-% \item This work was pioneered by Eleanor Rosch (1973, 1975) (very readable)
-% \end{itemize}
-
-% % \myslide{What is a protoypical bird?}
-
-% % \\includegraphics[width=\textwidth]{pics/prot
-
-% \myslide{Relations between Concepts}
-
-% \begin{itemize}
-% \item Concepts are linked in many ways
-% \item Most common relationship is \txx{hypernymy}: \con{dog} is-a \con{animal}
-% \item Typically subordinate terms inherit properties from superordinate terms
-% \\  \eng{Birds fly} so \eng{Sparrows fly}
-% \item Larger units of knowledge, such as \txx{frames} are similar
-%  \end{itemize}
-
-
-
-% \myslide{Basic Level Categories}
-% \begin{itemize}
-% \item Some categories (concepts) seem to be more psychologically basic than others
-%   \begin{itemize}
-%   \item Pictures of objects are categorized faster at the basic level
-%   \item Basic level names used more often in free-naming tasks
-%   \item Children learn them earlier
-%   \item Basic-level names are more common in adult discourse 
-%   \item Basic-level categories are common in different cultures
-%   \item Basic level names tend to be short
-%   \item Basic-level names tend to be common in compound nouns
-%   \end{itemize}
-% \item
-%   \begin{tabular}[t]{lll}
-% superordinate & basic & subordinate \\  \hline
-% \lex{vehicle} & \lex{bus} & \lex{school bus} \\
-% \lex{jewelry} & \lex{necklace} & \lex{pearl necklace} \\
-% \lex{animal} & \lex{dog} & \lex{poodle} 
-% \end{tabular}
-% \end{itemize}
-
-% \myslide{}
-% \begin{itemize}
-% \item Basic level categories are a decomposition of the world into
-%   maximally informative categories. 
-%   \begin{itemize}
-%   \item BLCs maximize the number of attributes shared by members of
-%     the category
-%   \item BLCs minimize the number of attributes shared with
-%     other categories
-%   \end{itemize}
-% \item It can be hard to agree on what is the Basic Level: whereas dog
-%   as a basic category is a species, bird or fish are at a higher
-%   level, etc.
-% \item Similarly, the notion of frequency is very closely tied
-%   to the basic level, but not exactly the same.
-% \end{itemize}
-
-% \myslide{Linguistic Relativity}
-
-% \begin{itemize}
-% \item The language we think in makes some concepts easy to express,
-%   and some concepts hard
-% \item The idea behind \txx{linguistic relativity} is that this will
-%   effect how you think
-%   \begin{itemize}
-%   \item Korean lexicalizes politeness and has rigid social hierarchies
-%   \item English and Chinese speakers differ as to whether they
-%     concepualize things as substances or individuals
-%   \item Gendered language speakers have different connotations: \lex{key}
-%     \begin{itemize}
-%     \item (German: masculine) `hard, heavy, jagged, metal, and useful'
-%     \item (Spanish: feminine)  `golden, intricate, little, lovely, shiny, and tiny'
-%     \end{itemize}
-%   \item It is easier to differentiate colors that you have names for
-%   \end{itemize}
-% \item Most confirmed differences are very, very subtle
-% \end{itemize}
-
-
-% \myslide{The Sapir-Whorf Hypothesis}
-
-% \begin{description}
-% \item[strong]  language determines thought and that linguistic categories limit and determine cognitive categories
-% \item[weak]  linguistic categories and usage influence thought and certain kinds of non-linguistic behaviour
-% \end{description}
-
-% The terms "Strong/Weak Sapir-Whorf Hypothesis" is widely used even though Edward
-% Sapir and Benjamin Lee Whorf never co-authored anything and never
-% stated their ideas in terms of a hypothesis let alone with two versions.
-
-% \myslide{What Whorf actually said}
-% \begin{quotation}
-%   We dissect nature along lines laid down by our native language. The
-%   categories and types that we isolate from the world of phenomena we
-%   do not find there because they stare every observer in the face; on
-%   the contrary, the world is presented in a kaleidoscope flux of
-%   impressions which has to be organized by our minds—and this means
-%   largely by the linguistic systems of our minds. We cut nature up,
-%   organize it into concepts, and ascribe significances as we do,
-%   largely because we are parties to an agreement to organize it in
-%   this way—an agreement that holds throughout our speech community and
-%   is codified in the patterns of our language [\ldots] all observers
-%   are not led by the same physical evidence to the same picture of the
-%   universe, unless their linguistic backgrounds are similar, or can in
-%   some way be calibrated.
-% \\ \hfill Whorf (Carroll; Ed.); 1956: pp. 212–214
-% \end{quotation}
-
-
-% \myslide{Language, Thought and Reality}
-
-% \begin{itemize}\addtolength{\itemsep}{-1ex}
-% \item Do we really think in language? 
-%   \begin{itemize}
-%   \item We can think of things we don't have words for
-%   \item Language under-specifies meaning
-%   \end{itemize}
-% \item Maybe we store a more abstract representation
-% \\ \txx{the language of thought} or \txx{Mentalese}
-% \item Does the world exist outside of our minds?
-% \item If so, can we truly perceive it?
-% \item Many linguists side-step these issues: \txx{lexical semantics}
-% \item Many simplify them: \txx{formal semantics}
-% \item Some meet them head on: \txx{conceptual/cognitive semantics}
-% \end{itemize}
-
-
-\section{What is a word?}
-
-\myslide{Defining \lex{word}}
-
-\begin{itemize}
-\item How many words are there in the following?
-  \begin{exe}
-  \ex \eng{He who laughs last laughs longest.}
-  \ex \eng{If he is right and I am wrong, are we both in trouble?}
-  \ex \eng{I'm gonna go to the  station-master.}
-  \ex \eng{Sorry to knock you up, Mr Holmes.}
-  \ex \eng{他们结婚了} \eng{ta1men jie2hun1 le} ``they got married'' (\eng{他们结了婚})
-\end{exe}  
-
-\item \txx{Tokens}: Individual instances of a class
-\item \txx{Types}: The class as a whole
-\end{itemize}
-\newpage
-\begin{itemize}
-\item  Why do we need a definition for \lex{word}?
-  \begin{itemize}
-  \item Psychological reality:  People can divide language into words
-  \item Phonological contours:  People pronounce words as unit
-  \item Orthographic practice: Many languages put spaces between words
-(although this practice only began around 600 CE for Latin, and did
-not spread to all European languages 'til as late as the 1600s)
- \begin{itemize}
- \item Some put them between phrases (Korean)
- \item Some words include spaces \eng{New York}, \eng{ad hoc}
-  \end{itemize}
-\end{itemize}
-\end{itemize}
-
-\myslide{Bloomfield's grammatical definition}
-
-\begin{quote}
-A word, then, is a free form, which does not consist
-entirely of (two or more) lesser free forms; in brief, a
-word is a \textit{minimum free form}.
-\begin{flushright}
-  (Bloomfield 1984: p178) 
-\end{flushright}
- \end{quote}
-
-In practice, the definition is somewhat task specific: it may make more sense to talk of \txx{orthographic words}, \txx{semantic words} or \txx{predicates}, \ldots .
-
-% \section{Derivational Relations}
-
-% \myslide{Diathesis Alternations}
-
-% \MyLogo{\citet{Levin:1993}}
-
-% \begin{itemize}
-% \item \txx{Causative/inchoative alternation}:
-%   \begin{quote}
-%     \eng{Kim \ul{broke} the window} $\leftrightarrow$ \eng{The window \ul{broke}}
-%     \\ also \eng{the window \ul{is broken}} (state)
-%   \end{quote}
-% \item \txx{Middle construction alternation}:
-%   \begin{quote}
-%     \eng{Kim \ul{cut} the bread} $\leftrightarrow$ \eng{The bread \ul{cut} easily}
-%   \end{quote}
-% \item \txx{Conative alternation}:
-%   \begin{quote}
-%     \eng{Kim \ul{hit} the door} $\leftrightarrow$ \eng{Kim \ul{hit} at the door}
-%   \end{quote}
-% \item \txx{Body-part possessor ascension alternation}:
-%   \begin{quote}
-%     \eng{Kim \ul{cut} Sandy's arm} $\leftrightarrow$ \eng{Kim \ul{cut} Sandy on the arm}
-%   \end{quote}
-% \end{itemize}
-
-
-
-
-% \myslide{Diathesis Alternations and Verb Classes}
-
-% \MyLogo{\citet{Levin:1993}}
-
-% \begin{itemize}
-% \item A verb's (in)compatibility with different alternations is a strong
-%   predictor of its lexical semantics:
-%   \begin{quote}\smaller[1]
-%     \begin{tabular}{ccccc}
-%       & \lex{break} & \lex{cut} & \lex{hit} & \lex{touch} \\
-%       Causative & YES & NO & NO & NO \\
-%       Middle & YES & YES & NO & NO \\
-%       Conative & NO & YES & YES & NO \\
-%       Body-part & NO & YES & YES & YES \\
-%     \end{tabular}
-%     \vspace{3ex}
-
-%     \larger[1]
-%     \lex{break} = \{\eng{break, chip, crack, crash, crush, ...}\}\\
-%     \lex{cut} = \{\eng{chip, clip, cut, hack, hew, saw, ...}\}\\
-%     \lex{hit} = \{\eng{bang, bash, batter, beat, bump, ...}\}\\
-%     \lex{touch} = \{\eng{caress, graze, kiss, lick, nudge, ...}\}
-%   \end{quote}
-
-% %\newpage
-
-
-% \item \textbf{Corollary}: we can predict the syntax of novel words we
-%   are given the semantic class for
-
-% \item The principal weakness of syntax-based verb classification is that
-%   there are often subtle divergences in semantics between synonyms (cf.\
-%   \lex{eat} vs.\ \lex{devour} vs.\ \lex{gobble})
-% \end{itemize}
-
-% \myslide{Agentitive Nouns}
-% \MyLogo{}
-% \begin{itemize}
-% \item The entity who/which performs the action of the verb
-%   \\ \textbf{verb} + \lex{-er, -or, -ant}
-%   \begin{exe}
-%     \ex \lex{murderer, commentator, whaler, director, computer}
-%     \ex ?? \lex{undertaker, cooker, footballer, crofter}
-%   \end{exe}
-% \item Should \lex{murderer} be listed separately from \lex{murder} in
-% the dictionary? Why or why not?\task
-% \item Also the undergoer: \textbf{verb} + \lex{-ee}: \lex{employee}
-% \item \lex{-er\,$|$-or} has equivalents in most languages:
-%   \\ Japanese: 員, 者, 人, 機, \ldots
-% \end{itemize}
-
-
-% \section{Lexical Universals}
-
-% \myslide{Color Terms}
-
-% \begin{itemize}
-% \MyLogo{See also: \url{http://wals.info/chapter/133}: Colour Terms
-% by Paul Kay and Luisa Maffi}
-% \item \txx{Basic Color Terms}
-%   \begin{itemize}
-%   \item Monolexemic
-%   \item Not a hyponym of any other color
-%   \item Can be widely applied
-%   \item Not derived from a noun
-%   \end{itemize}
-% \item Seem to come in an order
-% \hspace*{-4em}\[ \left\{ \begin{array}[c]{l}
-%     \mbox{\con{white/dark}} \\  \mbox{\con{black/light}}
-%   \end{array} \right\}
-%    < \mbox{\con{red}} < 
-%  \left\{ \begin{array}[c]{l}
-%     \mbox{\con{green}} \\  \mbox{\con{yellow}}
-%   \end{array} \right\}
-%  < \mbox{\con{blue}} < \mbox{\con{brown}} <  
-% \left\{ \begin{array}[c]{l}
-%     \mbox{\con{purple}} \\  \mbox{\con{pink}} \\ \mbox{\con{orange}} \\  \mbox{\con{grey}}
-%   \end{array} \right\} \]
-% \item \txx{Focal Colors} are related to the neurophysiology of our visual system
-% \end{itemize}
-
-% \myslide{Core Vocabulary}
-% \MyLogo{\url{en.wiktionary.org/wiki/Appendix:Swadesh_list}}
-% \begin{itemize}
-% \item Some universal terms can be used to compare languages
-%   \begin{itemize}
-%   \item lexicostatistics (quantitative language relatedness assessment)
-%   \item glottochronology (language divergence dating)
-% \end{itemize}
-% \item The \txx{Swadesh list}, developed by Morris Swadesh from 1940 onward 
-% \end{itemize}
-% \vspace*{-2ex}
-% I, You, we, this, that, who, what, not, all, many, one, two, big,
-% long, small, woman, man, person, fish, bird, dog, louse, tree, seed,
-% leaf, root, bark, skin, flesh, blood, bone, grease, egg, horn, tail,
-% feather, hair, head, ear, eye, nose, mouth, tooth, tongue, claw, foot,
-% knee, hand, belly, neck, breasts, heart, liver, drink, eat, bite, see,
-% hear, know, sleep, die, kill, swim, fly, walk, come, lie, sit, stand,
-% give, say, sun, moon, star, water, rain, stone, sand, earth, cloud,
-% smoke, fire, ash(es), burn, path, mountain, red, green, yellow, white,
-% black, night, hot, cold, full, new, good, round, dry, name
-% \vspace*{-1ex}
-% \begin{itemize}
-% \item Available in many languages (hundreds) 
-% \end{itemize}
-% \vspace*{-1ex}
-
-\myslide{What if we had fewer words?}
-
-\eng{He was a fine creature, this man of the old English soil, simple, straight and gentle, with his great, earnest, blue eyes and broad, comely face. His love for his wife and his trust in her shone in his features. Holmes had listened to his story with the utmost attention, and now he sat for some time in silent thought.} DANC
-
-\begin{itemize}
-\item Can we get the same message (denotation and connotation) with a
-smaller vocabulary? \url{http://xkcd.com/simplewriter/}
-\item It is hard!
-\item That is why we have so many words
-\item and why some writers are better than others.
+\item  Find examples in \textit{Válka s Mloky} where \cs{ty} and \cs{vy} are used:  what is the difference? \task
 \end{itemize}
 
 
 \myslide{Conclusions}
 
 \begin{itemize}
-\item We learned about how to talk about meaning
+\item We learned a little about word meaning, reference and deixis
 \end{itemize}
+
 
 \myslide{Acknowledgments and References}
 
@@ -1633,24 +1077,6 @@ smaller vocabulary? \url{http://xkcd.com/simplewriter/}
 %\item Problems  partially based on exercises from Saeed (2003)
 \item Video: Dead parrot sketch by Monty Python
 \end{itemize}
-
-
-
-\myslide{Synonyms for a \lex{dead} Parrot}
-
-\begin{quote} \large
-  \lex{be dead, be demised, be deceased, pass on, be no more, cease to be,
-  expire, go to meet one's maker, be a stiff, be bereft of life,
-  rest in peace, push up the daisies, one's metabolic processes are
-  now history, be off the twig, kicked the bucket, shuffle off this
-  mortal coil, ring down the curtain, join the choir invisible, be an
-  ex-parrot}
-\end{quote}
-
-From the ``Dead Parrot Sketch'', also known as the ``Pet Shop Sketch''
-or ``Parrot Sketch'', originally in \textit{Monty Python's Flying Circus},
-first performed in the eighth episode of the show's first series,
-"Full Frontal Nudity" (7 December 1969).
 
 
 
