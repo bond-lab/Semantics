@@ -1,505 +1,750 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Annotation Task</title>
+    <link rel="icon" type="image/svg" href="icon.svg">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+	  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	  crossorigin="anonymous">
+  </head>
+<body class="container">
+<div class="column">
+<h2><a name='phase1'>Phase 1: Annotation Task</a></h2>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html xmlns:xhtml="http://www.w3.org/1999/xhtml">
-<head>
+  <p> The format is:
+
+<h4>Group ID: Sentence IDs FROM&ndash;TO</h4>
+
+<table>
+<tr>
+  <th>ID</th> 
+  <td>Name</td> 
+  <td>Corpus</td>
+</tr>
+</table>
+<br>
+<p> For example:
+
+<h4>Group 2221B: Sentence IDs 0&ndash;222</h4>
+<table>
+<tr>
+  <td>s1</td> 
+  <td>Herlock SHOLMES</td> 
+  <td>CorpusA</td>
+</tr>
+<tr>
+  <td>s111</td> 
+  <td>John Hamish WATSON</td> 
+  <td>CorpusB</td>
+</tr>
+</table>
+
+<p>
+     <ul>
+     <li> The id is for internal use, please use it to log in.  
+     <li> Your password is 'WATSON'
+     <li> Clicking on the corpus jumps you to the start sentence (with 4 sentences before and after) 
+     <li> See <a href='project1.html'>Project 1</a> for the instructions.
+     <li> You will have to log in each time you change to a new browser
+     <li> Don't tag past the end sentence (there will not be a warning, so watch the sentence number)
+<li> Sentences vary in length, so some have more concepts, some less, but you all have a little over  200 concepts to tag.
+	</ul>
+
+<h3>Annotation for eng</h3>
+<h4>Group 1: Sentence IDs 110001&ndash;110008</h4>
+<table>
+<tr>
+<th>s7</th>
+<td>Sara Kang CIENCIALOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&lang=eng&sid=110001'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s31</th>
+<td>Kateřina JUŘIČNÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&lang=eng&sid=110001'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s66</th>
+<td>Matouš SAIDL</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&lang=eng&sid=110001'>Corpus C</a></td>
+</tr>
+</table>
+<h4>Group 2: Sentence IDs 110009&ndash;110024</h4>
+<table>
+<tr>
+<th>s1</th>
+<td>Andrea BAHNEROVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&lang=eng&sid=110009'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s16</th>
+<td>Kristina FOLVARČNÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&lang=eng&sid=110009'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s18</th>
+<td>Klára GAJDOŠOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&lang=eng&sid=110009'>Corpus C</a></td>
+</tr>
+</table>
+<h4>Group 3: Sentence IDs 110025&ndash;110034</h4>
+<table>
+<tr>
+<th>s33</th>
+<td>Eliška KARBANOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&lang=eng&sid=110025'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s46</th>
+<td>Veronika MICHALCOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&lang=eng&sid=110025'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s62</th>
+<td>Hana POLACHOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&lang=eng&sid=110025'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s68</th>
+<td>Eva SVOBODOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engD&lang=eng&sid=110025'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 4: Sentence IDs 110035&ndash;110044</h4>
+<table>
+<tr>
+<th>s45</th>
+<td>Erik MAŠLEJ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&lang=eng&sid=110035'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s58</th>
+<td>Václav PETR</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&lang=eng&sid=110035'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s55</th>
+<td>Stanislava PACKOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&lang=eng&sid=110035'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s102</th>
+<td>Michaela MEŇHÉRTOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engD&lang=eng&sid=110035'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 5: Sentence IDs 110045&ndash;110057</h4>
+<table>
+<tr>
+<th>s114</th>
+<td>Michaela ŠPAKOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&lang=eng&sid=110045'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s4</th>
+<td>Alexandra BUMBALOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&lang=eng&sid=110045'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s22</th>
+<td>Kateřina HALENKOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&lang=eng&sid=110045'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s89</th>
+<td>Michal HRBÁČ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engD&lang=eng&sid=110045'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 6: Sentence IDs 110058&ndash;110088</h4>
+<table>
+<tr>
+<th>s107</th>
+<td>Marie OTÁHALOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&lang=eng&sid=110058'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s29</th>
+<td>Karel JÁNOŠ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&lang=eng&sid=110058'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s82</th>
+<td>Sarah FÁBIKOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&lang=eng&sid=110058'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s105</th>
+<td>Lucie NĚMCOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engD&lang=eng&sid=110058'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 7: Sentence IDs 110089&ndash;110112</h4>
+<table>
+<tr>
+<th>s77</th>
+<td>Lucia ĆURKOVIĆ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&lang=eng&sid=110089'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s20</th>
+<td>Šárka GEIEROVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&lang=eng&sid=110089'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s85</th>
+<td>Barbora FRÜHAUFOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&lang=eng&sid=110089'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s113</th>
+<td>Juliana ŠADEROVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engD&lang=eng&sid=110089'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 8: Sentence IDs 110113&ndash;110130</h4>
+<table>
+<tr>
+<th>s86</th>
+<td>Klára HANOUSKOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&lang=eng&sid=110113'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s120</th>
+<td>Denisa VYHNÁLKOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&lang=eng&sid=110113'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s115</th>
+<td>Aneta ŠUSTROVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&lang=eng&sid=110113'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s121</th>
+<td>Markéta ZAPLETALOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engD&lang=eng&sid=110113'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 9: Sentence IDs 110131&ndash;110143</h4>
+<table>
+<tr>
+<th>s47</th>
+<td>Lucia MIKULINOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&lang=eng&sid=110131'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s38</th>
+<td>Filip KŘÍŠTOF</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&lang=eng&sid=110131'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s99</th>
+<td>Dominika LACKOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&lang=eng&sid=110131'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s8</th>
+<td>Nikola CINTULOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engD&lang=eng&sid=110131'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 10: Sentence IDs 110144&ndash;110161</h4>
+<table>
+<tr>
+<th>s27</th>
+<td>Katarína JANČÍKOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&lang=eng&sid=110144'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s78</th>
+<td>Zdeňka DAŇOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&lang=eng&sid=110144'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s81</th>
+<td>Michaela EDLEROVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&lang=eng&sid=110144'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s34</th>
+<td>Sára KOKEŠOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engD&lang=eng&sid=110144'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 11: Sentence IDs 110162&ndash;110170</h4>
+<table>
+<tr>
+<th>s90</th>
+<td>Marcel HUMAJ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&lang=eng&sid=110162'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s96</th>
+<td>Kateřina KOSTKOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&lang=eng&sid=110162'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s117</th>
+<td>Angelina VERVEIKO</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&lang=eng&sid=110162'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s75</th>
+<td>Anh TRANOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engD&lang=eng&sid=110162'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 12: Sentence IDs 110171&ndash;110195</h4>
+<table>
+<tr>
+<th>s3</th>
+<td>Ondřej BRUTOVSKÝ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&lang=eng&sid=110171'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s61</th>
+<td>Petr PIROCHTA</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&lang=eng&sid=110171'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s40</th>
+<td>Elena LACHEROVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&lang=eng&sid=110171'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s44</th>
+<td>Katarína MASAREOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engD&lang=eng&sid=110171'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 13: Sentence IDs 110196&ndash;110212</h4>
+<table>
+<tr>
+<th>s98</th>
+<td>Bruno KRASUĽA</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&lang=eng&sid=110196'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s88</th>
+<td>Šárka HOSKOVCOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&lang=eng&sid=110196'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s79</th>
+<td>Nastya DEMYDENKO</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&lang=eng&sid=110196'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s72</th>
+<td>Nina ŠMÁLOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engD&lang=eng&sid=110196'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 14: Sentence IDs 110213&ndash;110227</h4>
+<table>
+<tr>
+<th>s53</th>
+<td>Dávid OPATOVSKÝ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&lang=eng&sid=110213'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s63</th>
+<td>Hana ROZÍNKOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&lang=eng&sid=110213'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s64</th>
+<td>Zuzana RŮŽIČKOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&lang=eng&sid=110213'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s93</th>
+<td>Bohdan KINDY</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engD&lang=eng&sid=110213'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 15: Sentence IDs 110228&ndash;110249</h4>
+<table>
+<tr>
+<th>s110</th>
+<td>Nikola RUŽIČOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&lang=eng&sid=110228'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s84</th>
+<td>Klára FRIEDRICHOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&lang=eng&sid=110228'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s111</th>
+<td>Arina SHYRIAIEVA</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&lang=eng&sid=110228'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s13</th>
+<td>Laura DŽUGANOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engD&lang=eng&sid=110228'>Corpus D</a></td>
+</tr>
+</table>
+<h3>Annotation for ces</h3>
+<h4>Group 1: Sentence IDs 110006&ndash;110014</h4>
+<table>
+<tr>
+<th>s92</th>
+<td>Daniel KAZÍK</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesA&lang=ces&sid=110006'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s122</th>
+<td>Adéla ZEMČÍKOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesB&lang=ces&sid=110006'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s26</th>
+<td>Josef CHALUPA</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesC&lang=ces&sid=110006'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s60</th>
+<td>Markéta PÍCHOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesD&lang=ces&sid=110006'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 2: Sentence IDs 110015&ndash;110032</h4>
+<table>
+<tr>
+<th>s19</th>
+<td>Eva GANSOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesA&lang=ces&sid=110015'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s103</th>
+<td>Jan MENŠÍK</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesB&lang=ces&sid=110015'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s11</th>
+<td>Zoja ČERNÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesC&lang=ces&sid=110015'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s119</th>
+<td>Barbora VRBOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesD&lang=ces&sid=110015'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 3: Sentence IDs 110033&ndash;110048</h4>
+<table>
+<tr>
+<th>s39</th>
+<td>Nataša KUBÍNYIOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesA&lang=ces&sid=110033'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s74</th>
+<td>Daniel TANNER</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesB&lang=ces&sid=110033'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s70</th>
+<td>Beata ŠIŠKOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesC&lang=ces&sid=110033'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s25</th>
+<td>Michaela HUDEČKOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesD&lang=ces&sid=110033'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 4: Sentence IDs 110049&ndash;110064</h4>
+<table>
+<tr>
+<th>s48</th>
+<td>Magdaléna MLÁDKOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesA&lang=ces&sid=110049'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s2</th>
+<td>František BAJZA</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesB&lang=ces&sid=110049'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s100</th>
+<td>Sabina LUCKÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesC&lang=ces&sid=110049'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s9</th>
+<td>Tobiáš CVRČEK</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesD&lang=ces&sid=110049'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 5: Sentence IDs 110065&ndash;110116</h4>
+<table>
+<tr>
+<th>s32</th>
+<td>Diana KADŽAJA</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesA&lang=ces&sid=110065'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s59</th>
+<td>Cam Ly PHAM</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesB&lang=ces&sid=110065'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s54</th>
+<td>Jonáš OŽANA</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesC&lang=ces&sid=110065'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s37</th>
+<td>Michaela KRÚTEKOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesD&lang=ces&sid=110065'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 6: Sentence IDs 110117&ndash;110148</h4>
+<table>
+<tr>
+<th>s21</th>
+<td>Iva GRÜNEROVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesA&lang=ces&sid=110117'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s65</th>
+<td>Jakub RYCHLÝ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesB&lang=ces&sid=110117'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s24</th>
+<td>Hana HOSKOVCOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesC&lang=ces&sid=110117'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s10</th>
+<td>Denisa ČAGÁNKOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesD&lang=ces&sid=110117'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 7: Sentence IDs 110149&ndash;110168</h4>
+<table>
+<tr>
+<th>s91</th>
+<td>Vanesa JAROŠOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesA&lang=ces&sid=110149'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s94</th>
+<td>Veronika KOLÁČKOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesB&lang=ces&sid=110149'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s28</th>
+<td>Karolína JANKŮ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesC&lang=ces&sid=110149'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s5</th>
+<td>Adéla BURDOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesD&lang=ces&sid=110149'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 8: Sentence IDs 110169&ndash;110197</h4>
+<table>
+<tr>
+<th>s69</th>
+<td>Václav SYNEK</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesA&lang=ces&sid=110169'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s52</th>
+<td>Eliška ONDRÁČKOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesB&lang=ces&sid=110169'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s118</th>
+<td>Jana VOLEJNÍČKOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesC&lang=ces&sid=110169'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s17</th>
+<td>Richard FOUSEK</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesD&lang=ces&sid=110169'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 9: Sentence IDs 110198&ndash;110219</h4>
+<table>
+<tr>
+<th>s51</th>
+<td>Barbora NOVÁKOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesA&lang=ces&sid=110198'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s116</th>
+<td>Ema VACULKOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesB&lang=ces&sid=110198'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s36</th>
+<td>Martin KRČMÁŘ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesC&lang=ces&sid=110198'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s56</th>
+<td>Karel PAŠKO</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesD&lang=ces&sid=110198'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 10: Sentence IDs 110220&ndash;110250</h4>
+<table>
+<tr>
+<th>s95</th>
+<td>Šárka KOSAŘOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesA&lang=ces&sid=110220'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s73</th>
+<td>Pavel ŠVEJDA</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesB&lang=ces&sid=110220'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s83</th>
+<td>Ondřej FIALA</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesC&lang=ces&sid=110220'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s43</th>
+<td>Ivo MARTINOVSKÝ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesD&lang=ces&sid=110220'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 11: Sentence IDs 110251&ndash;110275</h4>
+<table>
+<tr>
+<th>s104</th>
+<td>Martina MORAVANSKÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesA&lang=ces&sid=110251'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s6</th>
+<td>Adam CAPEK</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesB&lang=ces&sid=110251'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s15</th>
+<td>Aneta FOLDYNOVA</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesC&lang=ces&sid=110251'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s109</th>
+<td>Kateryna RADZIIEVSKA</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesD&lang=ces&sid=110251'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 12: Sentence IDs 110276&ndash;110302</h4>
+<table>
+<tr>
+<th>s112</th>
+<td>Šimon SMYČKA</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesA&lang=ces&sid=110276'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s67</th>
+<td>Lucie SEIDLOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesB&lang=ces&sid=110276'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s87</th>
+<td>Kateryna HENIAHA</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesC&lang=ces&sid=110276'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s50</th>
+<td>Zuzana NEORALOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesD&lang=ces&sid=110276'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 13: Sentence IDs 110303&ndash;110318</h4>
+<table>
+<tr>
+<th>s42</th>
+<td>Anna MÁČELOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesA&lang=ces&sid=110303'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s108</th>
+<td>Linda Kristina PAUČOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesB&lang=ces&sid=110303'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s41</th>
+<td>Lukáš LEMPACH</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesC&lang=ces&sid=110303'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s71</th>
+<td>Štěpán ŠKODA</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesD&lang=ces&sid=110303'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 14: Sentence IDs 110319&ndash;110342</h4>
+<table>
+<tr>
+<th>s12</th>
+<td>Matěj DEPEŠ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesA&lang=ces&sid=110319'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s49</th>
+<td>Kristýna NĚMCOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesB&lang=ces&sid=110319'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s23</th>
+<td>Veronika HALUZOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesC&lang=ces&sid=110319'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s14</th>
+<td>Marie FANTOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesD&lang=ces&sid=110319'>Corpus D</a></td>
+</tr>
+</table>
+<h4>Group 15: Sentence IDs 110343&ndash;110360</h4>
+<table>
+<tr>
+<th>s80</th>
+<td>Michaela DUPENOPULOSOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesA&lang=ces&sid=110343'>Corpus A</a></td>
+</tr>
+<tr>
+<th>s57</th>
+<td>Julie PÁVKOVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesB&lang=ces&sid=110343'>Corpus B</a></td>
+</tr>
+<tr>
+<th>s76</th>
+<td>Irena VINTROVÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesC&lang=ces&sid=110343'>Corpus C</a></td>
+</tr>
+<tr>
+<th>s106</th>
+<td>Denisa OBORNÁ</td>
+<td><a href= 'http://localhost/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=cesD&lang=ces&sid=110343'>Corpus D</a></td>
+</tr>
+</table>
+<hr>
+      <p><a href='annotation.html'>Project Guide</a>
+      <p><a href='index.html'>Syllabus</a>
+</div>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Annotation Task</title>
 </head>
 <body>
-<h2><a name='phase1'>Phase 1: Annotation Task</a></h2>
 
-  <p> The format is
-<br>
-<table>
-<tr>
-  <td>ID</td> 
-  <td>Name</td> 
-  <td>UID</td> 
-  <td>Corpus</td>
-  <td>Sentences</td>
-</tr>
-<tr>
-  <td>s221</td> 
-  <td>John Hamish Watson</td> 
-  <td>watson001</td> 
-  <td>B</td>
-  <td>000001-0000016</td>
-</tr>
-</table>
-	<ul>
-	  <li> The id is for internal use, please remember it and your password
-<li> Clicking on the sentences jumps you to the start sentence (with 4 sentences before and after) 
-<li> You will have to log in each time you change to a new browser
-	  <li> Don't tag past the end sentence (there will not be a warning)
-<li> Sentences vary in length, so some have more, some less, but you all have around 200 concepts, with an average of 13.7 sentences per group.
-	</ul>
-
-
-<table>
-<tr>   <td>ID</td> <td>Name</td> <td>UID</td> <td>Corpus</td><td>Sentences</td></tr>
-<tr> <td>s1</td> <td>Anastasia Audrey Widjaja</td> <td>AWIDJAJA001</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18525'>18525 &ndash; 18531</a></td></tr>
-    
-<tr> <td>s2</td> <td>Anbalagan Ashwataa</td> <td>ASHWATAA001</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18532'>18532 &ndash; 18539</a></td></tr>
-    
-<tr> <td>s3</td> <td>Andrea Rachel Nuralam</td> <td>ANDR0089</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18540'>18540 &ndash; 18559</a></td></tr>
-    
-<tr> <td>s4</td> <td>Ang Pei Lin, Jolene</td> <td>JANG053</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18560'>18560 &ndash; 18575</a></td></tr>
-    
-<tr> <td>s5</td> <td>Ang Yuen Ting, Lydia</td> <td>A180032</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18576'>18576 &ndash; 18587</a></td></tr>
-    
-<tr> <td>s6</td> <td>Angel Francesca Laksana</td> <td>ANGE0051</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18588'>18588 &ndash; 18600</a></td></tr>
-    
-<tr> <td>s7</td> <td>Arella Thea Darmawan</td> <td>ADARMAWA001</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18601'>18601 &ndash; 18609</a></td></tr>
-    
-<tr> <td>s8</td> <td>Bai Shifan</td> <td>SBAI004</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18610'>18610 &ndash; 18622</a></td></tr>
-    
-<tr> <td>s9</td> <td>Carissa Caitlin @ Ho Jia Ling</td> <td>CARI0012</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18623'>18623 &ndash; 18640</a></td></tr>
-    
-<tr> <td>s10</td> <td>Cassia Lee Yong Shi</td> <td>CLEE092</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18641'>18641 &ndash; 18655</a></td></tr>
-    
-<tr> <td>s11</td> <td>Chawla Kanksha</td> <td>KANKSHA001</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18656'>18656 &ndash; 18674</a></td></tr>
-    
-<tr> <td>s12</td> <td>Cheah Min Xuan, Shermeen</td> <td>SCHEAH005</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18675'>18675 &ndash; 18689</a></td></tr>
-    
-<tr> <td>s13</td> <td>Cheo Mei Lin</td> <td>MCHEO001</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18690'>18690 &ndash; 18698</a></td></tr>
-    
-<tr> <td>s14</td> <td>Cheong Kai Xin</td> <td>KCHEONG014</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18699'>18699 &ndash; 18712</a></td></tr>
-    
-<tr> <td>s15</td> <td>Chia Joe Yee</td> <td>JCHIA037</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18713'>18713 &ndash; 18725</a></td></tr>
-    
-<tr> <td>s16</td> <td>Chong Kit Yen</td> <td>KCHONG031</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18726'>18726 &ndash; 18736</a></td></tr>
-    
-<tr> <td>s17</td> <td>Chua Pei Si</td> <td>C190088</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18737'>18737 &ndash; 18752</a></td></tr>
-    
-<tr> <td>s18</td> <td>Cui Yanning</td> <td>YCUI013</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18753'>18753 &ndash; 18775</a></td></tr>
-    
-<tr> <td>s19</td> <td>Dai Guang Jing</td> <td>GDAI002</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18776'>18776 &ndash; 18797</a></td></tr>
-    
-<tr> <td>s20</td> <td>Damien Yeo</td> <td>DYEO016</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18798'>18798 &ndash; 18811</a></td></tr>
-    
-<tr> <td>s21</td> <td>Denise Tay Yu Qing</td> <td>DTAY017</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18812'>18812 &ndash; 18831</a></td></tr>
-    
-<tr> <td>s22</td> <td>Diviya Vega Suresh</td> <td>DIVIYAVE001</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18832'>18832 &ndash; 18838</a></td></tr>
-    
-<tr> <td>s23</td> <td>Evangeline Tsai Jia Ying</td> <td>EVAN0020</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18839'>18839 &ndash; 18850</a></td></tr>
-    
-<tr> <td>s24</td> <td>Fang Cheng Xian, Joshua</td> <td>FANG0078</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18851'>18851 &ndash; 18860</a></td></tr>
-    
-<tr> <td>s25</td> <td>Fidelia Beatrice</td> <td>FIDE0004</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18861'>18861 &ndash; 18871</a></td></tr>
-    
-<tr> <td>s26</td> <td>Foo Junwei, Lucas</td> <td>LFOO007</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18872'>18872 &ndash; 18889</a></td></tr>
-    
-<tr> <td>s27</td> <td>Francesca Magdalene Soh Min Hwei</td> <td>FRAN0031</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18890'>18890 &ndash; 18905</a></td></tr>
-    
-<tr> <td>s28</td> <td>Gabrielle Chua Ying Xuan</td> <td>GCHUA023</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18906'>18906 &ndash; 18917</a></td></tr>
-    
-<tr> <td>s29</td> <td>Gayathri Thirumagan Sri</td> <td>GAYA0011</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18918'>18918 &ndash; 18925</a></td></tr>
-    
-<tr> <td>s30</td> <td>Geraldine Koh</td> <td>GKOH011</td> <td>A</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engA&sid=18926'>18926 &ndash; 18935</a></td></tr>
-    
-<tr> <td>s31</td> <td>Glenda Hong Zixuan</td> <td>GHONG001</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18525'>18525 &ndash; 18531</a></td></tr>
-    
-<tr> <td>s32</td> <td>Goh Eng Min, Joanne</td> <td>JGOH102</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18532'>18532 &ndash; 18539</a></td></tr>
-    
-<tr> <td>s33</td> <td>Goh Pei Swhen</td> <td>GOHP0040</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18540'>18540 &ndash; 18559</a></td></tr>
-    
-<tr> <td>s34</td> <td>Har Hui Yun</td> <td>HARH0001</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18560'>18560 &ndash; 18575</a></td></tr>
-    
-<tr> <td>s35</td> <td>Ho Hol Yarn</td> <td>C200125</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18576'>18576 &ndash; 18587</a></td></tr>
-    
-<tr> <td>s36</td> <td>Isaac Tay Peng Bin</td> <td>ITAY004</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18588'>18588 &ndash; 18600</a></td></tr>
-    
-<tr> <td>s37</td> <td>Jessica Chandra</td> <td>JCHANDRA003</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18601'>18601 &ndash; 18609</a></td></tr>
-    
-<tr> <td>s38</td> <td>Jesslyn Tang Kit Ying</td> <td>A180125</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18610'>18610 &ndash; 18622</a></td></tr>
-    
-<tr> <td>s39</td> <td>Jill Tan Jing Wen</td> <td>JILL0006</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18623'>18623 &ndash; 18640</a></td></tr>
-    
-<tr> <td>s40</td> <td>Joshua Lee Shaw Wah</td> <td>JOSH0042</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18641'>18641 &ndash; 18655</a></td></tr>
-    
-<tr> <td>s41</td> <td>Kang Yi Long</td> <td>YKANG004</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18656'>18656 &ndash; 18674</a></td></tr>
-    
-<tr> <td>s42</td> <td>Kathy Sophia Kristianty</td> <td>KATHY002</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18675'>18675 &ndash; 18689</a></td></tr>
-    
-<tr> <td>s43</td> <td>Kok Feng Rui Danson</td> <td>DKOK002</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18690'>18690 &ndash; 18698</a></td></tr>
-    
-<tr> <td>s44</td> <td>Lee Zhe Ren</td> <td>ZLEE037</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18699'>18699 &ndash; 18712</a></td></tr>
-    
-<tr> <td>s45</td> <td>Lek Jia Xin</td> <td>JLEK003</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18713'>18713 &ndash; 18725</a></td></tr>
-    
-<tr> <td>s46</td> <td>Leong Jing Yi</td> <td>LE0011YI</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18726'>18726 &ndash; 18736</a></td></tr>
-    
-<tr> <td>s47</td> <td>Lim Jia Hui</td> <td>JLIM310</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18737'>18737 &ndash; 18752</a></td></tr>
-    
-<tr> <td>s48</td> <td>Lim Jie Min Jermayne</td> <td>JLIM311</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18753'>18753 &ndash; 18775</a></td></tr>
-    
-<tr> <td>s49</td> <td>Lim Wei Jie Geoffrey</td> <td>LIMW0205</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18776'>18776 &ndash; 18797</a></td></tr>
-    
-<tr> <td>s50</td> <td>Lim Xinhui</td> <td>XLIM032</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18798'>18798 &ndash; 18811</a></td></tr>
-    
-<tr> <td>s51</td> <td>Lim Yenyi</td> <td>YLIM148</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18812'>18812 &ndash; 18831</a></td></tr>
-    
-<tr> <td>s52</td> <td>Lin Hanqing</td> <td>LINH0032</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18832'>18832 &ndash; 18838</a></td></tr>
-    
-<tr> <td>s53</td> <td>Loh Wei Ling</td> <td>WLOH026</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18839'>18839 &ndash; 18850</a></td></tr>
-    
-<tr> <td>s54</td> <td>Loke Yuen Yu, Alicia</td> <td>E190155</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18851'>18851 &ndash; 18860</a></td></tr>
-    
-<tr> <td>s55</td> <td>Mervyn Chiong Jia Rong</td> <td>MCHIONG001</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18861'>18861 &ndash; 18871</a></td></tr>
-    
-<tr> <td>s56</td> <td>Michelle Cordelia Tanjaya</td> <td>MTANJAYA001</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18872'>18872 &ndash; 18889</a></td></tr>
-    
-<tr> <td>s57</td> <td>Moon Chiang Qi</td> <td>E190170</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18890'>18890 &ndash; 18905</a></td></tr>
-    
-<tr> <td>s58</td> <td>Muhammad Muzaffar Shah B M H S</td> <td>MUZAFFAR001</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18906'>18906 &ndash; 18917</a></td></tr>
-    
-<tr> <td>s59</td> <td>Ng Shao Yi</td> <td>SNG099</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18918'>18918 &ndash; 18925</a></td></tr>
-    
-<tr> <td>s60</td> <td>Nicole Ng Shi Min</td> <td>NNG028</td> <td>B</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engB&sid=18926'>18926 &ndash; 18935</a></td></tr>
-    
-<tr> <td>s61</td> <td>Nur Aqilah Binte Abdul Wahid</td> <td>NURA0072</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18525'>18525 &ndash; 18531</a></td></tr>
-    
-<tr> <td>s62</td> <td>Nur Meisarah Binte Azmi</td> <td>MEISARAH001</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18532'>18532 &ndash; 18539</a></td></tr>
-    
-<tr> <td>s63</td> <td>Nurshabrina Bte Nurshahid</td> <td>NURSHABR001</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18540'>18540 &ndash; 18559</a></td></tr>
-    
-<tr> <td>s64</td> <td>Nurul Halizah Binte Suhaimi</td> <td>NURU0037</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18560'>18560 &ndash; 18575</a></td></tr>
-    
-<tr> <td>s65</td> <td>Nurul Hana Chelsea Neubronner</td> <td>NU0001ER</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18576'>18576 &ndash; 18587</a></td></tr>
-    
-<tr> <td>s66</td> <td>Nurul Syahirah Binte Mohammad</td> <td>NURULSYA003</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18588'>18588 &ndash; 18600</a></td></tr>
-    
-<tr> <td>s67</td> <td>Olivia Teng Hong Mei</td> <td>OTENG001</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18601'>18601 &ndash; 18609</a></td></tr>
-    
-<tr> <td>s68</td> <td>Phyoe Wathan Moe</td> <td>PHYOEWAT001</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18610'>18610 &ndash; 18622</a></td></tr>
-    
-<tr> <td>s69</td> <td>Rachael Soh Rui Jing</td> <td>RACH0098</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18623'>18623 &ndash; 18640</a></td></tr>
-    
-<tr> <td>s70</td> <td>Rachael Wong Mun</td> <td>RWONG020</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18641'>18641 &ndash; 18655</a></td></tr>
-    
-<tr> <td>s71</td> <td>Rebecca Ammani D/O Alexander R</td> <td>REBE0013</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18656'>18656 &ndash; 18674</a></td></tr>
-    
-<tr> <td>s72</td> <td>Renee Teo Li Ying</td> <td>RTEO019</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18675'>18675 &ndash; 18689</a></td></tr>
-    
-<tr> <td>s73</td> <td>Russell Leung Pak Toh</td> <td>RUSS0009</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18690'>18690 &ndash; 18698</a></td></tr>
-    
-<tr> <td>s74</td> <td>Seet Ser Yi Dion</td> <td>C190197</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18699'>18699 &ndash; 18712</a></td></tr>
-    
-<tr> <td>s75</td> <td>Seow Ning Man Jocelyn</td> <td>SEOW0112</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18713'>18713 &ndash; 18725</a></td></tr>
-    
-<tr> <td>s76</td> <td>Sevina Spring Goh Si Zhen</td> <td>SGOH044</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18726'>18726 &ndash; 18736</a></td></tr>
-    
-<tr> <td>s77</td> <td>Sheryl Chin Wai Shan</td> <td>SCHIN013</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18737'>18737 &ndash; 18752</a></td></tr>
-    
-<tr> <td>s78</td> <td>Sie Kim Hoon, Cheyanne</td> <td>CSIE002</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18753'>18753 &ndash; 18775</a></td></tr>
-    
-<tr> <td>s79</td> <td>Siti Sarah Binti Roseli</td> <td>SITISARA004</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18776'>18776 &ndash; 18797</a></td></tr>
-    
-<tr> <td>s80</td> <td>Soh Zhi Jia</td> <td>ZSOH005</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18798'>18798 &ndash; 18811</a></td></tr>
-    
-<tr> <td>s81</td> <td>Subramanian Meenalochani</td> <td>MEENALOC001</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18812'>18812 &ndash; 18831</a></td></tr>
-    
-<tr> <td>s82</td> <td>Tan Kwan Sing</td> <td>TANK0279</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18832'>18832 &ndash; 18838</a></td></tr>
-    
-<tr> <td>s83</td> <td>Thilras Irfana</td> <td>THILRAS001</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18839'>18839 &ndash; 18850</a></td></tr>
-    
-<tr> <td>s84</td> <td>Tiong Wei Wen, Averie</td> <td>ATIONG001</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18851'>18851 &ndash; 18860</a></td></tr>
-    
-<tr> <td>s85</td> <td>Victoria Lee Leyi</td> <td>VLEE021</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18861'>18861 &ndash; 18871</a></td></tr>
-    
-<tr> <td>s86</td> <td>Wee Chuin Kit, Shaun</td> <td>SWEE020</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18872'>18872 &ndash; 18889</a></td></tr>
-    
-<tr> <td>s87</td> <td>Wilson</td> <td>WWILSON001</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18890'>18890 &ndash; 18905</a></td></tr>
-    
-<tr> <td>s88</td> <td>Woon Wee Han Eugene</td> <td>EWOON001</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18906'>18906 &ndash; 18917</a></td></tr>
-    
-<tr> <td>s89</td> <td>Yeo Ruo Teng</td> <td>YEOR0008</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18918'>18918 &ndash; 18925</a></td></tr>
-    
-<tr> <td>s90</td> <td>Zhao Yikang</td> <td>ZHAO0282</td> <td>C</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engC&sid=18926'>18926 &ndash; 18935</a></td></tr>
-    
-<tr> <td>s91</td> <td>Zoe Deborah Tauro</td> <td>ZOE001</td> <td>D</td>
-   <td><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/tag-word.cgi?gridmode=ntumcgrid&corpus=engD&sid=18926'>18926 &ndash; 18935</a></td></tr>
-    
-</tr>
-</table>
-<hr>
-      <p><a href='annotation.html'>Project Guide</a>
-      <p><a href='index.html'>Syllabus</a>
-<h2><a name='phase2'>Phase 2: Comparison Task</a></h2>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18525&sid_to=18531'>Group 1 (18525 &ndash; 18531)</a></h3>
-<ol type='A'>
-  <li> Anastasia Audrey Widjaja (<tt>AWIDJAJA001: s1</tt>)
-  <li> Glenda Hong Zixuan (<tt>GHONG001: s31</tt>)
-  <li> Nur Aqilah Binte Abdul Wahid (<tt>NURA0072: s61</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18532&sid_to=18539'>Group 2 (18532 &ndash; 18539)</a></h3>
-<ol type='A'>
-  <li> Anbalagan Ashwataa (<tt>ASHWATAA001: s2</tt>)
-  <li> Goh Eng Min, Joanne (<tt>JGOH102: s32</tt>)
-  <li> Nur Meisarah Binte Azmi (<tt>MEISARAH001: s62</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18540&sid_to=18559'>Group 3 (18540 &ndash; 18559)</a></h3>
-<ol type='A'>
-  <li> Andrea Rachel Nuralam (<tt>ANDR0089: s3</tt>)
-  <li> Goh Pei Swhen (<tt>GOHP0040: s33</tt>)
-  <li> Nurshabrina Bte Nurshahid (<tt>NURSHABR001: s63</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18560&sid_to=18575'>Group 4 (18560 &ndash; 18575)</a></h3>
-<ol type='A'>
-  <li> Ang Pei Lin, Jolene (<tt>JANG053: s4</tt>)
-  <li> Har Hui Yun (<tt>HARH0001: s34</tt>)
-  <li> Nurul Halizah Binte Suhaimi (<tt>NURU0037: s64</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18576&sid_to=18587'>Group 5 (18576 &ndash; 18587)</a></h3>
-<ol type='A'>
-  <li> Ang Yuen Ting, Lydia (<tt>A180032: s5</tt>)
-  <li> Ho Hol Yarn (<tt>C200125: s35</tt>)
-  <li> Nurul Hana Chelsea Neubronner (<tt>NU0001ER: s65</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18588&sid_to=18600'>Group 6 (18588 &ndash; 18600)</a></h3>
-<ol type='A'>
-  <li> Angel Francesca Laksana (<tt>ANGE0051: s6</tt>)
-  <li> Isaac Tay Peng Bin (<tt>ITAY004: s36</tt>)
-  <li> Nurul Syahirah Binte Mohammad (<tt>NURULSYA003: s66</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18601&sid_to=18609'>Group 7 (18601 &ndash; 18609)</a></h3>
-<ol type='A'>
-  <li> Arella Thea Darmawan (<tt>ADARMAWA001: s7</tt>)
-  <li> Jessica Chandra (<tt>JCHANDRA003: s37</tt>)
-  <li> Olivia Teng Hong Mei (<tt>OTENG001: s67</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18610&sid_to=18622'>Group 8 (18610 &ndash; 18622)</a></h3>
-<ol type='A'>
-  <li> Bai Shifan (<tt>SBAI004: s8</tt>)
-  <li> Jesslyn Tang Kit Ying (<tt>A180125: s38</tt>)
-  <li> Phyoe Wathan Moe (<tt>PHYOEWAT001: s68</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18623&sid_to=18640'>Group 9 (18623 &ndash; 18640)</a></h3>
-<ol type='A'>
-  <li> Carissa Caitlin @ Ho Jia Ling (<tt>CARI0012: s9</tt>)
-  <li> Jill Tan Jing Wen (<tt>JILL0006: s39</tt>)
-  <li> Rachael Soh Rui Jing (<tt>RACH0098: s69</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18641&sid_to=18655'>Group 10 (18641 &ndash; 18655)</a></h3>
-<ol type='A'>
-  <li> Cassia Lee Yong Shi (<tt>CLEE092: s10</tt>)
-  <li> Joshua Lee Shaw Wah (<tt>JOSH0042: s40</tt>)
-  <li> Rachael Wong Mun (<tt>RWONG020: s70</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18656&sid_to=18674'>Group 11 (18656 &ndash; 18674)</a></h3>
-<ol type='A'>
-  <li> Chawla Kanksha (<tt>KANKSHA001: s11</tt>)
-  <li> Kang Yi Long (<tt>YKANG004: s41</tt>)
-  <li> Rebecca Ammani D/O Alexander R (<tt>REBE0013: s71</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18675&sid_to=18689'>Group 12 (18675 &ndash; 18689)</a></h3>
-<ol type='A'>
-  <li> Cheah Min Xuan, Shermeen (<tt>SCHEAH005: s12</tt>)
-  <li> Kathy Sophia Kristianty (<tt>KATHY002: s42</tt>)
-  <li> Renee Teo Li Ying (<tt>RTEO019: s72</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18690&sid_to=18698'>Group 13 (18690 &ndash; 18698)</a></h3>
-<ol type='A'>
-  <li> Cheo Mei Lin (<tt>MCHEO001: s13</tt>)
-  <li> Kok Feng Rui Danson (<tt>DKOK002: s43</tt>)
-  <li> Russell Leung Pak Toh (<tt>RUSS0009: s73</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18699&sid_to=18712'>Group 14 (18699 &ndash; 18712)</a></h3>
-<ol type='A'>
-  <li> Cheong Kai Xin (<tt>KCHEONG014: s14</tt>)
-  <li> Lee Zhe Ren (<tt>ZLEE037: s44</tt>)
-  <li> Seet Ser Yi Dion (<tt>C190197: s74</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18713&sid_to=18725'>Group 15 (18713 &ndash; 18725)</a></h3>
-<ol type='A'>
-  <li> Chia Joe Yee (<tt>JCHIA037: s15</tt>)
-  <li> Lek Jia Xin (<tt>JLEK003: s45</tt>)
-  <li> Seow Ning Man Jocelyn (<tt>SEOW0112: s75</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18726&sid_to=18736'>Group 16 (18726 &ndash; 18736)</a></h3>
-<ol type='A'>
-  <li> Chong Kit Yen (<tt>KCHONG031: s16</tt>)
-  <li> Leong Jing Yi (<tt>LE0011YI: s46</tt>)
-  <li> Sevina Spring Goh Si Zhen (<tt>SGOH044: s76</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18737&sid_to=18752'>Group 17 (18737 &ndash; 18752)</a></h3>
-<ol type='A'>
-  <li> Chua Pei Si (<tt>C190088: s17</tt>)
-  <li> Lim Jia Hui (<tt>JLIM310: s47</tt>)
-  <li> Sheryl Chin Wai Shan (<tt>SCHIN013: s77</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18753&sid_to=18775'>Group 18 (18753 &ndash; 18775)</a></h3>
-<ol type='A'>
-  <li> Cui Yanning (<tt>YCUI013: s18</tt>)
-  <li> Lim Jie Min Jermayne (<tt>JLIM311: s48</tt>)
-  <li> Sie Kim Hoon, Cheyanne (<tt>CSIE002: s78</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18776&sid_to=18797'>Group 19 (18776 &ndash; 18797)</a></h3>
-<ol type='A'>
-  <li> Dai Guang Jing (<tt>GDAI002: s19</tt>)
-  <li> Lim Wei Jie Geoffrey (<tt>LIMW0205: s49</tt>)
-  <li> Siti Sarah Binti Roseli (<tt>SITISARA004: s79</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18798&sid_to=18811'>Group 20 (18798 &ndash; 18811)</a></h3>
-<ol type='A'>
-  <li> Damien Yeo (<tt>DYEO016: s20</tt>)
-  <li> Lim Xinhui (<tt>XLIM032: s50</tt>)
-  <li> Soh Zhi Jia (<tt>ZSOH005: s80</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18812&sid_to=18831'>Group 21 (18812 &ndash; 18831)</a></h3>
-<ol type='A'>
-  <li> Denise Tay Yu Qing (<tt>DTAY017: s21</tt>)
-  <li> Lim Yenyi (<tt>YLIM148: s51</tt>)
-  <li> Subramanian Meenalochani (<tt>MEENALOC001: s81</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18832&sid_to=18838'>Group 22 (18832 &ndash; 18838)</a></h3>
-<ol type='A'>
-  <li> Diviya Vega Suresh (<tt>DIVIYAVE001: s22</tt>)
-  <li> Lin Hanqing (<tt>LINH0032: s52</tt>)
-  <li> Tan Kwan Sing (<tt>TANK0279: s82</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18839&sid_to=18850'>Group 23 (18839 &ndash; 18850)</a></h3>
-<ol type='A'>
-  <li> Evangeline Tsai Jia Ying (<tt>EVAN0020: s23</tt>)
-  <li> Loh Wei Ling (<tt>WLOH026: s53</tt>)
-  <li> Thilras Irfana (<tt>THILRAS001: s83</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18851&sid_to=18860'>Group 24 (18851 &ndash; 18860)</a></h3>
-<ol type='A'>
-  <li> Fang Cheng Xian, Joshua (<tt>FANG0078: s24</tt>)
-  <li> Loke Yuen Yu, Alicia (<tt>E190155: s54</tt>)
-  <li> Tiong Wei Wen, Averie (<tt>ATIONG001: s84</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18861&sid_to=18871'>Group 25 (18861 &ndash; 18871)</a></h3>
-<ol type='A'>
-  <li> Fidelia Beatrice (<tt>FIDE0004: s25</tt>)
-  <li> Mervyn Chiong Jia Rong (<tt>MCHIONG001: s55</tt>)
-  <li> Victoria Lee Leyi (<tt>VLEE021: s85</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18872&sid_to=18889'>Group 26 (18872 &ndash; 18889)</a></h3>
-<ol type='A'>
-  <li> Foo Junwei, Lucas (<tt>LFOO007: s26</tt>)
-  <li> Michelle Cordelia Tanjaya (<tt>MTANJAYA001: s56</tt>)
-  <li> Wee Chuin Kit, Shaun (<tt>SWEE020: s86</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18890&sid_to=18905'>Group 27 (18890 &ndash; 18905)</a></h3>
-<ol type='A'>
-  <li> Francesca Magdalene Soh Min Hwei (<tt>FRAN0031: s27</tt>)
-  <li> Moon Chiang Qi (<tt>E190170: s57</tt>)
-  <li> Wilson (<tt>WWILSON001: s87</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18906&sid_to=18917'>Group 28 (18906 &ndash; 18917)</a></h3>
-<ol type='A'>
-  <li> Gabrielle Chua Ying Xuan (<tt>GCHUA023: s28</tt>)
-  <li> Muhammad Muzaffar Shah B M H S (<tt>MUZAFFAR001: s58</tt>)
-  <li> Woon Wee Han Eugene (<tt>EWOON001: s88</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18918&sid_to=18925'>Group 29 (18918 &ndash; 18925)</a></h3>
-<ol type='A'>
-  <li> Gayathri Thirumagan Sri (<tt>GAYA0011: s29</tt>)
-  <li> Ng Shao Yi (<tt>SNG099: s59</tt>)
-  <li> Yeo Ruo Teng (<tt>YEOR0008: s89</tt>)
-</ol>
-<h3><a href='https://lr.soh.ntu.edu.sg/ntumc/cgi-bin/agreement.cgi?lang=eng&sid_from=18926&sid_to=18935'>Group 30 (18926 &ndash; 18935)</a></h3>
-<ol type='A'>
-  <li> Geraldine Koh (<tt>GKOH011: s30</tt>)
-  <li> Nicole Ng Shi Min (<tt>NNG028: s60</tt>)
-  <li> Zhao Yikang (<tt>ZHAO0282: s90</tt>)
-  <li> Zoe Deborah Tauro (<tt>ZOE001: s91</tt>)
-</ol>
-<hr>
-      <p><a href='annotation.html'>Project Guide</a>
-      <p><a href='index.html'>Syllabus</a>
 </body>
 </html>
       
