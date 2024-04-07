@@ -23,7 +23,7 @@
 \item Sentence Meaning
   \begin{itemize}
   \item Semantic Roles and Alternations
-  \item Tense, Aspect, Modality and Evidentiality
+  \item Tense, Aspect, Modality and Evidentiality (skip)
   \end{itemize}
 \item Close Reading and Word Sense Disambiguation
 \end{itemize}
@@ -133,14 +133,17 @@
       \clip (0,0) circle (2); \fill[pink] (2,0) circle (2);
       \endscope
       % outline
-      \draw (0,0) circle (2) node [text=black,left,align=center] {\tiny\lex{big}\\ [-1.5ex] \tiny \lex{things}} 
+      \draw (0,0) circle (2) node [text=black,left,align=center] {\tiny\lex{big}\\ [-1ex] \tiny \lex{things}} 
       (2,0) circle (2) node [text=black,right] {\tiny\lex{heads}};
-      \node[align=center] at (1,0) {\tiny \lex{big}\\[-1.5ex] \tiny \lex{heads}};
+      \node[align=center] at (1,0) {\tiny \lex{big}\\[-1ex] \tiny \lex{heads}};
     \end{tikzpicture}} 
 \end{center}
 
 \begin{itemize}
 \item This is the simplest form of composition
+  \begin{itemize}
+  \item although the meaning of big is not independent
+  \end{itemize}
 \end{itemize}
 
 \myslide{Other kinds of intersective modification}
@@ -777,6 +780,171 @@ Johann  How disappointing.
 \end{itemize}
 
 
+
+
+
+\section{Word Sense Disambiguation \\ for Close Reading}
+
+
+
+\myslide{Close Reading}
+\MyLogo{The idea comes from the study of poetry and is part of the
+  school of \textit{New Criticism}  \citep[e.g.,][]{Brooks:Warre:1938,Brooks:Warre:1943}}
+
+\begin{itemize}
+\item Reading (and often re-reading) a text to uncover multiple
+  aspects of meaning that lead you to understand a text better
+\item Looking at what the text actually says, as well as the
+  inferences you make from reading it
+\item After a close reading you should be able to support your
+  conclusions with specific examples from the text
+\item You can consider many aspects of the text, such as
+  \begin{itemize}
+  \item The Title
+  \item Word Choice
+  \item The Tone and Style
+  \item Discerning Patterns
+    % Does an image here remind you of an image elsewhere in the book? Where? What's the connection?
+    % How might this image fit into the pattern of the book as a whole?
+    % Could this passage symbolize the entire work? Could this passage serve as a microcosm--a little picture--of what's taking place in the whole work?
+    % What is the sentence rhythm like? Short and choppy? Long and flowing? Does it build on itself or stay at an even pace? What is the style like?
+    % Look at the punctuation. Is there anything unusual about it?
+    % Is there any repetition within the passage? What is the effect of that repetition?
+    % How many types of writing are in the passage? (For example, narration, description, argument, dialogue, rhymed or alliterative poetry, etc.)
+    % Can you identify paradoxes in the author's thought or subject?
+    % What is left out or kept silent? What would you expect the author to talk about that the author avoided?
+  \item  Point of View and Characterization
+  \item Symbolism
+
+    % How does the passage make us react or think about any characters or events within the narrative?
+    % Are there colors, sounds, physical description that appeals to the senses? Does this imagery form a pattern? Why might the author have chosen that color, sound or physical description?
+    % Who speaks in the passage? To whom does he or she speak? Does the narrator have a limited or partial point of view? Or does the narrator appear to be omniscient, and he knows things the characters couldn't possibly know? (For example, omniscient narrators might mention future historical events, events taking place "off stage," the thoughts and feelings of multiple characters, and so on).
+  \end{itemize}
+  \end{itemize}
+
+\myslide{Word Choice and Diction}
+\MyLogo{We will focus on this}
+
+\begin{itemize}
+\item What word(s) stand out? Why? (typically vivid words, unusual choices, or a contrast to what a reader expects)
+\item How do particular words get us to look at characters or events in a particular way? Do they evoke an emotion?
+\item Did the author use nonstandard language or words in another language? Why? What is the effect?
+\item Are there any words that could have more than one meaning? Why might the author have played with language in this way?
+\item Do some words have extra connotations?
+\end{itemize}
+
+\myslide{Word Sense Disambiguation}
+
+\begin{itemize}
+\item Knowing what individual words mean is the first step towards understanding
+\item We will try to identify the \txx{sense} of words
+  \begin{itemize}
+  \item We use \href{https://wordnet.princeton.edu/}{Wordnet} \citep{_Fellbaum:1998} as the sense inventory
+    \\ because it contains semantic relations as well as definitions
+    \\ and it is accessible: there are good interfaces to it
+  \item For every word we chose the most appropriate sense in wordnet
+    \\ or write a comment if we think there isn't one
+  \item Once we have identified a sense, it is then easy to look at
+    synonyms and other closely related words
+  \end{itemize}
+  \newpage
+\item \eng{Sherlock Holmes had been leaning back in his chair with his
+    eyes closed and his head sunk in a cushion, but he half opened his
+    \ul{lids} now and glanced across at his visitor.}\task{}
+  \begin{enumerate}\small
+  \item \lex{hat, chapeau, lid} ``headdress that protects the head
+    from bad weather; has shaped crown and usually a brim''
+  \item \lex{lid, eyelid, palpebra} ``either of two folds of skin that
+    can be moved to cover or open the eye''
+  \item \lex{lid} ``a movable top or cover (hinged or separate) for closing the opening at the top of a box, chest, jar, pan, etc.''
+
+  \end{enumerate}
+
+\newpage 
+\item This is difficult for many reasons
+  \begin{itemize}
+  \item Meaning boundaries are not clear: the sense distinctions
+    impose a structure on something that is actually fuzzy
+  \item Dictionaries are imperfect
+    \begin{itemize}
+    \item senses may be missing
+    \item senses may be too fine-grained
+    \end{itemize}
+  \item Processing a text by computer is difficult
+    \begin{itemize}
+    \item The computer may have misinterpreted
+    \begin{itemize}
+    \item the part-of-speech
+      \\ \eng{Does that go}  ``Female deer which go'' ``Is it the case that is goes?''
+      \\ \eng{The speckled band} ``the band that is speckled'' ``the band that someone speckled''
+    \item Or the sentence boundaries
+    \item Or the words boundaries
+    \end{itemize}
+        \end{itemize}
+  \item People use language idiosyncratically 
+    \begin{itemize}
+    \item extending meanings metaphorically
+    \item sometimes so strangely that we might even say wrongly
+    \end{itemize}
+\newpage
+  \item Typically people agree around 72.5\% of the time \citep{Snyder:Palmer:2004}.
+    \begin{itemize}
+    \item  Verbs are hardest (67.8\%), then nouns (74.9\%) and adjectives (78.5\%)
+    \item Disagreements tend to cluster around a relatively small group of difficult words.
+    \item For example \lex{national}
+      \begin{itemize}
+      \item In six out of seven instances one annotator chose
+        ``limited to or in the interests of a particular nation'' and
+        the other annotator chose ``concerned with or applicable to or
+        belonging to an entire nation or country''
+      \item They are hard to distinguish!
+      \end{itemize}
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\myslide{Projects 1 and 2}
+\MyLogo{Details online: we will give a demo}
+\begin{itemize}
+\item[1] Identify and annotate word meaning for your own passage of
+  one of the stories using wordnet as the sense inventory: 3 or 4 people do
+  the same set of sentences.
+  \begin{itemize}
+  \item For every word that needs to be tagged, either
+    \begin{itemize}
+    \item Chose a sense in wordnet
+    \item Identify it as a named entity
+    \item Identify a problem in the corpus or wordnet
+      \\ and leave a comment saying what the it should be
+    \end{itemize}
+  \item Do this on your own --- the goal is to think about the words' meanings
+  \end{itemize}
+\item[2] Compare and contrast your annotations with other annotators;
+  re-annotate based on your discussion and leave comments for at least
+  five words.
+  \begin{itemize}
+  \item We expect you to disagree 30-40\% of the time (more often than experts)
+  \item Sometimes you will have made a careless mistake
+  \item Sometimes you will have interpreted wordnet differently
+  \item Sometimes you will have interpreted the passage differently
+  \item Discussing meaning deepens your understanding of it
+  \end{itemize}
+\end{itemize}
+
+\myslide{Conclusions}
+
+\begin{itemize}
+\item Situations are represented by verbs
+\item Semantic roles can be used to make the relations between the situation and the participants clearer
+\item Close reading of a text helps to understand it more fully
+\item Determining the meanings of words is one part of building up
+  understanding
+\end{itemize}
+
+\small
+\bibliographystyle{aclnat}
+\bibliography{abb,mtg,nlp,ling}
+
 \section{Tense, Aspect and Modality (TAM)}
 
 \myslide{TAM}
@@ -1064,169 +1232,6 @@ not strongly grammaticalized.
 \ex \eng{Look at those clouds! $^\#$ It will rain!.}
 \end{exe}
 
-
-
-\section{Word Sense Disambiguation \\ for Close Reading}
-
-
-
-\myslide{Close Reading}
-\MyLogo{The idea comes from the study of poetry and is part of the
-  school of \textit{New Criticism}  \citep[e.g.,][]{Brooks:Warre:1938,Brooks:Warre:1943}}
-
-\begin{itemize}
-\item Reading (and often re-reading) a text to uncover multiple
-  aspects of meaning that lead you to understand a text better
-\item Looking at what the text actually says, as well as the
-  inferences you make from reading it
-\item After a close reading you should be able to support your
-  conclusions with specific examples from the text
-\item You can consider many aspects of the text, such as
-  \begin{itemize}
-  \item The Title
-  \item Word Choice
-  \item The Tone and Style
-  \item Discerning Patterns
-    % Does an image here remind you of an image elsewhere in the book? Where? What's the connection?
-    % How might this image fit into the pattern of the book as a whole?
-    % Could this passage symbolize the entire work? Could this passage serve as a microcosm--a little picture--of what's taking place in the whole work?
-    % What is the sentence rhythm like? Short and choppy? Long and flowing? Does it build on itself or stay at an even pace? What is the style like?
-    % Look at the punctuation. Is there anything unusual about it?
-    % Is there any repetition within the passage? What is the effect of that repetition?
-    % How many types of writing are in the passage? (For example, narration, description, argument, dialogue, rhymed or alliterative poetry, etc.)
-    % Can you identify paradoxes in the author's thought or subject?
-    % What is left out or kept silent? What would you expect the author to talk about that the author avoided?
-  \item  Point of View and Characterization
-  \item Symbolism
-
-    % How does the passage make us react or think about any characters or events within the narrative?
-    % Are there colors, sounds, physical description that appeals to the senses? Does this imagery form a pattern? Why might the author have chosen that color, sound or physical description?
-    % Who speaks in the passage? To whom does he or she speak? Does the narrator have a limited or partial point of view? Or does the narrator appear to be omniscient, and he knows things the characters couldn't possibly know? (For example, omniscient narrators might mention future historical events, events taking place "off stage," the thoughts and feelings of multiple characters, and so on).
-  \end{itemize}
-  \end{itemize}
-
-\myslide{Word Choice and Diction}
-\MyLogo{We will focus on this}
-
-\begin{itemize}
-\item What word(s) stand out? Why? (typically vivid words, unusual choices, or a contrast to what a reader expects)
-\item How do particular words get us to look at characters or events in a particular way? Do they evoke an emotion?
-\item Did the author use nonstandard English or words in another language? Why? What is the effect?
-\item Are there any words that could have more than one meaning? Why might the author have played with language in this way?
-\item Do some words have extra connotations?
-\end{itemize}
-
-\myslide{Word Sense Disambiguation}
-
-\begin{itemize}
-\item Knowing what individual words mean is the first step towards understanding
-\item We will try to identify the \txx{sense} of words
-  \begin{itemize}
-  \item We use \href{https://wordnet.princeton.edu/}{Wordnet} \citep{_Fellbaum:1998} as the sense inventory
-    \\ because it contains semantic relations as well as definitions
-    \\ and it is accessible: there are good interfaces to it
-  \item For every word we chose the most appropriate sense in wordnet
-    \\ or write a comment if we think there isn't one
-  \item Once we have identified a sense, it is then easy to look at
-    synonyms and other closely related words
-  \end{itemize}
-  \newpage
-\item \eng{Sherlock Holmes had been leaning back in his chair with his
-    eyes closed and his head sunk in a cushion, but he half opened his
-    \ul{lids} now and glanced across at his visitor.}\task{}
-  \begin{enumerate}\small
-  \item \lex{hat, chapeau, lid} ``headdress that protects the head
-    from bad weather; has shaped crown and usually a brim''
-  \item \lex{lid, eyelid, palpebra} ``either of two folds of skin that
-    can be moved to cover or open the eye''
-  \item \lex{lid} ``a movable top or cover (hinged or separate) for closing the opening at the top of a box, chest, jar, pan, etc.''
-
-  \end{enumerate}
-
-\newpage 
-\item This is difficult for many reasons
-  \begin{itemize}
-  \item Meaning boundaries are not clear: the sense distinctions
-    impose a structure on something that is actually fuzzy
-  \item Dictionaries are imperfect
-    \begin{itemize}
-    \item senses may be missing
-    \item senses may be too fine-grained
-    \end{itemize}
-  \item Processing a text by computer is difficult
-    \begin{itemize}
-    \item The computer may have misinterpreted
-    \begin{itemize}
-    \item the part-of-speech
-      \\ \eng{Does that go}  ``Female deer which go'' ``Is it the case that is goes?''
-      \\ \eng{The speckled band} ``the band that is speckled'' ``the band that someone speckled''
-    \item Or the sentence boundaries
-    \item Or the words boundaries
-    \end{itemize}
-        \end{itemize}
-  \item People use language idiosyncratically 
-    \begin{itemize}
-    \item extending meanings metaphorically
-    \item sometimes so strangely that we might even say wrongly
-    \end{itemize}
-\newpage
-  \item Typically people agree around 72.5\% of the time \citep{Snyder:Palmer:2004}.
-    \begin{itemize}
-    \item  Verbs are hardest (67.8\%), then nouns (74.9\%) and adjectives (78.5\%)
-    \item Disagreements tend to cluster around a relatively small group of difficult words.
-    \item For example \lex{national}
-      \begin{itemize}
-      \item In six out of seven instances one annotator chose
-        ``limited to or in the interests of a particular nation'' and
-        the other annotator chose ``concerned with or applicable to or
-        belonging to an entire nation or country''
-      \item They are hard to distinguish!
-      \end{itemize}
-    \end{itemize}
-  \end{itemize}
-\end{itemize}
-
-\myslide{Projects 1 and 2}
-\MyLogo{Details online: we will give a demo}
-\begin{itemize}
-\item[1] Identify and annotate word meaning for your own passage of
-  one of the stories using wordnet as the sense inventory: 3 or 4 people do
-  the same set of sentences.
-  \begin{itemize}
-  \item For every word that needs to be tagged, either
-    \begin{itemize}
-    \item Chose a sense in wordnet
-    \item Identify it as a named entity
-    \item Identify a problem in the corpus or wordnet
-      \\ and leave a comment saying what the it should be
-    \end{itemize}
-  \item Do this on your own --- the goal is to think about the words' meanings
-  \end{itemize}
-\item[2] Compare and contrast your annotations with other annotators;
-  re-annotate based on your discussion and leave comments for at least
-  five words.
-  \begin{itemize}
-  \item We expect you to disagree 30-40\% of the time (more often than experts)
-  \item Sometimes you will have made a careless mistake
-  \item Sometimes you will have interpreted wordnet differently
-  \item Sometimes you will have interpreted the passage differently
-  \item Discussing meaning deepens your understanding of it
-  \end{itemize}
-\end{itemize}
-
-\myslide{Conclusions}
-
-\begin{itemize}
-\item Situations are represented by verbs
-\item Semantic roles can be used to make the relations between the situation and the participants clearer
-\item Close reading of a text helps to understand it more fully
-\item Determining the meanings of words is one part of building up
-  understanding
-\end{itemize}
-
-\small
-\bibliographystyle{aclnat}
-\bibliography{abb,mtg,nlp,ling}
 
 \end{document}
 
