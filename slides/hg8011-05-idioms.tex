@@ -416,7 +416,7 @@ There are many different kinds of irregularity.
 
 %\begin{frame}{The state of the art (translation)}
 \myslide{The state of the art (translation)}
-\MyLogo{Not very impressive}
+\MyLogo{Not so good}
 
 \begin{exe}
   \ex \eng{Kim blew her top}
@@ -437,7 +437,10 @@ There are many different kinds of irregularity.
   \trans \tra{Kim came to the head} (Google+Bing Translate 2015)
 %  \trans \tra{Kim came to the head} (Bing Translate)
 \end{exe}
-%\end{frame}
+% \end{frame}
+
+\makexeCJKinactive
+
 
 %\begin{frame}{The state of the art (wordnet)}
 \myslide{The state of the art (wordnet)}
@@ -476,7 +479,25 @@ There are many different kinds of irregularity.
 \end{multicols}
 \end{itemize}
 
-%\end{frame}
+% \end{frame}
+
+\myslide{The state of the art (large language models)}
+\MyLogo{Actually quite good}
+
+\begin{itemize}
+\item FCB: Translate "Kim blew her top" into Japanese
+\item ChatGPT:
+\texttt{The English idiom "Kim blew her top" translates to Japanese as "キムはキレた" (Kimu wa kireta). This phrase captures the sense that Kim lost her temper or became very angry.}
+\item FCB: What does "キムは頭に来た" mean
+\item ChatGPT:  \texttt{The phrase "キムは頭に来た" (Kimu wa atama ni kita) translates to English as "Kim got angry" or more literally, "It came to Kim's head." It's another way to express that Kim became angry or upset, similar to saying "Kim blew her top" in English. \\
+The expression  "頭に 来た" (atama ni kita) is a common way in Japanese to describe someone getting angry or frustrated.}
+\end{itemize}
+
+\hfill Translated with openai's ChatGPT 4.0 (2024-04-21)
+
+Training on a lot of data, with a lot of parameters, makes it much better
+
+
 
 
 % %\begin{frame}{Why Look at them in HPSG?}
@@ -700,7 +721,7 @@ X\textsubscript{NP} V\textsubscript{1} Y\textsubscript{NP} D\textsubscript{1} N\
     \ex \eng{Maybe the parties foolishly signed \ul{a pact which then found its way} into the hands of the DTI.}
     \ex \eng{\ul{Fitzgerald, who lost his rag with John McEnroe} at Wimbledon, had already offered his view of the pair}
 \ex \eng{Nor is it the case that the \ul{Federal Republic is using the issue of democratic accountability to drag its feet} on EMU.}
-\ex \eng{\ul{Mr Waddington, a former immigration minister and rightwinger, seems to have gritted his teeth} at yesterday's meeting and stood by the compromise hammered out at Mrs Thatcher's insistence in a cabinet committee.}
+% \ex \eng{\ul{Mr Waddington, a former immigration minister and rightwinger, seems to have gritted his teeth} at yesterday's meeting and stood by the compromise hammered out at Mrs Thatcher's insistence in a cabinet committee.}
   \end{exe}
 \end{itemize}
 
@@ -743,23 +764,23 @@ X\textsubscript{NP} V\textsubscript{1} Y\textsubscript{NP} D\textsubscript{1} N\
 
 
 
-\myslide{Truly Unique Things}
+% \myslide{Truly Unique Things}
 
-\begin{itemize} \addtolength{\itemsep}{-1ex}
-\item the music of Beethoven
-\item the intuition of a woman
-\item the obstinacy of an ass
-\item the crowing of a cock
-\item the song of a tit
-\item the waywardness of the wind
-\end{itemize}
-\begin{flushright}
-  Alas Smith and Jones (1986)
-\end{flushright}
-Mistakenly attributed to Oscar Wilde (1854 – 1900), who actually said:
-\begin{quote}
-``Intuition: the strange instinct that tells a woman she is right, whether she is or not.''  
-\end{quote}
+% \begin{itemize} \addtolength{\itemsep}{-1ex}
+% \item the music of Beethoven
+% \item the intuition of a woman
+% \item the obstinacy of an ass
+% \item the crowing of a cock
+% \item the song of a tit
+% \item the waywardness of the wind
+% \end{itemize}
+% \begin{flushright}
+%   Alas Smith and Jones (1986)
+% \end{flushright}
+% Mistakenly attributed to Oscar Wilde (1854 – 1900), who actually said:
+% \begin{quote}
+% ``Intuition: the strange instinct that tells a woman she is right, whether she is or not.''  
+% \end{quote}
 
 
 
@@ -1177,6 +1198,152 @@ cultures FUTURE is FRONT but in at least one FUTURE is BACK)
 \item Material resources and talents are provisions.
 \end{itemize}
 
+
+\myslide{Influence of Metaphors}
+\begin{itemize}
+% \item Polysemy FIXME
+\item Verbs of perception
+\\  \begin{tabular}{lcl}
+    seeing & \into & understanding \\
+    hearing & \into & obeying \\
+    tasting & \into & choosing \\
+    feeling & \into & emoting \\
+    smelling & \into & disliking \\
+  \end{tabular}
+\item[?] Can you give an example in English or another language?\task
+\item Literal meanings extend into metaphorical meanings
+\item These become conventionalized
+\item And then we have polysemy
+\end{itemize}
+
+\myslide{Metonymy as Metaphor}  %% FIXME add examples
+
+\begin{itemize}\addtolength{\itemsep}{-0.5em}
+\item PART for WHOLE (synecdoche)
+  \begin{exe}
+    \ex \eng{Can you lend a hand?}
+  \end{exe}
+\item WHOLE for PART (synecdoche)
+  \begin{exe}
+    \ex \eng{NTU won the soccer.}
+  \end{exe}
+\item CONTAINER for CONTENT
+  \begin{exe}
+    \ex \eng{The lunch menu had five dishes.}
+  \end{exe}
+\item MATERIAL for OBJECT
+  \begin{exe}
+    \ex \eng{I won gold.}
+   \end{exe}
+\item PRODUCER for PRODUCT
+  \begin{exe}
+    \ex \eng{I'll get an IBM}
+  \end{exe}
+\item PLACE for INSTITUTION (toponym)
+  \begin{exe}
+    \ex \eng{Downing Street has made no comment}
+  \end{exe}
+ \item INSTITUTION for PEOPLE RESPONSIBLE
+   \begin{exe}
+     \ex \eng{Fairprice raised its prices.}
+   \end{exe}
+\item PLACE for EVENT
+  \begin{exe}
+    \ex \eng{Hiroshima changed our view of war.}
+  \end{exe}
+ \item CONTROLLER for CONTROLLED
+   \begin{exe}
+     \ex \eng{ A truck rear ended me.}
+   \end{exe}
+ \item OBJECT for USER
+   \begin{exe}
+     \ex \eng{They are a hired gun.}
+   \end{exe}
+% \item CAUSE for EFFECT
+%   \begin{exe}
+%     \ex \eng{His native tongue is Hausa.}
+%   \end{exe}
+\end{itemize}
+
+% \myslide{Everything's a metaphor}
+% \MyLogo{\citep{Feldman:2006}}
+% \begin{itemize}
+% \item Embodied Construction Grammar
+%   \begin{itemize}
+%   \item  \txx{embodied} ECG structures parameterize active simulations based on motor and perceptual schemas
+%   \item \txx{construction-based} the basic linguistic unit is a construction, or form-meaning pairing
+%   \item \txx{constraint-based} constraints of all kinds (phonological, syntactic, semantic, etc.) are expressed using a unification-based grammar;
+%   \item \txx{formal(ized)} both formally defined and computationally implemented. 
+%   \end{itemize}
+% \item We understand \lex{grasp} because we can physically control our
+%   bodies to grasp things.
+% \item We grasp \lex{understand} because it is like \lex{grasp} but with ideas not things.
+% \end{itemize}
+
+% \myslide{Metaphor and Politics}
+
+% \begin{itemize}
+% \item \citet{Lakoff:1995} states that different political groups base their
+%   understanding of the world on different metaphors
+%   \begin{itemize}
+%   \item \txx{nurturant parent} (liberal) family is one that revolves
+%     around every family member caring for and being cared for by every
+%     other family member, with open communication between all parties,
+%     and with each family member pursuing their own vision of
+%     happiness.
+%   \item \txx{strict father} (conservative) family revolves around the idea that parents teach their children how to be self-reliant and self-disciplined through "tough love". 
+%   \end{itemize}
+% \end{itemize}
+
+% \myslide{Nurturant Parent}
+
+% \begin{itemize}
+% \item     Morality: The basis of morality is in understanding, respecting, and helping other people, and in seeking the happiness of one's self and of others. The primary vices are selfishness and anti-social behavior.
+% \item   Child development: Children develop morality primarily through interacting with and observing good people, especially good parents. Punishment is necessary in some cases, but also has the potential to backfire, causing children to adopt more violent or more anti-social ways. Though children should, in general, obey their parents, they will develop best if allowed to question their parents' decisions. Moral development is a life-long process, and almost no one is so perfect as not to need improvement.
+% \item     Justice: The world is not without justice, but it is far from the ideal of justice. Many people, for example, do not seem properly rewarded for their hard work and dedication. We must work hard to improve everyone's condition.
+% \end{itemize}
+
+% \myslide{Strict Father}
+
+% \begin{itemize}
+% \item     Morality: Evil is all around us, constantly tempting us. Thus, the basis of morality is strong moral character, which requires self-reliance and self-discipline. The primary vices are those that dissolve self-discipline, such as laziness, gluttony, and indulgent sexuality.
+% \item     Child development: Children develop self-discipline, self-reliance, and other virtues primarily through rewards and punishment, a system of "tough love". Since parents know the difference between right and wrong and children still do not, obedience to the parents is very important. Moral development basically lasts only as long as childhood; it's important to get it right the first time, because there is no "second chance".
+% \item 
+%     Justice: The world may be a difficult place to live, but it is basically just; people usually get what they deserve. The difficulties in one's life serve as a test to sort the deserving from the undeserving.
+
+% \end{itemize}
+% % 
+\myslide{Metaphors in Sherlock Holmes}
+\begin{exe}
+  
+\ex \eng{"Oh, sir, do you not think that you could help me, too, and  and at least \ul{throw a little light} through \ul{the dense darkness which surrounds me}"}
+ \ex \eng{"You may advise me how to \ul{walk amid the dangers which encompass me.}"}
+\ex \eng{" 'Tell me, Helen,' said she, 'have you ever heard anyone whistle \ul{in the dead of the night}?"}
+\ex \eng{"my sister was quite alone \ul{when she met her end}"}
+\ex \eng{"My companion sat in the front of the trap, his arms folded, his hat pulled down over his eyes, and his chin sunk upon his breast, \ul{buried in the deepest thought}"}
+ \ex \eng{"As we passed out he exchanged a few words with the landlord, explaining that we were going on a late visit to an acquaintance, and that it was possible that \ul{we might spend the night there}."}
+\ex \eng{"The presence of the gypsies, and the use of the word `band', which was used by the poor girl, no doubt to explain the appearance which she had caught a hurried glimpse of by the light of her match, were sufficient to \ul{put me upon an entirely wrong scent}."}
+\end{exe}
+
+
+\myslide{Summary}
+
+\begin{itemize}
+\item We can combine words in non-compositional ways
+\item But still there are shared conventions
+\item Some things we have to learn (\txx{idioms}), some things we work out
+  on the fly (\txx{metaphors})
+\item The distinction is somewhat fuzzy
+
+\end{itemize}
+
+\small
+\bibliographystyle{aclnat}
+\bibliography{abb,mtg,nlp,ling}
+
+
+\section{More Metaphor: Anger}
+
 \myslide{ANGER}
 
 \begin{itemize}\addtolength{\itemsep}{-1ex}
@@ -1351,148 +1518,6 @@ heart=1SG.POSS like 3SG.exist chilli ginger \\
 Adonara-Lamaholot is a small language spoken on Eastern part of Flores
 Island, Solor Island, and Lembata Island of Eastern Indonesia.   From
 the PhD thesis of Elvis Albertus bin Toni (NTU 2018).  
-
-\myslide{Influence of Metaphors}
-\begin{itemize}
-% \item Polysemy FIXME
-\item Verbs of perception
-\\  \begin{tabular}{lcl}
-    seeing & \into & understanding \\
-    hearing & \into & obeying \\
-    tasting & \into & choosing \\
-    feeling & \into & emoting \\
-    smelling & \into & disliking \\
-  \end{tabular}
-\item[?] Can you give an example in English or another language?\task
-\item Literal meanings extend into metaphorical meanings
-\item These become conventionalized
-\item And then we have polysemy
-\end{itemize}
-
-\myslide{Metonymy as Metaphor}  %% FIXME add examples
-
-\begin{itemize}\addtolength{\itemsep}{-0.5em}
-\item PART for WHOLE (synecdoche)
-  \begin{exe}
-    \ex \eng{Can you lend a hand?}
-  \end{exe}
-\item WHOLE for PART (synecdoche)
-  \begin{exe}
-    \ex \eng{NTU won the soccer.}
-  \end{exe}
-\item CONTAINER for CONTENT
-  \begin{exe}
-    \ex \eng{The lunch menu had five dishes.}
-  \end{exe}
-\item MATERIAL for OBJECT
-  \begin{exe}
-    \ex \eng{I won gold.}
-   \end{exe}
-\item PRODUCER for PRODUCT
-  \begin{exe}
-    \ex \eng{I'll get an IBM}
-  \end{exe}
-\item PLACE for INSTITUTION (toponym)
-  \begin{exe}
-    \ex \eng{Downing Street has made no comment}
-  \end{exe}
- \item INSTITUTION for PEOPLE RESPONSIBLE
-   \begin{exe}
-     \ex \eng{Fairprice raised its prices.}
-   \end{exe}
-\item PLACE for EVENT
-  \begin{exe}
-    \ex \eng{Hiroshima changed our view of war.}
-  \end{exe}
- \item CONTROLLER for CONTROLLED
-   \begin{exe}
-     \ex \eng{ A truck rear ended me.}
-   \end{exe}
- \item OBJECT for USER
-   \begin{exe}
-     \ex \eng{They are a hired gun.}
-   \end{exe}
-% \item CAUSE for EFFECT
-%   \begin{exe}
-%     \ex \eng{His native tongue is Hausa.}
-%   \end{exe}
-\end{itemize}
-
-% \myslide{Everything's a metaphor}
-% \MyLogo{\citep{Feldman:2006}}
-% \begin{itemize}
-% \item Embodied Construction Grammar
-%   \begin{itemize}
-%   \item  \txx{embodied} ECG structures parameterize active simulations based on motor and perceptual schemas
-%   \item \txx{construction-based} the basic linguistic unit is a construction, or form-meaning pairing
-%   \item \txx{constraint-based} constraints of all kinds (phonological, syntactic, semantic, etc.) are expressed using a unification-based grammar;
-%   \item \txx{formal(ized)} both formally defined and computationally implemented. 
-%   \end{itemize}
-% \item We understand \lex{grasp} because we can physically control our
-%   bodies to grasp things.
-% \item We grasp \lex{understand} because it is like \lex{grasp} but with ideas not things.
-% \end{itemize}
-
-% \myslide{Metaphor and Politics}
-
-% \begin{itemize}
-% \item \citet{Lakoff:1995} states that different political groups base their
-%   understanding of the world on different metaphors
-%   \begin{itemize}
-%   \item \txx{nurturant parent} (liberal) family is one that revolves
-%     around every family member caring for and being cared for by every
-%     other family member, with open communication between all parties,
-%     and with each family member pursuing their own vision of
-%     happiness.
-%   \item \txx{strict father} (conservative) family revolves around the idea that parents teach their children how to be self-reliant and self-disciplined through "tough love". 
-%   \end{itemize}
-% \end{itemize}
-
-% \myslide{Nurturant Parent}
-
-% \begin{itemize}
-% \item     Morality: The basis of morality is in understanding, respecting, and helping other people, and in seeking the happiness of one's self and of others. The primary vices are selfishness and anti-social behavior.
-% \item   Child development: Children develop morality primarily through interacting with and observing good people, especially good parents. Punishment is necessary in some cases, but also has the potential to backfire, causing children to adopt more violent or more anti-social ways. Though children should, in general, obey their parents, they will develop best if allowed to question their parents' decisions. Moral development is a life-long process, and almost no one is so perfect as not to need improvement.
-% \item     Justice: The world is not without justice, but it is far from the ideal of justice. Many people, for example, do not seem properly rewarded for their hard work and dedication. We must work hard to improve everyone's condition.
-% \end{itemize}
-
-% \myslide{Strict Father}
-
-% \begin{itemize}
-% \item     Morality: Evil is all around us, constantly tempting us. Thus, the basis of morality is strong moral character, which requires self-reliance and self-discipline. The primary vices are those that dissolve self-discipline, such as laziness, gluttony, and indulgent sexuality.
-% \item     Child development: Children develop self-discipline, self-reliance, and other virtues primarily through rewards and punishment, a system of "tough love". Since parents know the difference between right and wrong and children still do not, obedience to the parents is very important. Moral development basically lasts only as long as childhood; it's important to get it right the first time, because there is no "second chance".
-% \item 
-%     Justice: The world may be a difficult place to live, but it is basically just; people usually get what they deserve. The difficulties in one's life serve as a test to sort the deserving from the undeserving.
-
-% \end{itemize}
-% % 
-\myslide{Metaphors in Sherlock Holmes}
-\begin{exe}
-  
-\ex \eng{"Oh, sir, do you not think that you could help me, too, and  and at least \ul{throw a little light} through \ul{the dense darkness which surrounds me}"}
- \ex \eng{"You may advise me how to \ul{walk amid the dangers which encompass me.}"}
-\ex \eng{" 'Tell me, Helen,' said she, 'have you ever heard anyone whistle \ul{in the dead of the night}?"}
-\ex \eng{"my sister was quite alone \ul{when she met her end}"}
-\ex \eng{"My companion sat in the front of the trap, his arms folded, his hat pulled down over his eyes, and his chin sunk upon his breast, \ul{buried in the deepest thought}"}
- \ex \eng{"As we passed out he exchanged a few words with the landlord, explaining that we were going on a late visit to an acquaintance, and that it was possible that \ul{we might spend the night there}."}
-\ex \eng{"The presence of the gypsies, and the use of the word `band', which was used by the poor girl, no doubt to explain the appearance which she had caught a hurried glimpse of by the light of her match, were sufficient to \ul{put me upon an entirely wrong scent}."}
-\end{exe}
-
-
-\myslide{Summary}
-
-\begin{itemize}
-\item We can combine words in non-compositional ways
-\item But still there are shared conventions
-\item Some things we have to learn (\txx{idioms}), some things we work out
-  on the fly (\txx{metaphors})
-\item The distinction is somewhat fuzzy
-
-\end{itemize}
-
-\small
-\bibliographystyle{aclnat}
-\bibliography{abb,mtg,nlp,ling}
 
 
 \end{document}
