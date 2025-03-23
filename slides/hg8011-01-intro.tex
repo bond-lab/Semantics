@@ -11,6 +11,7 @@
 %\include{schedule}
 
 
+
 \myslide{Welcome!}
 
 \begin{itemize}
@@ -19,7 +20,7 @@
   \item How meaning is built up from words and phrases
   \item How meaning depends on context
   \end{itemize}
-\item Using the Sherlock Homes stories and the War with the Newts
+\item We will ground the analysis with real examples from the Sherlock Homes stories and the War with the Newts
   \begin{itemize}
   \item I try to make this as enjoyable as possible
   \item You get to read  a great story
@@ -31,8 +32,10 @@
 
 \begin{itemize}
 \item How this course is organized
-\item What is semantics
+\item What is \txx{semantics} (and \txx{pragmatics})
 \item Why should we be interested in semantics
+\item Ways of looking at the world (\txx{Views})
+\item Words that change meaning when you use them! (\txx{Deixis})
 \item Syllabus; Administrivia
 \end{itemize}
 
@@ -46,29 +49,27 @@
 \item \emp{EXCEPT you must read the story assigned}
 \item If you want to know more about semantics I recommend
   \begin{itemize}
-  \item Saeed, John (2009). \textit{Semantics}. 3rd Edition. Wiley-Blackwell. 
+  \item Paul Kroeger (2022) \textit{Analyzing meaning: An introduction to semantics and pragmatics}. 3rd edition.  Language Science Press. \href{https://langsci-press.org/catalog/book/359}{DOI: 10.5281}
+  \item Saeed, John (2009) \textit{Semantics}. 4rd Edition. Wiley-Blackwell. 
   \item Lyons, John (1977) \textit{Semantics}.  Cambridge University Press
   \end{itemize}
-\item Between now and next week, I expect you to read the assigned story.
+\item Between now and next week, I expect you to read the first chapter of the assigned story.
 \end{itemize}
 
 \myslide{Studying meaning}
 
 \begin{itemize}
-\item I will teach you about meaning
-\item You will then try to analyze the use of words 
-  \\ in the Sherlock Holmes stories
-  \\ in the War with the newts
+\item You'll learn to analyze meaning systematically, using examples from the \textit{War with the Newts}
   \begin{itemize}
   \item Word Meaning (sense)
-    \\   https://compling.upol.cz/ntumc/cgi-bin/showcorpus.cgi
+%    \\   https://compling.upol.cz/ntumc/cgi-bin/showcorpus.cgi
     \\  \eng{to knock up}
   \item Word and Sentence Meaning (sentiment)
     \\  \eng{Julia and I had no great pleasure in our lives}
   \item Idioms and metaphors
     \\ \eng{to cross someone's path}
   \end{itemize}
-\item You must do the three online projects, each is 4--6 hours work
+% \item You must do the three online projects, each is 4--6 hours work
 
 \end{itemize}
 
@@ -446,9 +447,269 @@ I use one cat saw one child \\
   Your turn: try to paraphrase --- translate into English
   \\ aim to be unambiguous, even if slightly disfluent\task
 \end{center}
+\section{Where is the meaning?}
+\MyLogo{Saeed Chapter 2}
+
+\myslide{Referential or Representational?}
+
+One view of meaning is to define it in terms of how it constrains reality.
+
+\begin{itemize}
+\item Picture the worlds in which these sentences are true:
+  \begin{exe}
+    \ex \eng{I patted the dog.}
+    \ex \eng{I did not pat the dog.}
+  \end{exe}
+\end{itemize}
+
+Assuming that they were uttered at the same time, they are
+incompatible because they cannot refer to the same
+situation: the \txx{referential} view. 
+\newpage
+But we can represent the same reality in different ways:
+
+\begin{exe}
+  \ex \eng{Ich habe Hunger} ``I have hunger''
+  \ex \eng{I am hungry}
+\end{exe}
+
+\txx{Representational} theories are interested in how we represent reality,
+and how our representations are influenced by conceptual structures
+conventionalized in language.
+
+
+ \myslide{Referential View}
+
+\begin{center}
+\begin{tikzpicture}[node distance=9cm, auto, thick]
+  \node[draw, rounded corners](speaker){Speaker};
+  \node[draw, rounded corners, right of=speaker](expression){Expression};
+  \node[draw, rounded corners, right of=expression](referent){Referent};
+
+  \draw[->, thick] (speaker) -- node{Say}(expression);
+  \draw[->, thick] (expression) -- node{Denotes}(referent);
+  \draw[->, thick, bend left] (speaker.north) to node[above]{Refers to}(referent.north);
+\end{tikzpicture}
+\end{center}
+
+
+ The \txx{referential view} is focused on direct relationships between
+ expressions (words, sentences) and things in the world (realist
+ view).
 
 
 
+
+
+ \myslide{Representational View}
+
+\begin{center}
+\begin{tikzpicture}[node distance=6cm, auto, thick]
+  \node[draw, rounded corners](speaker){Speaker};
+  \node[draw, rounded corners, right of=speaker](expression){Expression};
+  \node[draw, rounded corners, above right=1cm and 1.5cm of expression](concept){Concept};
+  \node[draw, rounded corners, right of=expression, xshift=3cm](referent){Referent};
+
+  \draw[->, thick] (speaker) -- node{Say}(expression);
+  \draw[->, thick] (expression) -- node[left]{Evokes}(concept);
+  \draw[->, thick] (concept) -- node[right]{Represents}(referent);
+  \draw[->, thick, bend left=30] (speaker) to node[above]{Refers via}(concept);
+\end{tikzpicture}
+\end{center}
+
+\vspace{-4em} The \txx{representational view} is focused on how relationships between
+ expressions (words, sentences) and things in the world are mediated by
+ the mind (cognitive linguistics).  
+
+This gives a more complex, but richer model.
+
+
+\myslide{Referring vs Non-Referring}
+
+\begin{itemize}
+\item \txx{Referring expressions} are expressions that identify
+  entities in the world (typically \txx{nominals})
+  \begin{exe}
+    \ex \eng{cat}, \jpn[that yellow bag]{ano kiiro kaban}
+    \ex \eng{London Bridge}, \eng{Xiao Ming}
+  \end{exe}
+\item \txx{Non-referring expressions} don't have referential properties
+  \begin{exe}
+    \ex \eng{maybe, if, is, but}
+  \end{exe}
+\item Not all nominals refer
+  \begin{exe}
+    \ex \eng{That is \ul{an ugly dog}}
+    \ex \eng{If only I had \ul{a dog}}
+  \end{exe}
+\item And, of course, all this is made more confusing if we model the
+  fictional world and our interpretation of it as separate from the
+  characters' interpretations, \ldots
+\end{itemize}
+
+
+\section{Deixis}
+\MyLogo{Saeed Section 7.2}
+
+\myslide{What is Deixis}
+\begin{itemize}
+\item any linguistic element whose interpretation
+  necessarily makes reference to properties of the
+  extra-linguistic context in which it occurs is \txx{deictic}
+  \begin{description}
+  \item[\txx{Person}] relative to the speaker and addressee; \eng{you, me, them}
+  \item[\txx{Spatial Location}] demonstratives; \eng{this, that, over there, here}
+  \item[\txx{Temporal Location}] tense; \eng{yesterday, today, tomorrow}
+  \item[\txx{Social Status}] relative to the social position: \eng{professor, you, uncle, boy}
+  \end{description}
+\item \txx{Discourse deixis}: referring to a linguistic expression or chunk of discourse
+\end{itemize}
+
+\newpage
+More than 90\% of the declarative sentences people utter are indexical
+in that they involve implicit references to the speaker, addressee,
+time and/or place of utterance in expressions like first and second
+person pronouns, demonstratives, tenses, and adverbs like \lex{here}, \lex{now},
+\lex{yesterday} \citep[p366]{Bar-Hillel:1954}.
+
+\myslide{Spatial Deixis}
+\begin{itemize}
+\item Two way systems (English, \ldots)
+  \\[2ex] \begin{tabular}{llll}
+    \txx{proximal} &\lex{this} & \lex{here} &close to the speaker\\
+    \txx{distal} &\lex{that} & \lex{there} & far from the speaker 
+  \end{tabular}
+\item Three (four) way systems (Japanese, \ldots)
+    \\[2ex] \begin{tabular}{lllll}
+                    & Gloss & \con{thing}   & \con{place}  \\
+\hline
+      \txx{proximal}  & close to speaker & \lex{kore} ``this'' & \lex{koko} ``here''\\
+      \txx{medial} &close to addressee &\lex{sore} ``that''   & \lex{soko} ``there'' \\
+      \txx{distal} &far from both&\lex{are} ``\,'tother'' & \lex{asoko} ``over there''  \\ \hline
+      \txx{Q} & interrogative & \lex{dore} ``what'' & \lex{doko} ``where''
+  \end{tabular}
+  \item Can you do English \con{time}?  \task %\marginpar{\fbox{\LARGE ?}}
+%  \item Can you do this in another language?\task %\marginpar{\fbox{\LARGE ?}}
+
+ % Can decompose: \lex{here} ``this place'', \lex{there} ``that place'', \lex{where} ``what place''
+ % \lex{now} ``this time'',  \lex{then} ``that time'', \lex{when} ``what time''
+\end{itemize}
+
+% \noindent\begin{tabular}{lllll}
+%     & close to sp  & \multicolumn{2}{c}{far from sp} & Q \\  
+%     & & close to hr & far from both \\ \hline
+%   English & this & \multicolumn{2}{c}{that} & what \\
+%   \ \ \ \  place & here & \multicolumn{2}{c}{there} & where \\
+%   Japanese & kono & sono & ano & dono \\
+%    \ \ \ \  place & koko & soko & asoko & doko \\
+% \end{tabular}
+
+
+% \mytask{try this}
+
+% \begin{tabular}[l]{}
+%   Q & close & far & further \\
+%   what & this & that & 'tother \\
+%   ?    & now  & then & --- \\
+%   where & ? & there & over there \\
+% \end{tabular}
+
+
+\myslide{More Spatial Deixis}
+
+\begin{itemize}
+\item Often lexicalized:
+  \begin{itemize}
+  \item \lex{go, come, foreign, home, local, indigenous, national language}
+  \end{itemize}
+\item Can lead to \txx{discourse}/\txx{textual deixis}
+  \begin{exe}
+    \ex \eng{\ul{Here} we begin explaining textual deixis}
+  \end{exe}
+\item Often also used for time
+  \begin{exe}
+    \ex \eng{\ul{This year} we are trying a new kind of assignment}
+  \end{exe}
+\newpage
+\item Spatial expressions extend to possession in many languages
+  \begin{exe}
+    \ex \gll \jpn{NICT-ga} \jpn{Kyoto-ni} \jpn{aru} \\
+    NICT-\textsc{nom} Kyoto-\textsc{loc} be \\
+    \trans NICT is in Kyoto
+    \ex \gll \jpn{watashi-ni} \jpn{musuko-ga}  \jpn{aru} \\
+     I-\textsc{loc}  son-\textsc{nom} be \\
+    \trans I have a son (lit. a son is in me)
+   \end{exe}
+\end{itemize}
+
+\myslide{Person Deixis}
+
+\begin{itemize}
+\item Minimally a three way division
+\\[2ex]  \begin{tabular}{lll}
+    First Person & Speaker & \lex{I} \\
+    Second Person & Addressee & \lex{you} \\
+    Third Person & Other & \lex{he/she/it} \\
+  \end{tabular}
+\item Often combined with
+  \begin{itemize}
+  \item \txx{gender}: \lex{he/she/it }
+  \item \txx{number}: \lex{I/we}, 
+    \lex{'anta} ``you:m'', \lex{'antumaa} ``you:dual'',  \lex{'antum} ``you:m:pl''
+    \\ (Arabic)
+  \item \txx{inclusion}: \lex{n\'uy} ``we including you'',  \lex{n\'{\i}i} ``we excluding you'' (Zayse)
+  \item \txx{honorification}: \lex{kimi} ``you:inferior'', \lex{anata} ``you:equal'',
+    \\ don't use pronouns for superiors: \lex{sensei} ``teacher'', \ldots (Japanese)
+  \end{itemize}
+\end{itemize}
+
+\myslide{Social Deixis}
+
+In European languages, a two-way choice in 2nd person pronominal
+reference: the T/V distinction
+
+\begin{itemize}
+\item T/V distinctions in European languages
+  \\[2ex]
+  \begin{tabular}{lll}
+    & Familiar 2sg & Polite 2sg \\ \hline
+    French & \lex{tu} & \lex{vous} \\
+    German & \lex{du} & \lex{Sie} \\
+%    Spanish & \lex{t\'u} & \lex{usted} \\
+    Czech & \lex{ty} & \lex{vy} \\ 
+  \end{tabular}
+
+\item Shift from asymmetric use showing \txx{power} (superior uses \lex{tu}; inferior uses \lex{vous}) to symmetric use showing \txx{solidarity} (strangers use  \lex{vous}; intimates use \lex{tu}): typically the socially superior person must invite the socially
+  inferior person to use the familiar form
+\end{itemize}
+
+\myslide{Social Deixis can be marked on other words}
+\MyLogo{It must be marked}
+\begin{exe}
+  \ex \jpn{Tanaka-san-ga kudasaimashita} \hfill [addressee and subject hon.]
+  \trans Tanaka gave it to me (and I honor him and you)
+%  \trans
+ \ex \jpn{Tanaka-san-ga kudasatta} \hfill [subject honorification]
+  \trans Tanaka gave it to me (and I honor him)
+
+ \ex \jpn{Tanaka-kun-ga kuremashita} \hfill [addressee honorification]
+  \trans Tanaka gave it to me (and I honor you)
+
+ \ex \jpn{Tanaka-kun-ga kureta} \hfill [no honorification]
+  \trans Tanaka gave it to me (implies I am higher status than him)
+
+\end{exe}
+
+\begin{itemize}
+% \item Find examples where someone addresses Sherlock as \eng{Holmes}
+%   and compare then to examples where he is addressed as \eng{Mr
+%     Holmes}: what is the difference? \task
+\item  Find examples in \textit{Válka s Mloky} where \cs{ty} and \cs{vy} are used:  what is the difference? \task
+\end{itemize}
+
+
+
+\section{Administrivia}
 
 \myslide{Administrivia}
 \begin{description}\addtolength{\itemsep}{-5mm}
@@ -494,13 +755,14 @@ I use one cat saw one child \\
 
 By remaining in this class, the student agrees to:
 \begin{enumerate}\addtolength{\itemsep}{-1ex}
-\item  Make a good-faith effort to learn and enjoy the material.
-\item  Read assigned texts and participate in class discussions and activities.
-\item Submit assignments on time.
-\item Attend class at all times, barring special circumstances.
-\item Get help early: approach us when you first have trouble understanding a concept or homework problem rather than complaining about a lack of understanding afterward.
-\item Treat other students with respect in all class-related activities, including on-line discussions.
+\item  Make a genuine effort to learn and engage.
+\item Read messages and participate.
+\item Do assignments on time.
+\item Attend regularly.
+\item Seek help early, not last minute.
+\item Treat peers respectfully.
 \end{enumerate}
+
 \myslide{Attendance}
 \begin{enumerate}\addtolength{\itemsep}{-1ex}
 \item You are expected to attend all classes.
@@ -524,6 +786,30 @@ By remaining in this class, the student agrees to:
 \end{enumerate}
 
 
+\myslide{Assessment}
+
+\begin{itemize}
+\item Participate in tutorials, hand in answers \hfill  20\%
+\item Projects 1 \& 2  \hfill 30\% or 25\% (5UJ2)
+  \begin{enumerate}
+  \item Annotate text individually
+  \item Compare annotations and write up result (in groups of four)
+  \end{enumerate}
+\item Project 3\hfill 5\% (5UJ2)
+  \begin{itemize}
+  \item Identify interpretations that are not strictly compositional: \\
+    idioms and metaphors
+  \end{itemize}
+
+\end{itemize}
+\hrule
+\begin{center}
+      You can chose your language and group in moodle \\
+      by next Friday \\
+      or I will randomly assign you to a language and group
+    \end{center}
+
+
 \myslide{The winning strategy}
 
 \begin{itemize}
@@ -532,6 +818,12 @@ By remaining in this class, the student agrees to:
 \item Tasks: Discuss as much as you want (but not project 1), annotate your own answers
 \item Ask questions \ldots\ early and often!
 \end{itemize}
+
+
+  
+\small
+\bibliographystyle{aclnat}
+\bibliography{abb,mtg,nlp,ling}
 
 
 % \emp{Next Week}	Theories of meaning and the meaning of words
@@ -550,6 +842,83 @@ By remaining in this class, the student agrees to:
 % \end{itemize}
 
 
+\myslide{Glossary of Key Terms (English--Czech)}
+\begin{flushleft}
+\begin{longtable}{ll}
+  English & Čestina \\\hline \endhead
+Q & otázka (Q) \\
+analysis & analýza \\
+autonomous & autonomní \\
+collocation & kolokace \\
+communication & komunikace \\
+composition & kompozice \\
+compositional & kompoziční \\
+concordance & konkordance \\
+connotation & konotace \\
+context & kontext \\
+corpus & korpus \\
+deictic & deiktický \\
+deixis & deixe \\
+denotation & denotace \\
+discourse & diskurz \\
+distal & distální \\
+expression & výraz \\
+gender &  (gramatický) rod \\
+honorification & honorifika \\
+idiom & úsloví \\
+inclusion & inkluze \\
+lexical & lexikální \\
+meaning & význam \\
+medial & mediální \\
+mental lexicon & mentální lexikon \\
+metaphor & metafora \\
+nominals & nominální výrazy \\
+non-referring expressions & nereferenční výrazy \\
+number & číslo \\
+person & (gramatická) osoba \\
+phrase & slovní spojení \\
+power & moc \\
+pragmatics & pragmatika \\
+proximal & proximální \\
+refer & odkazovat \\
+reference & reference \\
+referential & referenční \\
+referential view & referenční pohled \\
+referring expressions & referenční výrazy \\
+representational & reprezentační \\
+representational view & reprezentační pohled \\
+semantics & sémantika \\
+sense & význam (smysl) \\
+sentence meaning & význam věty \\
+sentiment & sentiment \\
+social status & společenský status \\
+solidarity & solidarita \\
+spatial location & prostorová lokalizace \\
+temporal location & časová lokalizace \\
+textual deixis & textová deixe \\
+utterance & výpověď \\
+word meaning (sense) & slovní význam \\
+\end{longtable}
+\end{flushleft}
+
+\myslide{Further Reading}
+
+\begin{itemize}
+\item Introduction What does it mean to mean?
+  \begin{itemize}
+  \item Saeed: \S~1
+  \end{itemize}
+
+\item Meaning, Thought and Reality
+  \begin{itemize}
+  \item Saeed: \S~2
+  \end{itemize}
+  
+\item Deixis
+  \begin{itemize}
+  \item Saeed: \S~7.2
+  \end{itemize}
+\end{itemize}
 
 \end{document}
 
