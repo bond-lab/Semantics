@@ -5,11 +5,25 @@
 \input{headx.tex}
 
 \begin{document}
-\header{Lecture 2}{Theories of meaning and the meaning of words}{}
+\header{Lecture 2}{Word meaning and close reading}{}
 \maketitle
 
 %\include{schedule}
 
+\myslide{Overview}
+
+\begin{itemize}
+\item Word Meaning
+  \begin{itemize}
+  \item Definitions
+  \item Translations/paraphrases
+  \item Semantic Relations
+  \item Components
+  \item Word Embeddings
+  \end{itemize}
+\item Wordnet
+\item Close Reading and Word Sense Disambiguation
+\end{itemize}
 
 \section{The meanings of words}
  \MyLogo{}
@@ -64,7 +78,7 @@ How many different meanings?\task
 \item Translations/paraphrases
 \item Semantic Relations
 \item Components
-\item Vector Spaces
+\item Word Embeddings
 \end{itemize}
 
 
@@ -81,7 +95,7 @@ How many different meanings?\task
     \item \txx{connotation}  cultural or emotional associations 
     \end{itemize}
   \end{itemize}
-\item Introduce \con{concepts} \hfill (meaning as font-change)
+\item Introduce \con{concepts} %\hfill (meaning as font-change)
   \begin{itemize}
   \item How can we represent concepts?
   \item How do we learn them?
@@ -291,6 +305,10 @@ Not to be confused with \eng{\ul{left} hand} and \eng{the \ul{leaves} fell}, \ld
     \end{itemize}
   \end{itemize}
 \item These are \txx{intrinsic}, \txx{generic} properties
+  ]
+  \begin{itemize}
+  \item An albino zebra with three legs is still a zebra
+  \end{itemize}
 \item Can we use words even if we don't know their properties?
   \begin{itemize}
   \item \lex{Kway Teow}
@@ -382,7 +400,7 @@ relations to other words.
 \begin{itemize}\addtolength{\itemsep}{-1ex}
 \item The meanings of words change over time
 \item \lex{guitar} --- ``a stringed instrument usually having six
-  strings'': originally these were all made of wood
+  strings'': originally these all used the body to make sound
 \item We then get \lex{electric guitar} --- ``a guitar with a built-in
   pickup or pickups which convert string vibrations into electrical
   signals for amplification''
@@ -490,7 +508,7 @@ relations to other words.
     \ex \eng{above/below; right/left}
     \ex \eng{employer/employee}
   \end{exe}
-  (Slightly non-standard usage)
+  (Slightly non-standard usage by Saeed)
 \item \txx{Taxonomic Sisters}: children of the same (grand)parent
   \begin{exe}
     \ex \eng{Monday/Tuesday/\ldots{}/Sunday}
@@ -647,10 +665,217 @@ Some \con{golf} terms: \lex{approach$_9$}, \lex{approach shot$_1$}, \lex{golf co
 %  \item[] $\vdots$
   \end{itemize}
 \end{itemize}
+% \section{Sentence Types}
+
+\section{Componential Analysis}
+
+\myslide{Break word meaning into its components}
+\MyLogo{Inspired by work on phonetics in the Prague School}
+\begin{itemize}
+\item For example:
+  \\[2ex] \begin{tabular}{lllll}
+    \lex{woman} & \cmp{female} & \cmp{adult} & \cmp{human} & \\
+    \lex{spinster} & \cmp{female} & \cmp{adult} & \cmp{human} & \cmp{unmarried} \\
+    \lex{bachelor} & \cmp{male} & \cmp{adult} & \cmp{human} & \cmp{unmarried} \\
+    \lex{wife} & \cmp{female} & \cmp{adult} & \cmp{human} & \cmp{married} \\
+    \lex{girl} & \cmp{female} & \cmp{child} & \cmp{human} & \\
+    \lex{boy} & \cmp{male} & \cmp{child} & \cmp{human} & \\
+  \end{tabular}
+  \\[2ex] \txx{semantic components}/\txx{primitives} shown as \cmp{component}
+  \begin{itemize}
+  \item components allow a compact description
+  \item interact with morphology/syntax
+  \item form part of our cognitive architecture
+  \end{itemize}
+\end{itemize}
+
+\myslide{Defining Relations using Components}
+
+\begin{itemize}
+\item \txx{hyponymy}
+  \begin{quote}
+    A lexical item P is a hyponym of Q if all the components of Q are also in P.
+  \end{quote}
+  \begin{tabular}{lllll}
+    \lex{woman} & \cmp{female} & \cmp{adult} & \cmp{human} & \\
+    \lex{spinster} & \cmp{female} & \cmp{adult} & \cmp{human} & \cmp{unmarried} \\
+%    \lex{bachelor} & \cmp{male} & \cmp{adult} & \cmp{human} & \cmp{unmarried} \\
+    \lex{wife} & \cmp{female} & \cmp{adult} & \cmp{human} & \cmp{married} \\
+  \end{tabular}
+\\[2ex]  \lex{spinster} $\subset$ \lex{woman}; \lex{wife} $\subset$ \lex{woman}
+\item \txx{incompatibility}
+  \begin{quote}
+    A lexical item P is incompatible with Q if they share some
+    components but differ in one or more \txx{contrasting} components
+  \end{quote}
+%   \begin{tabular}{lllll}
+% %    \lex{woman} & \cmp{female} & \cmp{adult} & \cmp{human} & \\
+%     \lex{spinster} & \cmp{female} & \cmp{adult} & \cmp{human} & \cmp{unmarried} \\
+% %    \lex{bachelor} & \cmp{male} & \cmp{adult} & \cmp{human} & \cmp{unmarried} \\
+%     \lex{wife} & \cmp{female} & \cmp{adult} & \cmp{human} & \cmp{married} \\
+%   \end{tabular}
+  \lex{spinster} $\not\approx$ \lex{wife}
+
+\end{itemize}
+
+\myslide{Binary Features}
+
+\begin{itemize}
+\item We can make things more economical (fewer components):
+  \\[2ex] \begin{tabular}{lllll}
+    \lex{woman} & \cmp{+female} & \cmp{+adult} & \cmp{+human} & \\
+    \lex{spinster} & \cmp{+female} & \cmp{+adult} & \cmp{+human} & \cmp{--married} \\
+    \lex{bachelor} & \cmp{--female} & \cmp{+adult} & \cmp{+human} & \cmp{--married} \\
+    \lex{wife} & \cmp{+female} & \cmp{+adult} & \cmp{+human} & \cmp{+married} \\
+    \lex{girl} & \cmp{+female} & \cmp{-adult} & \cmp{+human} & \\
+  \end{tabular}
+  \begin{itemize}
+  \item Which should be $+$? \cmp{+female} or \cmp{--male}
+  \item Presumably also \cmp{--electric}, \cmp{--conical}, \ldots
+    \\ Only show \txx{relevant} features
+  \item \txx{antonyms} differ in only one binary component
+  \end{itemize}
+\end{itemize}
+
+\myslide{Redundancy Rules}
+
+\begin{itemize}
+\item We can add relations between components:
+\\[2ex]  \begin{tabular}{llll}
+     \cmp{+human} & \into & \cmp{+animate}  \\
+     \cmp{+adult} & \into & \cmp{+animate}  \\
+     \cmp{+animate} & \into & \cmp{+concrete}  \\
+     \cmp{+married} & \into & \cmp{+adult}  \\
+     \cmp{+married} & \into & \cmp{+human}   & \ldots
+  \end{tabular}
+\item Which allows us to write:
+  \\[2ex] \begin{tabular}{lllll}
+    \lex{woman} & \cmp{+female} & \cmp{+adult} & \cmp{+human} & \\
+    \lex{spinster} & \cmp{+female} & \cmp{+adult} & \cmp{+human} & \cmp{--married} \\
+    \lex{bachelor} & \cmp{--female} & \cmp{+adult} & \cmp{+human} & \cmp{--married} \\
+    \lex{wife} & \cmp{+female} & &   & \cmp{+married} 
+  \end{tabular}
+  \\[2ex] Can we say  \cmp{--married}  \into\  \cmp{+human}?
+\end{itemize} 
+
+\myslide{More Complex Breakdowns}
+
+\begin{itemize}
+\item We can add relations between components:
+\\[2ex]  \begin{tabular}{llll}
+     \cmp{+father} & \into & \cmp{+male} \cmp{+parent}  \\
+     \cmp{+father}(\ul{x},y) & \into & \cmp{+male}(x) \cmp{+parent}(x,y) \\
+     \cmp{+son}(\ul{x},y) & \into & \cmp{+male}(x) \cmp{+parent}(y,x) \\
+     \cmp{+brother}(\ul{x},y) & \into & \cmp{+male}(x) 
+     \cmp{+parent}(z,x) \cmp{+parent}(z,y) \\
+     \cmp{+grandfather}(\ul{x},y) & \into & \cmp{+male}(x) 
+     \cmp{+parent}(x,z)  \cmp{+parent}(z,y) \\
+  \end{tabular}
+\item Assume \cmp{+parent}(x,y)  means ``x is the parent of y''
+\item There are various ways you can formalize such relationships
+  \begin{itemize}
+  \item Many parts of language can be formalized in such a way
+  \item We did this for demonstratives
+    \\ \lex{this, that, these, those, what, here, there, where}\task
+  \end{itemize}
+\end{itemize}
+
+
+These are great for many sub-systems of language, but it is hard to make components for everything, \ldots
+
+%%% FIXME inheritance
+
+\myslide{Word Embeddings}
+\MyLogo{Slides based on \href{https://www.shanelynn.ie/get-busy-with-word-embeddings-introduction/}{An introduction to word embeddings for text analysis} by Shane Lynn (2017)}
+
+
+\begin{itemize}
+\item Represent words as a vector of numbers (instead of a set of components)
+\item Every word has a unique word embedding (or “vector”), which is
+  just a list of numbers for each word.  
+\item Embeddings start being useful from 50-500 dimensions
+  \\ LLMs typically are much larger
+\item The embedding captures the  “meaning” of the word. 
+\item  Similar words end up with similar embedding values
+\item Context based word embeddings give a different vector depending
+  on the context 
+
+\end{itemize}
+
+\myslide{Word Embeddings}
+\begin{itemize}
+\item In the simplest case, each word is a number
+\end{itemize}
+\includegraphics[width=\linewidth]{pics/one-hot-word-embedding-vectors-768x276.png}
+\begin{itemize}\addtolength{\itemsep}{-2ex}
+\item Two many dimensions
+\item No shared information
+\item Mainly zeros
+\end{itemize}
+\newpage
+\begin{itemize}
+\item We want fewer, more meaningful, dimensions (like components!) 
+\end{itemize}
+\includegraphics[width=\linewidth]{pics/3-dimensional-word-embeddings-example-768x362.png}
+
+\begin{itemize}
+\item How would you add \eng{child}? or \eng{emperor}?
+\end{itemize}
+
+\myslide{Similar words should be close}
+\MyLogo{src: \url{http://suriyadeepan.github.io}}
+
+
+\hspace{-4em}\includegraphics[width=1.1\linewidth]{pics/word-vector-space-similar-words.jpg}
+
+\myslide{We can learn these from raw text}
+
+\begin{itemize}
+\item In LLMs, models are constructed to predict the context words from a
+centre word, or the centre word from a set of context words.
+\item By training on large amounts of text, embeddings that model human
+intuitions can be built.
+\item By using multilingual text, we can link languages
+\item More about this in \textbf{DAS/LTI}: Language Technology and the Internet
+\end{itemize}
+\myslide{Semantic relations are also learned}
+
+
+\includegraphics[width=\linewidth]{pics/vocabulary-linear-relationships.jpg}
+
+We can do arithmetic on the vectors 
+
+
+\begin{tabular}{rcl}
+  $\vec{king}$ + $\vec{woman}$ $-$ $\vec{man}$  & $\approx$ & $\vec{queen}$ \\[2ex]
+  $\vec{Paris}$ $-$ $\vec{France}$ + $\vec{Germany}$  & $\approx$ & $\vec{Berlin}$
+\end{tabular}
+
+
+
+\myslide{Corpora contain stereotypes, ML learns them!}
+
+\begin{itemize}
+\item We can test if things are closer to $\vec{he}$ or $\vec{she}$
+  \\[2ex]
+  \begin{tabular}{lcr}
+    $\vec{nurse}.\vec{she}$ & = & 0.38 \\
+    $\vec{nurse}.\vec{he}$ & = & $-0.12$ \\
+    $\vec{programmer}.\vec{she}$ & = & 0.07 \\
+    $\vec{programmer}.\vec{he}$ & = & 0.28 \\
+  \end{tabular}
+\end{itemize}
+
+\begin{itemize}
+\item This is an accurate description of the state of the world described in the corpus
+\item But may not be what we want to use as a basis for reasoning, \ldots
+\end{itemize}
+
+\MyLogo{\citet{10.5555/3157382.3157584}}
 
 
 \section{Wordnet}
-\MyLogo{How can we quantify these things}
+\MyLogo{A graph-based approach}
 
 \myslide{WordNet}
 
@@ -829,9 +1054,13 @@ Some \con{golf} terms: \lex{approach$_9$}, \lex{approach shot$_1$}, \lex{golf co
     \\ or write a comment if we think there isn't one
   \item Once we have identified a sense, it is then easy to look at
     synonyms and other closely related words
+  \item We use the Czech wordnet \citep{Pala:Smrz:2004} for Czech
+  \item Both wordnets have been extended as part of the the Natural Text Understanding --- Multilingual Corpus (\txx{ntu-mc})
   \end{itemize}
   \newpage
-\item \eng{Sherlock Holmes had been leaning back in his chair with his
+\myslide{WSD: Example}
+
+ \eng{Sherlock Holmes had been leaning back in his chair with his
     eyes closed and his head sunk in a cushion, but he half opened his
     \ul{lids} now and glanced across at his visitor.}\task{}
   \begin{enumerate}\small
@@ -839,12 +1068,11 @@ Some \con{golf} terms: \lex{approach$_9$}, \lex{approach shot$_1$}, \lex{golf co
     from bad weather; has shaped crown and usually a brim''
   \item \lex{lid, eyelid, palpebra} ``either of two folds of skin that
     can be moved to cover or open the eye''
-  \item \lex{lid} ``a movable top or cover (hinged or separate) for closing the opening at the top of a box, chest, jar, pan, etc.''
-
-  \end{enumerate}
-
-\newpage 
-\item This is difficult for many reasons
+  \item \lex{lid} ``a movable top or cover (hinged or separate) for closing the opening at the top of a box, chest, jar, pan, etc.''  \end{enumerate}
+ 
+ \newpage
+\myslide{WSD: A challenging task!}
+This is difficult for many reasons
   \begin{itemize}
   \item Meaning boundaries are not clear: the sense distinctions
     impose a structure on something that is actually fuzzy
@@ -869,7 +1097,9 @@ Some \con{golf} terms: \lex{approach$_9$}, \lex{approach shot$_1$}, \lex{golf co
     \item extending meanings metaphorically
     \item sometimes so strangely that we might even say wrongly
     \end{itemize}
-\newpage
+  \end{itemize}
+  \myslide{WSD:  not impossible}
+    \begin{itemize}
   \item Typically people agree around 72.5\% of the time \citep{Snyder:Palmer:2004}.
     \begin{itemize}
     \item  Verbs are hardest (67.8\%), then nouns (74.9\%) and adjectives (78.5\%)
@@ -925,6 +1155,7 @@ Some \con{golf} terms: \lex{approach$_9$}, \lex{approach shot$_1$}, \lex{golf co
 
 \begin{itemize}
 \item We learned a little about word meaning, wordnet, close reading and your assignment
+\item This is covered in more detail in \citet[Chapter 3]{Saeed:2015}
 \end{itemize}
 
 
