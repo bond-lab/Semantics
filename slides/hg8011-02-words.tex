@@ -5,6 +5,7 @@
 \input{headx.tex}
 \newcommand{\zh}{\cmn}
 \newcommand{\zsm}{\cmn}
+\usepackage{forest}
 
 \begin{document}
 \header{Lecture 2}{Word meaning and close reading}{}
@@ -1025,28 +1026,44 @@ We can do arithmetic on the vectors
 
 
 \myslide{Word Meaning as a Graph}
-\MyLogo{}
-\bigskip
-\bigskip
-\bigskip
-\includegraphics[height=0.75\textheight]{pics/Semantic_Net.eps}
-
-\begin{itemize}
-\item You need a very big graph to capture all meanings
-\end{itemize}
-
-
+\MyLogo{It ends up being a very big graph}
+%\includegraphics[height=0.75\textheight]{pics/Semantic_Net.eps}
+ \begin{forest}
+   [entity
+   [object [artifact [equipment [golf-club [driver,name=d1] ] ] ]
+           [agent [person [worker [driver,name=d2] ]]] ]
+           [process
+       [move [propel [swing  [drive,name=d11] ]]]
+       [manipulate [  control [operate [drive,name=d21] ] ] ] ]
+        [substance]
+       [abstract [communication [writing [code [driver ] ] ] ]]
+    ] 
+ \draw[dashed] (d1) to  [out=-45, in=-135]  node[yshift=-1ex]{instrument} (d11);
+ \draw[double] (d2) to  [out=-45, in=-135]  node[yshift=-1ex]{agent} (d21);
+ ]
+\end{forest}
 
 \myslide{Wordnet in this course}
 
 
 \begin{itemize}
-\item We will use wordnet to test our skills in determining word meaning
-  \begin{itemize}
-  \item tag a short text from this year's story or stories
-  \item discuss differences with other annotators
- \end{itemize}
+\item We will use wordnet to develop skills in determining word meaning
 \item As well as a source of examples and inspiration
+\item   My students have used wordnets for:
+  \begin{itemize}
+  \item  Japanese derivational
+relations \citep{Bond:Wei:2019}
+\item  pronoun representation for Japanese, Mandarin and English
+  \citep{Seah:Bond:2014}
+\item exclamatives and classifiers
+\citep{Mok:Gao:Bond:2012,daCosta:Bond:2016}
+\item  sentiment analysis
+  \citep{Le:Moeljadi:Miura:Ohkuma:2016,Bond:Janz:Piasecki:2019}
+\item cross-lingual sense annotation \citep{Bonansinga:Bond:2016}
+\item multilingual crosswords \citep{Tan:2012}
+\item [\ldots]
+\end{itemize}
+\item If you are interested in working with wordnets, let me know
 \end{itemize}
 \section{Word Sense Disambiguation \\ for Close Reading}
 
@@ -1146,7 +1163,7 @@ This is difficult for many reasons
       \\ \eng{Does that go}  ``Female deer which go'' ``Is it the case that is goes?''
       \\ \eng{The speckled band} ``the band that is speckled'' ``the band that someone speckled''
     \item Or the sentence boundaries
-    \item Or the words boundaries
+    \item Or the word boundaries
     \end{itemize}
         \end{itemize}
   \item People use language idiosyncratically 
@@ -1226,9 +1243,8 @@ This is difficult for many reasons
   \item Steven Bird, Ewan Klein, and Edward Loper (2009) 
      \textit{Natural Language Processing with Python}, O'Reilly Media
     \\ \url{www.nltk.org/book}
-\end{itemize}
-%\item Problems  partially based on exercises from Saeed (2003)
-\item Video: Dead parrot sketch by Monty Python
+  \end{itemize}
+\item Embedding slides based on \href{https://www.shanelynn.ie/get-busy-with-word-embeddings-introduction/}{An introduction to word embeddings for text analysis} by Shane Lynn (2017)
 \end{itemize}
 
 
@@ -1244,11 +1260,56 @@ This is difficult for many reasons
 \bibliographystyle{aclnat}
 \bibliography{abb,mtg,nlp,ling}
 
-
-
+\myslide{Glossary of Key Terms (English--Czech)}
+\begin{longtable}{ll}
+  English & Česky \\\hline \endhead
+agentive noun & agentní podstatné jméno \\
+antagonism & antagonismus \\
+antonymy & antonymie (včetně stupňovatelnosti) \\
+conditions & podmínky \\
+connotation & konotace \\
+contrasting & kontrastní \\
+converses & opak \\
+denotation & denotace \\
+domain & doména \\
+element–substance & prvek–látka \\
+entailment & implikace \\
+generic & obecný \\
+holonymy & holonymie \\
+homographs & homografy \\
+homonyms & homonyma \\
+homophones & homofony \\
+hypernymy & hyperonymie \\
+hyponymy & hyponymie \\
+incompatibility & nekompatibilita \\
+intrinsic & vnitřní / vlastní \\
+member–collection & člen–kolekce \\
+meronymy & meronymie \\
+monosemy & monosémie \\
+overextending & nadměrné rozšíření významu \\
+underextending & nedostatečné rozšíření významu \\
+paraphrase & parafráze \\
+pejorative & pejorativní \\
+polysemy & polysémie \\
+portion–mass & část–množství \\
+primitives & prvky / primitiva \\
+propositional synonymy & propozicionální synonymie \\
+recipient noun & recipientní podstatné jméno \\
+reference & reference \\
+relevant & relevantní \\
+reverse & reverzní \\
+semantic components & sémantické komponenty \\
+semantic similarity & sémantická podobnost \\
+sense & význam \\
+synonymy & synonymie \\
+taxonomic sisters & taxonomické sestry \\
+translation & překlad \\
+zeugma & zeugma \\
+\end{longtable}
 
 
 \end{document}
+
 
 %%% Local Variables: 
 %%% coding: utf-8
