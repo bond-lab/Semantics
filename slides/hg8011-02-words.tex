@@ -3,6 +3,8 @@
 \documentclass[a4paper,landscape,headrule,footrule,xetex]{foils}
 
 \input{headx.tex}
+\newcommand{\zh}{\cmn}
+\newcommand{\zsm}{\cmn}
 
 \begin{document}
 \header{Lecture 2}{Word meaning and close reading}{}
@@ -19,6 +21,7 @@
   \item Translations/paraphrases
   \item Semantic Relations
   \item Components
+  \item Derivational Relations
   \item Word Embeddings
   \end{itemize}
 \item Wordnet
@@ -78,6 +81,7 @@ How many different meanings?\task
 \item Translations/paraphrases
 \item Semantic Relations
 \item Components
+\item Derivational Relations
 \item Word Embeddings
 \end{itemize}
 
@@ -208,20 +212,20 @@ Not to be confused with \eng{\ul{left} hand} and \eng{the \ul{leaves} fell}, \ld
     had \ul{left} was enough for all our wants}?\task
 \end{itemize}
 
-\myslide{Paraphrase cues}
+% \myslide{Paraphrase cues}
 
-\begin{itemize}
-\item \lex{that is to say}
-  \begin{itemize}
-  \item  \eng{I met him that night, and he called next day to ask if we had got home all safe, and after that we met him - that is to say, Mr Holmes, I met him twice for walks, \ldots} IDEN
-  \item \eng{In three days, that is to say on Monday next  \ldots} FINA
-  \end{itemize}
-\item \lex{in other words}
-  \begin{itemize}
-  \item \eng{\ldots there is a possibility that these initials are those of the second person who was present - in other words, of the murderer. \ldots} BLAC
-  \item \eng{\ldots when they closed their League offices that was a sign that they cared no longer about Mr. Jabez Wilson's presence; in other words, that they had completed their tunnel.} REDH
-  \end{itemize}
-\end{itemize}
+% \begin{itemize}
+% \item \lex{that is to say}
+%   \begin{itemize}
+%   \item  \eng{I met him that night, and he called next day to ask if we had got home all safe, and after that we met him - that is to say, Mr Holmes, I met him twice for walks, \ldots} IDEN
+%   \item \eng{In three days, that is to say on Monday next  \ldots} FINA
+%   \end{itemize}
+% \item \lex{in other words}
+%   \begin{itemize}
+%   \item \eng{\ldots there is a possibility that these initials are those of the second person who was present - in other words, of the murderer. \ldots} BLAC
+%   \item \eng{\ldots when they closed their League offices that was a sign that they cared no longer about Mr. Jabez Wilson's presence; in other words, that they had completed their tunnel.} REDH
+%   \end{itemize}
+% \end{itemize}
 
 
 \myslide{Lexical Semantics}
@@ -784,6 +788,59 @@ Some \con{golf} terms: \lex{approach$_9$}, \lex{approach shot$_1$}, \lex{golf co
 These are great for many sub-systems of language, but it is hard to make components for everything, \ldots
 
 %%% FIXME inheritance
+
+\myslide{Derivational Relations}
+
+\begin{itemize}
+\item There are also relations between meanings with different parts of speech
+  \\ Here we say one word is derived from the other
+\item Normally these have some morphological component
+  \begin{itemize}
+  \item \lex{beauty} (n) --- \lex{beautiful} (adj) --- \lex{beautifully} (adv) --- \lex{beautify} (verb)
+  \item \lex{decision} (n) — \lex{decide} (v) — \lex{decisive} (adj) — \lex{decisively} (adv)
+  \item \lex{drive} (v) — \lex{driver} (n) — \lex{drivable} (adj)
+  \item \lex{creation} (n) — \lex{create} (v) — \lex{creative} (adj) — \lex{creatively} (adv)   \item \eng{Sandy \ul{cut} their hand} --- \eng{Sandy has a \ul{cut} on their hand}
+  \end{itemize}
+\end{itemize}
+
+\myslide{Agentive Nouns}
+\MyLogo{}
+\begin{itemize}
+\item An \txx{agentive noun} is a word that is typically derived from
+  another word denoting an action, and that identifies an entity that
+  does that action.  \\ \textbf{verb} + \lex{-er, -or, -ant}
+  \begin{exe}
+    \ex \lex{murderer, commentator, whaler, director, computer}
+    \ex ?? \lex{undertaker, cooker, footballer} (Saeed also includes these)
+  \end{exe}
+\item Should \lex{murderer} be listed separately from \lex{murder} in
+the dictionary? Why or why not?
+\item Also \txx{recipient noun}s that show the undergoer:
+  \textbf{verb} + \lex{-ee}: \lex{employee}, \lex{trustee}
+\end{itemize}
+
+\myslide{Agentive Nouns in Other Languages}
+\MyLogo{Thanks to Yeo Jia Qi (Malay)}
+
+\begin{itemize}
+\item Japanese (suffix distinguishes person/machine)
+  \begin{itemize}
+  \item \zh{運転する} → \zh{運転者} \jpn[driver]{unten-sha}
+  \item \zh{計算する} → \zh{計算者} \zh{計算機} \jpn[computer]{keisan-sha/ki}
+  \item \zh{研究する} → \zh{研究者} \zh{研究員} \jpn[researcher]{kenkyuu-sha/in}
+  \item \zh{読む} → \zh{読み手} \zh{読者} \jpn[reader]{yomite/dokusha}
+  \end{itemize}
+\item Malay (prefix can convert any part  of speech)
+  \begin{itemize}
+  \item \zsm[help]{bantu (v)} → \zsm[assistant/helper]{pembantu} 
+  \item \zsm[cut]{potong (v)} → \zsm[cutter (human/machine)]{pemotong}
+  \item \zsm[fly]{terbang (v)} → \zsm[pilot (not passenger)]{penerbang}
+  %\item \zsm[scissors]{gunting (n)} → \zsm[(editor +human)]{penyunting}
+  \end{itemize}
+
+\end{itemize}
+
+
 
 \myslide{Word Embeddings}
 \MyLogo{Slides based on \href{https://www.shanelynn.ie/get-busy-with-word-embeddings-introduction/}{An introduction to word embeddings for text analysis} by Shane Lynn (2017)}

@@ -30,7 +30,7 @@ done
 popd
 
 ### copy changed slides
-#rsync -av --ignore-times slides/*.pdf docs/pdf
+rsync -av --ignore-times slides/tut*questions.pdf docs/pdf
 
 #htmldoc  --duplex --color --fontsize 12 --webpage -f /home/bond/papers/Outlines/${subj}-outline.pdf www/index.html
 
