@@ -1,0 +1,101 @@
+\documentclass[a4paper]{article}
+
+\title{Semantics: Tutorial Three}
+\author{Francis Bond \url{<bond@ieee.org>}}
+\date{}%2011-08-15}
+\usepackage{fontenc}
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setmainfont{TeX Gyre Pagella}
+\setsansfont[Ligatures=TeX]{TeX Gyre Heros}
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Sans CJK JP}
+\setCJKsansfont{Noto Sans CJK JP}
+\setCJKmonofont{Noto Sans CJK JP}
+%\newcommand{\ans}[1]{\hfill{#1}}
+%\newcommand{\ans}[1]{}
+%%% dynamically add answers
+
+\input{answers}
+
+\usepackage{multicol}
+%\Restriction{}
+%\rightfooter{}
+%\leftheader{}
+%\rightheader{}
+\usepackage{mygb4e}
+\newcommand{\lex}[1]{\textbf{\textit{#1}}}
+\newcommand{\lx}[1]{\textbf{\textit{#1}}}
+\newcommand{\ix}{\ex\it}
+\newcommand{\con}[1]{\textsc{#1}}
+\usepackage{url}
+\usepackage[normalem]{ulem}
+\newcommand{\ul}[1]{\uline{#1}}
+\newcommand{\txx}[1]{\textbf{#1}}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+ \item Although English does not mark \textbf{evidentiality} grammatically, it
+  can be expressed in other ways.  Consider the following situation:
+$S$ ``Kim bit Sandy''.  How could you express the following situations:
+  \begin{exe}
+    \ex You think $S$ is true, but have no evidence
+    \abox{I think Kim bit Sandy}
+    \ex You saw $S$ occur
+      \abox{I saw Kim bite Sandy}
+     \ex You saw a bite mark on Sandy, matching Kim's dental work
+      \abox{I deduce Kim bit Sandy from the bitemark
+        \\ It seems that Kim bit Sandy}
+      \ex Someone told you $S$
+      \abox{People say,  Kim bit Sandy
+        \\ I heard that Kim bit Sandy}
+    \ex You are Sandy, and you experienced $S$
+     \abox{Kim bit me}
+  \end{exe}
+  \abox{Of course, there could be other ways, these are just some of the possibilities}
+  Are any of these expressed grammatically in a language that you speak?
+  \abox{Japanese has two special constructions for seems/heard
+  \\[2ex] It seems that Kim bit Sandy
+        \\ キムが\ サンディを\ 噛だ\ よう\ だ
+        \\ \textit{kimu-ga sandei-wo kanda you-da}
+        \\ kim-\textsc{nom} sandy-\textsc{acc} bit seem \textsc{cop}
+        \\[2ex]  I heard that Kim bit Sandy
+        \\ キムが\ サンディを\ 噛だ\ そう\ だ
+        \\ \textit{kimu-ga sandei-wo kanda sou-da}
+        \\ kim-\textsc{nom} sandy-\textsc{acc} bit heard \textsc{cop}}
+  
+\item Find examples of each of the semantic roles from the story you are annotating:
+  \begin{itemize}
+  \item agent
+  \item patient
+  \item theme
+  \item experiencer
+  \item beneficiary
+  \item location
+  \item source
+  \item goal
+  \item stimulus
+  \item instrument
+  \end{itemize}
+  \abox{Try to get the students to give at least one example in each language}
+\item Find examples of modality from the story you are annotating:
+  \begin{itemize}
+  \item Epistemic (knowledge)
+    \begin{itemize}
+    \item auxilliary
+    \item main verb
+    \item adverb
+    \end{itemize}
+  \item Deontic (permisison/obligation)
+    \begin{itemize}
+    \item auxilliary
+    \item main verb
+    \item adverb
+    \end{itemize}
+  \end{itemize}
+  \abox{Try to get the students to give at least one example in each language}
+\end{enumerate}
+
+\end{document}
