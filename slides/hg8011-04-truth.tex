@@ -7,7 +7,14 @@
 \usepackage{colortbl}
 \definecolor{Gray}{gray}{0.9}
 
+\usepackage{newunicodechar}
 
+\newcommand\Warning{%
+ \makebox[1.4em][c]{%
+ \makebox[0pt][c]{\raisebox{.1em}{\small!}}%
+ \makebox[0pt][c]{\color{red}\Large$\bigtriangleup$}}}%
+
+\newunicodechar{⚠}{\Warning}
 
 \begin{document}
 \header{Lecture 4}{Quantification, Truth and Sentiment}{}
@@ -19,10 +26,11 @@
 \myslide{Overview}
 
 \begin{itemize}
-\item Revision of sentence meaning and compositionality
+%\item Revision of sentence meaning and compositionality
 \item Truth and Logic
 \item Quantification and Negation
 \item Sentiment and Connotation
+\item Presupposition
 \end{itemize}
 
 
@@ -30,78 +38,78 @@
 \myslide{Motivation}
 
 \begin{itemize}
-\item The Holmes's stories have a lot of reasoning
+\item Logic is expressed in sometimes unexpected ways in natural
+  language, we will look at some of these examples (Quantification and Negation)
+\item We use language to reason, as we can see in the Holmes's stories
   \begin{itemize}
   \item Sherlock looks at the evidence
   \item and forms conclusions
   \end{itemize}
   We will look at how we can do this (Truth and Logic)
-\item Logic is expressed in sometimes unexpected ways in natural
-  language, we will look at some of these examples (Quantification and Negation)
-\item Finally, the stories are partly fun to read because of the
+\item Finally, language is expressive because of the
   color: the way Doyle paints different characters as good or evil
   (Sentiment and Connotation)
 \end{itemize}
 
 
-\section{Revision}
+% \section{Revision}
 
-\myslide{Meaning is built up Compositionally}
+% \myslide{Meaning is built up Compositionally}
 
-\begin{itemize}
-\item \txx{Compositional Semantics}: the meaning of the whole depends (only)
-  on the meanings of the parts and the method of combination.
-\item The hearer/reader's \txx{interpretation} brings in much more
-  \begin{itemize}
-  \item we bring in our existing knowledge
-  \item we make inferences
-  \end{itemize}
-\item These inferences are based on (or constrained by) the semantics
-\item Intersective modification constrains the denotation
-\end{itemize}
+% \begin{itemize}
+% \item \txx{Compositional Semantics}: the meaning of the whole depends (only)
+%   on the meanings of the parts and the method of combination.
+% \item The hearer/reader's \txx{interpretation} brings in much more
+%   \begin{itemize}
+%   \item we bring in our existing knowledge
+%   \item we make inferences
+%   \end{itemize}
+% \item These inferences are based on (or constrained by) the semantics
+% \item Intersective modification constrains the denotation
+% \end{itemize}
 
-\myslide{Sentences describe situations}
+% \myslide{Sentences describe situations}
 
-\begin{itemize}
-\item Semantic Roles describe interactions of the participants 
-  \\ and possibly the location, time, manner, reason and so forth
-\item Roles are constrained by the verb (or adjective, \ldots) but can
-  also be used to generalize
-\item Verbs can appear with different roles filling different
-  syntactic positions (alternations).
-  \\ \eng{I broke the window} vs \eng{The window broke}
-\end{itemize}
+% \begin{itemize}
+% \item Semantic Roles describe interactions of the participants 
+%   \\ and possibly the location, time, manner, reason and so forth
+% \item Roles are constrained by the verb (or adjective, \ldots) but can
+%   also be used to generalize
+% \item Verbs can appear with different roles filling different
+%   syntactic positions (alternations).
+%   \\ \eng{I broke the window} vs \eng{The window broke}
+% \end{itemize}
 
-\myslide{Tense, Aspect and Modality}
+% \myslide{Tense, Aspect and Modality}
 
-\begin{itemize}
-\item We can talk about when things occurred (tense)
-  \begin{exe}
-    \ex \eng{I did it.}
-  \end{exe}
-\item Whether they are still ongoing (aspect)
-  \begin{exe}
-    \ex \eng{I am doing it.}
-  \end{exe}
-\item Whether we think something is true or should be (modality)
-  \begin{exe}
-    \ex \eng{I should probably go}
-    \ex \eng{I must have that}
-  \end{exe}
-\end{itemize}
+% \begin{itemize}
+% \item We can talk about when things occurred (tense)
+%   \begin{exe}
+%     \ex \eng{I did it.}
+%   \end{exe}
+% \item Whether they are still ongoing (aspect)
+%   \begin{exe}
+%     \ex \eng{I am doing it.}
+%   \end{exe}
+% \item Whether we think something is true or should be (modality)
+%   \begin{exe}
+%     \ex \eng{I should probably go}
+%     \ex \eng{I must have that}
+%   \end{exe}
+% \end{itemize}
 
-\myslide{Close Reading}
-\begin{itemize}
-\item Reading (and often re-reading) a text to uncover multiple
-  aspects of meaning that lead you to understand a text better
-\item This involves looking at what the text actually says, as well as
-  the inferences you make from reading it
-\item After a close reading you should be able to support your
-  conclusions with specific examples from the text
-\item You can consider many aspects of the text, we focus on word
-  choice
-\item We do this in Projects 1 and 2.
-\end{itemize}
+% \myslide{Close Reading}
+% \begin{itemize}
+% \item Reading (and often re-reading) a text to uncover multiple
+%   aspects of meaning that lead you to understand a text better
+% \item This involves looking at what the text actually says, as well as
+%   the inferences you make from reading it
+% \item After a close reading you should be able to support your
+%   conclusions with specific examples from the text
+% \item You can consider many aspects of the text, we focus on word
+%   choice
+% \item We do this in Projects 1 and 2.
+% \end{itemize}
 
 \section{Reasoning}
 \begin{quote}  
@@ -160,30 +168,26 @@ Holmesian deduction is abductive reasoning:
 \myslide{Logical Connectives}
 \MyLogo{It isn't just saying \textit{no it isnt't}}
 \begin{itemize}
-\item \txx{and} ($p \wedge q$)
-\item \txx{or}  ($p \vee q$: disjunction, inclusive or)
-\item \txx{xor} ($p \oplus q$: exclusive or, either or)
-\item \txx{if} ($p \rightarrow q$: if then, material implication)
-% If it doesn’t rain, p = F, the conditional claim cannot be
-% invalidated by whatever is done. (q= T or q =F). p is a
-% sufficient but not necessary condition for q. Some other
-% factor might want to cause me to go to the movies!
-% But not all if.. then…constructions work like that. What are
-% some counterexamples that you can think of? If she is smart,
-% then I would win the Nobel prize (counterfactuals)
+\item \txx{and} ($p \wedge q$: conjunction) \hfill \ces{a} \\
+  — both must be true
+\item \txx{or} ($p \vee q$: disjunction, inclusive or) \hfill \ces{nebo} \\
+  — at least one must be true
+\item \txx{xor} ($p \oplus q$: exclusive or, either or) \hfill \ces{exkluzivní nebo/buď anebo} \\
+  — exactly one must be true
+\item \txx{if} ($p \rightarrow q$: implication) \hfill \ces{jestliže} \\
+  — if $p$ is true, then $q$ must be true
 \item \txx{iff} ($p \equiv q$: if and only if) 
-  ($(p \rightarrow q) \wedge (q \rightarrow p)$)
-\item \txx{not} ($\neg p$: contradiction)
-\end{itemize}
-
-\begin{quote}
-  An \txx{argument} is a connected series of statements attempting to
-  establish a proposition.
-\end{quote}
-
-\begin{itemize}
-\item \txx{entailment} ($\vdash$: logical consequence, $\therefore$)) something
-  logically follows from the preceding statements 
+  ($(p \rightarrow q) \wedge (q \rightarrow p)$) \hfill \ces{právě tehdy, když} \\
+  —  both must be true or both false
+\item \txx{not} ($\neg p$: negation) \hfill \ces{ne} \\
+  — not $p$ is true when $p$ is false (and false when $p$ is true)
+% % If it doesn’t rain, p = F, the conditional claim cannot be
+% % invalidated by whatever is done. (q= T or q =F). p is a
+% % sufficient but not necessary condition for q. Some other
+% % factor might want to cause me to go to the movies!
+% % But not all if.. then…constructions work like that. What are
+% % some counterexamples that you can think of? If she is smart,
+% % then I would win the Nobel prize (counterfactuals)
 \end{itemize}
 
 
@@ -203,12 +207,21 @@ Holmesian deduction is abductive reasoning:
     F & F & T & F & F & F & T & T\\ \hline
 %    \hline
   \end{tabular}
+
+  
+\end{center}
   \begin{itemize}
   \item Words themselves often carry more implications
     \\ \eng{I did A and B} often implies \eng{I did A first}
   \item There are many ways of saying the operations
-  \end{itemize}
-\end{center}
+\item \txx{entailment} ($\vdash$: logical consequence, $\therefore$)) something
+  logically follows from the preceding statements
+\end{itemize}
+\begin{quote}
+  An \txx{argument} is a connected series of statements attempting to
+  establish a proposition.
+\end{quote}
+
 
 
 
@@ -371,7 +384,7 @@ $p \subset q$ \iz{hypernym}  & $p \sim q$ \iz{synonym} \\[2ex]
 \end{center}
 \begin{itemize}
 \item  The way that affirms by affirming (Latin)
-\item $p \rightarrow q, p \vdash q$
+\item $p \rightarrow q, p \vdash q$    (if $p$ then $q$,  and $p$ implies $q$)
 \item \txx{material implication}  (Not quite the same as English \lex{if})
 \end{itemize}
 
@@ -398,7 +411,7 @@ $p \subset q$ \iz{hypernym}  & $p \sim q$ \iz{synonym} \\[2ex]
 \end{center}
 \begin{itemize}
 \item  The way that negates by negating (Latin)
-\item $p \rightarrow q, \neg q \vdash \neg p$
+\item $p \rightarrow q, \neg q \vdash \neg p$   (if $p$ then $q$, and not $q$  implies not $p$)
 \end{itemize}
 
 \myslide{Other types of syllogisms}
@@ -444,6 +457,11 @@ These are all ways of proving something is true.
   \item \txx{False Dilemma}: You are with us or against us [or possibly don't care]
   \item \txx{Guilt by Association}: Hitler was a vegetarian  $\vdash$ vegetarianism is bad
   \end{itemize}
+  \begin{center}
+     ⚠ -- a bad argument doesn't mean the conclusion is wrong\\
+    just that the argument doesn't prove it, \ldots
+  \end{center}
+
 \end{itemize}
 
 
@@ -551,7 +569,11 @@ assume a simple world of predicates and individuals (constant and variable)}
   \item Quantifiers bind variables and scope over predications
     \begin{itemize}
     \item \txx{Universal Quantifier} ($\forall$: \eng{each, every, all})
+      \hfill \ces{univerzální kvantifikátor} \\
+      --- true for every element \hfill \ces{for all/pro všechna}
     \item \txx{Existential Quantifier} ($\exists$: \eng{some, a})
+      \hfill \ces{existenciální kvantifikátor} \\
+      --- true for at least one element \hfill \ces{exists/existuje} 
     \begin{exe}
       \ex \eng{All students learn logic}: $\forall$x (S(x)  $\into$ L(x,l))
       \ex \eng{A student learns logic}: $\exists$x (S(x)  $\wedge$ L(x,l))
@@ -597,36 +619,36 @@ assume a simple world of predicates and individuals (constant and variable)}
 \end{itemize}
 
 
-\myslide{Restricted Quantifiers}
+% \myslide{Restricted Quantifiers}
 
-\begin{itemize}
-\item \eng{Most students read a book}
-  \begin{itemize}
-  \item Most(x)(S(x) $\wedge$ R(x))
-    \\ \eng{most things are students and most things read books}
-  \item Most(x)(S(x) \into\  R(x))
-    \\ \eng{most things are such that, if they are students, they read books}
-  \end{itemize}
-\item We need to restrict the quantification
-  \begin{itemize}
-  \item (Most x: S(x)) R(x)
-  \end{itemize}
-\item Sometimes we need to decompose
-  \begin{itemize}
-  \item \eng{everybody} ($\forall$x: P(x))
-  \item \eng{something} ($\exists$x: T(x))
-  \end{itemize}
-\end{itemize}
+% \begin{itemize}
+% \item \eng{Most students read a book}
+%   \begin{itemize}
+%   \item Most(x)(S(x) $\wedge$ R(x))
+%     \\ \eng{most things are students and most things read books}
+%   \item Most(x)(S(x) \into\  R(x))
+%     \\ \eng{most things are such that, if they are students, they read books}
+%   \end{itemize}
+% \item We need to restrict the quantification
+%   \begin{itemize}
+%   \item (Most x: S(x)) R(x)
+%   \end{itemize}
+% \item Sometimes we need to decompose
+%   \begin{itemize}
+%   \item \eng{everybody} ($\forall$x: P(x))
+%   \item \eng{something} ($\exists$x: T(x))
+%   \end{itemize}
+% \end{itemize}
 
 \myslide{Generalized Quantifiers} 
 \MyLogo{Q: Try to define \iz{many}}
 \begin{itemize}
 \item Q(A,B): \eng{Q A are B}
-\item \iz{most(A,B)} = 1 iff $|$ A $\cap$ B $| > |$ A $-$ B $|$ 
-\item \iz{all(A,B)} = 1 iff  A $\subseteq$ B  
-\item \iz{some(A,B)} = 1 iff  A $\cap$ B $\ne \emptyset$ 
-\item \iz{no(A,B)} = 1 iff A $\cap$ B  $= \emptyset$ 
-\item \iz{fewer than x(A,B,X)} =1 iff $|$ A $\cap$ B $| <  |$ X $|$ 
+\item \iz{most(A,B)} = true iff $|$ A $\cap$ B $| > |$ A $-$ B $|$ 
+\item \iz{all(A,B)} = true iff  A $\subseteq$ B  
+\item \iz{some(A,B)} = true iff  A $\cap$ B $\ne \emptyset$ 
+\item \iz{no(A,B)} = true iff A $\cap$ B  $= \emptyset$ 
+\item \iz{fewer than x(A,B,X)} = true iff $|$ A $\cap$ B $| <  |$ X $|$ 
 \end{itemize}
 
 \myslide{Generalized Quantifiers:  \iz{all}, \iz{most}} 
@@ -786,7 +808,7 @@ some $p$ are $q$ & no $p$ are $q$ \\[2ex]
 
 \myslide{In other languages too!}
 
-\MyLogo{Thanks to Joanna Sio}
+\MyLogo{Thanks to Joanna Sio and OpenAi}
 
 \begin{exe}
 \ex \glll {} \cmn{我} \cmn{没有} \cmn{任何} \cmn{朋友}  \\
@@ -799,6 +821,14 @@ some $p$ are $q$ & no $p$ are $q$ \\[2ex]
 \trans *''I have any friends.''
 \end{exe}
 
+\begin{exe}
+\ex \gll {} \ces{Nemám} \ces{žádné} \ces{přátele.} \\
+        {} \textsc{neg.have.1sg} any friends \\
+\trans ``I don't have any friends.''
+\ex \gll * \ces{Mám} \ces{žádné} \ces{přátele.} \\
+        {} \textsc{have.1sg} any friends \\
+\trans *``I have any friends.''
+\end{exe}
 
 \myslide{Negation Scope}
 
@@ -886,10 +916,10 @@ good or bad.
 \begin{itemize}
 \item Sentiment can be built up.
   \begin{exe}
-    \ex \eng{good}
-    \ex \eng{very good}
-    \ex \eng{less than very good}
-    \ex \eng{I have never found it to be less than very good}
+    \ex \eng{good} \hfill{$\uparrow$}
+    \ex \eng{very good}  \hfill{$\uparrow\uparrow$}
+    \ex \eng{less than very good}  \hfill{$\downarrow$}
+    \ex \eng{I have never found it to be less than very good} \hfill{$u\uparrow\uparrow\uparrow$}
   \end{exe}
 \item It can be complex
  \begin{exe}
@@ -939,7 +969,7 @@ good or bad.
  \myslide{High and Low Examples in multiple languages}
 \newcommand{\ili}[1]{\href{https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/#1}{\url{i#1}}}
 
-
+\begin{center}
 \begin{small}
   \begin{tabular}{lrr>{\itshape}lrlrlr}
     Concept & freq & score & English & score & Chinese & score & Japanese & Score \\
@@ -959,27 +989,13 @@ good or bad.
             &     &      && & & & 殺害 & $-$63 \\
   \end{tabular}
 \end{small}
+  
+\end{center}
 
 By generalizing to the concept, we can share sentiment values across
 languages \citep{Bond:Ohkuma:daCosta:Miura:Chen:Kuribayashi:Wang:2016,Bond:Janz:Piasecki:2019}.
 
-\myslide{Conclusions}
 
-\begin{itemize}
-\item Language can be used to reason
-\item We reason unconsciously when we decide which words to use
-\item Language can be used to convey impressions and opinions
-  \begin{itemize}
-  \item You will try to do this as part of projects 1 and 2
-  \end{itemize}
-\end{itemize}
-
-
-\small
-\bibliographystyle{aclnat}
-\bibliography{abb,mtg,nlp,ling}
-
-  
 \section{Presupposition}
 
 \myslide{Presuppositions}
@@ -1152,6 +1168,75 @@ listener can identify the referent.
 \end{itemize}
 
 
+\myslide{Conclusions}
+
+\begin{itemize}
+\item Language can be used to reason
+\item We reason unconsciously when we decide which words to use
+\item Language can be used to convey impressions and opinions
+  \begin{itemize}
+  \item You will try to measure this as part of projects 1 and 2
+  \end{itemize}
+\item \citet{Saeed:2015} talks about Logic and Truth in Chapter~4
+\item  \citet{Kroeger:2022} talks about Truth and Inference in Chapter~3 (meaning relations, presupposition), and the Logic of Truth in Chaper~4 (propositional logic, quantifiers).  He goes into more detail in Chapters~13, Modeling Compositionality, and~14 Quantifiers  
+\end{itemize}
+
+
+\small
+\bibliographystyle{aclnat}
+\bibliography{abb,mtg,nlp,ling}
+
+\myslide{Glossary of Key Terms (English--Czech)}
+
+\begin{longtable}{ll}
+  English & Česky \\\hline \endhead
+argument & argument \\
+asymmetrical & asymetrický \\
+background & pozadí \\
+change of state & změna stavu \\
+cleft construction & klivní konstrukce \\
+comparative & komparativ \\
+compositional Semantics & kompoziční sémantika \\
+conclusion & závěr \\
+deductive reasoning & deduktivní usuzování \\
+defeasible & porazitelný / zvratitelný \\
+denotational semantic analysis & denotační sémantická analýza \\
+disjunctive syllogism & disjunktivní sylogismus \\
+downward entailment & dolní implikace \\
+empirical & empirický \\
+entailment & implikace / logický závěr \\
+equivocation & dvojsmysl / záměna významů \\
+existential quantifier & existenciální kvantifikátor \\
+factive verbs & faktivní slovesa \\
+false dilemma & falešné dilema \\
+foreground & popředí \\
+guilt by association & vina sdružením / vina z asociace \\
+hypothetical syllogism & hypotetický sylogismus \\
+if & jestliže \\
+iff & právě tehdy, když \\
+individual constants & individuální konstanty \\
+inductive Reasoning & induktivní usuzování \\
+interpretation & interpretace \\
+material implication & materiální implikace \\
+not & ne \\
+no true Scotsman & žádný pravý Skot (klam) \\
+or & nebo \\
+predicates & predikáty \\
+premise & premisa \\
+senses & významy \\
+slippery slope & kluzký svah (klam) \\
+strong & silný \\
+symmetrical & symetrický \\
+time adverbial & příslovečné určení času \\
+truth conditions & pravdivostní podmínky \\
+truth values & pravdivostní hodnoty \\
+universal quantifier & univerzální kvantifikátor \\
+upward entailment & horní implikace \\
+variables & proměnné \\
+verbs of judgement & slovesa úsudku \\
+weak & slabý \\
+xor & exkluzivní nebo / buď anebo \\
+\end{longtable}
 
 % \myslide{The Argument Clinic} 
 

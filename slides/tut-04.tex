@@ -1,0 +1,139 @@
+\documentclass[a4paper]{article}
+
+\title{Semantics: Tutorial Four}
+\author{Francis Bond \url{<bond@ieee.org>}}
+\date{}%2011-08-15}
+\usepackage{fontenc}
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setmainfont{TeX Gyre Pagella}
+\setsansfont[Ligatures=TeX]{TeX Gyre Heros}
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Sans CJK JP}
+\setCJKsansfont{Noto Sans CJK JP}
+\setCJKmonofont{Noto Sans CJK JP}
+%\newcommand{\ans}[1]{\hfill{#1}}
+%\newcommand{\ans}[1]{}
+%%% dynamically add answers
+
+\input{answers}
+
+\usepackage{multicol}
+%\Restriction{}
+%\rightfooter{}
+%\leftheader{}
+%\rightheader{}
+\usepackage{mygb4e}
+\newcommand{\lex}[1]{\textbf{\textit{#1}}}
+\newcommand{\lx}[1]{\textbf{\textit{#1}}}
+\newcommand{\ix}{\ex\it}
+\newcommand{\con}[1]{\textsc{#1}}
+\usepackage{url}
+\usepackage[normalem]{ulem}
+\newcommand{\ul}[1]{\uline{#1}}
+\newcommand{\txx}[1]{\textbf{#1}}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+  
+\item Find at least one example each of words with positive and
+  negative sentiment from your story.
+  \begin{itemize}
+  \item Do this ahead of class
+  \item Note the entire sentence
+  \end{itemize}
+   \emph{In the morning the captain returned; he was \ul{angry} and \ul{unhappy}, but said nothing.} (negative, negative)
+  \\ \emph{Fred is my \ul{best friend} after all.} (positive)
+
+
+\item \label{q:valid-argument} Which of the following arguments is \textbf{valid}?
+\begin{enumerate}
+\item If it rains, the ground gets wet. It is raining. Therefore, the ground gets wet. \label{q:valid-argument-a}
+\item If it rains, the ground gets wet. The ground is wet. Therefore, it must have rained.
+\item If it rains, the ground gets wet. It is sunny. Therefore, the ground is wet.
+\end{enumerate}
+\abox{Answer: (\ref{q:valid-argument-a})}
+
+\item \label{q:true-statement} Which statement must be \textbf{true}?
+\begin{enumerate}
+\item All dogs are mammals. \label{q:true-statement-a}
+\item Some dogs are reptiles.
+\item All mammals are dogs.
+\end{enumerate}
+\abox{Answer: (\ref{q:true-statement-a})}
+
+\item \label{q:inclusive-or} In logic, "\textbf{or}" (inclusive) means:
+\begin{enumerate}
+\item One or the other, but not both.
+\item Either one or both. \label{q:inclusive-or-b}
+\item Neither one nor the other.
+\end{enumerate}
+\abox{Answer: (\ref{q:inclusive-or-b})}
+
+\newpage
+  
+\item Are the following quantifiers:
+  \begin{itemize}
+  \item[(i)] \textbf{Symmetrical or asymmetrical}?  
+  (Symmetrical means switching subject and predicate does not change truth; asymmetrical means it does.)
+  \item[(ii)] How do they behave with entailments?
+    \begin{itemize}
+    \item[(iib)] In the \textbf{left argument} (the restrictor): is the quantifier upward or downward entailing?  
+    (Upward entailment means moving from a subset to a superset preserves truth; downward entailment means moving from a superset to a subset preserves truth.)
+    \item[(iic)] In the \textbf{right argument} (the scope): is the quantifier upward or downward entailing?  
+    (Again, upward entailment means weakening the predicate preserves truth; downward entailment means strengthening it preserves truth.)
+    \end{itemize}
+  \end{itemize}
+\begin{exe}
+\ex \textit{most}
+     \abox{\begin{itemize}
+       \item Asymmetrical (e.g., Most cats are animals ≠ Most animals are cats).
+       \item Left downward entailing: Most black cats are animals → Most cats are animals is NOT valid (subset in restrictor).
+       \item Right upward entailing: Most cats meow → Most cats make noise IS valid (weaken predicate).
+     \end{itemize}}
+\ex \textit{many (cardinal)}
+     \abox{\begin{itemize}
+       \item Asymmetrical (e.g., Many cats are friendly ≠ Many friendly are cats).
+       \item Left upward entailing: Many black cats are friendly ⟶ Many cats are friendly.
+       \item Right upward entailing: Many cats meow ⟶ Many cats make noise.
+     \end{itemize}}
+\ex \textit{few (cardinal)}
+     \abox{\begin{itemize}
+       \item Asymmetrical (e.g., Few animals are cats ≠ Few cats are animals).
+       \item Left downward entailing: Few animals are cats ⟶ Few animals are black cats.
+       \item Right downward entailing: Few cats make noise ⟶ Few cats meow.
+     \end{itemize}}
+\ex \textit{every}
+     \abox{\begin{itemize}
+       \item Asymmetrical (e.g., Every cat is an animal ≠ Every animal is a cat).
+       \item Left downward entailing: Every cat is an animal ⟶ Every black cat is an animal
+       \item Right upward entailing: Every cat meows ⟶ Every cat makes noise.
+     \end{itemize}}
+\ex \textit{at least two}
+     \abox{\begin{itemize}
+       \item Asymmetrical (e.g., At least two cats are animals ≠ At least two animals are cats).
+       \item Left upward entailing: At least two black cats are friendly ⟶ At least two cats are friendly.
+       \item Right upward entailing: At least two cats meow ⟶ At least two cats make noise.
+     \end{itemize}}
+\ex \textit{exactly two}
+     \abox{\begin{itemize}
+       \item Symmetrical (e.g., Exactly two cats are animals ≈ Exactly two animals are cats, assuming sets match).
+       \item Neither clearly upward nor downward entailing: exact number depends on both sides.
+       \item Caution: changing restrictor or scope may disrupt the exact count.
+     \end{itemize}}
+ \end{exe}
+
+
+
+ 
+\end{enumerate}
+\end{document}
+
+%%% Local Variables: 
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-PDF-mode: t
+%%% TeX-engine: xetex
+%%% End: 
