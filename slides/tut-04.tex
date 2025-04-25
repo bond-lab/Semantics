@@ -15,8 +15,12 @@
 %\newcommand{\ans}[1]{\hfill{#1}}
 %\newcommand{\ans}[1]{}
 %%% dynamically add answers
-
 \input{answers}
+
+\usepackage{xspace}
+\newcommand{\ent}{\ensuremath{\Rightarrow}\xspace}
+\newcommand{\nent}{\ensuremath{\not\Rightarrow}\xspace}
+\newcommand{\Y}[1]{\textbf{#1}}
 
 \usepackage{multicol}
 %\Restriction{}
@@ -27,6 +31,7 @@
 \newcommand{\lex}[1]{\textbf{\textit{#1}}}
 \newcommand{\lx}[1]{\textbf{\textit{#1}}}
 \newcommand{\ix}{\ex\it}
+\newcommand{\eng}{\textit}
 \newcommand{\con}[1]{\textsc{#1}}
 \usepackage{url}
 \usepackage[normalem]{ulem}
@@ -78,50 +83,69 @@
   \begin{itemize}
   \item[(i)] \textbf{Symmetrical or asymmetrical}?  
   (Symmetrical means switching subject and predicate does not change truth; asymmetrical means it does.)
-  \item[(ii)] How do they behave with entailments?
+\item[(ii)] How do they behave with entailments?
+  \begin{itemize}
+  \item[↑] Upward entailment means true for a more general thing (a hypernym)
+  \item[↓] Downward entailment means true for a more specific thing (a hyponym))
+  \end{itemize}
     \begin{itemize}
     \item[(iib)] In the \textbf{left argument} (the restrictor): is the quantifier upward or downward entailing?  
-    (Upward entailment means moving from a subset to a superset preserves truth; downward entailment means moving from a superset to a subset preserves truth.)
     \item[(iic)] In the \textbf{right argument} (the scope): is the quantifier upward or downward entailing?  
-    (Again, upward entailment means weakening the predicate preserves truth; downward entailment means strengthening it preserves truth.)
     \end{itemize}
   \end{itemize}
 \begin{exe}
 \ex \textit{most}
      \abox{\begin{itemize}
-       \item Asymmetrical (e.g., Most cats are animals ≠ Most animals are cats).
-       \item Left downward entailing: Most black cats are animals → Most cats are animals is NOT valid (subset in restrictor).
-       \item Right upward entailing: Most cats meow → Most cats make noise IS valid (weaken predicate).
+       \item Asymmetrical (e.g., Most cats are pets ≠ Most pets are cats).
+       \item L↑   Most black cats are pets \nent  Most cats are pets 
+       \item L↓   Most cats are pets \nent  Most black cats are pets
+       \item \Y{R↑}   Most cats are dangerous pets \ent  Most cats are pets
+       \item R↓   Most cats are pets \nent  Most cats are  dangerous pets
      \end{itemize}}
-\ex \textit{many (cardinal)}
+\ex \textit{a few (cardinal) ``two or threee''}
      \abox{\begin{itemize}
-       \item Asymmetrical (e.g., Many cats are friendly ≠ Many friendly are cats).
-       \item Left upward entailing: Many black cats are friendly ⟶ Many cats are friendly.
-       \item Right upward entailing: Many cats meow ⟶ Many cats make noise.
+       \item Symmetrical (e.g., A few cats are pets =  A few pets are cats).
+         \\     although we would probably say 2 or 3 not \eng{a few}
+       \item \Y{L↑}   A few black cats are pets \ent  A few cats are pets
+         \\ although there could be more
+       \item L↓   A few  cats are pets \nent  A few black cats are pets
+       \item \Y{R↑}   A few cats are dangerous pets \ent  A few cats are pets
+                  \\ although there could be more
+       \item R↓   A few cats are pets \nent  A few cats are  dangerous pets
      \end{itemize}}
-\ex \textit{few (cardinal)}
-     \abox{\begin{itemize}
-       \item Asymmetrical (e.g., Few animals are cats ≠ Few cats are animals).
-       \item Left downward entailing: Few animals are cats ⟶ Few animals are black cats.
-       \item Right downward entailing: Few cats make noise ⟶ Few cats meow.
+\ex \textit{few (proportional) ``a relatively small amount''}
+\abox{\begin{itemize}
+      \item Symmetrical (e.g., Few cats are pets ≠ Few pets are cats).
+       \item L↑   Few black cats are pets \nent  Few cats are pets
+       \item \Y{L↓}   Few cats are pets \nent  Few black cats are pets
+       \item R↑   Few cats are dangerous pets \nent  Few cats are pets
+       \item \Y{R↓}   Few cats are pets \ent  Few cats are  dangerous pets
      \end{itemize}}
 \ex \textit{every}
      \abox{\begin{itemize}
        \item Asymmetrical (e.g., Every cat is an animal ≠ Every animal is a cat).
-       \item Left downward entailing: Every cat is an animal ⟶ Every black cat is an animal
-       \item Right upward entailing: Every cat meows ⟶ Every cat makes noise.
+       \item L↑   Every black cat is a pet \nent  Every cat is a  pet
+       \item \Y{L↓}   Every cat is a pet \ent  Every black cat is a  pet
+       \item \Y{R↑}   Every cat is a dangerous pet \ent  Every cat is a  pet
+       \item R↓   Every cat is a pet \nent  Every  cat is a   dangerous pet
      \end{itemize}}
 \ex \textit{at least two}
-     \abox{\begin{itemize}
-       \item Asymmetrical (e.g., At least two cats are animals ≠ At least two animals are cats).
-       \item Left upward entailing: At least two black cats are friendly ⟶ At least two cats are friendly.
-       \item Right upward entailing: At least two cats meow ⟶ At least two cats make noise.
+\abox{\begin{itemize}
+       \item Symmetrical (e.g., At least two cats are pets ≈ At least two pets are cats).
+       \item \Y{L↑}   At least two black cats are pets \ent  At least two cats are pets
+       \item L↓   At least two  cats are pets \nent  At least two black cats are pets
+       \item \Y{R↑}   At least two cats are dangerous pets \ent  At least two cats are pets
+       \item R↓   At least two cats are pets \nent  At least two cats are  dangerous pets
      \end{itemize}}
-\ex \textit{exactly two}
-     \abox{\begin{itemize}
-       \item Symmetrical (e.g., Exactly two cats are animals ≈ Exactly two animals are cats, assuming sets match).
-       \item Neither clearly upward nor downward entailing: exact number depends on both sides.
-       \item Caution: changing restrictor or scope may disrupt the exact count.
+   \ex \textit{exactly two}
+   \abox{\begin{itemize}
+     \item Symmetrical (e.g., Exactly two cats are pets ≈ Exactly two pets are cats).
+       \\ normal assumption is that you pick out the same intersective subsets
+     \item L↑   Exactly two black cats are pets \nent  Exactly two cats are pets
+     \item L↓   Exactly two  cats are pets \nent  Exactly two black cats are pets
+     \item R↑   Exactly two cats are dangerous pets \nent  Exactly two cats are pets
+     \item R↓   Exactly two cats are pets \nent  Exactly two cats are  dangerous pets
+     \item \eng{exactly is a very different kind of quantifier}
      \end{itemize}}
  \end{exe}
 
