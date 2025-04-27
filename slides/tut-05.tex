@@ -1,0 +1,141 @@
+\documentclass[a4paper]{article}
+
+\title{Semantics: Tutorial Five}
+\author{Francis Bond \url{<bond@ieee.org>}}
+\date{}%2011-08-15}
+\usepackage{fontenc}
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setmainfont{TeX Gyre Pagella}
+\setsansfont[Ligatures=TeX]{TeX Gyre Heros}
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Sans CJK JP}
+\setCJKsansfont{Noto Sans CJK JP}
+\setCJKmonofont{Noto Sans CJK JP}
+%\newcommand{\ans}[1]{\hfill{#1}}
+%\newcommand{\ans}[1]{}
+%%% dynamically add answers
+\input{answers}
+
+\usepackage{xspace}
+\newcommand{\ent}{\ensuremath{\Rightarrow}\xspace}
+\newcommand{\nent}{\ensuremath{\not\Rightarrow}\xspace}
+\newcommand{\Y}[1]{\textbf{#1}}
+
+\usepackage{multicol}
+%\Restriction{}
+%\rightfooter{}
+%\leftheader{}
+%\rightheader{}
+\usepackage{mygb4e}
+\usepackage[e,j]{mtg2e}
+\newcommand{\lex}[1]{\textbf{\textit{#1}}}
+\newcommand{\lx}[1]{\textbf{\textit{#1}}}
+\newcommand{\ix}{\ex\it}
+%\newcommand{\eng}{\textit}
+\newcommand{\con}[1]{\textsc{#1}}
+\usepackage{url}
+\usepackage[normalem]{ulem}
+\newcommand{\ul}[1]{\uline{#1}}
+\newcommand{\txx}[1]{\textbf{#1}}
+
+\begin{document}
+\maketitle
+\begin{enumerate}
+  \item Consider the following English phrases:
+    \begin{enumerate}
+    \item walk quickly
+      \abox{compositional}
+    \item spill the tea
+      \abox{non-compositional:  ``reveal gossip or secrets''}
+    \item green thumb
+      \abox{non-compositional: ``talent for gardening''}
+    \item write an email
+      \abox{compositional}
+    \item night sky
+      \abox{compositional}
+    \item break the ice
+      \abox{non-compositional: ``to initiate social interaction, reduce tension''}
+    \end{enumerate}
+    Which ones have a non-compositional reading, and what is it?
+    \\  e.g. \textit{hit the sack} --- non-compositional: ``go to bed'';\\
+    \textit{hit the nail} --- compositional
+    
+\item Give an example of a multiword expression meaning the following in a language you speak.
+  \begin{exe}
+    \ex become angry
+    \abox{\jpn{hara ga tatsu} (腹が立つ) ``my stomach rises''}
+    \ex die
+    \abox{\eng{pass away}}
+    \ex get up early
+    \abox{rise with the lark
+    \\ \eng{Vstávat se slepicemi} ``get up with the chickens''}
+  \ex do two things at once
+  \abox{ \eng{Zabít dvě mouchy jednou ranou} ``kill two flies with one hit''
+\\ kill two birds with one stone.}
+\ex rain heavily
+\abox{\jpn{doshaburi} 土砂降り ``rain eath and sand''
+  \\ \eng{rain cats and dogs}
+  \\ \eng{Lije jako z konve}  ``raining as if from a watering can''}
+  \end{exe}
+  
+\item Lakoff and Johnson (1980) proposed the following image schemas for love:
+  \begin{itemize}
+  \item LOVE IS A JOURNEY
+  \item LOVE IS A FORCE (electromagnetic, gravitational)
+  \item LOVE IS WAR
+  \end{itemize}
+Organise the following metaphors into the above three schemas.
+\begin{exe}
+  \ex \textit{They lost their momentum}
+  \abox{LOVE is a FORCE}
+ \ex \textit{There were sparks between us}
+  \abox{LOVE is a FORCE}
+  \ex \textit{Look how far we've come}
+  \abox{LOVE is a JOURNEY}
+\ex \textit{We're at a crossroad}
+  \abox{LOVE is a JOURNEY}
+  \ex \textit{He overpowered her}
+  \abox{LOVE is WAR}
+\ex \textit{I could feel the electricity between them}
+  \abox{LOVE is a FORCE}
+\ex \textit{We'll just have to go our separate ways}
+  \abox{LOVE is a JOURNEY}
+\ex \textit{We can't turn back now}
+  \abox{LOVE is a JOURNEY}
+\ex \textit{His whole life revolves around her}
+  \abox{LOVE is a FORCE}
+\ex \textit{She is besieged by suitors}
+  \abox{LOVE is WAR}
+\ex \textit{They are uncontrollably attracted to each other}
+  \abox{LOVE is a FORCE}
+\ex \textit{He is known for his conquests}
+  \abox{LOVE is WAR}
+\end{exe}
+Can you think of other metaphors that do not fit into the above three schemas?
+
+\item For any two languages that you know, discuss similarities and
+  differences in conventionalized metaphors of body parts
+  (e.g. \eng{hand of a watch}, \jpn[well-known (lit: face is wide)]{kao-ga hiroi}).
+ \abox{\begin{itemize}
+  \item \jpn{atama ga katai} (頭がかたい) ``stubborn --- head is hard''
+    \\ HEAD is MIND; THOUGHT is OBJECT
+  \item \jpn{kuchi ga karui} (口が軽い) ``loose lipped --- mouth is
+    light''
+    \\ can't keep a secret
+    \\ MOUTH is VOICE; THOUGHT is OBJECT
+  \item \jpn{kuchi ga katai} (口がかたい) ``close mouthed --  mouth is
+    hard''
+    \\ can keep a secret
+    \\ MOUTH is VOICE; THOUGHT is OBJECT
+  \end{itemize}}
+ 
+\end{enumerate}
+\end{document}
+
+%%% Local Variables: 
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-PDF-mode: t
+%%% TeX-engine: xetex
+%%% End: 
