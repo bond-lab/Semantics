@@ -1,0 +1,215 @@
+\documentclass[a4paper]{article}
+
+\title{Semantics: Tutorial Four — Implicature, Politeness, and Scalar Meaning}
+\author{Francis Bond \url{<bond@ieee.org>}}
+\date{}%2011-08-15}
+\usepackage{fontenc}
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setmainfont{TeX Gyre Pagella}
+\setsansfont[Ligatures=TeX]{TeX Gyre Heros}
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Sans CJK JP}
+\setCJKsansfont{Noto Sans CJK JP}
+\setCJKmonofont{Noto Sans CJK JP}
+%\newcommand{\ans}[1]{\hfill{#1}}
+%\newcommand{\ans}[1]{}
+%%% dynamically add answers
+\input{answers}
+
+\usepackage[colorlinks]{hyperref}
+\usepackage{xspace}
+\newcommand{\ent}{\ensuremath{\Rightarrow}\xspace}
+\newcommand{\nent}{\ensuremath{\not\Rightarrow}\xspace}
+\newcommand{\Y}[1]{\textbf{#1}}
+
+\usepackage{multicol}
+%\Restriction{}
+%\rightfooter{}
+%\leftheader{}
+%\rightheader{}
+\usepackage{mygb4e}
+\newcommand{\lex}[1]{\textbf{\textit{#1}}}
+\newcommand{\lx}[1]{\textbf{\textit{#1}}}
+\newcommand{\ix}{\ex\it}
+\newcommand{\eng}{\textit}
+\newcommand{\con}[1]{\textsc{#1}}
+\usepackage{url}
+\usepackage[normalem]{ulem}
+\newcommand{\ul}[1]{\uline{#1}}
+\newcommand{\txx}[1]{\textbf{#1}}
+
+\begin{document}
+\maketitle
+
+\noindent In this tutorial, we'll examine how meaning goes beyond literal content — including implicatures, politeness strategies, and face-threatening acts.
+
+%\item Make your own joke using strict/sloppy identity readings.
+\begin{enumerate}
+\item Hedges are used when you know you will flout a maxim.  Which
+  maxim is flouted in the following hedges (and why)?:
+
+\begin{exe}
+
+\ex \textit{This may be a bit confusing, but I remember being in a car.}
+\abox{Manner}
+
+\ex \textit{I may be mistaken, but I thought I saw a wedding ring on her finger.}
+\abox{Quality}
+%\ex \textit{ I'm not sure if this is right, but I heard it was a secret ceremony in Hawaii.
+%\ex \textit{ He couldn't live without her, I guess.
+
+
+%\ex \textit{  So, to cut a long story short, we grabbed our stuff and ran.
+\ex \textit{I won't bore you with all the details, but it was an exciting trip.}
+\abox{Quantity}
+
+
+\ex \textit{I don't know if this is important, but some of the files are missing.}
+\abox{Relation}
+
+\ex \textit{As far as I know, they're married.}
+\abox{Quality}
+
+\ex \textit{This may sound like a dumb question, but whose handwriting is this?}
+\abox{Relation}
+% \ex \textit{  Not to change the subject, but is this related to the budget?
+
+
+\ex \textit{I don't know if this is clear at all, but I think the other car was reversing.}
+\abox{Manner}
+
+\ex \textit{As you probably know, I am afraid of dogs.}
+\abox{Quantity}
+\end{exe}
+\item Consider this sentence: “John \textbf{believes} that aliens exist.”  
+\\ Why might it trigger an implicature based on a Horn scale?
+  \abox{\textit{Believe} is part of a scale like \textit{〈think, believe, know, be certain〉}.
+  Saying “believe” implicates that John does not “know” or is not “certain” — because those would be stronger, more informative choices.
+  Scalar implicatures here involve epistemic strength: the speaker signals uncertainty by choosing a weaker term.}
+
+\item What is the scalar implicature in this exchange?
+  \begin{description}
+    \item[Boss:] Did you finish the report?
+    \item[Employee:] I \textbf{tried} to.
+  \end{description}
+  \abox{``Tried'' belongs to a scale like \textit{〈tried, began, succeeded〉}.
+  Choosing ``tried'' implicates that the stronger outcomes (like “succeeded”) didn’t happen.
+   This implies failure or at least incomplete success, even though the speaker avoids saying so directly.}
+
+\item For the next questions on politeness, (i) answer the question and (ii) translate each example into a language you speak, and see if you would use a similar strategy.
+\begin{enumerate}
+
+\item Which face is threatened in this interaction?
+  \begin{description}
+    \item[Boss:] I need that report on my desk in one hour.
+  \end{description}
+  \abox{This threatens the employee’s \textbf{negative face} — their freedom to act is restricted by an imposition. 
+\\  It’s a indirect request which softens it a little.}
+ \item Which face is threatened in this interaction?
+
+ \begin{description}
+    \item[Peer:] Actually, that’s not how it works — I think you misunderstood the instructions.
+  \end{description}
+  \abox{This threatens the hearer’s \textbf{positive face} — their self-image and competence are being challenged.
+\\  The use of \textit{I think} softens it a little.}
+
+\item What kind of face is appealed to here?
+  \begin{description}
+    \item[Friend:] You’re so good at design stuff — can you help me make a poster?
+  \end{description}
+  \abox{This appeals to the hearer’s \textbf{positive face} — their desire to be liked and appreciated.
+  Complimenting their skills softens the upcoming request.}
+
+\item How does this speaker preserve the hearer’s face?
+  \begin{description}
+    \item[Colleague:] I’m sorry to bother you, but could you maybe take a look at this when you have a chance?
+  \end{description}
+  \abox{This protects the hearer’s \textbf{negative face} by minimizing imposition. 
+  The speaker uses hedges (“maybe”), indirectness, and deference (“I’m sorry to bother you”) to be polite.}
+
+
+\item What politeness strategy is used in this refusal?
+  \begin{description}
+    \item[Student:] Could you write me a recommendation letter?
+    \item[Lecturer:] I’d love to help, but I’m afraid I’m already overloaded with deadlines this month.
+  \end{description}
+  \abox{This is a face-saving refusal that mitigates the threat to the student's \textbf{positive face}.
+  It avoids a bald “no” and uses a reason to show regret and respect.}
+
+
+\item How does this strategy protect both positive and negative face?
+  \begin{description}
+    \item[Email:] I hope this finds you well. If it's not too much trouble, would you mind reviewing my draft by Friday?
+  \end{description}
+  \abox{The writer attends to the recipient’s \textbf{positive face} (friendly greeting) and \textbf{negative face} (minimizing imposition with indirect phrasing).
+  It’s a classic example of polite written request.}
+
+\end{enumerate}
+
+\item Explain what is going on \href{https://www.youtube.com/watch?v=lLR-V2S0DC8}{here}:
+  \\ (from \textit{The Pink Panther Strikes Again (1976))}
+  \begin{description}
+    \item[Clouseau:] Does your dog bite?
+    \item[Hotel Clerk:] No.
+    \item[Clouseau:] [bowing down to pet the dog] Nice doggie.
+      \\ {}[Dog barks and bites Clouseau in the hand]
+    \item[Clouseau:] I thought you said your dog did not bite!
+    \item[Hotel Clerk:] That is not my dog. 
+    \end{description}
+ \abox{The clerk violates Relation — he answers literally, but not relevantly. Clouseau meant “the dog next to you,” not just any dog.}
+
+\item Rephrase the following commands into indirect requests, first in English, then in another language:
+  \begin{enumerate}
+  \item Tell me the time
+
+    \abox{
+    \begin{itemize}
+      \item Could you tell me what time it is?
+      \item Do you happen to know the time?
+      \item I was wondering if you might have the time?
+    \end{itemize}
+    }
+
+  \item Lend me money
+
+    \abox{
+    \begin{itemize}
+      \item Would it be possible for you to lend me some money?
+      \item Do you think you could help me out with a loan?
+      \item I hate to ask, but is there any chance I could borrow a bit of money?
+    \end{itemize}
+    }
+
+  \item Give me your phone number
+
+    \abox{
+    \begin{itemize}
+      \item Could I have your phone number, if you don’t mind?
+      \item Would you be okay sharing your number with me?
+      \item Is it alright if I get your number?
+    \end{itemize}
+    }
+
+  \item Leave me alone
+
+    \abox{
+    \begin{itemize}
+      \item Would you mind giving me some space for a bit?
+      \item I need some time to myself right now — could we talk later?
+      \item I’d appreciate it if I could be alone for a while.
+    \end{itemize}
+    }
+  \end{enumerate}
+
+\end{enumerate}
+
+
+\end{document}
+
+%%% Local Variables: 
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-PDF-mode: t
+%%% TeX-engine: xetex
+%%% End: 
