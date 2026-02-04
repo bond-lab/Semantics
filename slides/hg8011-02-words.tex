@@ -3,12 +3,13 @@
 \documentclass[a4paper,landscape,headrule,footrule,xetex]{foils}
 
 \input{headx.tex}
-
+\usepackage{forest}
 \begin{document}
 \header{Lecture 2}{Word meaning and close reading}{}
 \maketitle
 
 %\include{schedule}
+
 
 \myslide{Overview}
 
@@ -802,6 +803,56 @@ These are great for many sub-systems of language, but it is hard to make compone
 
 \end{itemize}
 
+\myslide{Derivational Relations}
+
+\begin{itemize}
+\item Often words are linked by more or less systematic relations, sometimes morphologically marked
+  \begin{itemize}
+  \item beauty/beautiful/beautify
+  \item cute/cuteness
+  \end{itemize}
+\end{itemize}
+
+\myslide{Agentive Nouns}
+\MyLogo{}
+\begin{itemize}
+\item An \txx{agentive noun} is a word that is typically derived from
+  another word denoting an action, and that identifies an entity that
+  does that action.  \\ \textbf{verb} + \lex{-er, -or, -ant}
+  \begin{exe}
+    \ex \lex{murderer, commentator, whaler, director, computer}
+    \ex ?? \lex{undertaker, cooker, footballer} (Saeed also includes these)
+  \end{exe}
+\item Should \lex{murderer} be listed separately from \lex{murder} in
+the dictionary? Why or why not?
+\item Also \txx{recipient noun}s that show the undergoer:
+  \textbf{verb} + \lex{-ee}: \lex{employee}, \lex{trustee}
+\end{itemize}
+
+\myslide{Agentive Nouns in Other Languages}
+\MyLogo{Thanks to Yeo Jia Qi (Malay)}
+
+\begin{itemize}
+\item Japanese (suffix distinguishes person/machine)
+  
+  \begin{itemize}
+  \item \jpn{運転する} → \jpn{運転者} \jpn[driver]{unten-sha}
+  \item \jpn{計算する} → \jpn{計算者} \jpn{計算機} \jpn[computer]{keisan-sha/ki}
+  \item \jpn{研究する} → \jpn{研究者} \jpn{研究員} \jpn[researcher]{kenkyuu-sha/in}
+  \item \jpn{読む} → \jpn{読み手} \jpn{読者} \jpn[reader]{yomite/dokusha}
+  \end{itemize}
+\item Malay (prefix can convert any part  of speech)
+  \begin{itemize}
+  \item \eng[help]{bantu (v)} → \eng[assistant/helper]{pembantu} 
+  \item \eng[cut]{potong (v)} → \eng[cutter (human/machine)]{pemotong}
+  \item \eng[fly]{terbang (v)} → \eng[pilot (not passenger)]{penerbang}
+%  \item \zsm[scissors]{gunting (n)} → \zsm[(editor – human)]{penyunting}
+  \end{itemize}
+
+
+
+
+
 \myslide{Word Embeddings}
 \begin{itemize}
 \item In the simplest case, each word is a number
@@ -966,17 +1017,47 @@ We can do arithmetic on the vectors
   \end{itemize}
 \end{itemize}
 
-
 \myslide{Word Meaning as a Graph}
-\MyLogo{}
-\bigskip
-\bigskip
-\bigskip
-\includegraphics[height=0.75\textheight]{pics/Semantic_Net.eps}
+\MyLogo{It ends up being a very big graph}
+%\includegraphics[height=0.75\textheight]{pics/Semantic_Net.eps}
+ \begin{forest}
+   [entity
+   [object [artifact [equipment [golf-club [driver,name=d1] ] ] ]
+           [agent [person [worker [driver,name=d2] ]]] ]
+           [process
+       [move [propel [swing  [drive,name=d11] ]]]
+       [manipulate [  control [operate [drive,name=d21] ] ] ] ]
+        [substance]
+       [abstract [communication [writing [code [driver ] ] ] ]]
+    ] 
+ \draw[dashed] (d1) to  [out=-45, in=-135]  node[yshift=-1ex]{instrument} (d11);
+ \draw[double] (d2) to  [out=-45, in=-135]  node[yshift=-1ex]{agent} (d21);
+ ]
+ \end{forest}
+ % [object [artifact [equipment [golf-club [driver,name=d1] ] ] ]
+      %  agent [person [worker [driver,name=d2] ]]]
+      %  [process
+      %  [move [propel [swing  [drive,name=d11] ]]]
+      %  [manipulate [  control [operate [drive,name=d21] ] ] ] ]
+       
+      %  [substance]
+      %  [abstract [communication [writing [code [driver ] ] ] ]]
+    %] 
+ % \draw[dashed] (d1) to  [out=0, in=-180] (d11);
+ % \draw[double] (d2) to [out=-75, in=110](d21);
+%\end{forest} 
 
-\begin{itemize}
-\item You need a very big graph to capture all meanings
-\end{itemize}
+
+% \myslide{Word Meaning as a Graph}
+% \MyLogo{}
+% \bigskip
+% \bigskip
+% \bigskip
+% \includegraphics[height=0.75\textheight]{pics/Semantic_Net.eps}
+
+% \begin{itemize}
+% \item You need a very big graph to capture all meanings
+% \end{itemize}
 
 
 
@@ -990,6 +1071,20 @@ We can do arithmetic on the vectors
   \item discuss differences with other annotators
  \end{itemize}
 \item As well as a source of examples and inspiration
+\item  my students have used wordnets for:
+  \begin{itemize}
+  \item  Japanese derivational
+relations \citep{Bond:Wei:2019}
+\item  pronoun representation for Japanese, Mandarin and English
+  \citep{Seah:Bond:2014}
+\item exclamatives and classifiers
+\citep{Mok:Gao:Bond:2012,daCosta:Bond:2016}
+\item  sentiment analysis
+  \citep{Le:Moeljadi:Miura:Ohkuma:2016,Bond:Janz:Piasecki:2019}
+\item cross-lingual sense annotation \citep{Bonansinga:Bond:2016}
+\item multilingual crosswords \citep{Tan:2012}
+\item [\ldots]
+\end{itemize}
 \end{itemize}
 \section{Word Sense Disambiguation \\ for Close Reading}
 
@@ -1069,8 +1164,8 @@ We can do arithmetic on the vectors
   \item \lex{lid, eyelid, palpebra} ``either of two folds of skin that
     can be moved to cover or open the eye''
   \item \lex{lid} ``a movable top or cover (hinged or separate) for closing the opening at the top of a box, chest, jar, pan, etc.''  \end{enumerate}
- 
- \newpage
+\end{itemize} 
+\newpage
 \myslide{WSD: A challenging task!}
 This is difficult for many reasons
   \begin{itemize}
