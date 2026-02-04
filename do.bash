@@ -14,11 +14,11 @@ cd $sdir
 for slide in `ls tut-*.tex`
 do
     base=`basename $slide .tex`
-    echo Processing ${base}
+    echo Processing ${base} --- questions
     ln -sf without.tex answers.tex
     latexmk -silent -xelatex ${base}
     mv "${base}.pdf" "${base}-questions.pdf"
-    echo Processing ${base} with answers
+    echo Processing ${base} --- answers
     ln -sf with.tex answers.tex 
     latexmk -silent -xelatex ${base}
     mv "${base}.pdf" "${base}-answers.pdf"
@@ -30,7 +30,7 @@ done
 popd
 
 ### copy changed slides
-#rsync -av --ignore-times slides/*.pdf docs/pdf
+rsync -av --ignore-times slides/tut*questions.pdf docs/pdf
 
 #htmldoc  --duplex --color --fontsize 12 --webpage -f /home/bond/papers/Outlines/${subj}-outline.pdf www/index.html
 

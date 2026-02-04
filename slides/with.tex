@@ -1,3 +1,22 @@
 % with answers
 
-\newcommand{\ans}[1]{#1}
+\usepackage[most]{tcolorbox}
+\tcbset{
+  highlight answer/.style={
+    colback=gray!10,
+    colframe=gray!60,
+    boxrule=0.4pt,
+    arc=2pt,
+    left=2pt,
+    right=2pt,
+    top=1pt,
+    bottom=1pt,
+    boxsep=1pt,
+    enhanced,
+  }
+}
+\newcommand{\ans}[1]{\tcbox[highlight answer]{#1}}
+\newcommand{\abox}[1]{\begin{tcolorbox}[highlight answer]#1\end{tcolorbox}}
+
+
+%\newcommand{\ans}[1]{#1}

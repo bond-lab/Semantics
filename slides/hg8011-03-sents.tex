@@ -23,25 +23,13 @@
 \item Sentence Meaning
   \begin{itemize}
   \item Semantic Roles and Alternations
-  \item Tense, Aspect, Modality and Evidentiality (skip)
+  \item Tense, Aspect, Modality and Evidentiality
   \end{itemize}
-\item Close Reading and Word Sense Disambiguation
+\item Annotation guide
 \end{itemize}
 
 \section{Revision of Word Meaning}
 
-\myslide{Word meaning}
-\begin{itemize}
-\item What is a word? How easy is it to define ‘word’?
-\item Different ways of representing meaning
-\item Lexical Relations
-\item Derivational Relations
-  \begin{itemize}
-  \item Inchoative, causative, conative, \ldots (\txx{alternations})
-  \item Agentive nouns
-  \end{itemize}
-\item Meaning: Relative or universal?
-\end{itemize}
 
 \myslide{Words} 
 \begin{description}
@@ -79,7 +67,7 @@
 \item Defines words as linked semantic nets
 \item Concepts are represented by synsets (synonym-sets)
 \item Synsets have both definitions and semantic relations
-\item We will use  \href{https://wordnet.princeton.edu/}{Princeton Wordnet} of English as our sense-inventory for projects one and two
+\item We will use wordnets as our sense-inventory for projects one and two
 \item Wordnets are available for many languages
 
 \end{itemize}
@@ -285,7 +273,7 @@ with another) helps us build the semantic model.
 \myslide{Situations}
 
 \begin{itemize}
-\item Noun phrases refer to entities
+\item Noun phrases refer to entities (things, people, places, \ldots) 
 \item Sentences refer to situations
   \begin{itemize}
   \item Situations can be constrained in various ways
@@ -307,7 +295,7 @@ with another) helps us build the semantic model.
 \end{itemize}
 
 \myslide{Semantic  Roles}
-\MyLogo{The set of roles we use is from \citet[Chapter~6]{Saeed:2009}.}
+\MyLogo{The set of roles we use is from \citet[Chapter~6]{Saeed:2015}.}
 In this section we talk about the relations between the participants
 in a situation and the situation itself.
 
@@ -433,12 +421,21 @@ being in a state or position.
   \ex\eng{\ul{Jo} felt sick}
   \ex\eng{The lecturer annoyed \ul{the students}}
 \end{exe}
-\item Find an example of EXPERIENCER in \Story{}\task
-\newpage
+\item  \txx{STIMULUS}
+  \begin{itemize}
+  \item  Usually used in connection with EXPERIENCER
+  \end{itemize}
+  \begin{exe}
+  \ex\eng{\ul{The lightning} scared them}
+  \ex\eng{I don't like \ul{the lightning}}
+\end{exe}
+\item Find examples of EXPERIENCER and  STIMULUS in \Story{}\task
+
+  \newpage
 \item  \txx{BENEFICIARY}
   \begin{itemize}
-  \item   for whose benefit the action was performed
-  \item   Typically indexed by "for" PP in English
+  \item   For whose benefit the action was performed
+  \item   Typically indexed by \lex{for} PP in English
     \\ or \textsc{object} in ditransitive verbs
   \end{itemize}
   \begin{exe}
@@ -449,7 +446,7 @@ being in a state or position.
 \item  \txx{LOCATION}
   \begin{itemize}
   \item  Place
-  \item Typically indexed by locative PPs in English
+  \item Typically indexed by locative PPs (\lex{in, on, at}, \ldots) in English
   \end{itemize}
   \begin{exe}
   \ex\eng{I am living \ul{in Indonesia}}
@@ -461,7 +458,7 @@ being in a state or position.
 \item  \txx{GOAL}
   \begin{itemize}
   \item  towards which something moves (lit or metaphor)
- \item  Typically indexed by "to" PP in English 
+ \item  Typically indexed by \lex{to} PP in English 
    \\ or \textsc{object} in ditransitive
   \end{itemize}
   \begin{exe}
@@ -471,30 +468,24 @@ being in a state or position.
 \item  \txx{SOURCE}
  \begin{itemize}
  \item  from which something moves or originates
- \item  Typically indexed by "from" PP in English
+ \item  Typically indexed by \ex{from} PP in English
  \end{itemize}
   \begin{exe}
  \ex\eng{We gleaned this \ul{from the Internet}}  
 \end{exe}
 \item Find  examples of SOURCE and GOAL in \Story{}\task
 \newpage
-\item  \txx{STIMULUS}
-  \begin{itemize}
-  \item  Usually used in connection with EXPERIENCER
-  \end{itemize}
-  \begin{exe}
-  \ex\eng{\ul{The lightning} scared them}
-  \ex\eng{I don't like \ul{the lightning}}
-\end{exe}
-\item  \txx{INSTRUMENT/MANNER}
+\item  \txx{INSTRUMENT}
   \begin{itemize}
   \item  Means by which action is performed
-  \item  Can be indexed by "with" PP in English
+  \item  Can be indexed by \lex{with} PP in English
   \end{itemize}
   \begin{exe}
     \ex\eng{I ate breakfast \ul{with chopsticks}}
   \end{exe}
-\item Find  examples of STIMULUS and INSTRUMENT in \Story{}\task
+\item Find examples of INSTRUMENT in \Story{}\task
+\item Some researchers have a separate COMITATIVE case which encodes a
+  relationship of accompaniment between two participants in an event 
 \end{itemize}
 
 
@@ -758,8 +749,7 @@ Kim-ga koori-wo \ul{tokashita}  {} koori-ga \ul{toketa} \\
 \myslide{Video}
 \MyLogo{Comitative or Instrument}
 \begin{itemize}
-\item \textit{I want to cook \ul{with} you}  IT Crowd, Series 2 - Episode 3
-\\ \url{https://www.youtube.com/watch?v=gOE-q20RcDM}
+\item \textit{I want to cook \ul{with} you}  \href{https://www.youtube.com/watch?v=gOE-q20RcDM}{IT Crowd, Series 2 - Episode 3}
 \begin{verbatim}
 Moss    Look, I've got your advert here.
         I printed it out.
@@ -770,13 +760,14 @@ Johann  Ah yes! Yes.
         You see.
 Moss    I see where the confusion was.
         I thought this was a cookery course.
-        But you wanted someone who would agree to let you kill and eat them.
+        But you wanted someone who would agree to let you kill
+        and eat them.
 Johann  Ja! You see? 
 Moss    That is funny.
 Johann  So you're not interested? 
 Moss    No, thanks, it's not for me.
 Johann  How disappointing.
-\end{verbatim}
+\end{verbatim}% '
 \end{itemize}
 
 
@@ -946,7 +937,7 @@ commitment and belief
 \item  \txx{Epistemic modality}: Speaker signals degree of  
 knowledge.
 \begin{exe}
-  \ex \eng{You can drive this car} \cmm{You are able to}
+  \ex \eng{You can drive this car} \cmm{It is possible}
 \end{exe}
 \item  \txx{Deontic modality}: Speaker signals his/her attitude  
 to social factors of obligation and permission.
@@ -964,10 +955,31 @@ to social factors of obligation and permission.
 % \item  Question: How do you use `must', `confirm', and 
 % `sure' in Singlish? ???
 \end{itemize}
-\item [?] Find examples of each type (auxiliary, verb, adverb/adjective) in \Story{}\task
-\item [?] Determine whether they are deontic or epistemic\task
+\item [?] Find examples of each type (deontic/epistemic), expressed in different ways (auxiliary, verb, adverb/adjective) in \Story{}\task
 \end{itemize}
 
+\myslide{Other modalities}
+
+There are other possible modalities \citep[p290 (4)]{Kroeger:2022}:
+\begin{itemize}
+\item \txx{bouletic} concerns what is possible or necessary,
+given a person's desires
+\item \txx{dynamic} concerns properties and dispositions of persons (such as ability)
+\item \txx{teleogical} concerns achieving a goal 
+\end{itemize}
+
+\begin{exe}
+\item \eng{It has to be raining.}
+   [after observing people coming inside with wet umbrellas] \txx{epistemic}
+ \item \eng{Visitors have to leave by six pm}.
+   [hospital regulations] \txx{deontic}
+ \item \eng{John has to work hard if he wants to retire at age 50.}
+   [to attain desires] \txx{bouletic}
+ \item \eng{I have to sneeze.}
+   [given the current state of one's nose] \txx{dynamic}
+ \item \eng{To get home in time, you have to take a taxi.}
+   [in order to achieve the stated purpose] \txx{teleological}
+\end{exe}
 \myslide{Possible Worlds}
 
 \begin{itemize}
@@ -1004,7 +1016,7 @@ to social factors of obligation and permission.
 % \end{itemize}
 
 \myslide{Mood more Generally}
-\MyLogo{See \citet{Saeed:2009} for more examples}
+\MyLogo{See \citet[Chapter 5]{Saeed:2015} for more examples}
 \begin{itemize}
 \item Grammatical Inflection used to mark modality is called \txx{mood}
   \begin{itemize}
@@ -1076,7 +1088,8 @@ not strongly grammaticalized.
 \item Situations are represented by verbs
 \item Semantic roles can be used to make the relations between the situation and the participants clearer
 \item We can say something about the situation, in particular Tense, Aspect and Modality (TAM)
-  
+\item \citet{Saeed:2015} talks about Tense, Aspect, Modality and Evidentiality in Chapter~5 and Semantic Roles (Thematic Roles) in  Chapter~6
+\item  \citet{Kroeger:2022} talks about Modals and Evidentiality in Part~V, and Tense and Aspect in part~VI
 %\item Close reading of a text helps to understand it more fully
 %\item Determining the meanings of words is one part of building up   understanding
 \end{itemize}
@@ -1084,6 +1097,96 @@ not strongly grammaticalized.
 \small
 \bibliographystyle{aclnat}
 \bibliography{abb,mtg,nlp,ling}
+
+\myslide{Glossary of Key Terms (English--Czech)}
+
+\begin{longtable}{ll}
+  English & Čeština \\ \hline
+  \endhead 
+ analysis & analýza \\
+ autonomous & autonomní \\
+ actor & aktor \\
+ agent & agens \\
+ alternation(s) & alternace \\
+ ambiguous & víceznačný \\
+ beneficiary & beneficient \\
+ body-part possessor ascension & vzestup posesora části těla \\
+ completive & kompletivní \\
+ compositional semantics & kompoziční sémantika \\
+ conative & konativní \\
+ conditional(s) & kondicionál \\
+ construction(s) & konstrukce \\
+ content word & lexikální slovo \\
+ deontic modality & deontická modalita \\
+ differentiae& rozlišující rysy \\
+ direct knowledge & přímá znalost \\
+ ditransitive passive & ditranzitivní pasivum \\
+ epistemic modality & epistemická modalita \\
+ experiencer & proživatel \\
+ experiential & experienciální \\
+ function word & funkční slovo \\
+ future perfect & předbudoucí čas \\
+ future progressive & budoucí průběhový čas \\
+ genus & rod (genus) \\
+ goal & cíl \\
+ habitual & habituální \\
+ hearsay (reportative) & nepřímá řeč (reportativ) \\
+ homonyms & homonyma \\
+ hyponymy & hyponymie \\
+ imperative & imperativ \\
+ imperfective & nedokonavý \\
+ indicative & indikativ \\
+ inferential & inferenciální \\
+ injunctive & injunktiv \\
+ instrument & instrument \\
+ interpretation & interpretace \\
+ interrogative & tázací \\
+ intransitive middle & intranzitivní medium \\
+ irrealis & irrealis \\
+ lexeme & lexém \\
+ location & lokace \\
+ manner & způsob \\
+ metrical tense & metrický čas \\
+ mood & slovesný způsob \\
+ multi-word expressions & víceslovné výrazy \\
+ nonvisual sensory & mimovizuální smyslový \\
+ object & předmět (objekt) \\
+ obligation & povinnost \\
+ optative & optativ \\
+ past perfect & předminulý čas \\
+ past progressive & minulý průběhový čas \\
+ patient & patient \\
+ perfect & perfektum \\
+ perfective & dokonavý \\
+ permission & dovolení \\
+ polysemous & mnohoznačný \\
+ possible worlds & možné světy \\
+ potential & potenciál \\
+ present perfect & předpřítomný čas \\
+ present progressive & přítomný průběhový čas \\
+ progressive & průběhový \\
+ projection rules & projekční pravidla \\
+ realis & realis \\
+ restriction & restrikce \\
+ selectional preferences / restrictions & selekční preference / restrikce \\
+ semantic dependencies & sémantické závislosti \\
+ semantic roles & sémantické role \\
+ senses and relations & významy a vztahy \\
+ signs & znaky \\
+ source & zdroj \\
+ state & stav \\
+ stimulus & stimul \\
+ subject & podmět (subjekt) \\
+ subjunctive & konjunktiv \\
+ theme & téma \\
+ time & čas \\
+ transitive middle & tranzitivní medium \\
+ transitive passive & tranzitivní pasivum \\
+ vagueness & vágnost \\
+ voice & slovesný rod \\
+ word & slovo \\
+ \end{longtable}
+
 
 \end{document}
 
@@ -1093,5 +1196,3 @@ not strongly grammaticalized.
 %%% TeX-PDF-mode: t
 %%% TeX-engine: xetex
 %%% End: 
-
-REDH

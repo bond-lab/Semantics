@@ -3,7 +3,10 @@
 \documentclass[a4paper,landscape,headrule,footrule,xetex]{foils}
 
 \input{headx.tex}
+\newcommand{\zh}{\cmn}
+\newcommand{\zsm}{\cmn}
 \usepackage{forest}
+
 \begin{document}
 \header{Lecture 2}{Word meaning and close reading}{}
 \maketitle
@@ -20,6 +23,7 @@
   \item Translations/paraphrases
   \item Semantic Relations
   \item Components
+  \item Derivational Relations
   \item Word Embeddings
   \end{itemize}
 \item Wordnet
@@ -79,6 +83,7 @@ How many different meanings?\task
 \item Translations/paraphrases
 \item Semantic Relations
 \item Components
+\item Derivational Relations
 \item Word Embeddings
 \end{itemize}
 
@@ -209,20 +214,20 @@ Not to be confused with \eng{\ul{left} hand} and \eng{the \ul{leaves} fell}, \ld
     had \ul{left} was enough for all our wants}?\task
 \end{itemize}
 
-\myslide{Paraphrase cues}
+% \myslide{Paraphrase cues}
 
-\begin{itemize}
-\item \lex{that is to say}
-  \begin{itemize}
-  \item  \eng{I met him that night, and he called next day to ask if we had got home all safe, and after that we met him - that is to say, Mr Holmes, I met him twice for walks, \ldots} IDEN
-  \item \eng{In three days, that is to say on Monday next  \ldots} FINA
-  \end{itemize}
-\item \lex{in other words}
-  \begin{itemize}
-  \item \eng{\ldots there is a possibility that these initials are those of the second person who was present - in other words, of the murderer. \ldots} BLAC
-  \item \eng{\ldots when they closed their League offices that was a sign that they cared no longer about Mr. Jabez Wilson's presence; in other words, that they had completed their tunnel.} REDH
-  \end{itemize}
-\end{itemize}
+% \begin{itemize}
+% \item \lex{that is to say}
+%   \begin{itemize}
+%   \item  \eng{I met him that night, and he called next day to ask if we had got home all safe, and after that we met him - that is to say, Mr Holmes, I met him twice for walks, \ldots} IDEN
+%   \item \eng{In three days, that is to say on Monday next  \ldots} FINA
+%   \end{itemize}
+% \item \lex{in other words}
+%   \begin{itemize}
+%   \item \eng{\ldots there is a possibility that these initials are those of the second person who was present - in other words, of the murderer. \ldots} BLAC
+%   \item \eng{\ldots when they closed their League offices that was a sign that they cared no longer about Mr. Jabez Wilson's presence; in other words, that they had completed their tunnel.} REDH
+%   \end{itemize}
+% \end{itemize}
 
 
 \myslide{Lexical Semantics}
@@ -786,6 +791,59 @@ These are great for many sub-systems of language, but it is hard to make compone
 
 %%% FIXME inheritance
 
+\myslide{Derivational Relations}
+
+\begin{itemize}
+\item There are also relations between meanings with different parts of speech
+  \\ Here we say one word is derived from the other
+\item Normally these have some morphological component
+  \begin{itemize}
+  \item \lex{beauty} (n) --- \lex{beautiful} (adj) --- \lex{beautifully} (adv) --- \lex{beautify} (verb)
+  \item \lex{decision} (n) — \lex{decide} (v) — \lex{decisive} (adj) — \lex{decisively} (adv)
+  \item \lex{drive} (v) — \lex{driver} (n) — \lex{drivable} (adj)
+  \item \lex{creation} (n) — \lex{create} (v) — \lex{creative} (adj) — \lex{creatively} (adv)   \item \eng{Sandy \ul{cut} their hand} --- \eng{Sandy has a \ul{cut} on their hand}
+  \end{itemize}
+\end{itemize}
+
+\myslide{Agentive Nouns}
+\MyLogo{}
+\begin{itemize}
+\item An \txx{agentive noun} is a word that is typically derived from
+  another word denoting an action, and that identifies an entity that
+  does that action.  \\ \textbf{verb} + \lex{-er, -or, -ant}
+  \begin{exe}
+    \ex \lex{murderer, commentator, whaler, director, computer}
+    \ex ?? \lex{undertaker, cooker, footballer} (Saeed also includes these)
+  \end{exe}
+\item Should \lex{murderer} be listed separately from \lex{murder} in
+the dictionary? Why or why not?
+\item Also \txx{recipient noun}s that show the undergoer:
+  \textbf{verb} + \lex{-ee}: \lex{employee}, \lex{trustee}
+\end{itemize}
+
+\myslide{Agentive Nouns in Other Languages}
+\MyLogo{Thanks to Yeo Jia Qi (Malay)}
+
+\begin{itemize}
+\item Japanese (suffix distinguishes person/machine)
+  \begin{itemize}
+  \item \zh{運転する} → \zh{運転者} \jpn[driver]{unten-sha}
+  \item \zh{計算する} → \zh{計算者} \zh{計算機} \jpn[computer]{keisan-sha/ki}
+  \item \zh{研究する} → \zh{研究者} \zh{研究員} \jpn[researcher]{kenkyuu-sha/in}
+  \item \zh{読む} → \zh{読み手} \zh{読者} \jpn[reader]{yomite/dokusha}
+  \end{itemize}
+\item Malay (prefix can convert any part  of speech)
+  \begin{itemize}
+  \item \zsm[help]{bantu (v)} → \zsm[assistant/helper]{pembantu} 
+  \item \zsm[cut]{potong (v)} → \zsm[cutter (human/machine)]{pemotong}
+  \item \zsm[fly]{terbang (v)} → \zsm[pilot (not passenger)]{penerbang}
+  %\item \zsm[scissors]{gunting (n)} → \zsm[(editor +human)]{penyunting}
+  \end{itemize}
+
+\end{itemize}
+
+
+
 \myslide{Word Embeddings}
 \MyLogo{Slides based on \href{https://www.shanelynn.ie/get-busy-with-word-embeddings-introduction/}{An introduction to word embeddings for text analysis} by Shane Lynn (2017)}
 
@@ -1033,45 +1091,15 @@ We can do arithmetic on the vectors
  \draw[dashed] (d1) to  [out=-45, in=-135]  node[yshift=-1ex]{instrument} (d11);
  \draw[double] (d2) to  [out=-45, in=-135]  node[yshift=-1ex]{agent} (d21);
  ]
- \end{forest}
- % [object [artifact [equipment [golf-club [driver,name=d1] ] ] ]
-      %  agent [person [worker [driver,name=d2] ]]]
-      %  [process
-      %  [move [propel [swing  [drive,name=d11] ]]]
-      %  [manipulate [  control [operate [drive,name=d21] ] ] ] ]
-       
-      %  [substance]
-      %  [abstract [communication [writing [code [driver ] ] ] ]]
-    %] 
- % \draw[dashed] (d1) to  [out=0, in=-180] (d11);
- % \draw[double] (d2) to [out=-75, in=110](d21);
-%\end{forest} 
-
-
-% \myslide{Word Meaning as a Graph}
-% \MyLogo{}
-% \bigskip
-% \bigskip
-% \bigskip
-% \includegraphics[height=0.75\textheight]{pics/Semantic_Net.eps}
-
-% \begin{itemize}
-% \item You need a very big graph to capture all meanings
-% \end{itemize}
-
-
+\end{forest}
 
 \myslide{Wordnet in this course}
 
 
 \begin{itemize}
-\item We will use wordnet to test our skills in determining word meaning
-  \begin{itemize}
-  \item tag a short text from this year's story or stories
-  \item discuss differences with other annotators
- \end{itemize}
+\item We will use wordnet to develop skills in determining word meaning
 \item As well as a source of examples and inspiration
-\item  my students have used wordnets for:
+\item   My students have used wordnets for:
   \begin{itemize}
   \item  Japanese derivational
 relations \citep{Bond:Wei:2019}
@@ -1085,6 +1113,7 @@ relations \citep{Bond:Wei:2019}
 \item multilingual crosswords \citep{Tan:2012}
 \item [\ldots]
 \end{itemize}
+\item If you are interested in working with wordnets, let me know
 \end{itemize}
 \section{Word Sense Disambiguation \\ for Close Reading}
 
@@ -1184,7 +1213,7 @@ This is difficult for many reasons
       \\ \eng{Does that go}  ``Female deer which go'' ``Is it the case that is goes?''
       \\ \eng{The speckled band} ``the band that is speckled'' ``the band that someone speckled''
     \item Or the sentence boundaries
-    \item Or the words boundaries
+    \item Or the word boundaries
     \end{itemize}
         \end{itemize}
   \item People use language idiosyncratically 
@@ -1250,7 +1279,7 @@ This is difficult for many reasons
 
 \begin{itemize}
 \item We learned a little about word meaning, wordnet, close reading and your assignment
-\item This is covered in more detail in \citet[Chapter 3]{Saeed:2015}
+\item Word meaning is covered in more detail in \citet[Chapter~3]{Saeed:2015}  and \citet[Chapter~6 and~7]{Kroeger:2022}
 \end{itemize}
 
 
@@ -1264,9 +1293,8 @@ This is difficult for many reasons
   \item Steven Bird, Ewan Klein, and Edward Loper (2009) 
      \textit{Natural Language Processing with Python}, O'Reilly Media
     \\ \url{www.nltk.org/book}
-\end{itemize}
-%\item Problems  partially based on exercises from Saeed (2003)
-\item Video: Dead parrot sketch by Monty Python
+  \end{itemize}
+\item Embedding slides based on \href{https://www.shanelynn.ie/get-busy-with-word-embeddings-introduction/}{An introduction to word embeddings for text analysis} by Shane Lynn (2017)
 \end{itemize}
 
 
@@ -1282,11 +1310,56 @@ This is difficult for many reasons
 \bibliographystyle{aclnat}
 \bibliography{abb,mtg,nlp,ling}
 
-
-
+\myslide{Glossary of Key Terms (English--Czech)}
+\begin{longtable}{ll}
+  English & Česky \\\hline \endhead
+agentive noun & agentní podstatné jméno \\
+antagonism & antagonismus \\
+antonymy & antonymie (včetně stupňovatelnosti) \\
+conditions & podmínky \\
+connotation & konotace \\
+contrasting & kontrastní \\
+converses & opak \\
+denotation & denotace \\
+domain & doména \\
+element–substance & prvek–látka \\
+entailment & implikace \\
+generic & obecný \\
+holonymy & holonymie \\
+homographs & homografy \\
+homonyms & homonyma \\
+homophones & homofony \\
+hypernymy & hyperonymie \\
+hyponymy & hyponymie \\
+incompatibility & nekompatibilita \\
+intrinsic & vnitřní / vlastní \\
+member–collection & člen–kolekce \\
+meronymy & meronymie \\
+monosemy & monosémie \\
+overextending & nadměrné rozšíření významu \\
+underextending & nedostatečné rozšíření významu \\
+paraphrase & parafráze \\
+pejorative & pejorativní \\
+polysemy & polysémie \\
+portion–mass & část–množství \\
+primitives & prvky / primitiva \\
+propositional synonymy & propozicionální synonymie \\
+recipient noun & recipientní podstatné jméno \\
+reference & reference \\
+relevant & relevantní \\
+reverse & reverzní \\
+semantic components & sémantické komponenty \\
+semantic similarity & sémantická podobnost \\
+sense & význam \\
+synonymy & synonymie \\
+taxonomic sisters & taxonomické sestry \\
+translation & překlad \\
+zeugma & zeugma \\
+\end{longtable}
 
 
 \end{document}
+
 
 %%% Local Variables: 
 %%% coding: utf-8
