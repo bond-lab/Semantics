@@ -1,0 +1,163 @@
+\section{Wordnet}
+
+\begin{frame}{WordNet}
+
+\MyLogo{\citet{Miller:1998:foreword,_Fellbaum:1998}}
+
+\begin{itemize}
+\item WordNet is an open-source electronic lexical database of English,
+  developed at Princeton University
+  \begin{quote}
+    \url{http://wordnet.princeton.edu/}
+  \end{quote}
+\item Made up of four separate semantic nets, for each of nouns, verbs,
+  adjectives and adverbs
+\item WordNets exist for many languages, my group has worked on:
+  \begin{itemize}
+  \item Japanese 
+  \item Bahasa Malay/Indonesian
+  \item Chinese (Mandarin and Cantonese)
+  \item The shared open multi-lingual wordnet (150+ languages) 
+    \\ \url{https://omwn.org/}
+  \item Kristang
+  \item Myanmar
+  \item Czech
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Wordnet Structure}
+\begin{itemize}
+\item Lexical items are categorised into $\sim$115K (and counting) glossed \textbf{synsets} (= synonym sets)
+
+%   \begin{quote}\smaller[2]
+% \begin{verbatim}
+% 1. enrichment -- (act of making fuller or more 
+%    meaningful or rewarding)
+% 2. enrichment -- (a gift that significantly increases 
+%    the recipient's wealth)
+% \end{verbatim}
+%   \end{quote}
+\item Lexical relations at either the synset level or sense (=
+  combination of lexical item and synset) level 
+\item Strongly lexicalist (originally):
+  \begin{itemize}
+  \item synsets only where words exist
+  \item but many multiword expressions ($\approx 50\%$)
+%  \item (near) absence of frame semantics
+  \end{itemize}
+
+% \newpage
+
+% \item Other quirks/properties:
+%   \begin{itemize}
+%   \item 25 \textbf{unique beginners} in noun semantic net
+%   \item taxonomic vs.\ functional hyponymy (cf.\ \eng{chicken} vs.\
+%     \eng{bird/food})
+%   \item few proper nouns and no separate classification for proper nouns
+%   \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Psycholinguistic Foundations of WordNet}
+
+\MyLogo{}
+
+\begin{itemize}
+\item Strong foundation on hypo/hypernymy (lexical inheritance) based on
+  \begin{itemize}
+  \item   response times to sentences such as:
+    \begin{quote}%\smaller
+      \eng{a canary \{can sing/fly,has skin\}}\\
+      \eng{a bird \{can sing/fly,has skin\}}\\
+      \eng{an animal \{can sing/fly,has skin\}}
+    \end{quote}
+  \item analysis of anaphora:
+    \begin{quote}%\smaller
+      \eng{I gave Kim a novel but the \{book,?product,...\}
+        bored her}\\
+      \eng{Kim got a new car. It has shiny \{wheels,?wheel nuts,...\}}
+    \end{quote}
+  \item selectional restrictions
+  \end{itemize}
+\item Is now often used to calculate \txx{semantic similarity}
+  \begin{itemize}
+  \item The shorter the path between two synsets the more similar they are
+  \item Or the shorter the path to the nearest shared hypernym, \ldots
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Word Meaning as a Graph}
+\MyLogo{It ends up being a very big graph}
+%\includegraphics[height=0.75\textheight]{img/Semantic_Net.eps}
+ \begin{forest}
+   [entity
+   [object [artifact [equipment [golf-club [driver,name=d1] ] ] ]
+           [agent [person [worker [driver,name=d2] ]]] ]
+           [process
+       [move [propel [swing  [drive,name=d11] ]]]
+       [manipulate [  control [operate [drive,name=d21] ] ] ] ]
+        [substance]
+       [abstract [communication [writing [code [driver ] ] ] ]]
+    ] 
+ \draw[dashed] (d1) to  [out=-45, in=-135]  node[yshift=-1ex]{instrument} (d11);
+ \draw[double] (d2) to  [out=-45, in=-135]  node[yshift=-1ex]{agent} (d21);
+ ]
+ \end{forest}
+ % [object [artifact [equipment [golf-club [driver,name=d1] ] ] ]
+      %  agent [person [worker [driver,name=d2] ]]]
+      %  [process
+      %  [move [propel [swing  [drive,name=d11] ]]]
+      %  [manipulate [  control [operate [drive,name=d21] ] ] ] ]
+       
+      %  [substance]
+      %  [abstract [communication [writing [code [driver ] ] ] ]]
+    %] 
+ % \draw[dashed] (d1) to  [out=0, in=-180] (d11);
+ % \draw[double] (d2) to [out=-75, in=110](d21);
+%\end{forest} 
+
+\end{frame}
+
+% \begin{frame}{Word Meaning as a Graph}
+% \MyLogo{}
+% \bigskip
+% \bigskip
+% \bigskip
+% \includegraphics[height=0.75\textheight]{img/Semantic_Net.eps}
+
+% \begin{itemize}
+% \item You need a very big graph to capture all meanings
+% \end{itemize}
+
+%\end{frame}
+
+
+\begin{frame}{Wordnet in this course}
+%%% FIXME inheritance
+
+\begin{itemize}
+\item We will use wordnet to test our skills in determining word meaning
+  \begin{itemize}
+  \item tag a short text from this year's story or stories
+  \item discuss differences with other annotators
+ \end{itemize}
+\item As well as a source of examples and inspiration
+\item  my students have used wordnets for:
+  \begin{itemize}
+  \item  Japanese derivational
+relations \citep{Bond:Wei:2019}
+\item  pronoun representation for Japanese, Mandarin and English
+  \citep{Seah:Bond:2014}
+\item exclamatives and classifiers
+\citep{Mok:Gao:Bond:2012,daCosta:Bond:2016}
+\item  sentiment analysis
+  \citep{Le:Moeljadi:Miura:Ohkuma:2016,Bond:Janz:Piasecki:2019}
+\item cross-lingual sense annotation \citep{Bonansinga:Bond:2016}
+\item multilingual crosswords \citep{Tan:2012}
+\item [\ldots]
+\end{itemize}
+\end{itemize}
+\end{frame}

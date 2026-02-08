@@ -1,0 +1,247 @@
+
+\subsection{Language is under-specified}
+
+\begin{frame}{Language is normally under-specified}
+\MyLogo{There are many meanings}
+\begin{center}
+\large We get \txx{words}: \\[2ex]
+    \Large \eng{I saw a kid with a cat.} \\[3ex]
+We want \emp{meaning}:
+\\  \includegraphics[width=0.3\textwidth]{img/1.png}
+
+\end{center}
+
+
+\end{frame}
+
+\begin{frame}{I saw a kid with a cat$_1$}
+\MyLogo{Thanks to Eddy and Zina Pozen for the pictures}
+
+\begin{tabular}{ll}
+
+  \includegraphics[width=0.45\textwidth]{img/1.png}
+&
+  \begin{minipage}{0.45\textwidth}
+    \vspace*{-8ex}\scriptsize
+  \begin{forest}
+  for tree={
+    s sep=6pt,
+    l sep=10pt,
+    align=center,
+  }
+  [S
+    [NP [\emph{I}]]
+    [VP
+      [V:see [\emph{saw}]]
+      [NP
+      [DET [\emph{a}]]
+      [N'
+        [N   [\emph{kid}]]
+        [PP:together [\emph{with a cat}]]]
+      ]
+    ]
+  ]
+\end{forest}  
+\\[3ex]
+ \small \iz{see(I, kid: \textsc{past});  with(kid, cat)}
+\\[1ex] \iz{see $\subset$ perceive}
+\\ \iz{kid $\sim$ child}
+\\ \iz{with $\subset$ together}
+\end{minipage}
+
+\end{tabular}
+\end{frame}
+
+\begin{frame}{I saw a kid with a cat$_2$}
+\MyLogo{}
+\hspace{-3em}\begin{tabular}{ll}
+  \includegraphics[width=0.5\textwidth]{img/2.png}
+&
+  \begin{minipage}{0.45\textwidth}
+    \vspace*{-10ex}\scriptsize
+\begin{forest}
+  for tree={s sep=6pt,l sep=10pt,align=center}
+  [S
+    [NP [\emph{I}]]
+    [VP
+      [V:see [\emph{saw}]]
+      [NP
+        [DET [\emph{a}]]
+        [N   [\emph{kid}]]
+      ]
+      [PP:together [\emph{with a cat}]]
+    ]
+  ]
+\end{forest}
+\\[3ex]
+ \small 
+ \iz{see(I, kid: \textsc{past}) with(I, cat)}
+\\[1ex] \iz{see $\subset$ perceive}
+\\ \iz{kid $\sim$ child}
+\\ \iz{with $\subset$ together}
+\end{minipage}
+\end{tabular}
+
+
+\end{frame}
+
+\begin{frame}{I saw a kid with a cat$_3$}
+\hspace{-3em}\begin{tabular}{ll}
+  \includegraphics[width=0.5\textwidth]{img/3.png}
+
+&
+  \begin{minipage}{0.45\textwidth}
+    \vspace*{-20ex}
+\begin{scriptsize}
+\begin{forest}
+  for tree={s sep=6pt,l sep=10pt,align=center}
+  [S
+    [NP [\emph{I}]]
+    [VP
+      [V:saw [\emph{saw}]]
+      [NP
+      [DET [\emph{a}]]
+      [N'
+        [N   [\emph{kid}]]
+        [PP:together [\emph{with a cat}]]]
+      ]
+    ]
+  ]
+\end{forest}
+\end{scriptsize}
+\\[3ex]
+ \small 
+\iz{saw(I, kid: \textsc{pres});  with(kid, cat)}
+\\[1ex] \iz{saw $\subset$ cut}
+\\ \iz{kid $\sim$ child}
+\\ \iz{with $\subset$ together}
+\end{minipage}
+\end{tabular}
+
+\end{frame}
+
+\begin{frame}{I saw a kid with a cat$_4$}
+\hspace{-3em}\begin{tabular}{ll}
+  \includegraphics[width=0.5\textwidth]{img/4.png}
+&
+  \begin{minipage}{0.45\textwidth}
+    \vspace*{-20ex}
+\begin{scriptsize}
+ \begin{forest}
+   for tree={s sep=6pt,l sep=10pt,align=center}
+   [S
+     [NP [\emph{I}]]
+     [VP
+       [V:saw [\emph{saw}]]
+       [NP
+          [DET [\emph{a}]]
+          [N:goat   [\emph{kid}]]
+       ]
+       [PP:instrument [\emph{with a cat}]]
+     ]
+   ]
+ \end{forest}
+\end{scriptsize}
+\\[3ex]
+ \small 
+\iz{saw(I, kid: \textsc{present}) with(I, cat)}
+\\[1ex] \iz{saw $\subset$ cut}
+\\ \iz{kid $\sim$ young goat}
+\\ \iz{with $\subset$ together}
+\end{minipage}
+\end{tabular}
+
+\end{frame}
+
+\begin{frame}{I saw a kid with a cat$_5$}
+\hspace{-3em}\begin{tabular}{ll}
+  \includegraphics[width=0.5\textwidth]{img/5.png}
+&
+  \begin{minipage}{0.45\textwidth}
+    \vspace*{-20ex}\scriptsize
+\begin{forest}
+  for tree={s sep=6pt,l sep=10pt,align=center}
+  [S
+    [NP [\emph{I}]]
+    [VP
+      [V:see [\emph{saw}]]
+      [NP
+        [DET [\emph{a}]]
+        [N   [\emph{kid}]]
+      ]
+      [PP:instrument [\emph{with a cat}]]
+    ]
+  ]
+\end{forest}
+ \small 
+ \iz{see(I, kid: \textsc{past}) with(I, cat) }
+\\[1ex] \iz{see $\subset$ perceive}
+\\ \iz{kid $\sim$ child}
+\\ \iz{with $\subset$ instrumental}
+ \end{minipage}
+\end{tabular}
+
+\end{frame}
+
+% \begin{frame}{People are good at understanding}
+% \MyLogo{We do this too}
+% \begin{itemize}
+% \item The words only hint at the meaning
+% \item Many words can mean more than one thing (\blu{ambiguity})
+% \item How can we \blu{model} and \blu{resolve} ambiguity?
+% \item Look at the text and try to annotate the meaning
+%   \begin{center}
+%     Very hard work
+%   \end{center}
+% %   \begin{itemize}
+% %   \item Deduce implicit models
+% %     \begin{itemize}
+% %     \item bag of words, $n$-gram chunks, \ldots
+% %     \end{itemize}
+% %   \item Define explicit models
+% %     \begin{itemize}
+% %     \item Grammars, lexicons and thesauri
+% %     \end{itemize}
+% %   \end{itemize}
+% %\item Then build statistical language models (machine learning)
+% \end{itemize}
+%\end{frame}
+
+\begin{frame}[allowframebreaks]{We can also use translations}
+%\MyLogo{Work smarter}
+%\addtocounter{exx}{-13}
+\begin{exe}
+  \ex \glll 我 看到了 一个 抱着 猫 的 孩子 \\
+  wǒ   kàndàole    yīgè   bàozhe  māo  de    háizi. \\
+  I saw one holding cat 's child \\
+  \trans I did see a child holding a cat
+
+  \ex \glll 我 抱着 猫 看到了 一个 孩子 \\
+  wǒ  bàozhe māo kàndàole  yīgè     háizi \\
+  I holding cat saw one  child \\
+ \trans I holding a cat did see a child
+%鋸锯
+  \ex \glll 我 鋸  一个 孩子 和 他/她 的 猫 \\
+wǒ jù  yīgè    háizi  hé  tā/tā   de māo \\
+%wo3 ju4  yi1ge4    háizi  he2  ta1ta1   de ma1o\\
+ I      saw    one    child   and     he/she  's cat\\
+ \trans I saw  (cut with a saw) a child and their cat 
+
+  \ex \glll 我 和 一只 猫 鋸 一只 小 山羊 \\
+wǒ hē  yīzhǐ  māo jù yīzhǐ xiǎo  shānyáng  \\
+%wo3 he1  yi1zhi3  ma1o ju4 yi1zhi3 xia3o  sha1nya2ng    \\
+I and one cat saw (cut with a saw) one small goat \\
+
+\trans I and a cat saw a young goat
+  \ex \glll 我 用 一只 猫 看到了 一个 孩子 \\
+wǒ yòng yīzhǐ  māo kàndàole  yīgè  háizi \\
+I use one cat saw one child \\
+\trans Using a cat, I did see a child
+\end{exe}
+
+\bigskip
+\begin{taskb}{Paraphrase} 
+  Try to paraphrase --- reword in English or translate to another language
+  \\ aim to be unambiguous, even if slightly disfluent
+\end{taskb}
+\end{frame}

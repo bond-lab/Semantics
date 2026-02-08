@@ -1,0 +1,144 @@
+\section{Componential Analysis}
+
+
+\begin{frame}{Break word meaning into its components}
+\MyLogo{Inspired by work on phonetics in the Prague School}
+\begin{itemize}
+\item For example:
+  \\[2ex] \begin{tabular}{lllll}
+    \lex{woman} & \cmp{female} & \cmp{adult} & \cmp{human} & \\
+    \lex{spinster} & \cmp{female} & \cmp{adult} & \cmp{human} & \cmp{unmarried} \\
+    \lex{man} & \cmp{male} & \cmp{adult} & \cmp{human} & \\
+    \lex{bachelor} & \cmp{male} & \cmp{adult} & \cmp{human} & \cmp{unmarried} \\
+    \lex{wife} & \cmp{female} & \cmp{adult} & \cmp{human} & \cmp{married} \\
+    \lex{girl} & \cmp{female} & \cmp{child} & \cmp{human} & \\
+    \lex{boy} & \cmp{male} & \cmp{child} & \cmp{human} & \\
+  \end{tabular}
+  \\[2ex] \txx{semantic components}/\txx{primitives} shown as \cmp{component}
+  \begin{itemize}
+  \item components allow a compact description
+  \item interact with morphology/syntax
+  \item form part of our cognitive architecture
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Defining Relations using Components}
+
+\begin{itemize}
+\item \txx{hyponymy}
+  \begin{quote}
+    A lexical item P is a hyponym of Q if all the components of Q are also in P.
+  \end{quote}
+  \begin{tabular}{lllll}
+    \lex{woman} & \cmp{female} & \cmp{adult} & \cmp{human} & \\
+    \lex{spinster} & \cmp{female} & \cmp{adult} & \cmp{human} & \cmp{unmarried} \\
+%    \lex{bachelor} & \cmp{male} & \cmp{adult} & \cmp{human} & \cmp{unmarried} \\
+    \lex{wife} & \cmp{female} & \cmp{adult} & \cmp{human} & \cmp{married} \\
+  \end{tabular}
+\\[2ex]  \lex{spinster} $\subset$ \lex{woman}; \lex{wife} $\subset$ \lex{woman}
+\item \txx{incompatibility}
+  \begin{quote}
+    A lexical item P is incompatible with Q if they share some
+    components but differ in one or more \txx{contrasting} components
+  \end{quote}
+%   \begin{tabular}{lllll}
+% %    \lex{woman} & \cmp{female} & \cmp{adult} & \cmp{human} & \\
+%     \lex{spinster} & \cmp{female} & \cmp{adult} & \cmp{human} & \cmp{unmarried} \\
+% %    \lex{bachelor} & \cmp{male} & \cmp{adult} & \cmp{human} & \cmp{unmarried} \\
+%     \lex{wife} & \cmp{female} & \cmp{adult} & \cmp{human} & \cmp{married} \\
+%   \end{tabular}
+  \lex{spinster} $\not\approx$ \lex{wife}
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Binary Features}
+
+\begin{itemize}
+\item We can make things more economical (fewer components):
+  \\[2ex] \begin{tabular}{lllll}
+    \lex{woman} & \cmp{+female} & \cmp{+adult} & \cmp{+human} & \\
+    \lex{spinster} & \cmp{+female} & \cmp{+adult} & \cmp{+human} & \cmp{--married} \\
+    \lex{bachelor} & \cmp{--female} & \cmp{+adult} & \cmp{+human} & \cmp{--married} \\
+    \lex{wife} & \cmp{+female} & \cmp{+adult} & \cmp{+human} & \cmp{+married} \\
+    \lex{girl} & \cmp{+female} & \cmp{-adult} & \cmp{+human} & \\
+  \end{tabular}
+  \begin{itemize}
+  \item Which should be $+$? \cmp{+female} or \cmp{--male}
+  \item Presumably also \cmp{--electric}, \cmp{--conical}, \ldots
+    \\ Only show \txx{relevant} features
+  \item \txx{antonyms} differ in only one binary component
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Redundancy Rules}
+
+\begin{itemize}
+\item We can add relations between components:
+\\[2ex]  \begin{tabular}{llll}
+     \cmp{+human} & \into & \cmp{+animate}  \\
+     \cmp{+adult} & \into & \cmp{+animate}  \\
+     \cmp{+animate} & \into & \cmp{+concrete}  \\
+     \cmp{+married} & \into & \cmp{+adult}  \\
+     \cmp{+married} & \into & \cmp{+human}   & \ldots
+  \end{tabular}
+\item Which allows us to write:
+  \\[2ex] \begin{tabular}{lllll}
+    \lex{woman} & \cmp{+female} & \cmp{+adult} & \cmp{+human} & \\
+    \lex{spinster} & \cmp{+female} & \cmp{+adult} & \cmp{+human} & \cmp{--married} \\
+    \lex{bachelor} & \cmp{--female} & \cmp{+adult} & \cmp{+human} & \cmp{--married} \\
+    \lex{wife} & \cmp{+female} & &   & \cmp{+married} 
+  \end{tabular}
+  \\[2ex] Can we say  \cmp{--married}  \into\  \cmp{+human}?
+\end{itemize} 
+\end{frame}
+
+\begin{frame}{More Complex Breakdowns}
+
+\begin{itemize}
+\item We can add relations between components:
+\\[2ex]  \begin{tabular}{llll}
+     \cmp{+father} & \into & \cmp{+male} \cmp{+parent}  \\
+     \cmp{+father}(\ul{x},y) & \into & \cmp{+male}(x) \cmp{+parent}(x,y) \\
+     \cmp{+son}(\ul{x},y) & \into & \cmp{+male}(x) \cmp{+parent}(y,x) \\
+     \cmp{+brother}(\ul{x},y) & \into & \cmp{+male}(x) 
+     \cmp{+parent}(z,x) \cmp{+parent}(z,y) \\
+     \cmp{+grandfather}(\ul{x},y) & \into & \cmp{+male}(x) 
+     \cmp{+parent}(x,z)  \cmp{+parent}(z,y) \\
+  \end{tabular}
+\item Assume \cmp{+parent}(x,y)  means ``x is the parent of y''
+\item There are various ways you can formalize such relationships
+  \begin{itemize}
+  \item Many parts of language can be formalized in such a way
+  % \item We did this for demonstratives
+  %   \\ \lex{this, that, these, those, what, here, there, where}\task
+  \end{itemize}
+\end{itemize}
+
+
+These are great for many sub-systems of language, but it is hard to make components for everything, \ldots
+
+
+\end{frame}
+
+\begin{frame}{Word Embeddings}
+\MyLogo{Slides based on \href{https://www.shanelynn.ie/get-busy-with-word-embeddings-introduction/}{An introduction to word embeddings for text analysis} by Shane Lynn (2017)}
+
+
+\begin{itemize}
+\item Represent words as a vector of numbers (instead of a set of components)
+\item Every word has a unique word embedding (or “vector”), which is
+  just a list of numbers for each word.  
+\item Embeddings start being useful from 50-500 dimensions
+  \\ LLMs typically are much larger
+\item The embedding captures the  “meaning” of the word. 
+\item  Similar words end up with similar embedding values
+\item Context based word embeddings give a different vector depending
+  on the context 
+
+\end{itemize}
+
+More later, \ldots
+\end{frame}

@@ -1,4 +1,4 @@
-## local stuff (marks and such)x
+## local stuff (marks and such)
 202*
 
 
@@ -12,10 +12,11 @@ slides/*.fls
 slides/*.log
 slides/*.out
 slides/*.pdf
-*~
-*/*~
-*/*/*~
 
+# Emacs temporary / lock files
+*~          # backup files
+\#*\#       # auto-save files: #foo#
+.#*         # lock files: .#foo
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
@@ -30,6 +31,8 @@ slides/*.pdf
 *.cb
 *.cb2
 .*.lb
+*.nav
+*.snm
 
 ## Intermediate documents:
 *.dvi

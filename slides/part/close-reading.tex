@@ -1,0 +1,140 @@
+
+\section{Word Sense Disambiguation and Close Reading}
+
+\begin{frame}{Close Reading}
+\MyLogo{The idea comes from the study of poetry and is part of the
+  school of \textit{New Criticism}  \citep[e.g.,][]{Brooks:Warre:1938,Brooks:Warre:1943}}
+
+\begin{itemize}
+\item Reading (and often re-reading) a text to uncover multiple
+  aspects of meaning that lead you to understand a text better
+\item Looking at what the text actually says, as well as the
+  inferences you make from reading it
+\item After a close reading you should be able to support your
+  conclusions with specific examples from the text
+\item You can consider many aspects of the text, such as
+  \begin{itemize}
+  \item The Title
+  \item Word Choice
+  \item The Tone and Style
+  \item Discerning Patterns
+    % Does an image here remind you of an image elsewhere in the book? Where? What's the connection?
+    % How might this image fit into the pattern of the book as a whole?
+    % Could this passage symbolize the entire work? Could this passage serve as a microcosm--a little picture--of what's taking place in the whole work?
+    % What is the sentence rhythm like? Short and choppy? Long and flowing? Does it build on itself or stay at an even pace? What is the style like?
+    % Look at the punctuation. Is there anything unusual about it?
+    % Is there any repetition within the passage? What is the effect of that repetition?
+    % How many types of writing are in the passage? (For example, narration, description, argument, dialogue, rhymed or alliterative poetry, etc.)
+    % Can you identify paradoxes in the author's thought or subject?
+    % What is left out or kept silent? What would you expect the author to talk about that the author avoided?
+  \item  Point of View and Characterization
+  \item Symbolism
+
+    % How does the passage make us react or think about any characters or events within the narrative?
+    % Are there colors, sounds, physical description that appeals to the senses? Does this imagery form a pattern? Why might the author have chosen that color, sound or physical description?
+    % Who speaks in the passage? To whom does he or she speak? Does the narrator have a limited or partial point of view? Or does the narrator appear to be omniscient, and he knows things the characters couldn't possibly know? (For example, omniscient narrators might mention future historical events, events taking place "off stage," the thoughts and feelings of multiple characters, and so on).
+  \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Word Choice and Diction}
+\MyLogo{We will focus on this}
+
+\begin{itemize}
+\item What word(s) stand out? Why? (typically vivid words, unusual choices, or a contrast to what a reader expects)
+\item How do particular words get us to look at characters or events in a particular way? Do they evoke an emotion?
+\item Did the author use nonstandard language or words in another language? Why? What is the effect?
+\item Are there any words that could have more than one meaning? Why might the author have played with language in this way?
+\item Do some words have extra connotations?
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Word Sense Disambiguation}
+
+\begin{itemize}
+\item Knowing what individual words mean is the first step towards understanding
+\item We will try to identify the \txx{sense} of words
+  \begin{itemize}
+  \item We use \href{https://wordnet.princeton.edu/}{Wordnet} \citep{_Fellbaum:1998} as the sense inventory
+    \\ because it contains semantic relations as well as definitions
+    \\ and it is accessible: there are good interfaces to it
+  \item For every word we chose the most appropriate sense in wordnet
+    \\ or write a comment if we think there isn't one
+  \item Once we have identified a sense, it is then easy to look at
+    synonyms and other closely related words
+  \item For Czech we use the Czech wordnet \citep{Pala:Smrz:2004}
+  \item Both wordnets have been extended as part of the the Natural Text Understanding --- Multilingual Corpus (\txx{ntu-mc})
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+% \begin{frame}{WSD: Example}
+
+%   \begin{taskb}
+%     Pick the correct meaning for \lex{lid}
+%   \end{taskb}
+  
+%  \eng{Sherlock Holmes had been leaning back in his chair with his
+%     eyes closed and his head sunk in a cushion, but he half opened his
+%     \ul{lids} now and glanced across at his visitor.}
+
+%   \begin{enumerate}
+%   \item \lex{hat, chapeau, lid} ``headdress that protects the head
+%     from bad weather; has shaped crown and usually a brim''
+%   \item \lex{lid, eyelid, palpebra} ``either of two folds of skin that
+%     can be moved to cover or open the eye''
+%   \item \lex{lid} ``a movable top or cover (hinged or separate) for closing the opening at the top of a box, chest, jar, pan, etc.''
+%   \end{enumerate}
+
+% \end{frame}
+
+
+\begin{frame}[allowframebreaks]{WSD: A challenging task!}
+  This is difficult for many reasons
+  \begin{itemize}
+  \item Meaning boundaries are not clear: the sense distinctions
+    impose a structure on something that is actually fuzzy
+  \item Dictionaries are imperfect
+    \begin{itemize}
+    \item senses may be missing
+    \item senses may be too fine-grained
+    \end{itemize}
+  \item Processing a text by computer is difficult
+    \begin{itemize}
+    \item The computer may have misinterpreted
+      \begin{itemize}
+      \item the part-of-speech
+        \\ \eng{Does that go}  ``Female deer which go'' ``Is it the case that is goes?''
+        \\ \eng{The speckled band} ``the band that is speckled'' ``the band that someone speckled''
+      \item Or the sentence boundaries
+      \item Or the words boundaries
+      \end{itemize}
+    \end{itemize}
+  \item People use language idiosyncratically 
+    \begin{itemize}
+    \item extending meanings metaphorically
+    \item sometimes so strangely that we might even say wrongly
+    \end{itemize}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}{WSD:  not impossible}
+  \begin{itemize}
+  \item Typically people agree around 72.5\% of the time \citep{Snyder:Palmer:2004}.
+    \begin{itemize}
+    \item  Verbs are hardest (67.8\%), then nouns (74.9\%) and adjectives (78.5\%)
+    \item Disagreements tend to cluster around a relatively small group of difficult words.
+    \item For example \lex{national}
+      \begin{itemize}
+      \item In six out of seven instances one annotator chose
+        ``limited to or in the interests of a particular nation'' and
+        the other annotator chose ``concerned with or applicable to or
+        belonging to an entire nation or country''
+      \item They are hard to distinguish!
+      \end{itemize}
+    \end{itemize}
+  \end{itemize}
+\end{frame}
