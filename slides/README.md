@@ -1,6 +1,7 @@
 
 ## Making tutorials
 
+link `answers.tex` to `with.tex` to get the answers,   `without.tex` for just the questions. 
 
 ## Czech glosses
 
