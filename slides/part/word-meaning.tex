@@ -1,0 +1,213 @@
+
+\section{The meanings of words}
+
+
+\begin{frame}[allowframebreaks]{Words carry different meanings: \lex{leave}}
+\MyLogo{\url{https://compling.upol.cz/ntumc/cgi-bin/showcorpus.cgi?sid_from=10000&sid_to=11000&clemma=leave}}
+\begin{description} %\addtolength{\itemsep}{0ex}
+\item[10070] \eng{Nothing was \ul{left} save a few acres of ground , and the
+  two-hundred-year-old house , which is itself crushed under a heavy
+  mortgage .}
+% leave (have left or have as a remainder) 
+\item[10079] \eng{The money which my mother had \ul{left} was enough
+  for all our wants , and there seemed to be no obstacle to our
+  happiness . "}
+%leave (leave or give by will after one's death;) 
+\item[10085] \eng{He had no friends at all save the wandering
+  gipsies , and he would give these vagabonds \ul{leave} to encamp upon
+  the few acres of bramble- covered land which represent the family
+  estate , and would accept in return the hospitality of their tents
+  , wandering away with them sometimes for weeks on end .}
+% leave (permission to do something;) 
+\item[10107] \eng{She
+  \ul{left} her room , therefore , and came into mine , where she sat for
+  some time , chatting about her approaching wedding .}
+%leave (move out of or depart from;) 
+\item [10108]\eng{At
+  eleven o'clock she rose to \ul{leave} me , but she paused at the door
+  and looked back.}
+%leave (move out of or depart from;) 
+\item[10439] \eng{" The rest you will \ul{leave} in our hands
+  . "}
+% leave (put into the care or protection of someone;) 
+\item[10449] \eng{And now , Miss Stoner , we must \ul{leave} you for if
+  Dr. Roylott returned and saw us our journey would be in vain .
+  }
+% leave (move out of or depart from;) 
+\item[10526] \eng{Then he turned down the lamp , and we were \ul{left} in darkness
+  .}
+% leave (act or be so as to become in a specified state;) 
+
+\end{description}
+
+
+How many different meanings?\task
+
+\bigskip
+From the \href{https://compling.upol.cz/ntumc/cgi-bin/showcorpus.cgi?sid_from=10000&sid_to=11000&clemma=leave}{NTU Multilingual Corpus} (\textit{Adventure of the Speckled band}, concept lemma = \eng{leave})
+\end{frame}
+
+\begin{frame}{How can we represent the differences?}
+
+\begin{itemize}
+\item Definitions
+\item Translations/paraphrases
+\item Semantic Relations
+\item Components
+\item Word Embeddings
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Semantic Representations of Words}
+
+\begin{itemize}\addtolength{\itemsep}{-1ex}
+\item Divide meaning into
+  \begin{itemize}
+  \item \txx{reference}: the relation to the world/mental space
+  \item \txx{sense}: the rest of the meaning
+    \begin{itemize}
+    \item \txx{denotation} the part that distinguishes the meaning
+      from other meanings
+    \item \txx{connotation}  cultural or emotional associations 
+    \end{itemize}
+  \end{itemize}
+\item Introduce \con{concepts} %\hfill (meaning as font-change)
+  \begin{itemize}
+  \item How can we represent concepts?
+  \item How do we learn them?
+    \begin{itemize}
+    \item Typically children start off by \txx{underextending} or \txx{overextending} concepts
+    \end{itemize}
+  \end{itemize}
+\item Example: \eng{That dog}
+  \begin{itemize}
+  \item reference --- the animal over there
+  \item sense --- canine quadruped domesticated by man
+  \item connotation --- faithful, friendly (or dirty)
+  \end{itemize}
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}{Definitional Semantics}
+
+%\MyLogo{\citet{Jackson:2002,Wilks+:1996}}
+
+  \begin{itemize}
+  \item Standard lexicographic approach to lexical semantics:
+    \begin{quote}
+      \textbf{semantics} = \eng{the \textcolor{blue}{study} of \textcolor{brown}{language meaning}}\\
+      \textbf{tailor} = \eng{a \textcolor{blue}{person} whose \textcolor{brown}{occupation is making and altering garments}}
+    \end{quote}
+  \item Definitions are conventionally made up of;
+    \begin{itemize}
+    \item \textcolor{blue}{genus}: what class the lexical item belongs to
+    \item \textcolor{brown}{differentiae}: what attributes distinguish it from
+      other members of that class
+    \end{itemize}
+    % \item ``Decoding'' vs.\ ``encoding'' dictionaries
+  \item Often hard  to understand if you don't already know the meaning!
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Definitional Semantics: pros and cons}
+  \begin{itemize}
+  \item Pros:
+  \begin{itemize}
+  \item familiarity (we are taught to use dictionaries)
+  \end{itemize}
+\item Cons:
+  \begin{itemize}
+  \item subjectivity in sense granularity (splitters vs.\ lumpers) and
+    definition specificity
+  \item circularity in definitions
+  \item consistency, reproducibility, \ldots
+  \item often focus on diachronic (historical) rather than synchronic (current) semantics 
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Entries for \lex{leave}}
+%\MyLogo{\url{https://compling.upol.cz/ntumc/cgi-bin/cgi-bin/wn-gridx.cgi?gridmode=ntumc-noedit&lang=eng&lemma=leave}}
+\begin{description}
+%  00613683-v (63)
+% V2 	leave 	     	go and leave behind, either intentionally or by neglect or forgetfulness
+\item [02015598-v] (72)
+V1, V2 	\lex{get out, go out, leave, exit} ``move out of or depart from''
+
+%01494310-v (328)
+% V2 	put, place, set, lay, position, pose, leave 	     	put into a certain place or abstract location
+\item [02356230-v] (8)
+V3 	\lex{leave, entrust} ``put into the care or protection of someone''
+% 00053097-n (2)
+% 	parting, farewell, leave, leave-taking 	     	the act of departing politely
+      \item [02009433-v] (149)
+V1 	\lex{leave, go away, go forth} ``go away from a place''
+% 15139130-n (3)
+% 	leave, leave of absence 	     	the period of time during which you are absent from work or duty
+\item[02229055-v] (7)
+V3 	\lex{leave, will, bequeath} ``leave or give by will after one's death''
+% 02383440-v (14)
+% V1, V2 	leave, depart, pull up stakes 	     	remove oneself from an association with or participation in
+% 00360092-v (5)
+% V2 	leave, leave behind 	     	be survived by after one's death
+% 02721438-v (30)
+% V2 	leave, allow for, allow, provide 	     	make a possibility or provide opportunity for; permit to be attainable or cause to remain
+% 00136991-v (27)
+% V2 	leave, leave alone, leave behind 	     	leave unchanged or undisturbed or refrain from taking
+\item [02729414-v] (56) V2 	\lex{leave} ``act or be so as to become in a specified state''
+\item [02730135-v] (5) V2 \lex{leave} ``have left or have as a remainder''
+
+% 02635659-v (89)
+% V2 	result, lead, leave 	     	have as a result or residue
+% 02296153-v (27)
+% V2, V3 	give, impart, leave, pass on 	     	transmit (knowledge or skills)
+% 00613018-v (3)
+% V2
+\item [06690114-n] (1) \lex{leave} ``permission to do something''
+\end{description}
+
+Not to be confused with \eng{\ul{left} hand} and \eng{the \ul{leaves} fell}, \ldots .
+\end{frame}
+
+\begin{frame}{Paraphrases and translation}
+
+\begin{itemize}
+\item Saying the same thing in different words
+  \begin{itemize}
+  \item Same language = \txx{paraphrase}
+  \item Different language = \txx{translation}
+  \end{itemize}
+\item We showed some paraphrases in the entries given above
+\item If you speak another language, then you can use that to
+  disambiguate may things.
+  \begin{itemize}
+  \item \lex{leave, entrust} = 預ける \jpn{azukeru}
+  \item \lex{get out, go out, leave, exit} = 去る \jpn{saru}
+  \item \lex{leave, will, bequeath} = 遺す \jpn{nokosu}
+  \end{itemize}
+  \begin{taskb}
+    Can you explain the ambiguity in \eng{The money which my mother
+    had \ul{left} was enough for all our wants}?
+  \end{taskb}
+\end{itemize}
+\end{frame}
+
+% \begin{frame}{Paraphrase cues}
+
+% \begin{itemize}
+% \item \lex{that is to say}
+%   \begin{itemize}
+%   \item  \eng{I met him that night, and he called next day to ask if we had got home all safe, and after that we met him - that is to say, Mr Holmes, I met him twice for walks, \ldots} IDEN
+%   \item \eng{In three days, that is to say on Monday next  \ldots} FINA
+%   \end{itemize}
+% \item \lex{in other words}
+%   \begin{itemize}
+%   \item \eng{\ldots there is a possibility that these initials are those of the second person who was present - in other words, of the murderer. \ldots} BLAC
+%   \item \eng{\ldots when they closed their League offices that was a sign that they cared no longer about Mr. Jabez Wilson's presence; in other words, that they had completed their tunnel.} REDH
+%   \end{itemize}
+% \end{itemize}
+
+% \end{frame}
