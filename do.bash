@@ -10,6 +10,14 @@ cd $sdir
 #     ## clean up
 #     #rm *.aux *.bbl *.blg *.log *~ *.dvi *.ps *.pdf
 # done
+for slide in `ls lexi-*.tex`
+do
+    base=`basename $slide .tex`
+    echo Processing ${base}
+    latexmk -pdf -xelatex ${base}
+    ## clean up
+    #rm *.aux *.bbl *.blg *.log *~ *.dvi *.ps *.pdf
+done
 
 for slide in `ls tut-*.tex`
 do
