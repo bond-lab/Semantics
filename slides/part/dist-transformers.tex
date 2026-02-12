@@ -1,0 +1,167 @@
+\section{Transformer Models}
+
+
+
+\begin{frame}{Generative Pre-trained Transformer (GPT) models}
+\begin{itemize}
+\item A \txx{transformer model} is a model that uses a parallel multi-head attention mechanism
+  \begin{itemize}
+  \item \txx{parallel}, in that all tokens are processed simultaneously.
+    The attention mechanism only uses information about other tokens
+    from lower layers, so it can be computed for all tokens in
+    parallel.
+  \item \txx{multi-head}, in that different attention heads can learn different relevance relations
+  \item \txx{attention}, a way for a token to interact more with relevant other tokens 
+  \end{itemize}
+\item \txx{pre-trained} means that it is trained before-hand on large data sets of unlabelled text
+\item \txx{generative}  means that it generates the next token
+\end{itemize}
+
+These do not model words, but predict the next word given a string of words --- so they are context aware.
+
+\end{frame}
+
+\begin{frame}{The architecture}
+
+
+% \begin{wrapfigure}[6]{R}{15cm}
+  \begin{center}
+\includegraphics[height=0.75\textheight]{img/Full_GPT_architecture.png}    
+  \end{center}
+
+
+% \end{wrapfigure}
+\bigskip
+
+Image from \href{https://en.m.wikipedia.org/wiki/Generative_pre-trained_transformer}{Wikipedia Generative pre-trained transformer}
+
+\end{frame}
+
+\begin{frame}{Terms}
+\begin{itemize}
+\item matmul = matrix multiplication
+\item mask = hide non-relevant bits
+\item softmax = converts to probabilities
+  \\ everything sums to one
+\item dropout = randomly delete nodes to avoid overfitting
+\item Gelo = activation function (calculates the output of the node)
+  \\ Gaussian Linear Error Unit
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{How big is it?}
+  \begin{itemize}
+  \item GPT3 has
+\begin{itemize}
+\item 96 layers, 96 heads
+\item 2,048 token context
+\item  12,888 long word embeddings
+\item 800GB to store
+\end{itemize}
+\item GPT4 is probably 1.5--2 times bigger
+  \\ Context window of 8,192 tokens
+\item GPT5 is probably 3 timees bigger again
+\\ Context window of 400,000 tokens
+\end{itemize}
+
+Model architectures are more efficient, but training is still very long.   Companies do not release detailed information.
+
+\end{frame}
+
+
+
+% \section{Relations between words (tokens): \txx{attention}}
+
+\subsection{How does the model look at context}
+
+
+
+\begin{frame}{Attention is all you need}
+\MyLogo{\href{https://towardsdatascience.com/openai-gpt-2-understanding-language-generation-through-visualization-8252f683b2f8}{GPT-2: Understanding Language Generation through Visualization} by  Jesse Vig (2019)}
+
+\begin{center}
+\includegraphics[width=\linewidth]{img/1_bdQ2iGgp7fEJh8Ul9Hg5uA.png}
+\end{center}
+
+\begin{itemize}
+\item A very influential paper from Google \citep{NIPS2017_3f5ee243}
+\item Introducing the idea of using multiple heads to model attention
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{What should I pay attention to?}
+\MyLogo{Darker lines means more attention (multiply by a larger number)}
+\noindent\includegraphics[width=\linewidth]{img/attention_dog.png}
+
+\begin{itemize}
+\item The system must generate the next word
+\item Here it looks at the subject
+\item \eng{The dog on the ship ran \ul{off, and the dog was found by the crew.}}
+\item If we change the subject, \ldots
+\item \eng{The motor on the ship ran \ul{at a speed of about 100 miles per hour.}}
+\item We are looking at GPT-2
+  \begin{itemize}
+  \item 12 layers
+  \item 12 heads
+  \item 144 patterns
+  \end{itemize}
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}{Multi-head attention}
+\noindent\includegraphics[width=\linewidth]{img/attention_layer4_head3.png}
+
+\newpage
+
+\end{frame}
+
+\begin{frame}{The Previous Word is also useful}
+
+\noindent\includegraphics[width=\linewidth]{img/attention_next-word.png}
+
+\end{frame}
+
+\begin{frame}{There seems to be a default pattern}
+
+\noindent\includegraphics[width=\linewidth]{img/attention_default.png}
+
+
+\end{frame}
+
+\begin{frame}{This pattern is useful for lists with commas}
+\noindent\includegraphics[width=0.85\linewidth]{img/attention_comma-list.png}
+
+
+\end{frame}
+
+\begin{frame}{Another Detailed Visualization}
+
+\href{https://bbycroft.net/llm}{LLM Visualization}
+
+A visualization and walkthrough of the LLM algorithm that backs OpenAI's ChatGPT. Explore the algorithm down to every add \& multiply, seeing the whole process in action.
+
+By Brendan Bycroft (2023)
+
+\end{frame}
+
+\begin{frame}{The result!}
+
+\begin{itemize}
+\item A very, very large model that can predict the next word based on the previous $n$ context words --- 2,048 for GPT-3.
+\item The results can mimic human behaviour in a variety of tasks -- for Chat GPT 4
+  \begin{itemize}
+  \item 93rd percentile for SAT (better than 93\% of students)
+  \item 54th percentile of the writing test for GRE, 80th percentile
+    and 99th percentiles for the quantitative and verbal sections
+    respectively
+  \item 90th percentile of the bar exam 
+  \end{itemize}
+\item The model gets better with more data
+\item It is hard to know exactly what is going on inside
+\end{itemize}
+\end{frame}
+

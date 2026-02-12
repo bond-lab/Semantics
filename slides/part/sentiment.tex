@@ -1,0 +1,157 @@
+\section{Sentiment and Connotation}
+
+
+
+\begin{frame}{Connotation}
+Many words carry more meaning than just identifying their referent.
+
+\begin{exe}
+  \ex
+  \begin{xlist}
+    \ex \eng{Kim is slender}
+    \ex \eng{Kim is thin}
+    \ex \eng{Kim is haggard}
+  \end{xlist}
+  \ex
+  \begin{xlist}
+    \ex \eng{The young lout is here.}
+    \ex \eng{The young boy is here.}
+    \ex \eng{The young gentleman is here.}
+  \end{xlist}
+  \ex
+  \begin{xlist}
+    \ex \eng{The young lout is arrogant.}
+    \ex \eng{The young boy is proud.}
+    \ex \eng{The young gentleman is confident.}
+  \end{xlist}
+ \ex
+  \begin{xlist}
+    \ex \eng{That bitch is cheap.}
+    \ex \eng{That woman is economical.}
+    \ex \eng{That lady is frugal.}
+  \end{xlist}
+
+\end{exe}
+
+\end{frame}
+
+\begin{frame}{Sentiment in the Holmes corpus}
+\begin{itemize}
+\item Doyle often gives us not-so subtle cues as to whether characters are
+good or bad.
+\item Some of them are very nationalist (and borderline racist, but not always)
+
+\begin{exe}
+  \ex \eng{A large face, seared with a thousand wrinkles, burned
+    yellow with the sun, and marked with every \ul{evil} passion, was
+    turned from one to the other of us, while his deep-set, \ul{bile}-shot
+    eyes, and the high thin fleshless nose, gave him somewhat the
+    resemblance to a fierce old bird of prey.} (\sh{SPEC})
+  \ex \eng{He was a \ul{fine} creature, this \ul{man of the old English
+    soil}, \ul{simple}, \ul{straight} and \ul{gentle}, with his
+    \ul{great}, \ul{earnest}, \ul{blue eyes} and broad, \ul{comely face}. } (\sh{DANC})
+
+  \ex \eng{``The aborigines of the Andaman Islands may perhaps claim
+    the distinction of being the smallest race upon this earth, \ldots
+    They are naturally \ul{hideous}, having large, \ul{misshapen} heads, small,
+    fierce eyes, and \ul{distorted} features.''} (\sh{SIGN})
+\item \eng{There was a portrait within of a man, \ul{strikingly
+      handsome} and \ul{intelligent}, but bearing unmistakable signs
+    upon his features of his African descent.} (\sh{YELL})
+
+\end{exe}
+
+\item[?] Can you find some examples of clearly positive or negative descriptions?\task
+\end{itemize} 
+
+\end{frame}
+
+\begin{frame}{Sentiment and Composition}
+\MyLogo{Sentiment Analysis/Opinion Mining is very popular these days}
+\begin{itemize}
+\item Sentiment can be built up.
+  \begin{exe}
+    \ex \eng{good} \hfill{$\uparrow$}
+    \ex \eng{very good}  \hfill{$\uparrow\uparrow$}
+    \ex \eng{less than very good}  \hfill{$\downarrow$}
+    \ex \eng{I have never found it to be less than very good} \hfill{$u\uparrow\uparrow\uparrow$}
+  \end{exe}
+\item It can be complex
+ \begin{exe}
+   \ex \eng{The new story is good, especially the characterization,
+     although the dialogue is a little stiff.}
+  \end{exe}
+ \item Polarity can depend on the target
+ \begin{exe}
+   \ex \eng{The screen is very wide.}
+   \ex \eng{Their nostrils are very wide.}
+  \end{exe}
+\item It can come from other things than lexical cues: $\star\star\star\star\star$
+%★★★★★　
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Annotating Sentiment}
+\MyLogo{Sentiment Analysis/Opinion Mining is very popular these days}
+   \begin{tabular}{r>{\itshape}l>{\itshape}l>{\itshape}l>{\itshape}l}
+      \textbf{Score} & \textbf{Example} & \textbf{Example} & \textbf{Example} & 
+      \textbf{Corpus Examples} \\
+      \hline
+      95 & fantastic & very good     &            & {perfect}, splendidly  \\ 
+      64 & good      & good          &            & {soothing}, pleasure  \\
+      34 & ok        & sort of good  & not bad    & {easy}, interesting  \\ 
+      0  & beige     & neutral       &            & {puff}  \\  
+      -34 & poorly    & a bit bad     &            & rumour, cripple  \\
+      -64 & bad       & bad           & not good   & {hideous}, death  \\
+      -95 & awful     & very bad      &            & {deadly}, horror-stricken     
+   \end{tabular}
+
+   We annotate \txx{senses}: words given their meaning, before they
+   are transformed by the syntax.  So \lex{good} in \eng{That is very
+     very good}
+   and \lex{good} in \eng{That is no good} get the same score.
+   
+% \end{itemize}
+
+
+
+\begin{itemize}
+\item Note that most words carry no sentiment.
+\end{itemize}
+
+
+
+ 
+ \end{frame}
+
+\begin{frame}{High and Low Examples in multiple languages}
+\newcommand{\ili}[1]{\href{https://lr.soh.ntu.edu.sg/omw/omw/concepts/ili/#1}{\url{i#1}}}
+
+\begin{center}
+\begin{small}
+  \begin{tabular}{lrr>{\itshape}lrlrlr}
+    Concept & freq & score & English & score & Chinese & score & Japanese & Score \\
+    \hline
+    % 01036996-n
+    \ili{40833}  &   24 &  50 & marriage & 39 & 婚事 & 34 & 結婚	& 58\\
+            &      &  & wedding  & 34 \\   
+            % 02021905-a
+    \ili{11080}  & 5& 40  &  rich & 33 & 有钱 & 34 &  裕福 & 66  \\
+    % 06878071-n
+    \ili{72643} & 4 & 33 &  smile &   32 & 微笑	& 34 & 笑み & 34 \\
+    % 00358431-v
+    \ili{23529}  & 40 & $-$68  & die & $-$80 &  去世 & $-$60 &亡くなる & $-$63 \\
+            &        &  &  &       & 死亡  & $-$64 & 死ぬ & $-$62\\
+            % 00220522-n
+    \ili{36562}  & 5  & $-$83 & murder &$-$95  & 谋杀 & $-$95	 & 殺し & 	$-$64 \\
+            &     &      && & & & 殺害 & $-$63 \\
+  \end{tabular}
+\end{small}
+  
+\end{center}
+
+By generalizing to the concept, we can share sentiment values across
+languages \citep{Bond:Ohkuma:daCosta:Miura:Chen:Kuribayashi:Wang:2016,Bond:Janz:Piasecki:2019}.
+
+\end{frame}
