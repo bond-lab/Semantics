@@ -6,9 +6,7 @@
 \begin{itemize}
 \item Lexical semantics is concerned with the identification and
   representation of the semantics of lexical items
-\item If we are to identify the semantics of lexical items, we have to
-  be prepared for the eventuality of a given word having 
-  multiple interpretations
+\item But a given word can have multiple interpretations
   \begin{itemize}
   \item \txx{Polysemy}: having multiple meanings
   \item \txx{Monosemy}: having only one meaning
@@ -158,12 +156,18 @@ relations to other words.
 \end{frame}
 
 \begin{frame}{Properties of hypernymy/hyponymy}
-  \begin{itemize}\addtolength{\itemsep}{-0.5ex}
+  \begin{itemize}
   \item Asymmetric; applies at the sense level
   \item applies only to lexical items of the same word class
   \item Transitive: \lex{dog$_1$} $\subset$ \lex{mammal$_1$} $\subset$ \lex{animal$_1$}
-  \item Not all nodes are lexicalized; can be multiple \\[2ex]
-    \begin{tabular}{llll}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Not everything is lexicalized}
+
+Lexicalization is the process by which new words, having gained widespread usage, enter the lexicon. \\[2ex]
+
+  \begin{tabular}{llll}
       neutral (Hyper) & male & female & child \\ \hline
 %      pig & hog & sow & piglet\\
       \lex{sheep} & \lex{ram} & \lex{ewe} & \lex{lamb}\\
@@ -171,17 +175,20 @@ relations to other words.
       \lex{goose} & \lex{gander} & \lex{\ul{goose}} & \lex{gosling}  \\
       \lex{horse} & \lex{stallion} & \lex{mare} & \lex{foal:colt/filly} \\
       \lex{dog} &  \lex{\ul{dog}} &  \lex{bitch} &\lex{puppy} \\
-      \lex{snake} & \lex{\ul{snake}}& \lex{\ul{snake}}& \lex{\ul{snake}}\\
+      \lex{snake} & & &\\
     \end{tabular}
+
+    \lex{snake} is not ambiguous it is \txx{vague}: the meaning is underspecified. 
+    
     \begin{taskb}
       Can you do this for \lex{pig}, \lex{cat} or \lex{chicken}?
     \end{taskb}
-   \begin{taskb}
+    \begin{taskb}
  Can you give an example of this in another language?
 \end{taskb}
 
-  \end{itemize}
 \end{frame}
+
 
 \begin{frame}[allowframebreaks]{Language Change and Auto-hyponyms}
 
@@ -283,12 +290,12 @@ relations to other words.
 \end{frame}
 
 
-\myslide{Semantic Relations as Graphs ($p \subset q$ and $p \sim q$)}
+\begin{frame}{Semantic Relations as Sets ($p \subset q$ and $p \sim q$)}
 \MyLogo{\textit{Yes it is}}
 
 \begin{tabular}{cc}
 $p \subset q$ \iz{hypernym}  & $p \sim q$ \iz{synonym} \\[2ex] 
-\scalebox{2}{
+\scalebox{1}{
 \begin{tikzpicture}
 \filldraw[fill=white] (-2,-2) rectangle (3,2);
 \scope % A \vee B
@@ -301,7 +308,7 @@ $p \subset q$ \iz{hypernym}  & $p \sim q$ \iz{synonym} \\[2ex]
 % outline
 \end{tikzpicture}}
 &
-\scalebox{2}{
+\scalebox{1}{
 \begin{tikzpicture}
 \filldraw[fill=white] (-2,-2) rectangle (3,2);
 \scope % A \vee B
@@ -316,7 +323,7 @@ $p \subset q$ \iz{hypernym}  & $p \sim q$ \iz{synonym} \\[2ex]
 
 \end{tabular}
 
-
+\end{frame}
 \begin{frame}[allowframebreaks]{Antonymy (opposites)}
 
 %\MyLogo{\citet{Cruse:1986,Miller:1990}}
