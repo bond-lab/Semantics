@@ -1,0 +1,517 @@
+\section{Constructions}
+
+\begin{frame}{Beyond words and phrases}
+
+\begin{itemize}
+\item Some uses of language seem to come from beyond just the words
+  \begin{itemize}
+  \item \eng{They laughed the poor guy out of the room.}
+  \item \eng{Mary urged Bill into the house.}
+  \end{itemize}
+\item \textbf{Caused Motion Construction}
+  \\ CAUSE-MOVE $<$agent, theme, goal/path$>$ \into S V NP PP
+  \begin{itemize}
+  \item compatible verbs can fuse with the construction
+  \end{itemize}
+\item \textbf{The Xer the Yer}
+  \begin{itemize}
+  \item \eng{the more you think about it, the less you understand}
+  \end{itemize}
+\item At one end, phrases can be modeled as very general constructions
+\item At the other end, idioms can be modeled as very specific constructions
+\end{itemize}
+
+\end{frame}
+
+% --- Forest style for construction networks -----------------------------
+\forestset{
+  cxg/.style={
+    for tree={
+      grow'=east,
+      parent anchor=east,
+      child anchor=west,
+      align=left,
+      rounded corners,
+      draw,
+      inner sep=2pt,
+      s sep=6pt,
+      l sep=10pt,
+      edge={-latex}
+    }
+  }
+}
+
+% ------------------------------------------------------------------------
+\begin{frame}{Roadmap (20 slides)}
+\begin{itemize}
+  \item Start with \textbf{non-canonical constructions}: \emph{whistle your way to work}
+  \item Key idea: \textbf{form--meaning pairings} at multiple granularities
+  \item From ``weird'' to \textbf{argument structure}, \textbf{idioms}, \textbf{morphology}, \textbf{discourse}
+  \item Semantics focus: \textbf{coercion}, \textbf{frames}, \textbf{constructional meaning}
+  \item How to represent: \textbf{AVMs}, \textbf{inheritance networks}, \textbf{examples}
+\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{Warm-up: a non-canonical pattern}
+\small
+% \label{ex:way1}
+\begin{exe}
+  \ex \gll She \textbf{whistled} her way to work.\\
+      she whistle.\textsc{pst} her way to work\\
+      \glt `She went to work while whistling (and the whistling is part of how she progressed).'
+  \ex \gll He \textbf{elbowed} his way through the crowd.\\
+      he elbow.\textsc{pst} his way through the crowd\\
+      \glt `He made progress through the crowd by using his elbows.'
+  \ex \gll They \textbf{googled} their way to an answer.\\
+      they google.\textsc{pst} their way to an answer\\
+      \glt `They reached an answer by googling (repeatedly / strategically).'
+\end{exe}
+
+
+\vspace{0.5em}
+\textbf{Observation:} the verb contributes \emph{manner/means}, but the construction contributes \emph{directed motion + incremental progress}.
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{Why this is interesting (semantics)}
+\small
+\begin{itemize}
+  \item The verb \emph{whistle} is not a motion verb.
+  \item Yet the sentence expresses a \textbf{motion event} with a \textbf{path/goal}.
+  \item Meaning is not (just) verb-centered; it is \textbf{construction-centered}.
+\end{itemize}
+
+\vspace{0.75em}
+\textbf{Constructional meaning sketch:}
+\begin{itemize}
+  \item \textsc{event}: motion-to-goal
+  \item \textsc{means}: activity denoted by V
+  \item \textsc{incrementality}: progress measured by ``way'' path
+\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{CxG in one sentence}
+\large
+\begin{center}
+\textbf{A construction is a conventionalized pairing of form and meaning}\\
+\textbf{(including constraints on usage).}
+\end{center}
+
+\vspace{0.75em}
+\normalsize
+\begin{itemize}
+  \item Constructions range from \textbf{morphemes} to \textbf{idioms} to \textbf{abstract patterns}.
+  \item Grammar is a \textbf{network} (inheritance, similarity, family resemblance).
+\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{From “words + rules” to a constructicon}
+\small
+Traditional modular view (oversimplified):
+\begin{itemize}
+  \item Lexicon: words (meanings)
+  \item Syntax: rules (structures)
+\end{itemize}
+
+\vspace{0.5em}
+CxG view:
+\begin{itemize}
+  \item Lexicon and syntax are a \textbf{continuum} of constructions.
+  \item The inventory of constructions = \textbf{constructicon}.
+\end{itemize}
+
+\vspace{0.75em}
+\textbf{Continuum examples:}
+
+\begin{exe}
+  \ex \emph{-ness} (morpheme construction)
+  \ex \emph{kicked the bucket} (idiom)
+  \ex \emph{the X-er, the Y-er} (comparative correlative)
+  \ex \emph{NP V NP PP} (argument structure pattern)
+\end{exe}
+
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{A first AVM: the Way Construction (simplified)}
+% \small
+% \avm{
+% [ \textsc{cxn} & \textit{Way-Construction} \\
+%   \textsc{form} & [ \textsc{syn} & [ \textsc{cat} & \textit{VP} \\
+%                                   \textsc{head} & [ \textsc{v} & V ] \\
+%                                   \textsc{comps} & \langle NP\textsubscript{poss}~\textit{way},~PP\textsubscript{path} \rangle ] ] \\
+%   \textsc{meaning} & [ \textsc{event} & \textit{motion} \\
+%                     \textsc{path} & \textit{directed} \\
+%                     \textsc{means} & \textit{activity}(V) \\
+%                     \textsc{progress} & + ] \\
+%   \textsc{constraints} & [ \textsc{v-semantics} & \textit{manner/means} \\
+%                         \textsc{pp} & \textit{path/to/through/into}\ldots ] ]
+% }
+
+\vspace{0.5em}
+\textbf{Takeaway:} a \emph{template} carries meaning and selects compatible verbs/PPs.
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{Not just “weird”: Constructional coercion}
+\small
+ \label{ex:coercion}
+\begin{exe}
+  \ex \gll She \textbf{sneezed} the napkin off the table.\\
+      she sneeze.\textsc{pst} the napkin off the table\\
+      \glt `Her sneezing caused the napkin to move off the table.'
+  \ex \gll He \textbf{laughed} the meeting into chaos.\\
+      he laugh.\textsc{pst} the meeting into chaos\\
+      \glt `His laughing caused the meeting to become chaotic.'
+\end{exe}
+
+
+\vspace{0.5em}
+\textbf{Idea:} a construction can \textbf{coerce} an event into a causal / change-of-state / motion construal.
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{The Caused-Motion Construction}
+\small
+Canonical-ish schema:
+ \label{ex:causedmotion}
+\begin{exe}
+  \ex \gll She pushed the box into the hallway.\\
+      she push.\textsc{pst} the box into the hallway\\
+      \glt `She caused the box to move into the hallway.'
+  \ex \gll The trainer threw the dolphin through the hoop.\\
+      the trainer throw.\textsc{pst} the dolphin through the hoop\\
+      \glt `The trainer caused the dolphin to move through the hoop.'
+  \ex \gll She sneezed the napkin off the table.\\
+      she sneeze.\textsc{pst} the napkin off the table\\
+      \glt `She caused the napkin to move off the table.'
+\end{exe}
+
+
+\vspace{0.5em}
+\textbf{Same constructional meaning; different verbs.}
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{Argument structure as constructions}
+\small
+Instead of ``the verb projects its arguments'', CxG often treats patterns as meaningful.
+
+
+\begin{exe}
+  \ex \textbf{Ditransitive:} \emph{NP V NP NP} $\Rightarrow$ \textsc{transfer} / \textsc{caused possession}\\
+      \gll She baked him a cake.\\
+          she bake.\textsc{pst} him a cake\\
+      \glt `She caused him to have a cake (by baking).'
+  \ex \textbf{Resultative:} \emph{NP V NP AP/PP} $\Rightarrow$ \textsc{caused change-of-state}\\
+      \gll They hammered the metal flat.\\
+          they hammer.\textsc{pst} the metal flat\\
+      \glt `They caused the metal to become flat (by hammering).'
+  \ex \textbf{Intransitive motion:} \emph{NP V PP} $\Rightarrow$ \textsc{directed motion}\\
+      \gll The bottle floated into the cave.\\
+          the bottle float.\textsc{pst} into the cave\\
+\end{exe}
+
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{Ditransitive: subtle meaning contrasts}
+\small
+Compare two ways to encode transfer/possession:
+
+
+\begin{exe}
+  \ex  She gave the student a book.\\
+      \glt `Direct transfer; recipient is foregrounded.'
+  \ex  She gave a book to the student.\\
+      \glt `Path/goal phrasing; can sound more ``delivery-like''.'
+\end{exe}
+
+
+\vspace{0.75em}
+\textbf{CxG angle:} these are \emph{distinct constructions} with overlapping but non-identical semantics and discourse profiles.
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{Construction networks (inheritance / family resemblance)}
+\small
+\begin{forest} cxg
+[Argument-Structure Constructions
+  [Motion-family
+    [Intransitive Motion\\\emph{NP V PP}]
+    [Caused Motion\\\emph{NP V NP PP}]
+    [Way-Construction\\\emph{NP V NP\textsubscript{way} PP}]
+  ]
+  [Change-of-state family
+    [Resultative\\\emph{NP V NP AP/PP}]
+    [Into-Causative\\\emph{NP V NP into NP}]
+  ]
+  [Transfer family
+    [Ditransitive\\\emph{NP V NP NP}]
+    [To-Dative\\\emph{NP V NP to NP}]
+  ]
+]
+\end{forest}
+
+\vspace{0.5em}
+\textbf{Key point:} generalizations live in the network, not only in ``rules''.
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{Idioms are constructions too (and they generalize)}
+\small
+Fixed idioms:
+
+\begin{exe}
+  \ex \emph{kick the bucket} `die'
+  \ex \emph{spill the beans} `reveal a secret'
+\end{exe}
+
+
+\vspace{0.5em}
+Partially schematic idioms (``open slots''):
+
+\begin{exe}
+  \ex \emph{the X-er, the Y-er}: \emph{The more you read, the happier you get.}
+  \ex \emph{What’s X doing Y?}: \emph{What’s that dog doing in my office?}
+  \ex \emph{let alone}: \emph{He can’t boil an egg, let alone cook dinner.}
+\end{exe}
+
+
+\vspace{0.5em}
+\textbf{Semantics lives at the pattern level.}
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{Information structure constructions}
+\small
+Constructions can encode discourse-pragmatics.
+
+
+\begin{exe}
+  \ex \textbf{Cleft:} \emph{It was \textbf{John} who broke the vase.}\\
+      Focuses \textbf{John} as the salient alternative.
+  \ex \textbf{Topicalization:} \emph{That book, I haven’t read \_\ yet.}\\
+      Promotes topic; leaves a gap.
+  \ex \textbf{Existential:} \emph{There’s a spider in the bath.}\\
+      Introduces a new discourse referent.
+\end{exe}
+
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{Constructions in morphology and word formation}
+\small
+Not only sentences:
+
+
+\begin{exe}
+  \ex \textbf{-ness} construction: \emph{happy} $\to$ \emph{happiness}\\
+      Meaning: abstract property/state
+  \ex \textbf{X-\emph{gate}} construction: \emph{Watergate} $\to$ \emph{Emailgate}\\
+      Meaning: scandal associated with X
+  \ex \textbf{N--N compounds}: \emph{chicken soup}, \emph{stone wall}\\
+      Meaning: a relation that must be inferred (ingredient / material / purpose / \ldots)
+\end{exe}
+
+
+\vspace{0.5em}
+\textbf{CxG claim:} these too are stored, learned, and productive patterns.
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{Semantic frames: linking constructions to world knowledge}
+\small
+Many CxG approaches connect constructions to frame-like semantics.
+
+
+\begin{exe}
+  \ex \emph{Ditransitive} evokes a \textsc{transfer} / \textsc{caused-possession} frame.
+  \ex \emph{Caused-motion} evokes a \textsc{cause-to-move} frame.
+  \ex \emph{Way-construction} evokes a \textsc{directed-motion-with-means} frame.
+\end{exe}
+
+
+\vspace{0.75em}
+\textbf{Why it matters for semantics:}
+\begin{itemize}
+  \item inference (what follows from the construal)
+  \item roles (participant structure beyond syntax)
+  \item alternations (meaning shifts with form)
+\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{From special cases to “everything is a construction”}
+\small
+The punchline:
+\begin{itemize}
+  \item If non-canonical patterns need stored form--meaning pairings,
+  \item and partially productive patterns do too,
+  \item and alternations correlate with meaning/discourse differences,
+\end{itemize}
+\vspace{0.5em}
+\begin{center}
+\Large
+\textbf{then general grammar is best modeled as a network of constructions.}
+\end{center}
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{How do constructions get learned? (usage-based intuition)}
+\small
+Usage-based story (common in CxG traditions):
+\begin{itemize}
+  \item Learners store exemplars; generalizations emerge from frequency and similarity.
+  \item High-frequency patterns become entrenched.
+  \item Productivity is graded (not all-or-nothing).
+\end{itemize}
+
+\vspace{0.75em}
+Mini illustration:
+
+\begin{exe}
+  \ex Heard often: \emph{give NP NP}, \emph{send NP NP}, \emph{show NP NP} $\Rightarrow$ strong ditransitive schema
+  \ex Heard rarely: \emph{whisper NP NP} $\Rightarrow$ marginal but interpretable via schema + pragmatics
+\end{exe}
+
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{Cross-linguistic perspective (quick taste)}
+\small
+CxG is friendly to cross-linguistic comparison because you can compare \emph{constructions}, not only categories.
+
+
+\begin{exe}
+  \ex English: \emph{She laughed him out of the room.} (caused-motion coercion)
+  \ex Some languages prefer: periphrasis / explicit causatives / serial verbs (language-specific constructions)
+  \ex Topic-prominent languages often have rich topic constructions (form + discourse meaning)
+\end{exe}
+
+
+\vspace{0.5em}
+\textbf{Semantics angle:} similar communicative functions may be packaged in different constructions.
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{Worked micro-analysis: Resultatives}
+\small
+
+\begin{exe}
+  \ex \gll They wiped the table clean.\\
+      they wipe.\textsc{pst} the table clean\\
+      \glt `They caused the table to become clean (by wiping).'
+  \ex \gll He drank the pub dry.\\
+      he drink.\textsc{pst} the pub dry\\
+      \glt `He caused the pub to become dry/empty (by drinking).'
+\end{exe}
+
+
+\vspace{0.5em}
+\textbf{Notes:}
+\begin{itemize}
+  \item The adjective encodes a \textbf{result state}.
+  \item Some pairs are natural; others require imaginative bridging/inference.
+  \item Productivity is constrained by plausibility and convention.
+\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{Representing a construction as an AVM (Resultative, simplified)}
+\small
+% \avm{
+% [ \textsc{cxn} & \textit{Resultative-Cxn} \\
+%   \textsc{form} & [ \textsc{syn} & [ \textsc{cat} & \textit{VP} \\
+%                                   \textsc{head} & V \\
+%                                   \textsc{comps} & \langle NP\textsubscript{obj},~XP\textsubscript{res} \rangle ] ] \\
+%   \textsc{meaning} & [ \textsc{event} & \textit{cause} \\
+%                     \textsc{theme} & NP\textsubscript{obj} \\
+%                     \textsc{result} & \textit{state}(XP\textsubscript{res}) ] \\
+%   \textsc{constraints} & [ \textsc{compatibility} & \textit{causal plausibility} ] ]
+% }
+
+\vspace{0.5em}
+\textbf{Use in semantics teaching:} make explicit what is contributed by pattern vs. lexeme.
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{Mini “constructional minimal pairs”}
+\small
+Try these as in-class discussion prompts.
+
+
+\begin{exe}
+  \ex \emph{She ran to the station.} (directed motion)
+  \ex \emph{She ran the shoes to pieces.} (resultative change-of-state)
+  \ex \emph{She ran her way to the station.} (way construction)
+\end{exe}
+
+
+\vspace{0.5em}
+\textbf{Question:} what semantic components stay constant (run as manner), and what changes by construction?
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{“Construction grammar for semantics” summary}
+\small
+\begin{itemize}
+  \item Meaning is distributed across \textbf{lexemes + constructions + context}.
+  \item Constructions range from concrete to abstract; productivity is graded.
+  \item Key semantic phenomena:
+    \begin{itemize}
+      \item \textbf{constructional meaning} (transfer, caused motion, result state)
+      \item \textbf{coercion} (non-motion verbs in motion construals)
+      \item \textbf{frame alignment} (roles, inferences)
+      \item \textbf{discourse meaning} (topic/focus packaging)
+    \end{itemize}
+  \item A constructicon is a \textbf{network} of related form--meaning pairings.
+\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{Two quick activities (examples-heavy)}
+\small
+\textbf{Activity A (classification):} Which construction is at work?
+
+\begin{exe}
+  \ex \emph{He talked his way out of trouble.}
+  \ex \emph{She sang the baby to sleep.}
+  \ex \emph{They emailed the form to the office.}
+  \ex \emph{It was Maria who solved the puzzle.}
+\end{exe}
+
+
+\vspace{0.5em}
+\textbf{Activity B (productivity test):} Acceptable? What meaning do you get?
+
+\begin{exe}
+  \ex \emph{He yawned the cat off the sofa.}
+  \ex \emph{She smiled her way into the committee.}
+  \ex \emph{They whispered him the secret.}
+\end{exe}
+
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{Closing: one slide “cheat sheet”}
+\small
+\begin{tabular}{@{}p{0.32\linewidth}p{0.64\linewidth}@{}}
+\toprule
+\textbf{Concept} & \textbf{One-liner} \\
+\midrule
+Construction & Conventional pairing of form + meaning (+ constraints) \\
+Constructicon & Inventory/network of constructions in a language \\
+Constructional meaning & Meaning contributed by the pattern (not only the verb) \\
+Coercion & Construction forces a compatible construal when lexeme alone wouldn’t \\
+Inheritance network & Generalizations captured as links among constructions \\
+Usage-based learning & Frequency + analogy shape what is stored and what generalizes \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.75em}
+\textbf{Last example to remember:} \emph{whistle your way to work} $\Rightarrow$ motion meaning without a motion verb.
+\end{frame}
