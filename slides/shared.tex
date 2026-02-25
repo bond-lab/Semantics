@@ -1,27 +1,30 @@
 % ---- Minimal setup (XeLaTeX) ----
 \usepackage{fontspec}
 \defaultfontfeatures{Ligatures=TeX}
-%\usepackage{luatexja}
-%\usepackage{luatexja-fontspec}
-%\ltjsetparameter{jacharrange={-9}}
+
 \setmainfont{TeX Gyre Pagella}
 \setsansfont{TeX Gyre Heros}
-\setmonofont{Inconsolata} % TeX Gyre Cursor} %  Fira Mono}
+\setmonofont{TeX Gyre Cursor} %  Fira Mono}
 % Auto-switch by Unicode block
 \usepackage[CJK,Emoticons,IPAExtensions,SpacingModifierLetters,PhoneticExtensions]{ucharclasses}
 \newfontfamily\devanagarifont{Noto Sans Devanagari}
 \setTransitionsFor{Devanagari}{\devanagarifont}{\normalfont}
-\newfontfamily\jafont{Noto Sans CJK JP}
-\newfontfamily\krfont{Noto Sans CJK KR}
-\newfontfamily\hanfont{Noto Sans CJK SC} % or TC
-\setTransitionsForChinese{\hanfont}{\normalfont}
-\setTransitionsForKorean{\krfont}{\normalfont}
-\setTransitionsForJapanese{\jafont}{\normalfont}
+
 \pdfstringdefDisableCommands{%
-  \def\jafont{}%
   \def\devanagarifont{}%
 }
-\newcommand{\jpf}[1]{{\jafont #1}}
+\usepackage{xeCJK}
+\xeCJKsetup{
+  PunctStyle=plain,
+  CJKspace=false,      % don't add space between CJK and Latin
+  CJKglue=,           % no inter-CJK glue
+  AutoFakeBold=false,
+  AutoFakeSlant=false
+}
+\setCJKsansfont{Noto Sans CJK JP}
+\setCJKmonofont{Noto Sans CJK JP}
+\newcommand{\jpf}[1]{#1}
+
 \newcommand{\ipa}[1]{{\ipafont\selectfont #1}}
 
 \newfontfamily\ipafont{Gentium}  % or DejaVu Sans, Charis SIL, Doulos SIL
