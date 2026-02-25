@@ -1,0 +1,341 @@
+\section{Multi-Word Expressions}
+\newcommand{\tra}[1]{\textcolor{olive}{\textsf{#1}}}
+
+
+
+\begin{frame}{Idioms}
+
+\begin{itemize}
+\item Some expressions clearly involve more than one orthographic word
+  \begin{itemize}
+  \item compound noun
+    \begin{itemize}
+    \item \eng{grass snake}; \eng{grass and tree snakes}
+    \end{itemize}
+  \item verb-particle
+    \begin{itemize}
+    \item \eng{I looked it up} vs \eng{I looked up the very long word}
+    \end{itemize}
+  \item  idiom
+    \begin{itemize}
+    \item \eng{going great guns, give the Devil his due}
+    \item \eng{jog someone's memory}
+    \item \eng{blow one's top}
+    \end{itemize}
+\item And more
+\\ \eng{San Francisco, ad hoc, by and large, Where Eagles
+Dare, kick the bucket, part of speech, in step, the
+Oakland Raiders, trip the light fantastic, telephone
+box,  take a walk , do a number on
+(someone), take (unfair) advantage (of), pull strings,
+kindle excitement, fresh air, \ldots}
+  \end{itemize}
+\item Knowing the individual words is not enough to know the meaning (or usage)
+  
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Multiword Expressions (MWE)}
+
+  There are many different kinds of irregularity.\\[2ex]
+%  \bigskip
+\begin{small}
+\begin{tabular}{lccccc}
+  MWE & \multicolumn{5}{c}{Weirdness} \\
+                  & Lexical  & Syntactic & Semantic & Pragmatic &
+                                                                  Statistical  \\
+\hline
+\eng{ad hominem}       &  $+$ & ?   &  ?   &   ?   & $+$ \\
+\eng{at first}          &      & $+$ &     &      & ? \\
+\eng{first aid}         &      &      & $+$   &      & ? \\
+\eng{salt and pepper}   &      &      &      &      & $+$\\
+\eng{good morning}      &      &      &      &  $+$ &$+$ \\
+\eng{cat's cradle}     & $+$  &      &  $+$ &      & ?\\
+\end{tabular}
+  \end{small}
+\begin{itemize}
+\item Most of the time, we don't even notice
+\item Unless it is your second language
+% \item In Project Three you will find examples of interesting
+%   multi-word expressions
+% \\ from a new story
+\item Much more in \citet{Sag02a}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{We analyze these differently}
+
+  \begin{itemize}
+  \item \txx{Fixed Expressions} are like words with spaces
+    \\ \lex{ad hominem} ``at the person''
+  \item \txx{Semi-Fixed Expressions} allow some inflection
+    \\ \lex{part(s)-of-speech} ``syntactic category''
+  \item \txx{Flexible Expressions} \citep{Nunberg:Sag:Wasow:1994}
+    \begin{itemize}
+    \item \txx{Decomposable Expressions} we can treat the parts as
+      having different meanings in context
+      \\ \lex{spill the beans} ``reveal the secrets''
+    \item \txx{Non-decomposable Expressions}
+      \\ \lex{kick the bucket} ``die''
+    \end{itemize}
+  \item \txx{Institutionalized Phrases} are statistically marked
+    \\ \lex{black and white} vs $^?$\lex{white and black} c.f. \lex{白黒} \jpn[white black]{shirokuro}
+    \\ \lex{machine translation} vs $^?$\lex{computer translation}
+    
+  \end{itemize}
+  
+\end{frame}
+
+\begin{frame}{Semantic Opacity: A Gradient}
+
+\begin{exe}
+  \ex \textbf{Opaque:} \emph{kick the bucket} $\Rightarrow$ meaning unrelated to kicking/buckets
+  \ex \textbf{Partially transparent:} \emph{spill the beans} $\Rightarrow$ metaphorical extension
+  \ex \textbf{Highly transparent:} \emph{strong tea} $\Rightarrow$ collocational preference
+\end{exe}
+
+
+\vspace{0.5em}
+Dimensions of semantic idiosyncrasy:
+\begin{itemize}
+  \item Non-compositional meaning
+  \item Restricted argument structure
+  \item Fixed lexical choices
+  \item Conventional metaphor/metonymy
+\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{Verb-Particle Constructions}
+
+\begin{exe}
+  \ex \eng{She looked up the word}
+  \ex \eng{She looked the word up}
+\end{exe}
+
+\vspace{0.5em}
+Particles may:
+\begin{itemize}
+  \item Encode direction (\eng{walk out})
+  \item Encode aspect (\eng{eat up})
+  \item Encode idiomatic meaning (\eng{give up})
+\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{Collocations and Selectional Preferences}
+\begin{exe}
+  \ex \eng{strong tea} vs.\ *\eng{powerful tea}
+  \ex \eng{heavy rain} vs.\ *\eng{strong rain}
+\end{exe}
+
+\vspace{0.5em}
+Not fully idiomatic, but statistically entrenched.
+
+\vspace{0.5em}
+For computational semantics:
+\begin{itemize}
+  \item Collocations affect vector representations.
+  \item Lexical choice is conventionalized.
+\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------------------
+\begin{frame}{Formulaic Sequences and Lexical Bundles}
+
+  In corpus linguistics \citep{Biber:Conrad:Reppen:1998}:
+
+\begin{exe}
+  \ex \eng{on the other hand}
+  \ex \eng{as a result of}
+  \ex \eng{in the case of}
+\end{exe}
+
+\vspace{0.5em}
+Properties:
+\begin{itemize}
+  \item High frequency.
+  \item Often discourse-organizing.
+  \item Not necessarily semantically opaque.
+\end{itemize}
+
+\vspace{0.5em}
+Bundles show how usage frequency shapes grammar.
+\end{frame}
+
+\begin{frame}{How common are MWEs?}
+
+\begin{itemize}
+\item They are very common in the lexicon
+  \begin{itemize}
+  \item In wordnet,  41\% of the entries are multiword (mainly compound nouns)
+  \end{itemize}
+\item But less common in the actual text (\sh{SPEC} 4.5\%: 296/6,641)
+\\ 24 are new (not in Wordnet 3.0); 55 are named entities
+% sqlite3 /var/www/ntumc/db/eng.db "select substr(tag,1,1), clemma, tag, count(clemma) from concept where sid >=11000 and sid <=11700 and tag != 'x' and clemma glob '* *' group by substr(tag,1,1)"
+% -- Loading resources from /home/bond/.sqliterc
+
+% substr(tag,1,1)	clemma	tag	count(clemma)
+% 0	and so	00117620-r	206
+% 1	good fortune	11463746-n	11
+
+% 7	no one	77000137-n	3
+% 8	pull off	80000623-v	16
+% 9	last night	90000518-n	5
+
+% d	four o'clock	dat	1
+% l	baker street	loc	18
+% o	in order	oth	3
+% p	Hilton Cubitt	per	32
+% w	as well as	w	1
+
+  \begin{itemize}
+  \item \eng{take into one's confidence}
+  \item \eng{take in}
+  \item \eng{Sherlock Holmes}
+  \item \eng{practical joke(r)}
+  \item \eng{in love}
+  \item \eng{get the better of}
+  \item \eng{Panama hat}
+  \item \eng{as good as one's word} 
+  \end{itemize}
+\item It still seems as though wordnet (and dictionaries in general) are missing many MWEs
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Why are they important?}
+
+\begin{itemize}
+\item If you think you know the individual words, then you might be  confused
+
+\item  Which is a problem if you are a translator:
+\\ \eng[whoever he met]{whoever crossed his path} \sh{SPEC}
+\begin{exe}
+  \ex \glll 私道 を 渡ろう と する 人 \\
+  shidou wo watarou to suru hito \\
+  private-road \textsc{acc} cross.let's \textsc{quot} do person \\
+\trans ''whoever tried to cross his private road''
+\end{exe}
+\item Knowledge of MWEs is one of the things that separates a good speaker from a poor one
+\item From a linguist's point of view, they also reveal something about
+  how language is organized in our brains
+\end{itemize}
+
+
+
+%\section{Idioms}
+
+%\begin{frame}{Idioms are hard to handle}
+\end{frame}
+
+\begin{frame}{Idioms are hard to handle}
+%\MyLogo{They don't translate well}
+%\MyLogo{\eng{atama-ni kuru} better with 1st person subject}
+\begin{exe}
+  \ex \eng{Kim blew her top}
+  \trans ``Kim got angry''
+  \trans No \emp{blowing}, no \emp{top}, no \emp{her}
+  \ex  \glll \jpn{キムは} \jpn{頭に} \jpn{来た}  \\
+  kimu-wa atama-ni  kita \\
+  Kim-\textsc{top} head-\textsc{dat} came \\
+  \trans ``Kim got angry (lit: Kim came to her head)''
+  \trans no \emp{head}, no \emp{coming}
+\end{exe}
+
+\begin{itemize}
+\item They are hard to identify
+\item They require work to represent
+\end{itemize}
+%\end{frame}
+
+%\begin{frame}{The state of the art (translation)}
+\end{frame}
+
+\begin{frame}{The state of the art (translation)}
+\MyLogo{Not so good}
+
+\begin{exe}
+  \ex \eng{Kim blew her top}
+  \trans \glll \tra{キムは、} \tra{彼女の} \tra{上を} \tra{吹きました} \\
+  {Kimu wa,} {kanojo no} {ue o} fukimashita \\
+  Kim-\textsc{top} her-'s top-\textsc{acc} blew \\  
+  \trans  \tra{Kim exhaled on the upper part of her} (Google Translate
+  2015)
+ \trans \glll \tra{キムは、} \tra{彼女の} \tra{トップを} \tra{吹いた} \\
+  {Kimu wa,} {kanojo no} {toppu o} fuita \\
+  Kim-\textsc{top} her-'s top-\textsc{acc} blew \\  
+  \trans  \tra{Kim exhaled on the shirt of her} (Bing Translate 2015)
+ \trans \glll \tra{キムは、} \tra{トップを} \tra{吹いた} \\
+  {Kimu wa,} {toppu o} fuita \\
+  Kim-\textsc{top}  top-\textsc{acc} blew \\  
+  \trans  \tra{Kim exhaled on the shirt} (Google Translate 2019)
+  \ex \eng{キムは 頭に 来た}
+  \trans \tra{Kim came to the head} (Google+Bing Translate 2015)
+%  \trans \tra{Kim came to the head} (Bing Translate)
+\end{exe}
+
+\end{frame}
+
+\begin{frame}{The state of the art (wordnet)}
+\MyLogo{Some but not all}
+\vspace*{-1.5ex}
+\begin{itemize}
+\item Hyponym of \eng{rage} with many lemmas
+\begin{multicols}{2}
+  \begin{itemize}
+  \item \eng{flip one's lid}
+  \item \eng{blow one's stack}
+  \item \eng{flip one's wig}
+  \item \eng{lose one's temper}
+  \item \eng{blow up}
+  \item \eng{throw a fit}
+  \item \eng{hit the roof}
+  \item \eng{hit the ceiling}
+  \item \eng{have kittens}
+  \item \eng{have a fit}
+  \item \eng{combust}
+  \item \eng{fly off the handle}
+  \item \eng{blow a fuse}
+  \item \eng{go ballistic}
+  \end{itemize}
+\end{multicols}
+\item But by no means exhaustive
+\begin{multicols}{2}
+  \begin{itemize}
+  \item \eng{lose one's cool}
+  \item \eng{lose one's rag}  
+  \item \eng{lose one's grip}
+  \item \eng{blow one's top}
+  \item \eng{fly off one's handle}
+  \item \eng{spit the dummy}
+  \end{itemize}
+\end{multicols}
+\end{itemize}
+
+% \end{frame}
+
+\end{frame}
+
+\begin{frame}{The state of the art (large language models)}
+% \MyLogo{Actually quite good}
+% %\makexeCJKactive
+  \begin{small}
+    \begin{itemize}
+    \item FCB: Translate "Kim blew her top" into Japanese
+    \item ChatGPT:
+      \texttt{The English idiom "Kim blew her top" translates to Japanese as ``キムはキレた" (Kimu wa kireta). This phrase captures the sense that Kim lost her temper or became very angry.}
+    \item FCB: What does ``キムは頭に来た" mean
+    \item ChatGPT:  \texttt{The phrase ``キムは頭に来た" (Kimu wa atama ni kita) translates to English as "Kim got angry" or more literally, "It came to Kim's head." It's another way to express that Kim became angry or upset, similar to saying "Kim blew her top" in English. \\
+        The expression  ``頭に 来た" (atama ni kita) is a common way in Japanese to describe someone getting angry or frustrated.}
+    \end{itemize}
+  \end{small}
+  % \makexeCJKinactive
+\hfill Translated with openai's ChatGPT 4.0 (2024-04-21)
+
+Training on a lot of data, with a lot of parameters, makes it much better
+
+\end{frame}
+

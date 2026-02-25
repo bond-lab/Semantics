@@ -47,16 +47,16 @@
 
 \begin{frame}{This is like intersection for sets}
 \begin{center}
-  \scalebox{2}{
+  \scalebox{1}{
     \begin{tikzpicture}
       \filldraw[fill=white] (-3,-3) rectangle (5, 3);
       \scope % A \cap B
       \clip (0,0) circle (2); \fill[pink] (2,0) circle (2);
       \endscope
       % outline
-      \draw (0,0) circle (2) node [text=black,left,align=center] {\tiny\lex{big}\\ [-1ex] \tiny \lex{things}} 
-      (2,0) circle (2) node [text=black,right] {\tiny\lex{heads}};
-      \node[align=center] at (1,0) {\tiny \lex{big}\\[-1ex] \tiny \lex{heads}};
+      \draw (0,0) circle (2) node [text=black,left,align=center] {\lex{big}\\  \lex{things}} 
+      (2,0) circle (2) node [text=black,right] {\lex{heads}};
+      \node[align=center] at (1,0) { \lex{big}\\  \lex{heads}};
     \end{tikzpicture}} 
 \end{center}
 
@@ -64,6 +64,7 @@
 \item This is the simplest form of composition
   \begin{itemize}
   \item although the meaning of big is not independent
+  \item \eng{a big mouse} is smaller than \eng{a small elephant}
   \end{itemize}
 \end{itemize}
 
@@ -86,7 +87,7 @@ with another) helps us build the semantic model.
 
 \begin{frame}{Some exceptions}
 
-\begin{itemize}\addtolength{\itemsep}{-1ex}
+\begin{itemize}%\addtolength{\itemsep}{-1ex}
 \item Not all modification is intersective
   \begin{itemize}
   \item \eng{fake gun} is a thing like a gun: not a gun
@@ -97,8 +98,8 @@ with another) helps us build the semantic model.
 \item Word combinations (\txx{multi-word expressions}) can pick up new
   meanings
   \begin{itemize}
-  \item \eng{They have a big head} ``They are vain''
-  \item \eng{They are a red head} ``They have red hair''
+  \item \eng{They have a \ul{big head}} ``They are vain''
+  \item \eng{They are a \ul{red head}} ``They have red hair''
   \end{itemize}
   This requires a richer lexicon
 \item There are many other ways of composing words (not just modification)
@@ -190,23 +191,23 @@ with another) helps us build the semantic model.
 
 %\end{frame}
 
-\begin{frame}{Completion}
+% \begin{frame}{Completion}
 
-\begin{itemize}
-\item When we listen (or read) we actively anticipate the next word
-  (or words)
-\item We can guess them fairly well
-  \begin{itemize}
-\item \eng{Recognising, as I do, that you are the second highest
-    expert in Europe-'}
-\item \eng{'Indeed, sir! May I inquire who has the honour to be the
-    first?' asked Holmes, with some asperity. \ldots}
-  \item \eng{But as a practical man of affairs it is acknowledged that
-      you stand alone. I trust, sir, that I have not inadvertently-'} ???
-  \item \eng{'Just a little,' said Holmes. '}
-  \end{itemize}
-\item What is missing here?\task
+% \begin{itemize}
+% \item When we listen (or read) we actively anticipate the next word
+%   (or words)
+% \item We can guess them fairly well
+%   \begin{itemize}
+% \item \eng{Recognising, as I do, that you are the second highest
+%     expert in Europe-'}
+% \item \eng{'Indeed, sir! May I inquire who has the honour to be the
+%     first?' asked Holmes, with some asperity. \ldots}
+%   \item \eng{But as a practical man of affairs it is acknowledged that
+%       you stand alone. I trust, sir, that I have not inadvertently-'} ???
+%   \item \eng{'Just a little,' said Holmes. '}
+%   \end{itemize}
+% \item What is missing here?\task
 
-\end{itemize}
+% \end{itemize}
 
-\end{frame}
+%\end{frame}
