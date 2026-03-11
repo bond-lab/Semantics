@@ -1,0 +1,414 @@
+\section{Semantic Roles}
+
+
+\begin{frame}{Situations}
+
+\begin{itemize}
+\item Noun phrases refer to entities (things, people, places, \ldots) 
+\item Sentences refer to situations
+  \begin{itemize}
+  \item Situations can be constrained in various ways
+  \item What is the event in question?
+  \item Who participates in it?
+  \item When did it happen?
+  \item Is it ongoing or has it finished?
+  \item Is our knowledge of it certain?
+  \end{itemize}
+\item The core of an event is typically represented by a verb or
+  adjective 
+  \begin{itemize}
+  \item Verbs typically refer to actions (but can refer to states)
+    \\ \eng{He \ul{stepped} swiftly forward \ldots} DANC
+    \\  \eng{I \ul{know} you, you scoundrel!} DANC
+  \item Adjectives typically refer to states
+    \\ \eng{Your sister is \ul{dead}, then?} DANC
+  \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Semantic  Roles}
+\MyLogo{The set of roles we use is from \citet[Chapter~6]{Saeed:2015}.}
+In this section we talk about the relations between the participants
+in a situation and the situation itself.
+
+\begin{itemize}
+\item  \txx{Semantic roles} are parts of the sentence that 
+correspond to the participants in the situation 
+described
+
+\item  They classify relations between entities in a situation
+\\[2ex] \begin{dependency}
+\begin{deptext}[column sep=1em]
+He \& seized \& the poker, \& and \& bent \& it \& into \& a curve \ldots \\ %with his huge brown hands.}
+\end{deptext}
+\deproot[edge unit distance=2.5ex]{2}{ROOT}
+\depedge{1}{2}{AGENT}
+\depedge{3}{2}{PATIENT}
+\depedge{1}{5}{AGENT}
+\depedge{6}{5}{PATIENT}
+\depedge{7}{6}{GOAL}
+\end{dependency}
+ \newpage
+\item  Also known as
+\begin{itemize}
+\item  Deep case \citep{Fillmore:1968}
+\item  Thematic roles; Theta roles;   $\theta$-roles
+\item  Participant Roles
+\end{itemize}
+\end{itemize}
+ 
+\end{frame}
+
+\begin{frame}{Roles link different alternations}
+\begin{exe}
+  \ex\eng{Kim patted Sandy}
+  \ex\eng{Sandy was patted by Kim}
+\end{exe}
+\begin{itemize}
+\item The semantic roles are different from the grammatical relations.
+\item Which is the \txx{subject} and which the \txx{object} in these sentences?
+\item What are the semantic roles of Kim and Sandy?
+\item \txx{semantic dependencies}: An abstract representation of the meaning links word-senses to
+  each other using semantic roles: different sentences may end up the same at this level
+\\[2ex] \begin{dependency}
+\begin{deptext}[column sep=1em]
+Kim \& pat$_1$ \& Sandy \\ %with his huge brown hands.}
+\end{deptext}
+\deproot[edge unit distance=1.5ex]{2}{ROOT}
+\depedge{1}{2}{AGENT}
+\depedge{3}{2}{PATIENT}
+\end{dependency}
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Semantic Roles}
+\MyLogo{Some prose and examples from \citet{Bender:2013}}
+\begin{itemize}
+\item \txx{AGENT} (takes \eng{deliberately, on purpose, what did X do?})
+  \begin{quote}
+    A participant which the meaning of the verb specifies as doing or causing something,
+    possibly intentionally. 
+  \end{quote}
+  \begin{itemize}
+  \item The initiator, performer of controller of an action; typically volitional, typically animate
+  \item Typically \textsc{subject}
+  \end{itemize}
+  \begin{exe}
+      \ex\eng{\eng{\ul{Kim} kicked Sandy}}
+      \ex\eng{\eng{\ul{The ogre} leaped into the fray}}
+      \ex\eng{\eng{\ul{The student} watched the video}}
+    \end{exe}
+\item (\txx{ACTOR}) generalization of \txx{AGENT} that allows non-volitional, non-actor
+  \\ if you use this, then \txx{AGENT} is restricted to animate, volitional participants
+\item Find an example of AGENT in \Story{}\task
+\newpage
+\item  \txx{PATIENT} (\eng{What happened to X?})
+  \begin{quote}
+    A participant which the verb characterizes as having something
+    happen to it, and as being affected by what happens to it.
+    %Examples: objects of kill, eat, smash but not those of watch, hear
+    %and love.
+  \end{quote}
+  \begin{itemize}
+  \item The undergoer of an action
+  \item  Undergoes change in state usually, both animate and 
+    inanimate
+  \item Typically \textsc{object}
+  \end{itemize}
+  \begin{exe}
+    \ex\eng{\eng{Kim kicked \ul{Sandy}}}
+    \ex\eng{\eng{The ogre ate  \ul{the dog}}}
+    \ex\eng{$^\#$\eng{The student watched \ul{the video}}}
+    \ex\eng{$^\#$\eng{I heard \ul{a sound}}}
+  \end{exe}
+\item Find an example of PATIENT in \Story{}\task
+\newpage
+\item  \txx{THEME}
+  \begin{quote}
+     A participant which is characterized as changing its position or condition, or as
+being in a state or position. 
+  \end{quote}
+  \begin{itemize}
+  \item  Moved, location or state is described
+  \item Typically \textsc{object}
+\end{itemize}
+\begin{exe}
+  \ex \eng{\eng{Hiromi put \ul{the book} on the shelf}}
+  \ex \eng{\eng{Freddy gave you \ul{the chocolate}}}
+  \ex \eng{\eng{\ul{The book} is on the shelf}}
+  \ex \eng{\eng{\ul{The protagonist} died}}
+  \ex *\eng{\eng{\ul{The dog} walked home}}
+\end{exe}
+\item Find an example of THEME in \Story{}\task
+\newpage
+
+\item  \txx{EXPERIENCER}
+  \begin{quote}
+    A participant who is characterized as aware of something.
+  \end{quote}
+  \begin{itemize}
+  \item   Non-volitional, displaying awareness of action, state
+  \item Typically \textsc{subject}
+  \end{itemize}
+  \begin{exe}
+  \ex\eng{\ul{Liling} heard thunder}
+  \ex\eng{\ul{Jo} felt sick}
+  \ex\eng{The lecturer annoyed \ul{the students}}
+\end{exe}
+\item  \txx{STIMULUS}
+  \begin{itemize}
+  \item  Usually used in connection with EXPERIENCER
+  \end{itemize}
+  \begin{exe}
+  \ex\eng{\ul{The lightning} scared them}
+  \ex\eng{I don't like \ul{the lightning}}
+\end{exe}
+\item Find examples of EXPERIENCER and  STIMULUS in \Story{}\task
+
+  \newpage
+\item  \txx{BENEFICIARY}
+  \begin{itemize}
+  \item   For whose benefit the action was performed
+  \item   Typically indexed by \lex{for} PP in English
+    \\ or \textsc{object} in ditransitive verbs
+  \end{itemize}
+  \begin{exe}
+  \ex\eng{They made \ul{me} a present}
+  \ex\eng{They made a present \ul{for me}}
+\end{exe}
+
+\item  \txx{LOCATION}
+  \begin{itemize}
+  \item  Place
+  \item Typically indexed by locative PPs (\lex{in, on, at}, \ldots) in English
+  \end{itemize}
+  \begin{exe}
+  \ex\eng{I am living \ul{in Indonesia}}
+  \ex\eng{It is \ul{on the table}}
+\end{exe}
+\item Find  examples of BENEFICIARY and LOCATION in \Story{}\task
+\newpage  
+
+\item  \txx{GOAL}
+  \begin{itemize}
+  \item  towards which something moves (lit or metaphor)
+ \item  Typically indexed by \lex{to} PP in English 
+   \\ or \textsc{object} in ditransitive
+  \end{itemize}
+  \begin{exe}
+  \ex\eng{She handed the form \ul{to him}}
+  \ex\eng{She handed \ul{him} her form}
+  \end{exe}
+\item  \txx{SOURCE}
+ \begin{itemize}
+ \item  from which something moves or originates
+ \item  Typically indexed by \ex{from} PP in English
+ \end{itemize}
+  \begin{exe}
+ \ex\eng{We gleaned this \ul{from the Internet}}  
+\end{exe}
+\item Find  examples of SOURCE and GOAL in \Story{}\task
+\newpage
+\item  \txx{INSTRUMENT}
+  \begin{itemize}
+  \item  Means by which action is performed
+  \item  Can be indexed by \lex{with} PP in English
+  \end{itemize}
+  \begin{exe}
+    \ex\eng{I ate breakfast \ul{with chopsticks}}
+  \end{exe}
+\item Find examples of INSTRUMENT in \Story{}\task
+\item Some researchers have a separate COMITATIVE case which encodes a
+  relationship of accompaniment between two participants in an event 
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}{PropBank Roles}
+
+\begin{itemize}\addtolength{\itemsep}{-1ex}
+\item An influential set of semantic roles comes from  PropBank \citep{Palmer:Gildea:Kingsbury:2005}
+\item They have 6 core roles and 17 modifier roles
+\item The core roles, meaning is defined per verb sense \\
+  \begin{tabular}{lll}
+    Role & Description & Example \\
+    ARG0 & agent          & \\
+    ARG1 & patient   & \\
+    ARG2 & instrument, benefactive, attribute   & \\
+    ARG3 & starting point, benefactive, attribute   & \\
+    ARG4 & ending point   & \\
+    ARGA & secondary agent & \eng{\ul{Kim}$_A$ \ull{trotted} \ul{her horse}$_0$}
+      \end{tabular}
+    \item \lex{seize.01} ``acquire (forcefully or stealthily)''
+    \\  \begin{tabular}{ll}
+        Arg0-PAG: &agent, entity acquiring something\\
+        Arg1-PPT: &thing acquired \\
+        Arg2-DIR: &acquired-from
+      \end{tabular}
+      \\[1.5ex] \eng{\ul{Sandy}$_0$ \ull{seized} \ul{the poker}$_1$ \ul{from Kim}$_2$}
+    \end{itemize}
+
+
+\end{frame}
+
+\begin{frame}{The Modifier Roles}
+\MyLogo{Can be used with any verb}
+\begin{small}
+\begin{verbatim}
+COM: Comitative
+LOC: Locative
+DIR: Directional
+GOL: Goal
+MNR: Manner
+TMP: Temporal
+EXT: Extent
+REC: Reciprocals
+PRD: Secondary Predication
+PRP: Purpose
+CAU: Cause
+DIS: Discourse
+ADV: Adverbials
+ADJ: Adjectival
+MOD: Modal
+NEG: Negation
+DSP: Direct Speech
+LVB: Light Verb
+CXN: Construction
+\end{verbatim}
+  \end{small}
+
+\end{frame}
+
+\begin{frame}{Some Issues}
+\begin{itemize}
+\item  Every theory has a different set of roles
+\item  It is hard to generalize: roles can be very word specific
+\item  Roles are very under-specified, these are all PATIENT!
+\begin{exe}
+\ex\eng{The genie touched \ul{the lamp} with their nose.}
+\ex\eng{The baby rubbed \ul{the lamp} with its hands.}
+\ex\eng{The baby squeezed \ul{the rubber toy} with its hands.}
+\ex\eng{She cracked \ul{the mirror} with a stone.}
+\end{exe}
+\end{itemize}
+
+
+
+\end{frame}
+
+\begin{frame}{Linking Grammatical Relations and Semantic Roles}
+\begin{itemize}
+\item    Semantic roles typically map onto grammatical 
+  functions systematically
+  \begin{itemize}
+  \item  AGENT is usually the subject
+  \item  PATIENT is usually the object
+  \end{itemize}
+\item  It is possible to predict how arguments are linked to 
+the verb from their semantic roles, and hence their 
+grammatical functions.
+% \end{itemize}
+
+\item Many verbs allow \txx{alternation}s ``syntactic variants with different roles''
+
+\begin{exe}
+  \ex \eng{Jo broke the ice with a pickaxe}  \sr{AGENT, PATIENT, INSTRUMENT}
+  \ex \eng{The pickaxe broke the ice}  \sr{INSTRUMENT, PATIENT}
+  \ex \eng{The ice broke}  \sr{PATIENT}
+\end{exe}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Other Predicates}
+
+\begin{itemize}
+\item Adjectives  (normally theme)
+  \begin{exe}
+  \ex \eng{John is tall} (THEME)
+  \ex \eng{John is cold [to touch]} (THEME)
+  \ex \eng{John is/feels cold} (EXPERIENCER)
+    \\ different adjectives in e.g., Japanese：
+    \\  \eng{冷たい} \jpn[cold (to touch)]{tsumetai}  vs \eng{寒い} \jpn[(feel) cold]{samui}
+  \end{exe}
+\item Predicative Copula (treat second NP as predicate)
+  \begin{exe}
+  \ex \eng{John is a boy} (THEME)
+  \end{exe}
+\item Identity Copula (reversible)
+  \begin{exe}
+  \ex \eng{Kim is my teacher} (THEME, THEME)?
+  \ex \eng{My teacher is Kim} (THEME, THEME)?
+  \end{exe}
+
+
+\end{itemize}
+
+
+
+\end{frame}
+
+%\begin{frame}{Thematic Hierarchy}
+
+% \begin{itemize}
+% \item  The higher you are in the hierarchy the more likely 
+% to be subject (then object, then indirect, then 
+% argument PP, then adjunct PP)
+% \end{itemize}
+% \[  \mbox{AGENT} > 
+% \left\{\begin{array}[c]{l} \mbox{GOAL/RECIPIENT} \\ \mbox{BENEFICIARY} \end{array} \right\}  >
+% \left\{\begin{array}[c]{l} \mbox{THEME} \\ \mbox{PATIENT} \end{array} \right\}  >
+% \mbox{INSTRUMENT} > 
+% \mbox{LOCATION} \]
+
+% \begin{itemize}
+% \item  Generally true across languages
+% \end{itemize}
+
+
+
+% \end{frame}
+
+\begin{frame}{Dowty's Proto-Arguments}
+% \MyLogo{\citet{Dowty:1991}}
+% \begin{itemize}
+% \item  The \txx{Agent} Proto-Role 
+% \begin{itemize}
+% \item  Volitional
+% \item  Sentient (and/or perceptive)
+% \item  Causes event or change of state; 
+% \item  Movement
+% \end{itemize}
+% \item  The \txx{Patient} Proto-Role
+% \begin{itemize}
+% \item  Change of state
+% \item  Incremental theme (i.e. determines aspect)
+% \item  Causally affected by event
+% \item  Stationary (relative to movement of proto-agent).     
+% \end{itemize}
+% \end{itemize}
+
+% \end{frame}
+
+%\begin{frame}{Dowty's Argument Selection Principle}
+% \begin{itemize}
+% \item   when a verb takes a subject and an object
+%   \begin{itemize}
+%   \item  the argument with the greatest number of Proto-Agent 
+%     properties will be the one selected as \textsc{subject}
+%   \item  the one with the greatest number of Proto-Patient properties 
+%     will be selected as \textsc{object}
+%   \end{itemize}
+% \item   Try: \lex{threw} --- ball, the man, the dog
+
+% \item   Relatively predictive, but what about sentences 
+% such as:
+% \\  \eng{The hunger killed him}?
+% \end{itemize}
+
+
+%\end{frame}
