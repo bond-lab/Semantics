@@ -26,7 +26,7 @@
 \end{itemize}
 
 \end{frame}
-
+\subsection{Semantic  Roles}
 \begin{frame}{Semantic  Roles}
 \MyLogo{The set of roles we use is from \citet[Chapter~6]{Saeed:2015}.}
 In this section we talk about the relations between the participants
@@ -75,7 +75,7 @@ He \& seized \& the poker, \& and \& bent \& it \& into \& a curve \ldots \\ %wi
 \begin{deptext}[column sep=1em]
 Kim \& pat$_1$ \& Sandy \\ %with his huge brown hands.}
 \end{deptext}
-\deproot[edge unit distance=1.5ex]{2}{ROOT}
+\deproot[edge unit distance=2.5ex]{2}{ROOT}
 \depedge{1}{2}{AGENT}
 \depedge{3}{2}{PATIENT}
 \end{dependency}
@@ -228,12 +228,12 @@ being in a state or position.
 
 \end{frame}
 
-\begin{frame}{PropBank Roles}
+\begin{frame}[allowframebreaks]{PropBank Roles}
 
-\begin{itemize}\addtolength{\itemsep}{-1ex}
+\begin{itemize}%\addtolength{\itemsep}{-1ex}
 \item An influential set of semantic roles comes from  PropBank \citep{Palmer:Gildea:Kingsbury:2005}
 \item They have 6 core roles and 17 modifier roles
-\item The core roles, meaning is defined per verb sense \\
+\item For the core roles, meaning is defined per verb sense \\
   \begin{tabular}{lll}
     Role & Description & Example \\
     ARG0 & agent          & \\
@@ -241,8 +241,9 @@ being in a state or position.
     ARG2 & instrument, benefactive, attribute   & \\
     ARG3 & starting point, benefactive, attribute   & \\
     ARG4 & ending point   & \\
-    ARGA & secondary agent & \eng{\ul{Kim}$_A$ \ull{trotted} \ul{her horse}$_0$}
-      \end{tabular}
+    ARGA & secondary agent & \eng{\ul{Kim}$_A$ \ull{walked} \ul{her dog}$_0$}
+  \end{tabular}
+\framebreak  
     \item \lex{seize.01} ``acquire (forcefully or stealthily)''
     \\  \begin{tabular}{ll}
         Arg0-PAG: &agent, entity acquiring something\\
