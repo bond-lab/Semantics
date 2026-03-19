@@ -48,8 +48,7 @@
     
 \item Using semantic components, analyze the following words:
   \begin{quote}
-  \lex{son, daughter, child, mother, father, parent, grandfather,
-    grandmother, grandparent}
+  \lex{cousin, nephew, niece}
   \end{quote}
   Discuss whether a binary format would be an advantage here.
   \\ You may use two place relations in your descriptions \\ e.g. \cmp{sibling-of(x, y)}.
@@ -64,7 +63,9 @@
 % grandparent (X,Z): +CHILD-OF(Y,X) +CHILD-OF(Y,Z)  | or  +GRANDPARENT-OF ? not so good
 % grandfather (X,Z): +MALE(X) +CHILD-OF(Y,X)  +CHILD-OF(Y,Z)
 % grandmother (X,Z): -MALE(X) +CHILD-OF(Y,X)  +CHILD-OF(Y,Z)
+% cousin (X,Y): CHILD-OF(X,P) CHILD-OF(P,G) CHILD-OF(U,G), CHILD-OF(Y,U)
 
+  
 %%% Note that in English, fact that there are two arguments shows up in det. choice
 %%% "My son is sleepy" (not "a/the son is sleepy")
 %%% can also do with parent-of and reversed elements, likewise +/-FEMALE
