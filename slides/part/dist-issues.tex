@@ -34,7 +34,7 @@
 
 \end{frame}
 
-\begin{frame}{Drowning in AI-produced Nonsense}
+\begin{frame}{Drowning in AI-produced Nonsense (slop)}
 
 \begin{itemize}
 \item Untruths produced by ChatGPT found in WebSearch
@@ -170,6 +170,22 @@ racist concepts.
 \item Because instructions and input are the same: \txx{text}.   It is very hard to guarantee there are no bad instructions in the input, \ldots
 \end{itemize}
 \end{frame}
+
+\begin{frame}{The lethal trifecta}
+
+  If an LLM based system has these capabilities:
+  \begin{itemize}
+  \item Access to your private data—one of the most common purposes of tools in the first place!
+  \item Exposure to untrusted content—any mechanism by which text (or images) controlled by a malicious attacker could become available to your LLM
+  \item The ability to externally communicate in a way that could be used to steal your data (I often call this “exfiltration” but I’m not confident that term is widely understood.)
+  \end{itemize}
+  If your agent combines these three features, an attacker can easily trick it into accessing your private data and sending it to that attacker.
+
+\href{https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/}{Simon Willison’s Weblog} 2025-06-16
+\end{frame}
+
+
+
 \begin{frame}{Little Bobby Ignore All Instructions}
   \begin{center}
     \includegraphics[width=0.6\textwidth]{img/little-bobby-ignore.jpg}
