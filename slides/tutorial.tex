@@ -1,0 +1,25 @@
+\usepackage[margin=25mm]{geometry}
+\usepackage{fancyhdr}
+
+% Define a custom page style for the first page
+\fancypagestyle{firstpage}{%
+  \fancyhf{}  % clear all
+  \fancyhead[L]{Full Name:
+ \makebox[0.4\textwidth][l]{\dotfill}}
+    % \leaders\hbox{.}\hskip 0.5\textwidth\hfill}
+%  \kern 0.5em\makebox[0.5\textwidth][l]{\dotfill}}
+  \renewcommand{\headrulewidth}{0pt}  % optional: remove the header rule
+}
+
+\let\oldmaketitle\maketitle
+\renewcommand{\maketitle}{\oldmaketitle\thispagestyle{firstpage}}
+
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setmainfont{TeX Gyre Pagella}
+\setsansfont[Ligatures=TeX]{TeX Gyre Heros}
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Sans CJK JP}
+\setCJKsansfont{Noto Sans CJK JP}
+\setCJKmonofont{Noto Sans CJK JP}
+%
