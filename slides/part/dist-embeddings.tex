@@ -56,21 +56,19 @@ From  \url{http://suriyadeepan.github.io}.
 \end{frame}
 
 \begin{frame}{We can learn these from raw text}
-
   \begin{itemize}
-  \item 
-  In word embeddings, these  vectors are learned from corpora, where a word is represented originally by a vector made of other words it appears close to, with the dimensions then reduced.
-
-\item 
-  Transfer models, starting with BERT, instead used neural nets and attention, predicting the context 
-  
-\item 
-In LLMs, models are constructed to predict the context words from a
-centre word, or the centre word from a set of context words.
-\item 
-By training on large amounts of text, embeddings that model human
-intuitions can be built.
-\end{itemize}
+  \item \txx{Static embeddings} (word2vec, GloVe): trained to predict
+    context words from a centre word (\txx{Skip-gram}), or the centre
+    word from its context words (\txx{CBOW}); each word gets one fixed vector
+  \item \txx{Contextual embeddings} (BERT): a neural encoder trained to
+    predict \emph{masked} tokens in a sentence --- the same word gets a
+    different vector depending on its context
+  \item \txx{Generative LLMs} (GPT family): trained to predict the
+    \emph{next} token given all previous tokens; context-sensitive
+    embeddings emerge as a by-product of this objective
+  \item By training on large amounts of text, embeddings that model human
+    intuitions can be built
+  \end{itemize}
 \end{frame}
 
 

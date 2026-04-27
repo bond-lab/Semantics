@@ -18,6 +18,7 @@
 % %\leftheader{}
 % %\rightheader{}
 \usepackage{langsci-gb4e}
+\newcommand{\horn}[1]{\ensuremath{\langle}\,#1\,\ensuremath{\rangle}}
 % \newcommand{\lex}[1]{\textbf{\textit{#1}}}
 % \newcommand{\lx}[1]{\textbf{\textit{#1}}}
 % \newcommand{\ix}{\ex\it}
@@ -73,8 +74,8 @@
 \end{exe}
 \item Consider this sentence: “John \textbf{believes} that aliens exist.”  
 \\ Why might it trigger an implicature based on a Horn scale?
-  \abox{\textit{Believe} is part of a scale like \textit{〈think, believe, know, be certain〉}.
-  Saying “believe” implicates that John does not “know” or is not “certain” — because those would be stronger, more informative choices.
+  \abox{\textit{Believe} is part of a scale like \horn{certain, know, believe, think}.
+  Saying ``believe'' implicates that John does not ``know'' or is not ``certain'' — because those would be stronger, more informative choices.
   Scalar implicatures here involve epistemic strength: the speaker signals uncertainty by choosing a weaker term.}
 
 \item What is the scalar implicature in this exchange?
@@ -82,9 +83,15 @@
     \item[Boss:] Did you finish the report?
     \item[Employee:] I \textbf{tried} to.
   \end{description}
-  \abox{``Tried'' belongs to a scale like \textit{〈tried, began, succeeded〉}.
-  Choosing ``tried'' implicates that the stronger outcomes (like “succeeded”) didn’t happen.
-   This implies failure or at least incomplete success, even though the speaker avoids saying so directly.}
+  \abox{``Tried’’ belongs to a scale like \horn{succeed, manage, try}.
+  Choosing ``tried’’ implicates that the stronger outcomes (``managed’’ or ``succeeded’’) did not happen —
+  because a cooperative speaker would have chosen the stronger term if it were true.
+  This implies failure or at least incomplete success, even though the speaker avoids saying so directly.}
+
+  How could you cancel this implicature without contradiction?
+  \abox{You can add a continuation that explicitly denies it: \textit{I tried to finish the report — and actually, I managed to!}
+  The implicature of non-success disappears without any logical contradiction, showing it is \textbf{defeasible}
+  (unlike an entailment, which cannot be cancelled).}
 
 \item For the next questions on politeness, (i) answer the question and (ii) translate each example into a language you speak, and see if you would use a similar strategy.
 \begin{enumerate}
@@ -94,7 +101,7 @@
     \item[Boss:] I need that report on my desk in one hour.
   \end{description}
   \abox{This threatens the employee’s \textbf{negative face} — their freedom to act is restricted by an imposition. 
-\\  It’s a indirect request which softens it a little.}
+\\  It is an indirect request, which softens it a little.}
  \item Which face is threatened in this interaction?
 
  \begin{description}
@@ -138,7 +145,7 @@
 \newpage
 
 \item Explain what is going on \href{https://www.youtube.com/watch?v=lLR-V2S0DC8}{here}:
-  \\ (from \textit{The Pink Panther Strikes Again (1976))}
+  \\ (from \textit{The Pink Panther Strikes Again (1976)})
   \begin{description}
     \item[Clouseau:] Does your dog bite?
     \item[Hotel Clerk:] No.
@@ -147,7 +154,11 @@
     \item[Clouseau:] I thought you said your dog did not bite!
     \item[Hotel Clerk:] That is not my dog. 
     \end{description}
- \abox{The clerk violates Relation — he answers literally, but not relevantly. Clouseau meant “the dog next to you,” not just any dog.}
+ \abox{The clerk answers literally but not cooperatively: Clouseau clearly meant ``the dog next to you,''
+  not just any dog. This is a failure of Relation — the answer is not relevant to the intended question.
+  One could also argue the clerk is being \textbf{deliberately uncooperative}, exploiting the literal
+  meaning of \textit{your} to avoid responsibility. Grice's Cooperative Principle assumes good faith,
+  but not all speakers are as cooperative as they should be.}
 
 \item Rephrase the following commands into indirect requests, first in English, then in another language:
   \begin{enumerate}

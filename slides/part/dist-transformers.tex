@@ -44,8 +44,8 @@ Image from \href{https://en.m.wikipedia.org/wiki/Generative_pre-trained_transfor
 \item softmax = converts to probabilities
   \\ everything sums to one
 \item dropout = randomly delete nodes to avoid overfitting
-\item Gelo = activation function (calculates the output of the node)
-  \\ Gaussian Linear Error Unit
+\item GeLU = activation function (calculates the output of the node)
+  \\ Gaussian Error Linear Unit
 
 \end{itemize}
 \end{frame}
@@ -56,7 +56,7 @@ Image from \href{https://en.m.wikipedia.org/wiki/Generative_pre-trained_transfor
 \begin{itemize}
 \item 96 layers, 96 heads
 \item 2,048 token context
-\item  12,888 long word embeddings
+\item  12,288 long word embeddings
 \item 800GB to store
 \end{itemize}
 \item GPT4 is probably 1.5--2 times bigger
@@ -155,9 +155,8 @@ By Brendan Bycroft (2023)
 \item The results can mimic human behaviour in a variety of tasks -- for Chat GPT 4
   \begin{itemize}
   \item 93rd percentile for SAT (better than 93\% of students)
-  \item 54th percentile of the writing test for GRE, 80th percentile
-    and 99th percentiles for the quantitative and verbal sections
-    respectively
+  \item 54th percentile of the writing test for GRE, 80th and 99th percentiles
+    for the quantitative and verbal sections respectively
   \item 90th percentile of the bar exam 
   \end{itemize}
 \item The model gets better with more data
