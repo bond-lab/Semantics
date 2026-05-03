@@ -1,7 +1,7 @@
 \section{Componential Analysis}
 
 
-\begin{frame}{Break word meaning into its components}
+\begin{frame}{We can separate a word's meaning into components}
 \MyLogo{Inspired by work on phonetics in the Prague School}
 \begin{itemize}
 \item For example:
@@ -49,7 +49,7 @@
 %     \lex{wife} & \cmp{female} & \cmp{adult} & \cmp{human} & \cmp{married} \\
 %   \end{tabular}
   \lex{spinster} $\not\approx$ \lex{wife}
-
+  \item (simple) \txx{antonyms} differ in only one binary component
 \end{itemize}
 \end{frame}
 
@@ -63,12 +63,12 @@
     \lex{bachelor} & \cmp{--female} & \cmp{+adult} & \cmp{+human} & \cmp{--married} \\
     \lex{wife} & \cmp{+female} & \cmp{+adult} & \cmp{+human} & \cmp{+married} \\
     \lex{girl} & \cmp{+female} & \cmp{-adult} & \cmp{+human} & \\
-  \end{tabular}
+          \end{tabular}
+          \bigskip
   \begin{itemize}
   \item Which should be $+$? \cmp{+female} or \cmp{--male}
   \item Presumably also \cmp{--electric}, \cmp{--conical}, \ldots
     \\ Only show \txx{relevant} features
-  \item \txx{antonyms} differ in only one binary component
   \end{itemize}
 \end{itemize}
 \end{frame}
@@ -99,14 +99,14 @@
 
 \begin{itemize}
 \item We can add relations between components:
-\\[2ex]  \begin{tabular}{llll}
+\\[2ex]  \hspace*{-2em}\begin{tabular}{llll}
      \cmp{+father} & \into & \cmp{+male} \cmp{+parent}  \\
      \cmp{+father}(\ul{x},y) & \into & \cmp{+male}(x) \cmp{+parent}(x,y) \\
      \cmp{+son}(\ul{x},y) & \into & \cmp{+male}(x) \cmp{+parent}(y,x) \\
      \cmp{+brother}(\ul{x},y) & \into & \cmp{+male}(x) 
      \cmp{+parent}(z,x) \cmp{+parent}(z,y) \\
      \cmp{+grandfather}(\ul{x},y) & \into & \cmp{+male}(x) 
-     \cmp{+parent}(x,z)  \cmp{+parent}(z,y) \\
+     \cmp{+parent}(x,z)  \cmp{+parent}(z,y) \\[2ex]
   \end{tabular}
 \item Assume \cmp{+parent}(x,y)  means ``x is the parent of y''
 \item There are various ways you can formalize such relationships
@@ -123,22 +123,3 @@ These are great for many sub-systems of language, but it is hard to make compone
 
 \end{frame}
 
-\begin{frame}{Word Embeddings}
-\MyLogo{Slides based on \href{https://www.shanelynn.ie/get-busy-with-word-embeddings-introduction/}{An introduction to word embeddings for text analysis} by Shane Lynn (2017)}
-
-
-\begin{itemize}
-\item Represent words as a vector of numbers (instead of a set of components)
-\item Every word has a unique word embedding (or “vector”), which is
-  just a list of numbers for each word.  
-\item Embeddings start being useful from 50-500 dimensions
-  \\ LLMs typically are much larger
-\item The embedding captures the  “meaning” of the word. 
-\item  Similar words end up with similar embedding values
-\item Context based word embeddings give a different vector depending
-  on the context 
-
-\end{itemize}
-
-More later, \ldots
-\end{frame}
